@@ -5,24 +5,24 @@
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/akasha/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/akasha/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/akasha/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/akasha/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/akasha/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"tea9297.github.io","root":"/akasha/","images":"/akasha/images","scheme":"Muse","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/akasha/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/akasha/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"tea9297.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="選擇不同的文件搜尋方法使用search_type參數可選擇不同的文件搜尋方法去找出與問題相關的文件段落，可使用svm, mmr, tfidf, knn。另可使用merge，為前三者的合併。  支持向量機（svm） 使用輸入提示和文件向量來訓練svm模型，訓練後，svm可用於基於其與訓練數據的相似性對新向量進行評分。  Max Marginal Relevance（mmr） 通過余弦相似度選擇相似的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="文件搜尋">
-<meta property="og:url" content="https://tea9297.github.io/akasha/2024/03/12/%E6%96%87%E4%BB%B6%E6%90%9C%E5%B0%8B/index.html">
+<meta property="og:url" content="https://tea9297.github.io/2024/03/12/%E6%96%87%E4%BB%B6%E6%90%9C%E5%B0%8B/index.html">
 <meta property="og:site_name" content="akasha使用手冊">
 <meta property="og:description" content="選擇不同的文件搜尋方法使用search_type參數可選擇不同的文件搜尋方法去找出與問題相關的文件段落，可使用svm, mmr, tfidf, knn。另可使用merge，為前三者的合併。  支持向量機（svm） 使用輸入提示和文件向量來訓練svm模型，訓練後，svm可用於基於其與訓練數據的相似性對新向量進行評分。  Max Marginal Relevance（mmr） 通過余弦相似度選擇相似的">
 <meta property="og:locale" content="zh_TW">
@@ -33,11 +33,11 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://tea9297.github.io/akasha/2024/03/12/%E6%96%87%E4%BB%B6%E6%90%9C%E5%B0%8B/">
+<link rel="canonical" href="https://tea9297.github.io/2024/03/12/%E6%96%87%E4%BB%B6%E6%90%9C%E5%B0%8B/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://tea9297.github.io/akasha/2024/03/12/%E6%96%87%E4%BB%B6%E6%90%9C%E5%B0%8B/","path":"2024/03/12/文件搜尋/","title":"文件搜尋"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://tea9297.github.io/2024/03/12/%E6%96%87%E4%BB%B6%E6%90%9C%E5%B0%8B/","path":"2024/03/12/文件搜尋/","title":"文件搜尋"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>文件搜尋 | akasha使用手冊</title>
@@ -51,7 +51,7 @@
 
 
   <noscript>
-    <link rel="stylesheet" href="/akasha/css/noscript.css">
+    <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
 </head>
 
@@ -71,7 +71,7 @@
 
   <div class="site-meta">
 
-    <a href="/akasha/" class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
       <p class="site-title">akasha使用手冊</p>
       <i class="logo-line"></i>
@@ -89,7 +89,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/akasha/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-tags"><a href="/akasha/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li><li class="menu-item menu-item-categories"><a href="/akasha/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
         </a>
@@ -152,13 +152,13 @@
 <div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        <a href="/akasha/archives/">
+        <a href="/archives/">
           <span class="site-state-item-count">33</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-          <a href="/akasha/categories/">
+          <a href="/categories/">
         <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
@@ -189,10 +189,10 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://tea9297.github.io/akasha/2024/03/12/%E6%96%87%E4%BB%B6%E6%90%9C%E5%B0%8B/">
+    <link itemprop="mainEntityOfPage" href="https://tea9297.github.io/2024/03/12/%E6%96%87%E4%BB%B6%E6%90%9C%E5%B0%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/akasha/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
     </span>
 
@@ -268,12 +268,12 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/akasha/2024/02/26/JSON%E6%A0%BC%E5%BC%8F/" rel="prev" title="JSON格式">
+                <a href="/2024/02/26/JSON%E6%A0%BC%E5%BC%8F/" rel="prev" title="JSON格式">
                   <i class="fa fa-angle-left"></i> JSON格式
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/akasha/2024/03/20/auto_evaluation/" rel="next" title="auto_evaluation">
+                <a href="/2024/03/20/auto_evaluation/" rel="next" title="auto_evaluation">
                   auto_evaluation <i class="fa fa-angle-right"></i>
                 </a>
             </div>
@@ -326,10 +326,10 @@
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/akasha/js/comments.js"></script><script src="/akasha/js/utils.js"></script><script src="/akasha/js/motion.js"></script><script src="/akasha/js/sidebar.js"></script><script src="/akasha/js/next-boot.js"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
-<script src="/akasha/js/third-party/search/local-search.js"></script>
+<script src="/js/third-party/search/local-search.js"></script>
 
 
 
