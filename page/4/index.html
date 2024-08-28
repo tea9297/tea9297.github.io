@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/project/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/project/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/project/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/project/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/project/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"akasha.github.io","root":"/project/","images":"/project/images","scheme":"Muse","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/project/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/project/js/config.js"></script>
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="akasha使用手冊">
+<meta property="og:url" content="https://akasha.github.io/project/page/4/index.html">
+<meta property="og:site_name" content="akasha使用手冊">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:author" content="Chih Chuan Chang&lt;ccchang@iii.org.tw&gt;">
+<meta property="article:tag" content="akasha, manual, llm, rag">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://akasha.github.io/project/page/4/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-TW","comments":"","permalink":"","path":"page/4/index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>akasha使用手冊</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/project/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/project/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">akasha使用手冊</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">akasha manual</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/project/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-tags"><a href="/project/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li><li class="menu-item menu-item-categories"><a href="/project/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜尋..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Chih Chuan Chang<ccchang@iii.org.tw></p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/project/archives/">
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/project/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-TW" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://akasha.github.io/project/2024/01/01/DEV-%E8%A8%AD%E5%AE%9A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/project/images/avatar.gif">
+      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/project/2024/01/01/DEV-%E8%A8%AD%E5%AE%9A/" class="post-title-link" itemprop="url">DEV-設定</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-01-01 22:58:00" itemprop="dateCreated datePublished" datetime="2024-01-01T22:58:00+08:00">2024-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-08-28 14:12:17" itemprop="dateModified" datetime="2024-08-28T14:12:17+08:00">2024-08-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/project/categories/akasha-lab/" itemprop="url" rel="index"><span itemprop="name">akasha-lab</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="API-KEY"><a href="#API-KEY" class="headerlink" title="API KEY"></a>API KEY</h2><p>若要使用openAI的模型，必須輸入API KEY，可選擇openAI或是Azure openAI其一<br>如範例，選擇使用Azure openAI後，輸入key值與URL，按下儲存，若顯示成功，便成功添加API KEY。</p>
+<p><img src="https://hackmd.io/_uploads/S1dU30xca.png" alt="image"></p>
+<p>若勾選左下角”Save Permanently”便會將key值儲存至config中，下次登入也可以直接使用。</p>
+<p><img src="https://hackmd.io/_uploads/BJgE53Cl9T.png" alt="image"></p>
+</br>
+</br>
+
+<h2 id="History"><a href="#History" class="headerlink" title="History"></a>History</h2><p>History分頁可下載文檔問答的紀錄，並下載成.txt或.json檔案。<br><img src="https://hackmd.io/_uploads/SJBzpRlq6.png" alt="image"></p>
+<h2 id="Account"><a href="#Account" class="headerlink" title="Account"></a>Account</h2><p>Account分頁可更改密碼或是刪除帳號<br><img src="https://hackmd.io/_uploads/SkYEaAx5a.png" alt="image"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://akasha.github.io/project/2024/01/01/DEV-Knowledges/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/project/images/avatar.gif">
+      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/project/2024/01/01/DEV-Knowledges/" class="post-title-link" itemprop="url">DEV-Knowledges</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-01-01 22:57:00" itemprop="dateCreated datePublished" datetime="2024-01-01T22:57:00+08:00">2024-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-08-28 14:12:34" itemprop="dateModified" datetime="2024-08-28T14:12:34+08:00">2024-08-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/project/categories/akasha-lab/" itemprop="url" rel="index"><span itemprop="name">akasha-lab</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="創建Knowledge"><a href="#創建Knowledge" class="headerlink" title="創建Knowledge"></a>創建Knowledge</h2><p>knowledge為一個保存資料集(Datasets)和搜尋參數的設定檔，可以直接使用knowledge來使用文檔問答。<br>至New Knowledge頁面，輸入Knowledge名稱，選擇嵌入模型，選擇文件段落大小，選擇Dataset(可以多個)，預設為選擇所有文件檔案，也可以各個檔案逐一勾選。</p>
+<p><img src="https://hackmd.io/_uploads/Bk9a71bq6.png" alt="image"></p>
+</br>
+</br>
+
+<p>可選擇是否分享Knowledge給其他使用者<br><img src="https://hackmd.io/_uploads/ry2K4yZ9p.png" alt="image"></p>
+</br>
+</br>
+
+<p>按下 “Create Knowledge”，會為每個文件產生向量db，因此可能需要等待一段時間。<br><img src="https://hackmd.io/_uploads/Sy3kS1bc6.png" alt="image"></p>
+</br>
+</br>
+
+<p>:::warning<br>同一使用者無法創建相同名稱的Knowledge，不同使用者可以創建相同名稱的Knowledge<br>:::<br><img src="https://hackmd.io/_uploads/Ski7By-5T.png" alt="image"></p>
+</br>
+</br>
+
+<h2 id="檢視Knowledge"><a href="#檢視Knowledge" class="headerlink" title="檢視Knowledge"></a>檢視Knowledge</h2><p>創建完Knowledge後，可至My Knowledges頁面檢視，勾選Shared Knowledges按鈕後也會顯示別人分享的Knowledges，自己創建的Knowledge可以刪除，但無法刪除別人分享的Knowledge。</p>
+<p><img src="https://hackmd.io/_uploads/Hkq2HJbca.png" alt="image"></p>
+</br>
+</br>
+
+<h2 id="更新Knowledge"><a href="#更新Knowledge" class="headerlink" title="更新Knowledge"></a>更新Knowledge</h2><p>若要更新Knowledge資訊，可至Update Knowledge頁面，選擇要更新的Knowledge後，便可以更改Knowledge名稱、描述，也可以新增或刪除文件、分享者。<br><img src="https://hackmd.io/_uploads/r1RvLJZqa.png" alt="image"><br><img src="https://hackmd.io/_uploads/B1afL1b56.png" alt="image"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://akasha.github.io/project/2024/01/01/DEV-Consult/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/project/images/avatar.gif">
+      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/project/2024/01/01/DEV-Consult/" class="post-title-link" itemprop="url">DEV-Consult</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-01-01 22:56:00" itemprop="dateCreated datePublished" datetime="2024-01-01T22:56:00+08:00">2024-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-08-28 14:12:41" itemprop="dateModified" datetime="2024-08-28T14:12:41+08:00">2024-08-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/project/categories/akasha-lab/" itemprop="url" rel="index"><span itemprop="name">akasha-lab</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Chat"><a href="#Chat" class="headerlink" title="Chat"></a>Chat</h2><p>Chat與Regular Consult相似，會根據提供的文檔進行問答，但同時Chat也會記住使用者之前的問答互動，方便使用者進行追問。</p>
+<p><img src="https://hackmd.io/_uploads/HJYO5ZfzR.png" alt="image"></p>
+<p>若要進行與之前不相關、新的提問，可以點選右邊按紐Clear History清除紀錄。</p>
+</br>
+</br>
+
+
+<h2 id="Regular-Consult"><a href="#Regular-Consult" class="headerlink" title="Regular Consult"></a>Regular Consult</h2><p>創建完Knowledge後，便可以利用它來做文檔問答，來到Consult頁面，選擇Knowledge後，便可以輸入問題，按下crtl+Enter後便可以提交問題給語言模型等待回應。</p>
+<p><img src="https://hackmd.io/_uploads/HyLhLJZ9a.png" alt="image"></p>
+<h3 id="更改參數"><a href="#更改參數" class="headerlink" title="更改參數"></a>更改參數</h3><p>若你為該Knowledge的擁有者，按下Advanced可以更改Knowledge的參數，提交問題後，參數將會儲存到config中。<br><img src="https://hackmd.io/_uploads/Hk4sPkb9p.png" alt="image"></p>
+<h5 id="1-System-Prompt-為希望語言模型回答的格式"><a href="#1-System-Prompt-為希望語言模型回答的格式" class="headerlink" title="1. System Prompt 為希望語言模型回答的格式"></a>1. System Prompt 為希望語言模型回答的格式</h5><h5 id="2-language-model-為使用何種語言模型"><a href="#2-language-model-為使用何種語言模型" class="headerlink" title="2. language model 為使用何種語言模型"></a>2. language model 為使用何種語言模型</h5><h5 id="3-search-type-為搜尋文檔的方法"><a href="#3-search-type-為搜尋文檔的方法" class="headerlink" title="3. search type 為搜尋文檔的方法"></a>3. search type 為搜尋文檔的方法</h5><h5 id="4-Top-K-為使用文檔段落的數量"><a href="#4-Top-K-為使用文檔段落的數量" class="headerlink" title="4. Top K 為使用文檔段落的數量"></a>4. Top K 為使用文檔段落的數量</h5><h5 id="5-Threshold-為文檔與問題相似度的閾值"><a href="#5-Threshold-為文檔與問題相似度的閾值" class="headerlink" title="5. Threshold 為文檔與問題相似度的閾值"></a>5. Threshold 為文檔與問題相似度的閾值</h5><h5 id="6-Max-Doc-Length-為文檔段落的最長總長度"><a href="#6-Max-Doc-Length-為文檔段落的最長總長度" class="headerlink" title="6. Max Doc Length 為文檔段落的最長總長度"></a>6. Max Doc Length 為文檔段落的最長總長度</h5><h5 id="7-Temperature-為語言模型的隨機性"><a href="#7-Temperature-為語言模型的隨機性" class="headerlink" title="7. Temperature 為語言模型的隨機性"></a>7. Temperature 為語言模型的隨機性</h5></br>
+</br>
+
+<h2 id="Deep-Consult"><a href="#Deep-Consult" class="headerlink" title="Deep Consult"></a>Deep Consult</h2><p>若要詢問較為複雜的問題，可使用Deep-Consult，將可能需要的知識點做為子問題放到Sub-Questions中，再將最終期望詢問的問題填入Question欄位，按下”Submit”按鈕，便可等待語言模型回答。</p>
+<p><img src="https://hackmd.io/_uploads/r1jk31Wqp.png" alt="image"></p>
+</br>
+</br>
+
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>在Summary頁面，可以從Dataset中選擇一個文件檔案，並輸入指示進行摘要。</p>
+<p><img src="https://hackmd.io/_uploads/ryP6Hht2a.png" alt="image"></p>
+</br>
+</br>
+
+
+<p>你也可以上傳一個文件檔案進行摘要</p>
+<p><img src="https://hackmd.io/_uploads/r1kcr2Knp.png" alt="image"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" title="上一頁" aria-label="上一頁" href="/project/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/project/">1</a><span class="space">&hellip;</span><a class="page-number" href="/project/page/3/">3</a><span class="page-number current">4</span>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Chih Chuan Chang<ccchang@iii.org.tw></span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/project/js/comments.js"></script><script src="/project/js/utils.js"></script><script src="/project/js/motion.js"></script><script src="/project/js/sidebar.js"></script><script src="/project/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/project/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

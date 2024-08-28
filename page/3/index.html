@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/project/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/project/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/project/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/project/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/project/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"akasha.github.io","root":"/project/","images":"/project/images","scheme":"Muse","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/project/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/project/js/config.js"></script>
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="akasha使用手冊">
+<meta property="og:url" content="https://akasha.github.io/project/page/3/index.html">
+<meta property="og:site_name" content="akasha使用手冊">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:author" content="Chih Chuan Chang&lt;ccchang@iii.org.tw&gt;">
+<meta property="article:tag" content="akasha, manual, llm, rag">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://akasha.github.io/project/page/3/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-TW","comments":"","permalink":"","path":"page/3/index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>akasha使用手冊</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/project/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/project/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">akasha使用手冊</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">akasha manual</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/project/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-tags"><a href="/project/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li><li class="menu-item menu-item-categories"><a href="/project/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜尋..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Chih Chuan Chang<ccchang@iii.org.tw></p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/project/archives/">
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/project/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-TW" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://akasha.github.io/project/2024/02/26/JSON%E6%A0%BC%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/project/images/avatar.gif">
+      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/project/2024/02/26/JSON%E6%A0%BC%E5%BC%8F/" class="post-title-link" itemprop="url">JSON格式</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-02-26 06:51:06" itemprop="dateCreated datePublished" datetime="2024-02-26T06:51:06+08:00">2024-02-26</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="JSON-Formatter"><a href="#JSON-Formatter" class="headerlink" title="JSON Formatter"></a>JSON Formatter</h2><p>如果你想讓語言模型的回答為JSON格式，可以使用JSONformatter</p>
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><p>如以下範例，首先先定義你想要回傳的key值的名稱、說明和型別，並利用<em><strong>JSON_formatter</strong></em>轉換成json格式的prompt，並在問問題時把JSON_prompt丟入system_prompt中。</p>
+<p>如formatter2和formatter3，你也可以直接使用JSON_formatter_list或JSON_formatter_dict將list或dictionary轉換成json格式的prompt。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">import akasha.prompts as prompts</span><br><span class="line">import akasha</span><br><span class="line">import akasha.eval as eval</span><br><span class="line"></span><br><span class="line">formatter = [</span><br><span class="line">        prompts.OutputSchema(name=&quot;學歷&quot;, description=&quot;受試者的就讀大學&quot;, type=&quot;str&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;經驗&quot;, description=&quot;受試者的工作經驗&quot;, type=&quot;str&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;專長&quot;, description=&quot;受試者的專長能力&quot;, type=&quot;list&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;年資&quot;, description=&quot;受試者的總工作年數&quot;, type=&quot;int&quot;)</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">formatter2 = prompts.JSON_formatter_list(names=[&quot;學歷&quot;,&quot;經驗&quot;,&quot;專長&quot;,&quot;年資&quot;], types=[&quot;str&quot;,&quot;str&quot;,&quot;list&quot;,&quot;int&quot;],\</span><br><span class="line">        descriptions=[&quot;受試者的就讀大學&quot;,&quot;受試者的工作經驗&quot;,&quot;受試者的專長能力&quot;,&quot;受試者的總工作年數&quot;])</span><br><span class="line"></span><br><span class="line">formatter3 = prompts.JSON_formatter_dict([&#123; &quot;name&quot;: &quot;學歷&quot;, &quot;description&quot;: &quot;受試者的就讀大學&quot;, &quot;type&quot;: &quot;str&quot; &#125;,\</span><br><span class="line">        &#123; &quot;name&quot;: &quot;經驗&quot;, &quot;description&quot;: &quot;受試者的工作經驗&quot;, &quot;type&quot;: &quot;str&quot; &#125;,\</span><br><span class="line">            &#123; &quot;name&quot;: &quot;專長&quot;, &quot;description&quot;: &quot;受試者的專長能力&quot;, &quot;type&quot;: &quot;list&quot; &#125;,\</span><br><span class="line">                &#123; &quot;name&quot;: &quot;年資&quot;, &quot;description&quot;: &quot;受試者的總工作年數&quot;, &quot;type&quot;: &quot;int&quot; &#125;])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">JSON_prompt = prompts.JSON_formatter(formatter)</span><br><span class="line"># JSON_prompt = prompts.JSON_formatter(formatter2)</span><br><span class="line"># JSON_prompt = prompts.JSON_formatter(formatter3)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA(topK=10, threshold=0.0)</span><br><span class="line"></span><br><span class="line">response = ak.ask_whole_file(file_path=&quot;docs/resume_pool/A.docx&quot;,</span><br><span class="line">system_prompt=JSON_prompt, prompt=f&#x27;&#x27;&#x27;以上是受試者的履歷，請回答該受試者的學歷、經驗、專長、年資&#x27;&#x27;&#x27;)</span><br><span class="line"></span><br><span class="line">parse_json = akasha.helper.extract_json(resposne)</span><br><span class="line"></span><br><span class="line">print(parse_json)</span><br><span class="line">print(type(parse_json))</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#x27;學歷&#x27;: &#x27;國立臺北科技大學電資學士班 四技&#x27;, &#x27;經驗&#x27;: &#x27;總年資0-1年年工作經歷&#x27;, &#x27;專長&#x27;: [&#x27;計算機網路(協定)&#x27;, &#x27;資料庫系統&#x27;, &#x27;物件導向程式設計&#x27;, &#x27;C語言&#x27;, &#x27;python&#x27;, &#x27;C++&#x27;, &#x27;Gitlab&#x27;, &#x27;Jenkins&#x27;, &#x27;Git&#x27;, &#x27;linux&#x27;, &#x27;Google表單&#x27;], &#x27;年資&#x27;: 1&#125; </span><br><span class="line"></span><br><span class="line">&lt;class &#x27;dict&#x27;&gt;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://akasha.github.io/project/2024/02/26/chain_of_thought/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/project/images/avatar.gif">
+      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/project/2024/02/26/chain_of_thought/" class="post-title-link" itemprop="url">chain_of_thought</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-02-26 06:46:14" itemprop="dateCreated datePublished" datetime="2024-02-26T06:46:14+08:00">2024-02-26</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="使用chain-of-thought處理複雜的問題"><a href="#使用chain-of-thought處理複雜的問題" class="headerlink" title="使用chain_of_thought處理複雜的問題"></a>使用chain_of_thought處理複雜的問題</h2><p>如果你想詢問的問題較為複雜，可以將它拆解成一連串的小問題並使用chain_of_thought詢問。</p>
+<h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import akasha</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">os.environ[&quot;OPENAI_API_KEY&quot;] = &quot;your openAI key&quot;</span><br><span class="line"></span><br><span class="line">dir_path = &quot;mic/&quot;</span><br><span class="line">queries2 = [&quot;西門子自有工廠如何朝工業4.0 發展&quot;,&quot;詳細解釋「工業4.0 成熟度指數」發展路徑的六個成熟度&quot;,&quot;根據西門子自有工廠朝工業4.0發展，探討其各項工業4.0的成熟度指標&quot;]</span><br><span class="line">ak = akasha.Doc_QA()</span><br><span class="line">response = ak.chain_of_thought(dir_path, queries2, search_type=&#x27;svm&#x27;)</span><br><span class="line">print(response)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">response 1:</span><br><span class="line">西門子自有工廠朝工業4.0發展的方式包括以下幾個方面：</span><br><span class="line"></span><br><span class="line">1. 數位化戰略：西門子提出數位化戰略，從工業4.0策略擬定到落地執行，為客戶提供一條龍服務。他們設計數位工廠原型</span><br><span class="line">，搭配OT、IT方案，並使用西門子的MindSphere工業物聯網平台，發展數據可視化和數據分析相關應用。</span><br><span class="line"></span><br><span class="line">2. 跨領域合作：西門子近年積極與雲服務商、系統商等跨領域合作，推動智慧製造解決方案。此外，他們也與SAP進行ERP整合，專注於物聯網領域。</span><br><span class="line"></span><br><span class="line">3. 虛實整合：西門子在中國大陸成都生產研發基地的案例中，從研發、生產、訂單管理、供應商管理到物流作業</span><br><span class="line">，實現了整條價值鏈的虛實整合。他們不斷提高配料、傳輸、檢測等流程的自動化程度。</span><br><span class="line"></span><br><span class="line">總體而言，西門子通過數位化戰略、跨領域合作和虛實整合等方式，推動自有工廠朝工業4.0發 </span><br><span class="line">展。他們致力於提升生產效率和效能，並利用先進的技術和解決方案實現智慧工廠的建設。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">response 2:</span><br><span class="line">「工業4.0成熟度指數」的發展路徑劃分為六個成熟度，分別是電腦化、可連結、可視化、可分析、可預測和自適應。</span><br><span class="line"></span><br><span class="line">1. 電腦化：這是工業4.0發展的起點，指企業開始使用計算機技</span><br><span class="line">術，人員不再手動操作機械。然而，機械仍未聯網，各個IT系統仍各自獨立，資料尚未串聯。例如，企業的ERP系統與生產相關的系統獨立運作，訂單與產品品檢紀錄分散於兩套系統，導致 </span><br><span class="line">訂單無法回溯出現品質問題的環節。</span><br><span class="line"></span><br><span class="line">2. 可連結：在這個成熟度階段，企業開始將各個IT系統進行連接，實現資料的串聯。這使得不同系統之間可以共享資料，提高資訊的流通效率。例 </span><br><span class="line">如，企業的ERP系統與生產相關的系統進行連接，訂單與產品品檢紀錄可以實現資料的回溯。</span><br><span class="line"></span><br><span class="line">3. 可視化：在這個成熟度階段，企業開始實現資料的可視化，將資料以圖形化或圖表化的方</span><br><span class="line">式呈現，使得管理者可以直觀地了解企業的運營狀況。例如，企業可以使用數據儀表板或報表來呈現生產線的運行情況和產品的品質指標。</span><br><span class="line"></span><br><span class="line">4. 可分析：在這個成熟度階段，企業開始進 </span><br><span class="line">行資料的分析，利用數據分析工具和算法來挖掘資料中的價值和洞察。這使得企業可以更深入地了解生產過程中的問題和潛在的改進空間。例如，企業可以使用數據分析工具來分析生產線的</span><br><span class="line">效率和品質問題，並提出改進措施。</span><br><span class="line"></span><br><span class="line">5. 可預測：在這個成熟度階段，企業開始利用資料分析的結果來進行預測和預測模型的建立。這使得企業可以預測生產過程中可能出現的問題，並 </span><br><span class="line">提前採取相應的措施。例如，企業可以利用預測模型來預測生產線的故障和產品的品質問題，並提前進行維護和調整。</span><br><span class="line"></span><br><span class="line">6. 自適應：在這個成熟度階段，企業開始實現自動化和自適應能 </span><br><span class="line">力，使得生產過程可以根據實時的數據和環境變化進行調整和優化。這使得企業可以更靈活地應對市場需求和生產變化。例如，企業可以實現生產線的自動調整和產品的自動優化，以適應市</span><br><span class="line">場需求的變化。</span><br><span class="line"></span><br><span class="line">這六個成熟度階段代表了企業在工業4.0發展過程中的不同階段和能力水平，企業可以根據自身的情況和目標，逐步提升成熟度，實現工業4.0的目標。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">response 3:</span><br><span class="line">根據西門子自有工廠朝工業4.0發展的方式，可以探討其在工業4.0成熟度指標中的幾個方面：</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">1. 數位化戰略：西門子提出數位化戰略，從工業4.0策略擬定到落地執行提供一條龍服務</span><br><span class="line">。這代表企業在工業4.0成熟度指標中已經達到了可連結和可視化的階段，並開始將數據應用於生產優化和資源利用。</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">2. 整合系統：西門子在廠內進行軟體間整合，包括PLM、ERP、MOM </span><br><span class="line">、WMS和Automation五大系統的整合，使數據互聯互通。這代表企業在工業4.0成熟度指標中已經達到了可分析和可預測的階段，並能夠利用數據分析技術進行深入分析和預測。</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">3. 數據 應用：西門子利用自有的數位雙生軟體Tecnomatix，打造虛擬工廠，模擬生產狀況或監控實際生產狀況。這代表企業在工業4.0成熟度指標中已經達到了可分析和可預測的階段，並能夠利用 </span><br><span class="line">數據應用提供的資訊，優化生產設備和工序。</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">總的來說，根據西門子自有工廠朝工業4.0發展的方式，可以看出他們在工業4.0成熟度指標中已經達到了可連結、可視化、可分析和可預測，優化生產設備和工序。</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+</br>
+</br>
+</br>
+</br>
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">### Arguments of Doc_QA class ###</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">Args:</span><br><span class="line">            **embeddings (str, optional)**: the embeddings used in query and vector storage. Defaults to &quot;text-embedding-ada-002&quot;.\n</span><br><span class="line">            **chunk_size (int, optional)**: chunk size of texts from documents. Defaults to 1000.\n</span><br><span class="line">            **model (str, optional)**: llm model to use. Defaults to &quot;gpt-3.5-turbo&quot;.\n</span><br><span class="line">            **verbose (bool, optional)**: show log texts or not. Defaults to False.\n</span><br><span class="line">            **threshold (float, optional)**: the similarity threshold of searching. Defaults to 0.2.\n</span><br><span class="line">            **language (str, optional)**: the language of documents and prompt, use to make sure docs won&#x27;t exceed</span><br><span class="line">                max token size of llm input.\n</span><br><span class="line">            **search_type (str, optional)**: search type to find similar documents from db, default &#x27;merge&#x27;.</span><br><span class="line">                includes &#x27;merge&#x27;, &#x27;mmr&#x27;, &#x27;svm&#x27;, &#x27;tfidf&#x27;, also, you can custom your own search_type function, as long as your</span><br><span class="line">                function input is (query_embeds:np.array, docs_embeds:list[np.array], k:int, relevancy_threshold:float, log:dict) </span><br><span class="line">                and output is a list [index of selected documents].\n</span><br><span class="line">            **record_exp (str, optional)**: use aiido to save running params and metrics to the remote mlflow or not if record_exp not empty, and set record_exp as experiment name.  default &quot;&quot;.\n</span><br><span class="line">            **system_prompt (str, optional)**: the system prompt that you assign special instruction to llm model, so will not be used</span><br><span class="line">                in searching relevant documents. Defaults to &quot;&quot;.\n</span><br><span class="line">            **max_doc_len (int, optional)**: max document size of llm input. Defaults to 1500.\n</span><br><span class="line">            **temperature (float, optional)**: temperature of llm model from 0.0 to 1.0 . Defaults to 0.0.\n</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://akasha.github.io/project/2024/01/28/image/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/project/images/avatar.gif">
+      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/project/2024/01/28/image/" class="post-title-link" itemprop="url">image</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-01-28 08:38:00" itemprop="dateCreated datePublished" datetime="2024-01-28T08:38:00+08:00">2024-01-28</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="新版-DevSecOps-的-GitLab-Repository-存取說明"><a href="#新版-DevSecOps-的-GitLab-Repository-存取說明" class="headerlink" title="新版 DevSecOps 的 GitLab Repository 存取說明"></a>新版 DevSecOps 的 GitLab Repository 存取說明</h1><h2 id="1-設置-Token"><a href="#1-設置-Token" class="headerlink" title="1. 設置 Token"></a>1. 設置 Token</h2><ul>
+<li>在<code>DevSecOps</code>平台中選擇專案，連到<code>GitLab</code>專案頁面。然後選取<code>Settings</code>中的<code>Access Token</code>選項</li>
+</ul>
+<p><img src="https://hackmd.io/_uploads/BJXGKF79a.png" alt="image"></p>
+<ul>
+<li>在<code>Project Access Tokens</code>頁面中填入各項資訊（如下圖）</li>
+</ul>
+<p><img src="https://hackmd.io/_uploads/rJwYjK7q6.png" alt="image"></p>
+<ul>
+<li>之後便可以取得此專案的<code>token</code>。<strong>請注意這個<code>token</code>之後就不會再出現，所以複製之後要自己保存好！</strong></li>
+</ul>
+<p><img src="https://hackmd.io/_uploads/rkNcatXqT.png" alt="image"></p>
+<h2 id="2-在本機端複製專案"><a href="#2-在本機端複製專案" class="headerlink" title="2. 在本機端複製專案"></a>2. 在本機端複製專案</h2><p>在專案頁面點選<code>Clone</code>按鈕，並複製<code>https</code>的網址。</p>
+<p><img src="https://hackmd.io/_uploads/SkHFk97ca.png" alt="image"></p>
+<p>在本機端命令列中輸入下列指令，再依據提示要求輸入<code>username</code>與<code>token</code>。**(注意：這邊要輸入的不是<code>password</code>，而是<code>token</code>)**</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://gitlab-devops.iii.org.tw/iiidevops/&lt;project-name&gt;.git</span><br></pre></td></tr></table></figure>
+
+<p>或是在<code>git clone</code>指令中加入<code>username</code>，之後會被要求輸入密碼，再輸入<code>token</code>即可。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://&lt;username&gt;@gitlab-devops.iii.org.tw/iiidevops/&lt;project-name&gt;.git</span><br></pre></td></tr></table></figure>
+
+<p>或是在<code>git clone</code>指令中加入<code>username</code>與<code>token</code>:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://&lt;username&gt;:&lt;token&gt;@gitlab-devops.iii.org.tw/iiidevops/&lt;project-name&gt;.git</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://akasha.github.io/project/2024/01/26/ask_self/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/project/images/avatar.gif">
+      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/project/2024/01/26/ask_self/" class="post-title-link" itemprop="url">ask_self</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-01-26 03:36:20" itemprop="dateCreated datePublished" datetime="2024-01-26T03:36:20+08:00">2024-01-26</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="ask-self"><a href="#ask-self" class="headerlink" title="ask_self"></a>ask_self</h2><p>如果你不想使用文件檔案，希望直接輸入文件內容，你可以使用ask_self，使用<em><strong>info</strong></em> 參數將文件的內容傳給語言模型，<em><strong>info</strong></em>參數可為<em><strong>str</strong></em> 或者 <em><strong>list of str</strong></em>。</p>
+<h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">install_requires = [</span><br><span class="line">    &quot;pypdf&quot;,</span><br><span class="line">    &quot;langchain&gt;=0.1.0&quot;,</span><br><span class="line">    &quot;chromadb==0.4.14&quot;,</span><br><span class="line">    &quot;openai==0.27&quot;,</span><br><span class="line">    &quot;tiktoken&quot;,</span><br><span class="line">    &quot;lark==1.1.7&quot;,</span><br><span class="line">    &quot;scikit-learn&lt;1.3.0&quot;,</span><br><span class="line">    &quot;jieba==0.42.1&quot;,</span><br><span class="line">    &quot;sentence-transformers==2.2.2&quot;,</span><br><span class="line">    &quot;torch==2.0.1&quot;,</span><br><span class="line">    &quot;transformers&gt;=4.33.4&quot;, </span><br><span class="line">    &quot;llama-cpp-python==0.2.6&quot;,</span><br><span class="line">    &quot;auto-gptq==0.3.1&quot;,</span><br><span class="line">    &quot;tqdm==4.65.0&quot;,</span><br><span class="line">    &quot;docx2txt==0.8&quot;,</span><br><span class="line">    &quot;rouge==1.0.1&quot;,</span><br><span class="line">    &quot;rouge-chinese==1.0.3&quot;,</span><br><span class="line">    &quot;bert-score==0.3.13&quot;,</span><br><span class="line">    &quot;click&quot;,</span><br><span class="line">    &quot;tokenizers&gt;=0.13.3&quot;,</span><br><span class="line">    &quot;streamlit==1.28.2&quot;,</span><br><span class="line">    &quot;streamlit_option_menu==0.3.6&quot;,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA(</span><br><span class="line">    verbose=True,</span><br><span class="line">    max_doc_len=15000,</span><br><span class="line">    model=&quot;openai:gpt-4&quot;,</span><br><span class="line">)</span><br><span class="line">response = ak.ask_self(prompt=&quot;langchain的套件版本?&quot;, info=install_requires)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">langchain的套件版本是0.1.0或更高版本。</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://akasha.github.io/project/2024/01/25/ui%E6%93%8D%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/project/images/avatar.gif">
+      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/project/2024/01/25/ui%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">ui操作</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-01-25 07:55:36" itemprop="dateCreated datePublished" datetime="2024-01-25T07:55:36+08:00">2024-01-25</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="get-response"><a href="#get-response" class="headerlink" title="get_response"></a>get_response</h2><p>確認設定中有選擇正確的知識庫後，在system_prompt中填入希望回答的格式，在prompt中填入問題，按下submit便可以執行文檔問答。<br><img src="https://hackmd.io/_uploads/BkmIZ9y5T.png" alt="ui_5"></p>
+</br>
+</br>
+
+
+<p>可以使用<em><strong>clear</strong></em> 按鈕清空對話欄，也可以使用左側<em><strong>Download Log</strong></em>按鈕下載紀錄<br><img src="https://hackmd.io/_uploads/H1MgEckqT.png" alt="image"></p>
+</br>
+</br>
+
+<h2 id="chain-of-thought"><a href="#chain-of-thought" class="headerlink" title="chain_of_thought"></a>chain_of_thought</h2><p>使用<em><strong>Add Prompt</strong></em> 按鈕增加子問題，便可以使用chain of thought先提問小問題並利用小問題的答案回答較為複雜的問題。<br><img src="https://hackmd.io/_uploads/HkEQG5kqa.png" alt="image"></p>
+</br>
+</br>
+
+
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>選擇summary方法與長度後，上傳單一文件檔便可得到該文檔的摘要。<br><img src="https://hackmd.io/_uploads/r15wQ9y96.png" alt="image"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://akasha.github.io/project/2024/01/25/ui%E8%A8%AD%E5%AE%9A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/project/images/avatar.gif">
+      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/project/2024/01/25/ui%E8%A8%AD%E5%AE%9A/" class="post-title-link" itemprop="url">ui設定</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-01-25 07:41:48" itemprop="dateCreated datePublished" datetime="2024-01-25T07:41:48+08:00">2024-01-25</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>只要你安裝了akasha，便可以直接使用akasha_ui，在terminal執行:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">akasha ui</span></span><br></pre></td></tr></table></figure>
+
+<p>便可以在瀏覽器上<a target="_blank" rel="noopener" href="http://localhost:8501/">開啟</a>，開始使用akasha ui</p>
+</br>
+</br>
+
+<h2 id="上傳文件檔"><a href="#上傳文件檔" class="headerlink" title="上傳文件檔"></a>上傳文件檔</h2><p>上傳你需要的文件檔案，並取資料夾名稱，創立知識庫。<br>:::info<br>請注意文件檔只允許(.docx, .txt, .pdf)<br>:::<br><img src="https://hackmd.io/_uploads/B1glkq19a.png" alt="ui_upload"></p>
+</br>
+</br>
+
+<h2 id="設定"><a href="#設定" class="headerlink" title="設定"></a>設定</h2><p>在設定頁面，可以選擇要詢問的知識庫和調整各種參數、選擇不同語言模型。<br>:::info<br>若使用openAI模型，請在左側輸入 openAI的key，azure openAI則需要額外輸入url。<br>:::<br><img src="https://hackmd.io/_uploads/BJ0TRYJcT.png" alt="ui_setting"></p>
+<h2 id="手動增加模型"><a href="#手動增加模型" class="headerlink" title="手動增加模型"></a>手動增加模型</h2><p>如果你想使用不同的語言模型，可以至<a target="_blank" rel="noopener" href="https://huggingface.co/">huggingface</a>下載模型到”&#x2F;model”資料夾，模型便會加至設定中</p>
+<p><img src="https://hackmd.io/_uploads/SyS6g5yqa.png" alt="ui_model"></p>
+<p>設定完成後，便可開始使用akasha ui</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://akasha.github.io/project/2024/01/25/XML%E6%A0%BC%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/project/images/avatar.gif">
+      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/project/2024/01/25/XML%E6%A0%BC%E5%BC%8F/" class="post-title-link" itemprop="url">XML格式</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-01-25 03:36:06" itemprop="dateCreated datePublished" datetime="2024-01-25T03:36:06+08:00">2024-01-25</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="XML-Formatter"><a href="#XML-Formatter" class="headerlink" title="XML Formatter"></a>XML Formatter</h2><p>如果你想讓語言模型的回答為XML格式，可以使用XMLformatter</p>
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><p>如以下範例，首先先定義你想要回傳的key值的名稱、說明和型別，並利用<em><strong>XML_formatter</strong></em>轉換成xml格式的prompt，並在問問題時把xml_prompt丟入system_prompt中。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import akasha.prompts as prompts</span><br><span class="line">import akasha</span><br><span class="line">import akasha.eval as eval</span><br><span class="line"></span><br><span class="line">formatter = [</span><br><span class="line">        prompts.OutputSchema(name=&quot;學歷&quot;, description=&quot;受試者的就讀大學&quot;, type=&quot;str&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;經驗&quot;, description=&quot;受試者的工作經驗&quot;, type=&quot;str&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;專長&quot;, description=&quot;受試者的專長能力&quot;, type=&quot;list&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;年資&quot;, description=&quot;受試者的總工作年數&quot;, type=&quot;int&quot;)</span><br><span class="line">    ]</span><br><span class="line">xml_prompt = prompts.XML_formatter(formatter)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA(topK=10, threshold=0.0)</span><br><span class="line"></span><br><span class="line">response = ak.ask_whole_file(file_path=&quot;docs/resume_pool/A.docx&quot;,</span><br><span class="line">system_prompt=xml_prompt, prompt=f&#x27;&#x27;&#x27;以上是受試者的履歷，請回答該受試者的學歷、經驗、專長、年資&#x27;&#x27;&#x27;)</span><br><span class="line"></span><br><span class="line">print(response)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;resume&gt;</span><br><span class="line">    &lt;學歷&gt;國立臺北科技大學電資學士班 四技 就學中&lt;/學歷&gt;</span><br><span class="line">    &lt;經驗&gt;英文短期文理補習班補習班導師／管理人員&lt;/經驗&gt;</span><br><span class="line">    &lt;專長&gt;</span><br><span class="line">        &lt;能力&gt;語言能力&lt;/能力&gt;</span><br><span class="line">        &lt;英文&gt;聽-中等, 說-中等, 讀-中等, 寫-中等&lt;/英文&gt;</span><br><span class="line">        &lt;證照&gt;TOEIC &lt;/證照&gt;</span><br><span class="line">    &lt;/專長&gt;</span><br><span class="line">    &lt;年資&gt;0-1&lt;/年資&gt;</span><br><span class="line">&lt;/resume&gt;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://akasha.github.io/project/2024/01/01/DEV-%E5%AE%89%E8%A3%9D&%E5%9F%B7%E8%A1%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/project/images/avatar.gif">
+      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/project/2024/01/01/DEV-%E5%AE%89%E8%A3%9D&%E5%9F%B7%E8%A1%8C/" class="post-title-link" itemprop="url">DEV-安裝&執行</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-01-01 23:00:00" itemprop="dateCreated datePublished" datetime="2024-01-01T23:00:00+08:00">2024-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-08-28 14:11:30" itemprop="dateModified" datetime="2024-08-28T14:11:30+08:00">2024-08-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/project/categories/akasha-lab/" itemprop="url" rel="index"><span itemprop="name">akasha-lab</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="pip-安裝"><a href="#pip-安裝" class="headerlink" title="pip 安裝"></a>pip 安裝</h2><ol>
+<li>下載或git clone akasha ui-dev專案分支到你的資料夾 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git <span class="built_in">clone</span> --branch ui-dev https://github.com/iii-org/akasha.git</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> akasha</span></span><br></pre></td></tr></table></figure></li>
+<li>安裝所需python套件 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">python -m pip install -r requirements.txt</span></span><br></pre></td></tr></table></figure></li>
+<li>啟動fast api server 和 streamlit 介面 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">nohup</span> /bin/bash -c <span class="string">&quot;uvicorn api:app &amp;&quot;</span> &amp;&amp; streamlit run main.py</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><img src="https://hackmd.io/_uploads/HJKlJ2lqp.png" alt="image"></p>
+<h2 id="Docker-安裝"><a href="#Docker-安裝" class="headerlink" title="Docker 安裝"></a>Docker 安裝</h2><p>在某些情況之下採用pip 安裝，無法開啟dev-ui，或許這時候可以考慮使用docker</p>
+<ol>
+<li>下載或git clone akasha ui-dev專案分支到你的資料夾 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git <span class="built_in">clone</span> --branch ui-dev https://github.com/iii-org/akasha.git</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> akasha</span></span><br></pre></td></tr></table></figure></li>
+<li>(optional) 編輯 install.env 檔案 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">## install.env</span><br><span class="line">MODEL=./model    # 存放語言模型的資料夾</span><br><span class="line">CONFIG=./config # 存放dataset, knowledge 配置檔的資料夾</span><br><span class="line">DOCS=./docs # 存放文件的資料夾</span><br><span class="line">IMAGE_NAME=akasha_dev_ui</span><br><span class="line">IMAGE_VERSION=0.1</span><br></pre></td></tr></table></figure></li>
+<li>執行安裝 script <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">sudo</span> bash install.sh</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="預設openAI-key"><a href="#預設openAI-key" class="headerlink" title="預設openAI key"></a>預設openAI key</h3><p>如果您想要添加預設的 OpenAI API 密鑰或 Azure OpenAI API 密鑰，以便每個用戶都可以直接使用它，在第二步中，您可以在 <em><strong>install.env</strong></em> 文件中添加您的預設密鑰。<br>這將在你的config目錄中創建一個 <em><strong>default_key.json</strong></em> 文件，你可以更改該文件中的密鑰值以便在啟動akasha_dev_ui後更改或刪除密鑰。</p>
+<h3 id="openAI"><a href="#openAI" class="headerlink" title="openAI:"></a>openAI:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## install.env ##</span></span><br><span class="line">MODEL=./model   </span><br><span class="line">CONFIG=./config </span><br><span class="line">DOCS=./docs </span><br><span class="line">IMAGE_NAME=akasha-lab</span><br><span class="line">IMAGE_VERSION=0.6</span><br><span class="line">DEFAULT_OPENAI_API_KEY=&#123;your openAI key&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Azure-openAI"><a href="#Azure-openAI" class="headerlink" title="Azure openAI:"></a>Azure openAI:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## install.env ##</span></span><br><span class="line">MODEL=./model   </span><br><span class="line">CONFIG=./config </span><br><span class="line">DOCS=./docs </span><br><span class="line">IMAGE_NAME=akasha_dev_ui</span><br><span class="line">IMAGE_VERSION=0.6</span><br><span class="line">DEFAULT_AZURE_API_KEY=&#123;your Azure key&#125;</span><br><span class="line">DEFAULT_AZURE_API_BASE=&#123;your Azure base url&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<br/>
+<br/>
+
+
+<h2 id="使用docker-image建構container"><a href="#使用docker-image建構container" class="headerlink" title="使用docker image建構container"></a>使用docker image建構container</h2><p>1.創建資料夾儲存模型、文件資料</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p config</span><br><span class="line"><span class="built_in">mkdir</span> -p model</span><br><span class="line"><span class="built_in">mkdir</span> -p docs</span><br><span class="line"><span class="built_in">mkdir</span> -p chromadb</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>2.創建帳號yaml檔accounts.yaml</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">cookie:</span><br><span class="line">  expiry_days: 30</span><br><span class="line">  key: random_signature_key</span><br><span class="line">  name: random_cookie_name</span><br><span class="line">credentials:</span><br><span class="line">  usernames:</span><br><span class="line">    cws:</span><br><span class="line">      email: cws@gmail.com</span><br><span class="line">      name: cws</span><br><span class="line">      password: $2b$12$jCB8MeVqMc3jWDynjNyeVeLS8IWBduxnX362gLfJ1KIkeTPH9KYha</span><br><span class="line">  emails: []</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>3.從docker hub下載image並執行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> docker pull ccchang0518/akasha-lab:0.6</span><br><span class="line"><span class="built_in">sudo</span> docker run -v ./model:/app/model -v ./config:/app/config -v ./docs:/app/docs -v ./chromadb:/app/chromadb -v ./accounts.yaml:/app/accounts.yaml -p 8501:8501 --name akasha_dev_ui ccchang0518/akasha-lab:0.6</span><br></pre></td></tr></table></figure>
+
+<br/>
+<br/>
+
+
+<h2 id="使用API"><a href="#使用API" class="headerlink" title="使用API"></a>使用API</h2><p>若要直接串接akasha dev-ui API，啟動fastapi後，可至docs查詢API functions (<a target="_blank" rel="noopener" href="http://127.0.0.1:8000/docs">http://127.0.0.1:8000/docs</a>)</p>
+<p><img src="https://hackmd.io/_uploads/HkbuIKLAp.png" alt="image"></p>
+<br/>
+<br/>
+
+<p>若為docker安裝請使用-p {port}:8000 開啟fastapi port</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> docker run -v ./model:/app/model -v ./config:/app/config -v ./docs:/app/docs -v ./chromadb:/app/chromadb -v ./accounts.yaml:/app/accounts.yaml -p 8000:8000 -p 8501:8501 --name akasha-lab akasha-lab:0.6</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://akasha.github.io/project/2024/01/01/DEV-%E8%A8%BB%E5%86%8A%E5%B8%B3%E8%99%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/project/images/avatar.gif">
+      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/project/2024/01/01/DEV-%E8%A8%BB%E5%86%8A%E5%B8%B3%E8%99%9F/" class="post-title-link" itemprop="url">DEV-註冊帳號</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-01-01 22:59:00" itemprop="dateCreated datePublished" datetime="2024-01-01T22:59:00+08:00">2024-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-08-28 14:12:09" itemprop="dateModified" datetime="2024-08-28T14:12:09+08:00">2024-08-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/project/categories/akasha-lab/" itemprop="url" rel="index"><span itemprop="name">akasha-lab</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="註冊帳號"><a href="#註冊帳號" class="headerlink" title="註冊帳號"></a>註冊帳號</h2><p>akasha dev-ui需要使用者註冊帳號，不同使用者可以獨自創建dataset、knowledge用來做文檔問答，也可以分享dataset、knowledge給其他使用者。</p>
+<p><img src="https://hackmd.io/_uploads/rJtjE0eqT.png" alt="image"></p>
+<p>點選右下角”Sign Up”進入註冊介面<br><img src="https://hackmd.io/_uploads/SygzS0gqa.png" alt="image"></p>
+<p>註冊完成後便可使用Username 和 Password登入帳號<br><img src="https://hackmd.io/_uploads/SkTBSAg5p.png" alt="image"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://akasha.github.io/project/2024/01/01/DEV-Datasets/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/project/images/avatar.gif">
+      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/project/2024/01/01/DEV-Datasets/" class="post-title-link" itemprop="url">DEV-Datasets</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-01-01 22:58:00" itemprop="dateCreated datePublished" datetime="2024-01-01T22:58:00+08:00">2024-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-08-28 14:12:25" itemprop="dateModified" datetime="2024-08-28T14:12:25+08:00">2024-08-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/project/categories/akasha-lab/" itemprop="url" rel="index"><span itemprop="name">akasha-lab</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="創建Dataset"><a href="#創建Dataset" class="headerlink" title="創建Dataset"></a>創建Dataset</h2><p>Dataset為保存一個或多個文件檔的設定檔。<br>至New Dataset頁面，輸入dataset名稱與描述，並上傳dataset所需的文件檔案(.txt、.pdf、.docx)</p>
+<p><img src="https://hackmd.io/_uploads/HkE2pClcT.png" alt="image"></p>
+</br>
+</br>
+
+<p>可選擇是否分享dataset給其他使用者<br><img src="https://hackmd.io/_uploads/HJS8C0gcT.png" alt="image"></p>
+</br>
+</br>
+
+<p>按下 “Create Dataset”，創建dataset 成功</p>
+<p><img src="https://hackmd.io/_uploads/HyJc0Re5a.png" alt="image"></p>
+</br>
+</br>
+
+<p>:::warning<br>同一使用者無法創建相同名稱的Dataset，不同使用者可以創建相同名稱的Dataset<br>:::<br><img src="https://hackmd.io/_uploads/HkvCA0l5p.png" alt="image"></p>
+</br>
+</br>
+
+<h2 id="檢視Dataset"><a href="#檢視Dataset" class="headerlink" title="檢視Dataset"></a>檢視Dataset</h2><p>創建完Dataset後，可至My Dataset頁面檢視，勾選Shared Datasets按鈕後也會顯示別人分享的Datasets，自己創建的Dataset可以刪除，但無法刪除別人分享的Dataset。</p>
+<p><img src="https://hackmd.io/_uploads/rkO8kJb5a.png" alt="image"></p>
+</br>
+</br>
+
+<h2 id="更新Dataset"><a href="#更新Dataset" class="headerlink" title="更新Dataset"></a>更新Dataset</h2><p>若要更新Dataset資訊，可至Update Dataset頁面，選擇要更新的Dataset後，便可以更改Dataset名稱、描述，也可以新增或刪除文件、分享者。<br><img src="https://hackmd.io/_uploads/S1uye1-56.png" alt="image"><br><img src="https://hackmd.io/_uploads/H1xee1-q6.png" alt="image"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" title="上一頁" aria-label="上一頁" href="/project/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/project/">1</a><a class="page-number" href="/project/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/project/page/4/">4</a><a class="extend next" rel="next" title="下一頁" aria-label="下一頁" href="/project/page/4/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Chih Chuan Chang<ccchang@iii.org.tw></span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/project/js/comments.js"></script><script src="/project/js/utils.js"></script><script src="/project/js/motion.js"></script><script src="/project/js/sidebar.js"></script><script src="/project/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/project/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
