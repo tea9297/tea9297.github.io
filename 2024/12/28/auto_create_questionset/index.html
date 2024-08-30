@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"tea9297.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="自動產生問題如果您不想自己創建問題集來評估當前參數的性能，您可以使用 eval.auto_create_questionset 功能自動生成一個包含參考答案的問題集。隨後，您可以使用 eval.auto_evaluation 獲取評估指標，如 Bert_score、Rouge 和 LLM_score（對於問答問題集），以及單選問題集的正確率。這些分數範圍從 0 到 1，較高的值表示生成的回答與參考">
+<meta property="og:type" content="article">
+<meta property="og:title" content="auto_create_questionset">
+<meta property="og:url" content="https://tea9297.github.io/2024/12/28/auto_create_questionset/index.html">
+<meta property="og:site_name" content="akasha使用手冊">
+<meta property="og:description" content="自動產生問題如果您不想自己創建問題集來評估當前參數的性能，您可以使用 eval.auto_create_questionset 功能自動生成一個包含參考答案的問題集。隨後，您可以使用 eval.auto_evaluation 獲取評估指標，如 Bert_score、Rouge 和 LLM_score（對於問答問題集），以及單選問題集的正確率。這些分數範圍從 0 到 1，較高的值表示生成的回答與參考">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2024-12-28T15:59:59.000Z">
+<meta property="article:modified_time" content="2024-08-30T03:00:28.989Z">
+<meta property="article:author" content="Chih Chuan Chang&lt;ccchang@iii.org.tw&gt;">
+<meta property="article:tag" content="akasha">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://tea9297.github.io/2024/12/28/auto_create_questionset/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://tea9297.github.io/2024/12/28/auto_create_questionset/","path":"2024/12/28/auto_create_questionset/","title":"auto_create_questionset"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>auto_create_questionset | akasha使用手冊</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">akasha使用手冊</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">akasha manual</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜尋..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8B%95%E7%94%A2%E7%94%9F%E5%95%8F%E9%A1%8C"><span class="nav-number">1.</span> <span class="nav-text">自動產生問題</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8question-type%E6%B8%AC%E8%A9%A6%E4%B8%8D%E5%90%8C%E6%96%B9%E9%9D%A2%E7%9A%84%E8%83%BD%E5%8A%9B"><span class="nav-number">2.</span> <span class="nav-text">使用question_type測試不同方面的能力</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">2.1.</span> <span class="nav-text">範例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A%E5%95%8F%E9%A1%8C%E9%9B%86%E4%B8%BB%E9%A1%8C"><span class="nav-number">3.</span> <span class="nav-text">指定問題集主題</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B-1"><span class="nav-number">3.1.</span> <span class="nav-text">範例</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Chih Chuan Chang<ccchang@iii.org.tw></p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-TW" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://tea9297.github.io/2024/12/28/auto_create_questionset/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="auto_create_questionset | akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          auto_create_questionset
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-12-28 23:59:59" itemprop="dateCreated datePublished" datetime="2024-12-28T23:59:59+08:00">2024-12-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-08-30 11:00:28" itemprop="dateModified" datetime="2024-08-30T11:00:28+08:00">2024-08-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%A8%A1%E5%9E%8B%E8%A9%95%E4%BC%B0/" itemprop="url" rel="index"><span itemprop="name">模型評估</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="自動產生問題"><a href="#自動產生問題" class="headerlink" title="自動產生問題"></a>自動產生問題</h2><p>如果您不想自己創建問題集來評估當前參數的性能，您可以使用 <em><strong>eval.auto_create_questionset</strong></em> 功能自動生成一個包含參考答案的問題集。隨後，您可以使用 <em><strong>eval.auto_evaluation</strong></em> 獲取評估指標，如 Bert_score、Rouge 和 LLM_score（對於問答問題集），以及單選問題集的正確率。這些分數範圍從 0 到 1，較高的值表示生成的回答與參考答案更接近。</p>
+<p>如範例，以下創建了一個名為 ‘mic_essay.txt’ 的問題集文本文件，其中包含十個問題和參考答案。每個問題都是從 ‘doc&#x2F;mic&#x2F;‘ 目錄中給定文檔的內容段落中隨機生成的。然後，您可以使用該問題集文本文件來評估要測試的參數的性能。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import akasha.eval as eval</span><br><span class="line"></span><br><span class="line">eva = eval.Model_Eval(question_style=&quot;essay&quot;, search_type=&#x27;merge&#x27;,\</span><br><span class="line">      model=&quot;openai:gpt-3.5-turbo&quot;, embeddings=&quot;openai:text-embedding-ada-002&quot;,record_exp=&quot;exp_mic_auto_questionset&quot;)</span><br><span class="line"></span><br><span class="line">eva.auto_create_questionset(doc_path=&quot;doc/mic/&quot;, question_num=10, output_file_path=&quot;questionset/mic_essay.txt&quot;)</span><br><span class="line"></span><br><span class="line">bert_score, rouge, llm_score, tol_tokens = eva.auto_evaluation(questionset_file=&quot;questionset/mic_essay.txt&quot;, doc_path=&quot;doc/mic/&quot;, question_style = &quot;essay&quot;, record_exp=&quot;exp_mic_auto_evaluation&quot;,topK=3,search_type=&quot;svm&quot;)</span><br><span class="line">print(&quot;bert_score: &quot;, bert_score, &quot;\nrouge: &quot;, rouge, &quot;\nllm_score: &quot;, llm_score)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bert_score: 0.782</span><br><span class="line">rouge: 0.81</span><br><span class="line">llm_score: 0.393</span><br></pre></td></tr></table></figure>
+
+</br>
+</br>
+
+<h2 id="使用question-type測試不同方面的能力"><a href="#使用question-type測試不同方面的能力" class="headerlink" title="使用question_type測試不同方面的能力"></a>使用question_type測試不同方面的能力</h2><p>question_type 参数提供了四種問題類型：<em><strong>fact</strong></em>、<em><strong>summary</strong></em>、<em><strong>irrelevant</strong></em>、<em><strong>compared</strong></em>，預設是 fact。 </p>
+<ol>
+<li>fact測試回答一般事實的能力</li>
+<li>summary測試模型做摘要的能力</li>
+<li>irrelevant測試模型能否分辨文件中不存在答案的問題</li>
+<li>compared測試模型比較不同事物的能力</li>
+</ol>
+<h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import akasha.eval as eval</span><br><span class="line"></span><br><span class="line">eva = eval.Model_Eval(search_type=&#x27;merge&#x27;, question_type = &quot;irrelevant&quot;, model=&quot;openai:gpt-3.5-turbo&quot;, record_exp=&quot;exp_mic_auto_questionset&quot;)</span><br><span class="line"></span><br><span class="line">eva.auto_create_questionset(doc_path=&quot;doc/mic/&quot;, question_num=10, output_file_path=&quot;questionset/mic_irre.txt&quot;)</span><br><span class="line"></span><br><span class="line">bert_score, rouge, llm_score, tol_tokens = eva.auto_evaluation(questionset_file=&quot;questionset/mic_irre.txt&quot;, doc_path=&quot;doc/mic/&quot;, question_style = &quot;essay&quot;, record_exp=&quot;exp_mic_auto_evaluation&quot;,search_type=&quot;svm&quot;)</span><br></pre></td></tr></table></figure>
+
+</br>
+</br>
+
+<h2 id="指定問題集主題"><a href="#指定問題集主題" class="headerlink" title="指定問題集主題"></a>指定問題集主題</h2><p>如果你想生成特定主題的問題，你可以使用 <em><strong>create_topic_questionset</strong></em> 函數，它會使用輸入的主題在文檔中找到相關的文件段落並生成問題集。</p>
+<h3 id="範例-1"><a href="#範例-1" class="headerlink" title="範例"></a>範例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import akasha.eval as eval</span><br><span class="line"></span><br><span class="line">eva = eval.Model_Eval(search_type=&#x27;merge&#x27;,question_type = &quot;irrelevant&quot;, model=&quot;openai:gpt-3.5-turbo&quot;, record_exp=&quot;exp_mic_auto_questionset&quot;)</span><br><span class="line"></span><br><span class="line">eva.create_topic_questionset(doc_path=&quot;doc/mic/&quot;, topic= &quot;工業4.0&quot;, question_num=3, output_file_path=&quot;questionset/mic_topic_irre.txt&quot;)</span><br><span class="line"></span><br><span class="line">bert_score, rouge, llm_score, tol_tokens = eva.auto_evaluation(questionset_file=&quot;questionset/mic_topic_irre.txt&quot;, doc_path=&quot;doc/mic/&quot;, question_style = &quot;essay&quot;, record_exp=&quot;exp_mic_auto_evaluation&quot;,search_type=&quot;svm&quot;)</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/akasha/" rel="tag"># akasha</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/12/28/auto_evaluation/" rel="prev" title="auto_evaluation">
+                  <i class="fa fa-angle-left"></i> auto_evaluation
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/12/29/ask_agent/" rel="next" title="ask_agent">
+                  ask_agent <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Chih Chuan Chang<ccchang@iii.org.tw></span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
