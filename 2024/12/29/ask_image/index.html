@@ -19,28 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"tea9297.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="ask_agent如果你想詢問較複雜的問題，使用ask_agent，語言模型會將你的問題拆解來提供較好的回答。 example12345678910ak &#x3D; akasha.Doc_QA(    verbose&#x3D;True,    chunk_size&#x3D;500,    model&#x3D;&quot;openai:gpt-3.5-turbo&quot;,)res &#x3D; ak.ask_agent(    &amp;quo">
+    <meta name="description" content="ask_image如果你想同時輸入圖片與文字來詢問多模態模型(如gpt-4o, llama3.2-Vision)，可以使用ask_image，圖片路徑image_path可以是網址或本地圖片路徑，模型類別目前支援 openai, remote(vllm), huggingface(llama3.2-Vision)，但huggingface目前不支援stream流輸出。 example123456a">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ask_agent">
-<meta property="og:url" content="https://tea9297.github.io/2024/12/29/ask_agent/index.html">
+<meta property="og:title" content="ask_image">
+<meta property="og:url" content="https://tea9297.github.io/2024/12/29/ask_image/index.html">
 <meta property="og:site_name" content="akasha使用手冊">
-<meta property="og:description" content="ask_agent如果你想詢問較複雜的問題，使用ask_agent，語言模型會將你的問題拆解來提供較好的回答。 example12345678910ak &#x3D; akasha.Doc_QA(    verbose&#x3D;True,    chunk_size&#x3D;500,    model&#x3D;&quot;openai:gpt-3.5-turbo&quot;,)res &#x3D; ak.ask_agent(    &amp;quo">
+<meta property="og:description" content="ask_image如果你想同時輸入圖片與文字來詢問多模態模型(如gpt-4o, llama3.2-Vision)，可以使用ask_image，圖片路徑image_path可以是網址或本地圖片路徑，模型類別目前支援 openai, remote(vllm), huggingface(llama3.2-Vision)，但huggingface目前不支援stream流輸出。 example123456a">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2024-12-29T11:59:59.000Z">
-<meta property="article:modified_time" content="2024-08-30T02:59:50.594Z">
+<meta property="article:published_time" content="2024-12-29T12:59:59.000Z">
+<meta property="article:modified_time" content="2024-10-04T05:47:26.376Z">
 <meta property="article:author" content="Chih Chuan Chang&lt;ccchang@iii.org.tw&gt;">
 <meta property="article:tag" content="akasha">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://tea9297.github.io/2024/12/29/ask_agent/">
+<link rel="canonical" href="https://tea9297.github.io/2024/12/29/ask_image/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://tea9297.github.io/2024/12/29/ask_agent/","path":"2024/12/29/ask_agent/","title":"ask_agent"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://tea9297.github.io/2024/12/29/ask_image/","path":"2024/12/29/ask_image/","title":"ask_image"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>ask_agent | akasha使用手冊</title>
+<title>ask_image | akasha使用手冊</title>
   
 
 
@@ -140,7 +140,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ask-agent"><span class="nav-number">1.</span> <span class="nav-text">ask_agent</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#example"><span class="nav-number">1.1.</span> <span class="nav-text">example</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ask-image"><span class="nav-number">1.</span> <span class="nav-text">ask_image</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#example"><span class="nav-number">1.1.</span> <span class="nav-text">example</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -202,7 +202,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://tea9297.github.io/2024/12/29/ask_agent/">
+    <link itemprop="mainEntityOfPage" href="https://tea9297.github.io/2024/12/29/ask_image/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -215,12 +215,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="ask_agent | akasha使用手冊">
+      <meta itemprop="name" content="ask_image | akasha使用手冊">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          ask_agent
+          ask_image
         </h1>
 
         <div class="post-meta-container">
@@ -231,14 +231,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2024-12-29 19:59:59" itemprop="dateCreated datePublished" datetime="2024-12-29T19:59:59+08:00">2024-12-29</time>
+      <time title="創建時間：2024-12-29 20:59:59" itemprop="dateCreated datePublished" datetime="2024-12-29T20:59:59+08:00">2024-12-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-08-30 10:59:50" itemprop="dateModified" datetime="2024-08-30T10:59:50+08:00">2024-08-30</time>
+      <time title="修改時間：2024-10-04 13:47:26" itemprop="dateModified" datetime="2024-10-04T13:47:26+08:00">2024-10-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -259,10 +259,10 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="ask-agent"><a href="#ask-agent" class="headerlink" title="ask_agent"></a>ask_agent</h2><p>如果你想詢問較複雜的問題，使用ask_agent，語言模型會將你的問題拆解來提供較好的回答。</p>
-<h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ak = akasha.Doc_QA(</span><br><span class="line">    verbose=<span class="literal">True</span>,</span><br><span class="line">    chunk_size=<span class="number">500</span>,</span><br><span class="line">    model=<span class="string">&quot;openai:gpt-3.5-turbo&quot;</span>,</span><br><span class="line">)</span><br><span class="line">res = ak.ask_agent(</span><br><span class="line">    <span class="string">&quot;./docs/mic/&quot;</span>,     </span><br><span class="line">    <span class="string">&quot;LPWAN和5G的區別是什麼?&quot;</span>,</span><br><span class="line">)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <div class="post-body" itemprop="articleBody"><h2 id="ask-image"><a href="#ask-image" class="headerlink" title="ask_image"></a>ask_image</h2><p>如果你想同時輸入圖片與文字來詢問多模態模型(如gpt-4o, llama3.2-Vision)，可以使用ask_image，圖片路徑image_path可以是網址或本地圖片路徑，模型類別目前支援 <em><strong>openai</strong></em>, <em><strong>remote</strong></em>(vllm), <em><strong>huggingface</strong></em>(llama3.2-Vision)，但huggingface目前不支援stream流輸出。</p>
+<h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ak = akasha.Doc_QA(model=<span class="string">&quot;openai:gpt-4o&quot;</span>,)</span><br><span class="line">url = <span class="string">&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gfp-wisconsin-madison-the-nature-boardwalk.jpg/2560px-Gfp-wisconsin-madison-the-nature-boardwalk.jpg&quot;</span></span><br><span class="line">png = <span class="string">&quot;../miao.png&quot;</span></span><br><span class="line"></span><br><span class="line">res = ak.ask_image(image_path=url, prompt = <span class="string">&quot;這張圖片是甚麼?&quot;</span>) </span><br><span class="line"><span class="built_in">print</span>(res)</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">LPWAN和5G的主要區別在於他們的頻寬、延遲、成本和應用場景。</span><br><span class="line"></span><br><span class="line">LPWAN的頻寬相對較低（0.3 KBps – 50KBps），延遲較高（秒 - 分），且成本較低。它的主要優點是低耗能、支援長距離傳輸，並且可以連接大量的設備。然而，由於其頻寬和延遲的限制，LPWAN在製造業中的</span><br><span class="line">應用主要適用於非即時、非關鍵性的應用，例如環境污染偵測、照明、人員移動等，且須長時間穩定使用的應用情境。</span><br><span class="line"></span><br><span class="line">相較之下，5G提供的頻寬範圍在1-10 Gbps，而延遲則在1-10 ms之間，成本較高。這使得5G非常適合需要高時序精密度的應用，例如異質設備協作、遠端操控、混合現實（MR）巡檢維修等。此外，5G網路在大型</span><br><span class="line">廠區中，相較於Wi-Fi，無移交控制（Handover）中斷問題，因此更適合如低延遲、快速移動型的自主移動機器人（AMR）或無人機（Drone）廣域應用。然而，5G私網的建置成本相對昂貴，可能會影響企業的導 </span><br><span class="line">入意願。</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">這張圖片顯示了一個長度不等的木板路，穿過一片綠色的草地和樹林。路面上有許多細小的草根和葉子。路面兩側是高約1米左右的青綠色野生植物，中間有一些紅色的灌木丛。天空是藍色的，有一</span><br><span class="line">些白雲。</span><br><span class="line"></span><br><span class="line">這張圖像可能是一個自然景觀或一個旅遊目的地，例如一個國家公園或一個鳥類保護區。它也可能是一個攝影作品，用來展示自然美景和人們與環境之間的互動關係。</span><br><span class="line"></span><br><span class="line">總體而言，這張圖像展現了人們與自然環境之間美麗而微妙的關係，並呼籲我們去探索、欣賞和保護我們周圍的世界。這張圖片顯示了一個長度不等的木板路，穿過一片綠色的草地和樹林。路面上有許多細小的草根和葉子。路面兩側是高約1米左右的青綠色野生植物，中間有一些紅色的灌木叢。天空是藍色的，有一些白雲。</span><br><span class="line"></span><br><span class="line">這張圖像可能是一個自然景觀或一個旅遊目的地，例如一個國家公園或一個鳥類保護區。它也可能是一個攝影作品，用來展示自然美景和人們與環境之間的互動關係。</span><br><span class="line"></span><br><span class="line">總體而言，這張圖像展現了人們與自然環境之間美麗而微妙的關係，並呼籲我們去探索、欣賞和保護我們周圍的世界。</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -279,13 +279,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/12/28/auto_create_questionset/" rel="prev" title="auto_create_questionset">
-                  <i class="fa fa-angle-left"></i> auto_create_questionset
+                <a href="/2024/12/29/ask_self/" rel="prev" title="ask_self">
+                  <i class="fa fa-angle-left"></i> ask_self
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/12/29/ask_self/" rel="next" title="ask_self">
-                  ask_self <i class="fa fa-angle-right"></i>
+                <a href="/2024/12/29/ask_whole_file/" rel="next" title="ask_whole_file">
+                  ask_whole_file <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>

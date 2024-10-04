@@ -148,7 +148,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -187,6 +187,101 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://tea9297.github.io/2024/12/26/%E6%B5%81%E8%BC%B8%E5%87%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/12/26/%E6%B5%81%E8%BC%B8%E5%87%BA/" class="post-title-link" itemprop="url">流輸出</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-12-26 17:59:59" itemprop="dateCreated datePublished" datetime="2024-12-26T17:59:59+08:00">2024-12-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-08-30 11:03:33" itemprop="dateModified" datetime="2024-08-30T11:03:33+08:00">2024-08-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%80%B2%E9%9A%8E/" itemprop="url" rel="index"><span itemprop="name">進階</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="call-stream-model"><a href="#call-stream-model" class="headerlink" title="call_stream_model"></a>call_stream_model</h2><p>在輔助函數中，若LLM模型為若為<em><strong>openai</strong></em>, <em><strong>huggingface</strong></em>, <em><strong>remote</strong></em>類模型，可以使用akasha.call_stream_model()來得到流輸出</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> akasha</span><br><span class="line">prompt = <span class="string">&quot;say something.&quot;</span></span><br><span class="line">model_obj = akasha.handle_model(<span class="string">&quot;openai:gpt-3.5-turbo&quot;</span>, <span class="literal">False</span>, <span class="number">0.0</span>)</span><br><span class="line">streaming = akasha.call_stream_model(model_obj, prompt)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> s <span class="keyword">in</span> streaming:</span><br><span class="line">    <span class="built_in">print</span>(s)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Doc-QA-stream"><a href="#Doc-QA-stream" class="headerlink" title="Doc_QA stream"></a>Doc_QA stream</h2><p>Doc_QA class的函式皆可使用參數stream&#x3D;True來得到流輸出</p>
+<h2 id="Stream-Output"><a href="#Stream-Output" class="headerlink" title="Stream Output"></a>Stream Output</h2><p>要在網頁上或API中使用流輸出(及時一個字一個字輸出語言模型回答)時，若為<em><strong>openai</strong></em>, <em><strong>huggingface</strong></em>, <em><strong>remote</strong></em>類模型，可以使用model_obj.stream(prompt)，以下為streamlit write_stream在網頁上即時輸出回答為範例</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> streamlit <span class="keyword">as</span> st</span><br><span class="line"><span class="keyword">import</span> akasha</span><br><span class="line"><span class="keyword">import</span> gc, torch</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="string">&quot;pre&quot;</span> <span class="keyword">not</span> <span class="keyword">in</span> st.session_state:</span><br><span class="line">    st.session_state.pre = <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">if</span> <span class="string">&quot;model_obj&quot;</span> <span class="keyword">not</span> <span class="keyword">in</span> st.session_state:</span><br><span class="line">    st.session_state.model_obj = <span class="literal">None</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">clean</span>():</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        gc.collect()</span><br><span class="line">        torch.cuda.ipc_collect()</span><br><span class="line">        torch.cuda.empty_cache()</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">stream_response</span>(<span class="params">prompt:<span class="built_in">str</span>, model_name:<span class="built_in">str</span>=<span class="string">&quot;openai:gpt-3.5-turbo&quot;</span></span>):</span><br><span class="line">    <span class="comment"># Mistral-7B-Instruct-v0.3   Llama3-8B-Chinese-Chat</span></span><br><span class="line">    mdl_type = model_name.split(<span class="string">&#x27;:&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">    streaming = st.session_state.model_obj.stream(prompt)</span><br><span class="line">    <span class="keyword">for</span> s <span class="keyword">in</span> streaming:</span><br><span class="line">        <span class="keyword">if</span> mdl_type == <span class="string">&quot;openai&quot;</span>:</span><br><span class="line">            <span class="keyword">yield</span> s.content</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">yield</span> s</span><br><span class="line"></span><br><span class="line">model = st.selectbox(<span class="string">&quot;select model&quot;</span>, [<span class="string">&quot;openai:gpt-3.5-turbo&quot;</span>,<span class="string">&quot;hf:model/Mistral-7B-Instruct-v0.3&quot;</span>])</span><br><span class="line">prompt = st.chat_input(<span class="string">&quot;Say something&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> st.session_state.pre != model:</span><br><span class="line">    st.session_state.model_obj = <span class="literal">None</span></span><br><span class="line">    clean()</span><br><span class="line">    st.session_state.model_obj = akasha.helper.handle_model(model, <span class="literal">False</span>, <span class="number">0.0</span>)</span><br><span class="line">    st.session_state.pre = model</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> prompt:</span><br><span class="line">    st.write(<span class="string">&quot;question: &quot;</span> + prompt)</span><br><span class="line">    st.write_stream(stream_response(prompt, model))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>使用model_obj &#x3D; akasha.helper.handle_model(model, False, 0.0)建立模型物件，當要使用推論時，使用model_obj.stream(prompt)進行推論，可使用yield讓stream_response函式回傳generator, 便可即時輸出回答。</p>
+<h3 id="模型為openai類型時，s-content才是輸出文字，其他類型s即是輸出文字。"><a href="#模型為openai類型時，s-content才是輸出文字，其他類型s即是輸出文字。" class="headerlink" title="模型為openai類型時，s.content才是輸出文字，其他類型s即是輸出文字。"></a>模型為openai類型時，s.content才是輸出文字，其他類型s即是輸出文字。</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1035,114 +1130,6 @@
 <p><img src="https://hackmd.io/_uploads/rJtjE0eqT.png" alt="image"></p>
 <p>點選右下角”Sign Up”進入註冊介面<br><img src="https://hackmd.io/_uploads/SygzS0gqa.png" alt="image"></p>
 <p>註冊完成後便可使用Username 和 Password登入帳號<br><img src="https://hackmd.io/_uploads/SkTBSAg5p.png" alt="image"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://tea9297.github.io/2024/01/01/DEV-Datasets/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="akasha使用手冊">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | akasha使用手冊">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/01/01/DEV-Datasets/" class="post-title-link" itemprop="url">akashalab-Datasets</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2024-01-01 22:58:00" itemprop="dateCreated datePublished" datetime="2024-01-01T22:58:00+08:00">2024-01-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-08-30 11:30:13" itemprop="dateModified" datetime="2024-08-30T11:30:13+08:00">2024-08-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/akasha-lab/" itemprop="url" rel="index"><span itemprop="name">akasha-lab</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="創建Dataset"><a href="#創建Dataset" class="headerlink" title="創建Dataset"></a>創建Dataset</h2><p>Dataset為保存一個或多個文件檔的設定檔。<br>至New Dataset頁面，輸入dataset名稱與描述，並上傳dataset所需的文件檔案(.txt、.pdf、.docx)</p>
-<p><img src="https://hackmd.io/_uploads/HkE2pClcT.png" alt="image"></p>
-</br>
-</br>
-
-<p>可選擇是否分享dataset給其他使用者<br><img src="https://hackmd.io/_uploads/HJS8C0gcT.png" alt="image"></p>
-</br>
-</br>
-
-<p>按下 “Create Dataset”，創建dataset 成功</p>
-<p><img src="https://hackmd.io/_uploads/HyJc0Re5a.png" alt="image"></p>
-</br>
-</br>
-
-<p>:::warning<br>同一使用者無法創建相同名稱的Dataset，不同使用者可以創建相同名稱的Dataset<br>:::<br><img src="https://hackmd.io/_uploads/HkvCA0l5p.png" alt="image"></p>
-</br>
-</br>
-
-<h2 id="檢視Dataset"><a href="#檢視Dataset" class="headerlink" title="檢視Dataset"></a>檢視Dataset</h2><p>創建完Dataset後，可至My Dataset頁面檢視，勾選Shared Datasets按鈕後也會顯示別人分享的Datasets，自己創建的Dataset可以刪除，但無法刪除別人分享的Dataset。</p>
-<p><img src="https://hackmd.io/_uploads/rkO8kJb5a.png" alt="image"></p>
-</br>
-</br>
-
-<h2 id="更新Dataset"><a href="#更新Dataset" class="headerlink" title="更新Dataset"></a>更新Dataset</h2><p>若要更新Dataset資訊，可至Update Dataset頁面，選擇要更新的Dataset後，便可以更改Dataset名稱、描述，也可以新增或刪除文件、分享者。<br><img src="https://hackmd.io/_uploads/S1uye1-56.png" alt="image"><br><img src="https://hackmd.io/_uploads/H1xee1-q6.png" alt="image"></p>
 
       
     </div>
