@@ -27,7 +27,7 @@
 <meta property="og:description" content="選擇不同語言模型使用參數model便可以選擇不同的語言模型，預設是openai:gpt-3.5-turbo. 範例1. openai1234567import akashaakasha.Doc_QA()ak.get_response(dir_path,                 prompt,                 embeddings&#x3D;&quot;openai:text-embe">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-12-26T15:59:59.000Z">
-<meta property="article:modified_time" content="2024-10-17T08:09:53.958Z">
+<meta property="article:modified_time" content="2024-10-17T08:17:19.297Z">
 <meta property="article:author" content="Chih Chuan Chang&lt;ccchang@iii.org.tw&gt;">
 <meta property="article:tag" content="akasha-advanced">
 <meta name="twitter:card" content="summary">
@@ -238,7 +238,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-10-17 16:09:53" itemprop="dateModified" datetime="2024-10-17T16:09:53+08:00">2024-10-17</time>
+      <time title="修改時間：2024-10-17 16:17:19" itemprop="dateModified" datetime="2024-10-17T16:17:19+08:00">2024-10-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -283,7 +283,7 @@
 </br>
 </br>
 
-<h3 id="4-遠端api"><a href="#4-遠端api" class="headerlink" title="4. 遠端api"></a>4. 遠端api</h3><p>如果你使用別人的api或者利用TGI (Text Generation Inference)部署自己的模型，你可以使用***remote:{your LLM api url}***來加載模型。</p>
+<h3 id="4-遠端api"><a href="#4-遠端api" class="headerlink" title="4. 遠端api"></a>4. 遠端api</h3><p>如果你使用別人的api或者利用TGI (Text Generation Inference)部署自己的模型，你可以使用 <em><strong>remote:{your LLM api url}</strong></em> 來加載模型。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, </span><br><span class="line">                prompt, </span><br><span class="line">                model=&quot;remote:http://140.92.60.189:8081&quot;)</span><br></pre></td></tr></table></figure>
 
 
