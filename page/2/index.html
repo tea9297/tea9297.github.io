@@ -605,7 +605,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-08-30 11:02:10" itemprop="dateModified" datetime="2024-08-30T11:02:10+08:00">2024-08-30</time>
+      <time title="修改時間：2024-10-17 16:09:53" itemprop="dateModified" datetime="2024-10-17T16:09:53+08:00">2024-10-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -637,10 +637,16 @@
 </br>
 </br>
 
-<h3 id="3-llama-cpp"><a href="#3-llama-cpp" class="headerlink" title="3. llama-cpp"></a>3. llama-cpp</h3><p>llama-cpp允許使用quantized模型並執行在cpu上，你可以從huggingface上下載.gguf llama-cpp 模型，如範例，如果你的模型下載到”model&#x2F;“路徑下，可以使用以下方法加載模型</p>
+<h3 id="3-llama-cpp"><a href="#3-llama-cpp" class="headerlink" title="3. llama-cpp"></a>3. llama-cpp</h3><p>安裝llama-cpp-python可以使用cpu推論.gguf格式的模型，或是安裝akasha時選擇llama-cpp</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install llama-cpp-python</span><br><span class="line">#pip install akasha-terminal[llama-cpp]</span><br></pre></td></tr></table></figure>
+
+<p>llama-cpp允許使用quantized模型並執行在cpu上，你可以從huggingface上下載.gguf llama-cpp 模型，如範例，如果你的模型下載到”model&#x2F;“路徑下，可以使用以下方法加載模型</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, </span><br><span class="line">                prompt, </span><br><span class="line">                embeddings=&quot;huggingface:all-MiniLM-L6-v2&quot;,</span><br><span class="line">                model=&quot;llama-cpu:model/llama-2-13b-chat.Q5_K_S.gguf&quot;)</span><br></pre></td></tr></table></figure>
-<p>llama-cpp同樣允許使用gpu運算模型，使用<em><strong>llama-gpu</strong></em></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, </span><br><span class="line">                prompt, </span><br><span class="line">                embeddings=&quot;huggingface:all-MiniLM-L6-v2&quot;,</span><br><span class="line">                model=&quot;llama-gpu:model/llama-2-3b-chat.Q5_K_S.gguf&quot;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</br>
+</br>
+
+<p>llama-cpp同樣允許使用gpu運算模型，但安裝套件時需要使用cmake安裝，並確認已安裝g++, gcc和nvidia driver &amp; toolkit，詳細請見<a target="_blank" rel="noopener" href="https://github.com/abetlen/llama-cpp-python">llama-cpp-python</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CMAKE_ARGS=&quot;-DGGML_CUDA=on&quot; FORCE_CMAKE=1 python -m pip install --upgrade --force-reinstall llama-cpp-python&gt;=0.3.1 --no-cache-dir</span><br></pre></td></tr></table></figure>
 
 </br>
 </br>
