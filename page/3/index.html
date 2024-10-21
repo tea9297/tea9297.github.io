@@ -680,7 +680,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-10-21 11:34:29" itemprop="dateModified" datetime="2024-10-21T11:34:29+08:00">2024-10-21</time>
+      <time title="修改時間：2024-10-21 11:39:36" itemprop="dateModified" datetime="2024-10-21T11:39:36+08:00">2024-10-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -711,7 +711,7 @@
 
 
 <h3 id="Docker安裝"><a href="#Docker安裝" class="headerlink" title="Docker安裝"></a>Docker安裝</h3><p>若要使用docker安裝，可以直接下載image</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">docker pull ccchang0518/akasha-ui:0.1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">docker pull ccchang0518/akasha-ui:1.0</span></span><br></pre></td></tr></table></figure>
 
 <p>如要使用gpu來推論llama-cpp模型(.gguf)</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">docker pull ccchang0518/akasha-ui:llamacpp</span></span><br></pre></td></tr></table></figure>
@@ -1076,7 +1076,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://tea9297.github.io/2024/01/01/DEV-Datasets/">
+    <link itemprop="mainEntityOfPage" href="https://tea9297.github.io/2024/01/01/DEV-%E8%A8%AD%E5%AE%9A/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1094,7 +1094,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/01/01/DEV-Datasets/" class="post-title-link" itemprop="url">akashalab-Datasets</a>
+          <a href="/2024/01/01/DEV-%E8%A8%AD%E5%AE%9A/" class="post-title-link" itemprop="url">akashalab-設定</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1112,7 +1112,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-08-30 11:30:13" itemprop="dateModified" datetime="2024-08-30T11:30:13+08:00">2024-08-30</time>
+      <time title="修改時間：2024-08-30 11:30:22" itemprop="dateModified" datetime="2024-08-30T11:30:22+08:00">2024-08-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1134,30 +1134,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="創建Dataset"><a href="#創建Dataset" class="headerlink" title="創建Dataset"></a>創建Dataset</h2><p>Dataset為保存一個或多個文件檔的設定檔。<br>至New Dataset頁面，輸入dataset名稱與描述，並上傳dataset所需的文件檔案(.txt、.pdf、.docx)</p>
-<p><img src="https://hackmd.io/_uploads/HkE2pClcT.png" alt="image"></p>
+          <h2 id="API-KEY"><a href="#API-KEY" class="headerlink" title="API KEY"></a>API KEY</h2><p>若要使用openAI的模型，必須輸入API KEY，可選擇openAI或是Azure openAI其一<br>如範例，選擇使用Azure openAI後，輸入key值與URL，按下儲存，若顯示成功，便成功添加API KEY。</p>
+<p><img src="https://hackmd.io/_uploads/S1dU30xca.png" alt="image"></p>
+<p>若勾選左下角”Save Permanently”便會將key值儲存至config中，下次登入也可以直接使用。</p>
+<p><img src="https://hackmd.io/_uploads/BJgE53Cl9T.png" alt="image"></p>
 </br>
 </br>
 
-<p>可選擇是否分享dataset給其他使用者<br><img src="https://hackmd.io/_uploads/HJS8C0gcT.png" alt="image"></p>
-</br>
-</br>
-
-<p>按下 “Create Dataset”，創建dataset 成功</p>
-<p><img src="https://hackmd.io/_uploads/HyJc0Re5a.png" alt="image"></p>
-</br>
-</br>
-
-<p>:::warning<br>同一使用者無法創建相同名稱的Dataset，不同使用者可以創建相同名稱的Dataset<br>:::<br><img src="https://hackmd.io/_uploads/HkvCA0l5p.png" alt="image"></p>
-</br>
-</br>
-
-<h2 id="檢視Dataset"><a href="#檢視Dataset" class="headerlink" title="檢視Dataset"></a>檢視Dataset</h2><p>創建完Dataset後，可至My Dataset頁面檢視，勾選Shared Datasets按鈕後也會顯示別人分享的Datasets，自己創建的Dataset可以刪除，但無法刪除別人分享的Dataset。</p>
-<p><img src="https://hackmd.io/_uploads/rkO8kJb5a.png" alt="image"></p>
-</br>
-</br>
-
-<h2 id="更新Dataset"><a href="#更新Dataset" class="headerlink" title="更新Dataset"></a>更新Dataset</h2><p>若要更新Dataset資訊，可至Update Dataset頁面，選擇要更新的Dataset後，便可以更改Dataset名稱、描述，也可以新增或刪除文件、分享者。<br><img src="https://hackmd.io/_uploads/S1uye1-56.png" alt="image"><br><img src="https://hackmd.io/_uploads/H1xee1-q6.png" alt="image"></p>
+<h2 id="History"><a href="#History" class="headerlink" title="History"></a>History</h2><p>History分頁可下載文檔問答的紀錄，並下載成.txt或.json檔案。<br><img src="https://hackmd.io/_uploads/SJBzpRlq6.png" alt="image"></p>
+<h2 id="Account"><a href="#Account" class="headerlink" title="Account"></a>Account</h2><p>Account分頁可更改密碼或是刪除帳號<br><img src="https://hackmd.io/_uploads/SkYEaAx5a.png" alt="image"></p>
 
       
     </div>
