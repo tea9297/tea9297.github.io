@@ -1,112 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>akashalab-Datasets</title>
-    <url>/2024/01/01/DEV-Datasets/</url>
-    <content><![CDATA[<h2 id="創建Dataset"><a href="#創建Dataset" class="headerlink" title="創建Dataset"></a>創建Dataset</h2><p>Dataset為保存一個或多個文件檔的設定檔。<br>至New Dataset頁面，輸入dataset名稱與描述，並上傳dataset所需的文件檔案(.txt、.pdf、.docx)</p>
-<p><img src="https://hackmd.io/_uploads/HkE2pClcT.png" alt="image"></p>
-</br>
-</br>
-
-<p>可選擇是否分享dataset給其他使用者<br><img src="https://hackmd.io/_uploads/HJS8C0gcT.png" alt="image"></p>
-</br>
-</br>
-
-<p>按下 “Create Dataset”，創建dataset 成功</p>
-<p><img src="https://hackmd.io/_uploads/HyJc0Re5a.png" alt="image"></p>
-</br>
-</br>
-
-<p>:::warning<br>同一使用者無法創建相同名稱的Dataset，不同使用者可以創建相同名稱的Dataset<br>:::<br><img src="https://hackmd.io/_uploads/HkvCA0l5p.png" alt="image"></p>
-</br>
-</br>
-
-<h2 id="檢視Dataset"><a href="#檢視Dataset" class="headerlink" title="檢視Dataset"></a>檢視Dataset</h2><p>創建完Dataset後，可至My Dataset頁面檢視，勾選Shared Datasets按鈕後也會顯示別人分享的Datasets，自己創建的Dataset可以刪除，但無法刪除別人分享的Dataset。</p>
-<p><img src="https://hackmd.io/_uploads/rkO8kJb5a.png" alt="image"></p>
-</br>
-</br>
-
-<h2 id="更新Dataset"><a href="#更新Dataset" class="headerlink" title="更新Dataset"></a>更新Dataset</h2><p>若要更新Dataset資訊，可至Update Dataset頁面，選擇要更新的Dataset後，便可以更改Dataset名稱、描述，也可以新增或刪除文件、分享者。<br><img src="https://hackmd.io/_uploads/S1uye1-56.png" alt="image"><br><img src="https://hackmd.io/_uploads/H1xee1-q6.png" alt="image"></p>
-]]></content>
-      <categories>
-        <category>akasha-lab</category>
-      </categories>
-      <tags>
-        <tag>akasha-UI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>akashalab-Knowledges</title>
-    <url>/2024/01/01/DEV-Knowledges/</url>
-    <content><![CDATA[<h2 id="創建Knowledge"><a href="#創建Knowledge" class="headerlink" title="創建Knowledge"></a>創建Knowledge</h2><p>knowledge為一個保存資料集(Datasets)和搜尋參數的設定檔，可以直接使用knowledge來使用文檔問答。<br>至New Knowledge頁面，輸入Knowledge名稱，選擇嵌入模型，選擇文件段落大小，選擇Dataset(可以多個)，預設為選擇所有文件檔案，也可以各個檔案逐一勾選。</p>
-<p><img src="https://hackmd.io/_uploads/Bk9a71bq6.png" alt="image"></p>
-</br>
-</br>hhh
-
-<p>可選擇是否分享Knowledge給其他使用者<br><img src="https://hackmd.io/_uploads/ry2K4yZ9p.png" alt="image"></p>
-</br>
-</br>
-
-<p>按下 “Create Knowledge”，會為每個文件產生向量db，因此可能需要等待一段時間。<br><img src="https://hackmd.io/_uploads/Sy3kS1bc6.png" alt="image"></p>
-</br>
-</br>
-
-<p>:::warning<br>同一使用者無法創建相同名稱的Knowledge，不同使用者可以創建相同名稱的Knowledge<br>:::<br><img src="https://hackmd.io/_uploads/Ski7By-5T.png" alt="image"></p>
-</br>
-</br>
-
-<h2 id="檢視Knowledge"><a href="#檢視Knowledge" class="headerlink" title="檢視Knowledge"></a>檢視Knowledge</h2><p>創建完Knowledge後，可至My Knowledges頁面檢視，勾選Shared Knowledges按鈕後也會顯示別人分享的Knowledges，自己創建的Knowledge可以刪除，但無法刪除別人分享的Knowledge。</p>
-<p><img src="https://hackmd.io/_uploads/Hkq2HJbca.png" alt="image"></p>
-</br>
-</br>
-
-<h2 id="更新Knowledge"><a href="#更新Knowledge" class="headerlink" title="更新Knowledge"></a>更新Knowledge</h2><p>若要更新Knowledge資訊，可至Update Knowledge頁面，選擇要更新的Knowledge後，便可以更改Knowledge名稱、描述，也可以新增或刪除文件、分享者。<br><img src="https://hackmd.io/_uploads/r1RvLJZqa.png" alt="image"><br><img src="https://hackmd.io/_uploads/B1afL1b56.png" alt="image"></p>
-]]></content>
-      <categories>
-        <category>akasha-lab</category>
-      </categories>
-      <tags>
-        <tag>akasha-UI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>akashalab-Consult</title>
-    <url>/2024/01/01/DEV-Consult/</url>
-    <content><![CDATA[<h2 id="Chat"><a href="#Chat" class="headerlink" title="Chat"></a>Chat</h2><p>Chat與Regular Consult相似，會根據提供的文檔進行問答，但同時Chat也會記住使用者之前的問答互動，方便使用者進行追問。</p>
-<p><img src="https://hackmd.io/_uploads/HJYO5ZfzR.png" alt="image"></p>
-<p>若要進行與之前不相關、新的提問，可以點選右邊按紐Clear History清除紀錄。</p>
-</br>
-</br>
-
-
-<h2 id="Regular-Consult"><a href="#Regular-Consult" class="headerlink" title="Regular Consult"></a>Regular Consult</h2><p>創建完Knowledge後，便可以利用它來做文檔問答，來到Consult頁面，選擇Knowledge後，便可以輸入問題，按下crtl+Enter後便可以提交問題給語言模型等待回應。</p>
-<p><img src="https://hackmd.io/_uploads/HyLhLJZ9a.png" alt="image"></p>
-<h3 id="更改參數"><a href="#更改參數" class="headerlink" title="更改參數"></a>更改參數</h3><p>若你為該Knowledge的擁有者，按下Advanced可以更改Knowledge的參數，提交問題後，參數將會儲存到config中。<br><img src="https://hackmd.io/_uploads/Hk4sPkb9p.png" alt="image"></p>
-<h5 id="1-System-Prompt-為希望語言模型回答的格式"><a href="#1-System-Prompt-為希望語言模型回答的格式" class="headerlink" title="1. System Prompt 為希望語言模型回答的格式"></a>1. System Prompt 為希望語言模型回答的格式</h5><h5 id="2-language-model-為使用何種語言模型"><a href="#2-language-model-為使用何種語言模型" class="headerlink" title="2. language model 為使用何種語言模型"></a>2. language model 為使用何種語言模型</h5><h5 id="3-search-type-為搜尋文檔的方法"><a href="#3-search-type-為搜尋文檔的方法" class="headerlink" title="3. search type 為搜尋文檔的方法"></a>3. search type 為搜尋文檔的方法</h5><h5 id="4-Top-K-為使用文檔段落的數量"><a href="#4-Top-K-為使用文檔段落的數量" class="headerlink" title="4. Top K 為使用文檔段落的數量"></a>4. Top K 為使用文檔段落的數量</h5><h5 id="5-Threshold-為文檔與問題相似度的閾值"><a href="#5-Threshold-為文檔與問題相似度的閾值" class="headerlink" title="5. Threshold 為文檔與問題相似度的閾值"></a>5. Threshold 為文檔與問題相似度的閾值</h5><h5 id="6-Max-Doc-Length-為文檔段落的最長總長度"><a href="#6-Max-Doc-Length-為文檔段落的最長總長度" class="headerlink" title="6. Max Doc Length 為文檔段落的最長總長度"></a>6. Max Doc Length 為文檔段落的最長總長度</h5><h5 id="7-Temperature-為語言模型的隨機性"><a href="#7-Temperature-為語言模型的隨機性" class="headerlink" title="7. Temperature 為語言模型的隨機性"></a>7. Temperature 為語言模型的隨機性</h5></br>
-</br>
-
-<h2 id="Deep-Consult"><a href="#Deep-Consult" class="headerlink" title="Deep Consult"></a>Deep Consult</h2><p>若要詢問較為複雜的問題，可使用Deep-Consult，將可能需要的知識點做為子問題放到Sub-Questions中，再將最終期望詢問的問題填入Question欄位，按下”Submit”按鈕，便可等待語言模型回答。</p>
-<p><img src="https://hackmd.io/_uploads/r1jk31Wqp.png" alt="image"></p>
-</br>
-</br>
-
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>在Summary頁面，可以從Dataset中選擇一個文件檔案，並輸入指示進行摘要。</p>
-<p><img src="https://hackmd.io/_uploads/ryP6Hht2a.png" alt="image"></p>
-</br>
-</br>
-
-
-<p>你也可以上傳一個文件檔案進行摘要</p>
-<p><img src="https://hackmd.io/_uploads/r1kcr2Knp.png" alt="image"></p>
-]]></content>
-      <categories>
-        <category>akasha-lab</category>
-      </categories>
-      <tags>
-        <tag>akasha-UI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2024 updates</title>
     <url>/2024/12/31/2024%20updates/</url>
     <content><![CDATA[<h2 id="10-17-0-8-66"><a href="#10-17-0-8-66" class="headerlink" title="10&#x2F;17(0.8.66)"></a>10&#x2F;17(0.8.66)</h2><ul>
@@ -200,17 +94,103 @@
       </tags>
   </entry>
   <entry>
-    <title>akashalab-設定</title>
-    <url>/2024/01/01/DEV-%E8%A8%AD%E5%AE%9A/</url>
-    <content><![CDATA[<h2 id="API-KEY"><a href="#API-KEY" class="headerlink" title="API KEY"></a>API KEY</h2><p>若要使用openAI的模型，必須輸入API KEY，可選擇openAI或是Azure openAI其一<br>如範例，選擇使用Azure openAI後，輸入key值與URL，按下儲存，若顯示成功，便成功添加API KEY。</p>
-<p><img src="https://hackmd.io/_uploads/S1dU30xca.png" alt="image"></p>
-<p>若勾選左下角”Save Permanently”便會將key值儲存至config中，下次登入也可以直接使用。</p>
-<p><img src="https://hackmd.io/_uploads/BJgE53Cl9T.png" alt="image"></p>
+    <title>akashalab-Datasets</title>
+    <url>/2024/01/01/DEV-Datasets/</url>
+    <content><![CDATA[<h2 id="創建Dataset"><a href="#創建Dataset" class="headerlink" title="創建Dataset"></a>創建Dataset</h2><p>Dataset為保存一個或多個文件檔的設定檔。<br>至New Dataset頁面，輸入dataset名稱與描述，並上傳dataset所需的文件檔案(.txt、.pdf、.docx)</p>
+<p><img src="https://hackmd.io/_uploads/HkE2pClcT.png" alt="image"></p>
 </br>
 </br>
 
-<h2 id="History"><a href="#History" class="headerlink" title="History"></a>History</h2><p>History分頁可下載文檔問答的紀錄，並下載成.txt或.json檔案。<br><img src="https://hackmd.io/_uploads/SJBzpRlq6.png" alt="image"></p>
-<h2 id="Account"><a href="#Account" class="headerlink" title="Account"></a>Account</h2><p>Account分頁可更改密碼或是刪除帳號<br><img src="https://hackmd.io/_uploads/SkYEaAx5a.png" alt="image"></p>
+<p>可選擇是否分享dataset給其他使用者<br><img src="https://hackmd.io/_uploads/HJS8C0gcT.png" alt="image"></p>
+</br>
+</br>
+
+<p>按下 “Create Dataset”，創建dataset 成功</p>
+<p><img src="https://hackmd.io/_uploads/HyJc0Re5a.png" alt="image"></p>
+</br>
+</br>
+
+<p>:::warning<br>同一使用者無法創建相同名稱的Dataset，不同使用者可以創建相同名稱的Dataset<br>:::<br><img src="https://hackmd.io/_uploads/HkvCA0l5p.png" alt="image"></p>
+</br>
+</br>
+
+<h2 id="檢視Dataset"><a href="#檢視Dataset" class="headerlink" title="檢視Dataset"></a>檢視Dataset</h2><p>創建完Dataset後，可至My Dataset頁面檢視，勾選Shared Datasets按鈕後也會顯示別人分享的Datasets，自己創建的Dataset可以刪除，但無法刪除別人分享的Dataset。</p>
+<p><img src="https://hackmd.io/_uploads/rkO8kJb5a.png" alt="image"></p>
+</br>
+</br>
+
+<h2 id="更新Dataset"><a href="#更新Dataset" class="headerlink" title="更新Dataset"></a>更新Dataset</h2><p>若要更新Dataset資訊，可至Update Dataset頁面，選擇要更新的Dataset後，便可以更改Dataset名稱、描述，也可以新增或刪除文件、分享者。<br><img src="https://hackmd.io/_uploads/S1uye1-56.png" alt="image"><br><img src="https://hackmd.io/_uploads/H1xee1-q6.png" alt="image"></p>
+]]></content>
+      <categories>
+        <category>akasha-lab</category>
+      </categories>
+      <tags>
+        <tag>akasha-UI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>akashalab-Consult</title>
+    <url>/2024/01/01/DEV-Consult/</url>
+    <content><![CDATA[<h2 id="Chat"><a href="#Chat" class="headerlink" title="Chat"></a>Chat</h2><p>Chat與Regular Consult相似，會根據提供的文檔進行問答，但同時Chat也會記住使用者之前的問答互動，方便使用者進行追問。</p>
+<p><img src="https://hackmd.io/_uploads/HJYO5ZfzR.png" alt="image"></p>
+<p>若要進行與之前不相關、新的提問，可以點選右邊按紐Clear History清除紀錄。</p>
+</br>
+</br>
+
+
+<h2 id="Regular-Consult"><a href="#Regular-Consult" class="headerlink" title="Regular Consult"></a>Regular Consult</h2><p>創建完Knowledge後，便可以利用它來做文檔問答，來到Consult頁面，選擇Knowledge後，便可以輸入問題，按下crtl+Enter後便可以提交問題給語言模型等待回應。</p>
+<p><img src="https://hackmd.io/_uploads/HyLhLJZ9a.png" alt="image"></p>
+<h3 id="更改參數"><a href="#更改參數" class="headerlink" title="更改參數"></a>更改參數</h3><p>若你為該Knowledge的擁有者，按下Advanced可以更改Knowledge的參數，提交問題後，參數將會儲存到config中。<br><img src="https://hackmd.io/_uploads/Hk4sPkb9p.png" alt="image"></p>
+<h5 id="1-System-Prompt-為希望語言模型回答的格式"><a href="#1-System-Prompt-為希望語言模型回答的格式" class="headerlink" title="1. System Prompt 為希望語言模型回答的格式"></a>1. System Prompt 為希望語言模型回答的格式</h5><h5 id="2-language-model-為使用何種語言模型"><a href="#2-language-model-為使用何種語言模型" class="headerlink" title="2. language model 為使用何種語言模型"></a>2. language model 為使用何種語言模型</h5><h5 id="3-search-type-為搜尋文檔的方法"><a href="#3-search-type-為搜尋文檔的方法" class="headerlink" title="3. search type 為搜尋文檔的方法"></a>3. search type 為搜尋文檔的方法</h5><h5 id="4-Top-K-為使用文檔段落的數量"><a href="#4-Top-K-為使用文檔段落的數量" class="headerlink" title="4. Top K 為使用文檔段落的數量"></a>4. Top K 為使用文檔段落的數量</h5><h5 id="5-Threshold-為文檔與問題相似度的閾值"><a href="#5-Threshold-為文檔與問題相似度的閾值" class="headerlink" title="5. Threshold 為文檔與問題相似度的閾值"></a>5. Threshold 為文檔與問題相似度的閾值</h5><h5 id="6-Max-Doc-Length-為文檔段落的最長總長度"><a href="#6-Max-Doc-Length-為文檔段落的最長總長度" class="headerlink" title="6. Max Doc Length 為文檔段落的最長總長度"></a>6. Max Doc Length 為文檔段落的最長總長度</h5><h5 id="7-Temperature-為語言模型的隨機性"><a href="#7-Temperature-為語言模型的隨機性" class="headerlink" title="7. Temperature 為語言模型的隨機性"></a>7. Temperature 為語言模型的隨機性</h5></br>
+</br>
+
+<h2 id="Deep-Consult"><a href="#Deep-Consult" class="headerlink" title="Deep Consult"></a>Deep Consult</h2><p>若要詢問較為複雜的問題，可使用Deep-Consult，將可能需要的知識點做為子問題放到Sub-Questions中，再將最終期望詢問的問題填入Question欄位，按下”Submit”按鈕，便可等待語言模型回答。</p>
+<p><img src="https://hackmd.io/_uploads/r1jk31Wqp.png" alt="image"></p>
+</br>
+</br>
+
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>在Summary頁面，可以從Dataset中選擇一個文件檔案，並輸入指示進行摘要。</p>
+<p><img src="https://hackmd.io/_uploads/ryP6Hht2a.png" alt="image"></p>
+</br>
+</br>
+
+
+<p>你也可以上傳一個文件檔案進行摘要</p>
+<p><img src="https://hackmd.io/_uploads/r1kcr2Knp.png" alt="image"></p>
+]]></content>
+      <categories>
+        <category>akasha-lab</category>
+      </categories>
+      <tags>
+        <tag>akasha-UI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>akashalab-Knowledges</title>
+    <url>/2024/01/01/DEV-Knowledges/</url>
+    <content><![CDATA[<h2 id="創建Knowledge"><a href="#創建Knowledge" class="headerlink" title="創建Knowledge"></a>創建Knowledge</h2><p>knowledge為一個保存資料集(Datasets)和搜尋參數的設定檔，可以直接使用knowledge來使用文檔問答。<br>至New Knowledge頁面，輸入Knowledge名稱，選擇嵌入模型，選擇文件段落大小，選擇Dataset(可以多個)，預設為選擇所有文件檔案，也可以各個檔案逐一勾選。</p>
+<p><img src="https://hackmd.io/_uploads/Bk9a71bq6.png" alt="image"></p>
+</br>
+</br>hhh
+
+<p>可選擇是否分享Knowledge給其他使用者<br><img src="https://hackmd.io/_uploads/ry2K4yZ9p.png" alt="image"></p>
+</br>
+</br>
+
+<p>按下 “Create Knowledge”，會為每個文件產生向量db，因此可能需要等待一段時間。<br><img src="https://hackmd.io/_uploads/Sy3kS1bc6.png" alt="image"></p>
+</br>
+</br>
+
+<p>:::warning<br>同一使用者無法創建相同名稱的Knowledge，不同使用者可以創建相同名稱的Knowledge<br>:::<br><img src="https://hackmd.io/_uploads/Ski7By-5T.png" alt="image"></p>
+</br>
+</br>
+
+<h2 id="檢視Knowledge"><a href="#檢視Knowledge" class="headerlink" title="檢視Knowledge"></a>檢視Knowledge</h2><p>創建完Knowledge後，可至My Knowledges頁面檢視，勾選Shared Knowledges按鈕後也會顯示別人分享的Knowledges，自己創建的Knowledge可以刪除，但無法刪除別人分享的Knowledge。</p>
+<p><img src="https://hackmd.io/_uploads/Hkq2HJbca.png" alt="image"></p>
+</br>
+</br>
+
+<h2 id="更新Knowledge"><a href="#更新Knowledge" class="headerlink" title="更新Knowledge"></a>更新Knowledge</h2><p>若要更新Knowledge資訊，可至Update Knowledge頁面，選擇要更新的Knowledge後，便可以更改Knowledge名稱、描述，也可以新增或刪除文件、分享者。<br><img src="https://hackmd.io/_uploads/r1RvLJZqa.png" alt="image"><br><img src="https://hackmd.io/_uploads/B1afL1b56.png" alt="image"></p>
 ]]></content>
       <categories>
         <category>akasha-lab</category>
@@ -275,30 +255,15 @@
       </tags>
   </entry>
   <entry>
-    <title>akashalab-註冊帳號</title>
-    <url>/2024/01/01/DEV-%E8%A8%BB%E5%86%8A%E5%B8%B3%E8%99%9F/</url>
-    <content><![CDATA[<h2 id="註冊帳號"><a href="#註冊帳號" class="headerlink" title="註冊帳號"></a>註冊帳號</h2><p>akasha dev-ui需要使用者註冊帳號，不同使用者可以獨自創建dataset、knowledge用來做文檔問答，也可以分享dataset、knowledge給其他使用者。</p>
-<p><img src="https://hackmd.io/_uploads/rJtjE0eqT.png" alt="image"></p>
-<p>點選右下角”Sign Up”進入註冊介面<br><img src="https://hackmd.io/_uploads/SygzS0gqa.png" alt="image"></p>
-<p>註冊完成後便可使用Username 和 Password登入帳號<br><img src="https://hackmd.io/_uploads/SkTBSAg5p.png" alt="image"></p>
-]]></content>
-      <categories>
-        <category>akasha-lab</category>
-      </categories>
-      <tags>
-        <tag>akasha-UI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FAST API</title>
-    <url>/2024/12/26/FAST%20API/</url>
-    <content><![CDATA[<h2 id="FAST-API"><a href="#FAST-API" class="headerlink" title="FAST API"></a>FAST API</h2><p>akasha 提供get_response, ask_self, ask_whole_file, get_summary的api server</p>
-<h3 id="啟動"><a href="#啟動" class="headerlink" title="啟動"></a>啟動</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">akasha api (–port &#123;port&#125; –host &#123;host&#125; –workers &#123;num_of_workers&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>XML格式</title>
+    <url>/2024/12/25/XML%E6%A0%BC%E5%BC%8F/</url>
+    <content><![CDATA[<h2 id="XML-Formatter"><a href="#XML-Formatter" class="headerlink" title="XML Formatter"></a>XML Formatter</h2><p>如果你想讓語言模型的回答為XML格式，可以使用XMLformatter</p>
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><p>如以下範例，首先先定義你想要回傳的key值的名稱、說明和型別，並利用<em><strong>XML_formatter</strong></em>轉換成xml格式的prompt，並在問問題時把xml_prompt丟入system_prompt中。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha.prompts as prompts</span><br><span class="line">import akasha</span><br><span class="line">import akasha.eval as eval</span><br><span class="line"></span><br><span class="line">formatter = [</span><br><span class="line">        prompts.OutputSchema(name=&quot;學歷&quot;, description=&quot;受試者的就讀大學&quot;, type=&quot;str&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;經驗&quot;, description=&quot;受試者的工作經驗&quot;, type=&quot;str&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;專長&quot;, description=&quot;受試者的專長能力&quot;, type=&quot;list&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;年資&quot;, description=&quot;受試者的總工作年數&quot;, type=&quot;int&quot;)</span><br><span class="line">    ]</span><br><span class="line">xml_prompt = prompts.XML_formatter(formatter)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA(topK=10, threshold=0.0)</span><br><span class="line"></span><br><span class="line">response = ak.ask_whole_file(file_path=&quot;docs/resume_pool/A.docx&quot;,</span><br><span class="line">system_prompt=xml_prompt, prompt=f&#x27;&#x27;&#x27;以上是受試者的履歷，請回答該受試者的學歷、經驗、專長、年資&#x27;&#x27;&#x27;)</span><br><span class="line"></span><br><span class="line">print(response)</span><br></pre></td></tr></table></figure>
 
-
-<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import requests</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">HOST = os.getenv(&quot;API_HOST&quot;, &quot;http://127.0.0.1&quot;)</span><br><span class="line">PORT = os.getenv(&quot;API_PORT&quot;, &quot;8000&quot;)</span><br><span class="line">urls = &#123;</span><br><span class="line">    &quot;summary&quot;: f&quot;&#123;HOST&#125;:&#123;PORT&#125;/get_summary&quot;,</span><br><span class="line">    &quot;qa&quot;: f&quot;&#123;HOST&#125;:&#123;PORT&#125;/get_response&quot;,</span><br><span class="line">    &quot;self&quot;: f&quot;&#123;HOST&#125;:&#123;PORT&#125;/ask_self&quot;,</span><br><span class="line">    &quot;file&quot;: f&quot;&#123;HOST&#125;:&#123;PORT&#125;/ask_whole_file&quot;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">openai_config = &#123;</span><br><span class="line">    &quot;azure_key&quot;: &#123;your api key&#125;,</span><br><span class="line">    &quot;azure_base&quot;: &#123;your api base&#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">self_data = &#123;</span><br><span class="line">    &quot;prompt&quot;: &quot;太陽電池技術?&quot;,</span><br><span class="line">    &quot;info&quot;: &quot;太陽能電池技術5塊錢&quot;,</span><br><span class="line">    &quot;model&quot;: &quot;openai:gpt-3.5-turbo&quot;,</span><br><span class="line">    &quot;system_prompt&quot;: &quot;&quot;,</span><br><span class="line">    &quot;max_doc_len&quot;: 1500,</span><br><span class="line">    &quot;temperature&quot;: 0.0,</span><br><span class="line">    &quot;openai_config&quot;: openai_config</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">file_data = &#123;</span><br><span class="line">    &quot;doc_path&quot;: &quot;docs/mic/20230317_5軸工具機因應市場訴求改變的發展態勢.pdf&quot;,</span><br><span class="line">    &quot;prompt&quot;: &quot;五軸是什麼?&quot;,</span><br><span class="line">    &quot;chunk_size&quot;: 1000,</span><br><span class="line">    &quot;model&quot;: &quot;openai:gpt-3.5-turbo&quot;,</span><br><span class="line">    &quot;embedding_model&quot;: &quot;openai:text-embedding-ada-002&quot;,</span><br><span class="line">    &quot;system_prompt&quot;: &quot;&quot;,</span><br><span class="line">    &quot;max_doc_len&quot;: 1500,</span><br><span class="line">    &quot;temperature&quot;: 0.0,</span><br><span class="line">    &quot;openai_config&quot;: openai_config</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">chat_data = &#123;</span><br><span class="line">    &quot;doc_path&quot;: &quot;docs/pns/&quot;,</span><br><span class="line">    &quot;prompt&quot;: &quot;太陽電池技術?&quot;,</span><br><span class="line">    &quot;chunk_size&quot;: 1000,</span><br><span class="line">    &quot;model&quot;: &quot;openai:gpt-3.5-turbo&quot;,</span><br><span class="line">    &quot;embedding_model&quot;: &quot;openai:text-embedding-ada-002&quot;,</span><br><span class="line">    &quot;threshold&quot;: 0.1,</span><br><span class="line">    &quot;search_type&quot;: &#x27;auto&#x27;,</span><br><span class="line">    &quot;system_prompt&quot;: &quot;&quot;,</span><br><span class="line">    &quot;max_doc_len&quot;: 1500,</span><br><span class="line">    &quot;temperature&quot;: 0.0,</span><br><span class="line">    &quot;openai_config&quot;: openai_config</span><br><span class="line">&#125;</span><br><span class="line">summary_data = &#123;</span><br><span class="line">    &quot;file_path&quot;: &quot;docs/pns/2484.txt&quot;,</span><br><span class="line">    &quot;model&quot;: &quot;openai:gpt-3.5-turbo&quot;,</span><br><span class="line">    &quot;summary_type&quot;: &quot;reduce_map&quot;,</span><br><span class="line">    &quot;summary_len&quot;: 500,</span><br><span class="line">    &quot;system_prompt&quot;: &quot;&quot;,</span><br><span class="line">    &quot;openai_config&quot;: openai_config</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"># chat_response = requests.post(urls[&quot;qa&quot;], json=chat_data).json()</span><br><span class="line"># print(chat_response)</span><br><span class="line"></span><br><span class="line"># sum_response = requests.post(</span><br><span class="line">#     urls[&quot;summary&quot;],</span><br><span class="line">#     json=summary_data,</span><br><span class="line"># ).json()</span><br><span class="line"></span><br><span class="line"># print(sum_response)</span><br><span class="line"></span><br><span class="line">self_response = requests.post(urls[&quot;self&quot;], json=self_data).json()</span><br><span class="line">print(self_response)</span><br><span class="line">file_response = requests.post(urls[&quot;file&quot;], json=file_data).json()</span><br><span class="line">print(file_response)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;resume&gt;</span><br><span class="line">    &lt;學歷&gt;國立臺北科技大學電資學士班 四技 就學中&lt;/學歷&gt;</span><br><span class="line">    &lt;經驗&gt;英文短期文理補習班補習班導師／管理人員&lt;/經驗&gt;</span><br><span class="line">    &lt;專長&gt;</span><br><span class="line">        &lt;能力&gt;語言能力&lt;/能力&gt;</span><br><span class="line">        &lt;英文&gt;聽-中等, 說-中等, 讀-中等, 寫-中等&lt;/英文&gt;</span><br><span class="line">        &lt;證照&gt;TOEIC &lt;/證照&gt;</span><br><span class="line">    &lt;/專長&gt;</span><br><span class="line">    &lt;年資&gt;0-1&lt;/年資&gt;</span><br><span class="line">&lt;/resume&gt;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>進階</category>
+        <category>指定輸出格式</category>
       </categories>
       <tags>
         <tag>akasha-advanced</tag>
@@ -337,18 +302,23 @@
       </tags>
   </entry>
   <entry>
-    <title>XML格式</title>
-    <url>/2024/12/25/XML%E6%A0%BC%E5%BC%8F/</url>
-    <content><![CDATA[<h2 id="XML-Formatter"><a href="#XML-Formatter" class="headerlink" title="XML Formatter"></a>XML Formatter</h2><p>如果你想讓語言模型的回答為XML格式，可以使用XMLformatter</p>
-<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><p>如以下範例，首先先定義你想要回傳的key值的名稱、說明和型別，並利用<em><strong>XML_formatter</strong></em>轉換成xml格式的prompt，並在問問題時把xml_prompt丟入system_prompt中。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha.prompts as prompts</span><br><span class="line">import akasha</span><br><span class="line">import akasha.eval as eval</span><br><span class="line"></span><br><span class="line">formatter = [</span><br><span class="line">        prompts.OutputSchema(name=&quot;學歷&quot;, description=&quot;受試者的就讀大學&quot;, type=&quot;str&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;經驗&quot;, description=&quot;受試者的工作經驗&quot;, type=&quot;str&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;專長&quot;, description=&quot;受試者的專長能力&quot;, type=&quot;list&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;年資&quot;, description=&quot;受試者的總工作年數&quot;, type=&quot;int&quot;)</span><br><span class="line">    ]</span><br><span class="line">xml_prompt = prompts.XML_formatter(formatter)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA(topK=10, threshold=0.0)</span><br><span class="line"></span><br><span class="line">response = ak.ask_whole_file(file_path=&quot;docs/resume_pool/A.docx&quot;,</span><br><span class="line">system_prompt=xml_prompt, prompt=f&#x27;&#x27;&#x27;以上是受試者的履歷，請回答該受試者的學歷、經驗、專長、年資&#x27;&#x27;&#x27;)</span><br><span class="line"></span><br><span class="line">print(response)</span><br></pre></td></tr></table></figure>
+    <title>akashalab-設定</title>
+    <url>/2024/01/01/DEV-%E8%A8%AD%E5%AE%9A/</url>
+    <content><![CDATA[<h2 id="API-KEY"><a href="#API-KEY" class="headerlink" title="API KEY"></a>API KEY</h2><p>若要使用openAI的模型，必須輸入API KEY，可選擇openAI或是Azure openAI其一<br>如範例，選擇使用Azure openAI後，輸入key值與URL，按下儲存，若顯示成功，便成功添加API KEY。</p>
+<p><img src="https://hackmd.io/_uploads/S1dU30xca.png" alt="image"></p>
+<p>若勾選左下角”Save Permanently”便會將key值儲存至config中，下次登入也可以直接使用。</p>
+<p><img src="https://hackmd.io/_uploads/BJgE53Cl9T.png" alt="image"></p>
+</br>
+</br>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;resume&gt;</span><br><span class="line">    &lt;學歷&gt;國立臺北科技大學電資學士班 四技 就學中&lt;/學歷&gt;</span><br><span class="line">    &lt;經驗&gt;英文短期文理補習班補習班導師／管理人員&lt;/經驗&gt;</span><br><span class="line">    &lt;專長&gt;</span><br><span class="line">        &lt;能力&gt;語言能力&lt;/能力&gt;</span><br><span class="line">        &lt;英文&gt;聽-中等, 說-中等, 讀-中等, 寫-中等&lt;/英文&gt;</span><br><span class="line">        &lt;證照&gt;TOEIC &lt;/證照&gt;</span><br><span class="line">    &lt;/專長&gt;</span><br><span class="line">    &lt;年資&gt;0-1&lt;/年資&gt;</span><br><span class="line">&lt;/resume&gt;</span><br></pre></td></tr></table></figure>]]></content>
+<h2 id="History"><a href="#History" class="headerlink" title="History"></a>History</h2><p>History分頁可下載文檔問答的紀錄，並下載成.txt或.json檔案。<br><img src="https://hackmd.io/_uploads/SJBzpRlq6.png" alt="image"></p>
+<h2 id="Account"><a href="#Account" class="headerlink" title="Account"></a>Account</h2><p>Account分頁可更改密碼或是刪除帳號<br><img src="https://hackmd.io/_uploads/SkYEaAx5a.png" alt="image"></p>
+]]></content>
       <categories>
-        <category>指定輸出格式</category>
+        <category>akasha-lab</category>
       </categories>
       <tags>
-        <tag>akasha-advanced</tag>
+        <tag>akasha-UI</tag>
       </tags>
   </entry>
   <entry>
@@ -396,6 +366,23 @@
       </tags>
   </entry>
   <entry>
+    <title>auto_evaluation</title>
+    <url>/2024/12/28/auto_evaluation/</url>
+    <content><![CDATA[<h2 id="Auto-Evaluation"><a href="#Auto-Evaluation" class="headerlink" title="Auto Evaluation"></a>Auto Evaluation</h2><p>若要測試各種參數對語言模型回答的好壞，可以使用auto_evalution函數。首先，您需要基於您要使用的文檔構建一個問題集(.txt)。<br>您可以生成單選題文件或問答題文件。</p>
+<ol>
+<li>對於<em><strong>單選題文件</strong></em>，每個選項和正確答案之間用制表符(\t)分隔，每行是一個問題，如範例: <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">應回收廢塑膠容器材質種類不包含哪種?	1.聚丙烯（PP）	2.聚苯乙烯（PS）	3.聚氯乙烯（PVC）	4.低密度聚乙烯（LDPE）	4</span><br><span class="line">庫存盤點包括庫存全盤作業及不定期抽盤作業，盤點計畫應包括下列項目不包含哪項?	1.盤點差異之處理	2.盤點清冊	3.各項物品存放區域配置圖	4.庫存全盤日期及參加盤點人員名單	1</span><br><span class="line">以下何者不是環保署指定之公民營地磅機構?	1.中森加油站企業有限公司	2.台益地磅站	3.大眾地磅站	4.新福行	4</span><br></pre></td></tr></table></figure>
+ 函數將返回問題集的正確率和使用的token量，每個問題的詳細內容儲存在logs中。 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha.eval as eval</span><br><span class="line">import os</span><br><span class="line">from dotenv import load_dotenv</span><br><span class="line">load_dotenv() </span><br><span class="line"></span><br><span class="line">os.environ[&quot;OPENAI_API_KEY&quot;] = &quot;your openAI key&quot;</span><br><span class="line">dir_path = &quot;doc/pvc/&quot;</span><br><span class="line">exp_name = &quot;exp_akasha_auto_evaluation&quot;</span><br><span class="line"></span><br><span class="line">eva = eval.Model_Eval(question_style=&quot;single_choice&quot;, search_type=&#x27;merge&#x27;,\</span><br><span class="line">    model=&quot;openai:gpt-3.5-turbo&quot;, embeddings=&quot;openai:text-embedding-ada-002&quot;,record_exp=exp_name)</span><br><span class="line">print(eva.auto_evaluation(&quot;question_pvc.txt&quot;, dir_path ))</span><br><span class="line">## correct rate: 0.9, tokens: 3228 ##</span><br></pre></td></tr></table></figure></li>
+<li>對於<em><strong>問答題文件</strong></em>，每個問題之前有 “問題：”，每個參考答案之前有 “答案：”。每個問題之間用兩個換行符 (\n\n) 分隔。 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">問題：根據文件中的訊息，智慧製造的複雜性已超越系統整合商的負荷程度，未來產業鏈中的角色將傾向朝共和共榮共創智慧製造商機，而非過往的單打獨鬥模式發展。請問為什麼  供  應商、電信商、軟體開發商、平台商、雲端服務供應商、系統整合商等角色會傾向朝共和共榮共創智慧製造商機的方向發展？</span><br><span class="line">答案：因為智慧製造的複雜性已超越系統整合商的負荷程度，單一角色難以完成整個智慧製造的需求，而共和共榮共創的模式可以整合各方的優勢，共同創造智慧製造的商機。</span><br><span class="line"></span><br><span class="line">問題：根據文件中提到的資訊技術商（IT）和營運技術商（OT），請列舉至少兩個邊緣運算產品或解決方案。</span><br><span class="line">答案：根據文件中的資訊，NVIDIA的邊緣運算產品包括Jetson系列和EGX系列，而IBM的邊緣運算產品包括IBM Edge Application Manager和IBM Watson Anywhere。</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>模型評估</category>
+      </categories>
+      <tags>
+        <tag>akasha</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>auto_create_questionset</title>
     <url>/2024/12/28/auto_create_questionset/</url>
     <content><![CDATA[<h2 id="自動產生問題"><a href="#自動產生問題" class="headerlink" title="自動產生問題"></a>自動產生問題</h2><p>如果您不想自己創建問題集來評估當前參數的性能，您可以使用 <em><strong>eval.auto_create_questionset</strong></em> 功能自動生成一個包含參考答案的問題集。隨後，您可以使用 <em><strong>eval.auto_evaluation</strong></em> 獲取評估指標，如 Bert_score、Rouge 和 LLM_score（對於問答問題集），以及單選問題集的正確率。這些分數範圍從 0 到 1，較高的值表示生成的回答與參考答案更接近。</p>
@@ -421,23 +408,6 @@
 
 <h2 id="指定問題集主題"><a href="#指定問題集主題" class="headerlink" title="指定問題集主題"></a>指定問題集主題</h2><p>如果你想生成特定主題的問題，你可以使用 <em><strong>create_topic_questionset</strong></em> 函數，它會使用輸入的主題在文檔中找到相關的文件段落並生成問題集。</p>
 <h3 id="範例-1"><a href="#範例-1" class="headerlink" title="範例"></a>範例</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha.eval as eval</span><br><span class="line"></span><br><span class="line">eva = eval.Model_Eval(search_type=&#x27;merge&#x27;,question_type = &quot;irrelevant&quot;, model=&quot;openai:gpt-3.5-turbo&quot;, record_exp=&quot;exp_mic_auto_questionset&quot;)</span><br><span class="line"></span><br><span class="line">eva.create_topic_questionset(doc_path=&quot;doc/mic/&quot;, topic= &quot;工業4.0&quot;, question_num=3, output_file_path=&quot;questionset/mic_topic_irre.txt&quot;)</span><br><span class="line"></span><br><span class="line">bert_score, rouge, llm_score, tol_tokens = eva.auto_evaluation(questionset_file=&quot;questionset/mic_topic_irre.txt&quot;, doc_path=&quot;doc/mic/&quot;, question_style = &quot;essay&quot;, record_exp=&quot;exp_mic_auto_evaluation&quot;,search_type=&quot;svm&quot;)</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>模型評估</category>
-      </categories>
-      <tags>
-        <tag>akasha</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>auto_evaluation</title>
-    <url>/2024/12/28/auto_evaluation/</url>
-    <content><![CDATA[<h2 id="Auto-Evaluation"><a href="#Auto-Evaluation" class="headerlink" title="Auto Evaluation"></a>Auto Evaluation</h2><p>若要測試各種參數對語言模型回答的好壞，可以使用auto_evalution函數。首先，您需要基於您要使用的文檔構建一個問題集(.txt)。<br>您可以生成單選題文件或問答題文件。</p>
-<ol>
-<li>對於<em><strong>單選題文件</strong></em>，每個選項和正確答案之間用制表符(\t)分隔，每行是一個問題，如範例: <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">應回收廢塑膠容器材質種類不包含哪種?	1.聚丙烯（PP）	2.聚苯乙烯（PS）	3.聚氯乙烯（PVC）	4.低密度聚乙烯（LDPE）	4</span><br><span class="line">庫存盤點包括庫存全盤作業及不定期抽盤作業，盤點計畫應包括下列項目不包含哪項?	1.盤點差異之處理	2.盤點清冊	3.各項物品存放區域配置圖	4.庫存全盤日期及參加盤點人員名單	1</span><br><span class="line">以下何者不是環保署指定之公民營地磅機構?	1.中森加油站企業有限公司	2.台益地磅站	3.大眾地磅站	4.新福行	4</span><br></pre></td></tr></table></figure>
- 函數將返回問題集的正確率和使用的token量，每個問題的詳細內容儲存在logs中。 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha.eval as eval</span><br><span class="line">import os</span><br><span class="line">from dotenv import load_dotenv</span><br><span class="line">load_dotenv() </span><br><span class="line"></span><br><span class="line">os.environ[&quot;OPENAI_API_KEY&quot;] = &quot;your openAI key&quot;</span><br><span class="line">dir_path = &quot;doc/pvc/&quot;</span><br><span class="line">exp_name = &quot;exp_akasha_auto_evaluation&quot;</span><br><span class="line"></span><br><span class="line">eva = eval.Model_Eval(question_style=&quot;single_choice&quot;, search_type=&#x27;merge&#x27;,\</span><br><span class="line">    model=&quot;openai:gpt-3.5-turbo&quot;, embeddings=&quot;openai:text-embedding-ada-002&quot;,record_exp=exp_name)</span><br><span class="line">print(eva.auto_evaluation(&quot;question_pvc.txt&quot;, dir_path ))</span><br><span class="line">## correct rate: 0.9, tokens: 3228 ##</span><br></pre></td></tr></table></figure></li>
-<li>對於<em><strong>問答題文件</strong></em>，每個問題之前有 “問題：”，每個參考答案之前有 “答案：”。每個問題之間用兩個換行符 (\n\n) 分隔。 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">問題：根據文件中的訊息，智慧製造的複雜性已超越系統整合商的負荷程度，未來產業鏈中的角色將傾向朝共和共榮共創智慧製造商機，而非過往的單打獨鬥模式發展。請問為什麼  供  應商、電信商、軟體開發商、平台商、雲端服務供應商、系統整合商等角色會傾向朝共和共榮共創智慧製造商機的方向發展？</span><br><span class="line">答案：因為智慧製造的複雜性已超越系統整合商的負荷程度，單一角色難以完成整個智慧製造的需求，而共和共榮共創的模式可以整合各方的優勢，共同創造智慧製造的商機。</span><br><span class="line"></span><br><span class="line">問題：根據文件中提到的資訊技術商（IT）和營運技術商（OT），請列舉至少兩個邊緣運算產品或解決方案。</span><br><span class="line">答案：根據文件中的資訊，NVIDIA的邊緣運算產品包括Jetson系列和EGX系列，而IBM的邊緣運算產品包括IBM Edge Application Manager和IBM Watson Anywhere。</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
       <categories>
         <category>模型評估</category>
       </categories>
@@ -472,33 +442,18 @@
       </tags>
   </entry>
   <entry>
-    <title>get_response</title>
-    <url>/2024/12/29/get_response/</url>
-    <content><![CDATA[<h2 id="get-response"><a href="#get-response" class="headerlink" title="get_response"></a>get_response</h2><p>使用者輸入一個或多個文件(.pdf, .docx, .txt)資料夾，此函數可以讓語言模型根據搜尋到的文件回答問題。藉由使用者的問題和文件庫搜尋到知識片段，可以不用將整份文件輸入給模型，就讓語言模型正確回答問題。</p>
-<h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">qa = akasha.Doc_QA(</span><br><span class="line">    verbose=False, </span><br><span class="line">    search_type=&quot;svm&quot;, </span><br><span class="line">    model=&quot;openai:gpt-3.5-turbo&quot;)</span><br><span class="line"></span><br><span class="line">qa.get_response(</span><br><span class="line">        doc_path=&quot;docs/mic/&quot;,</span><br><span class="line">        prompt=&quot;五軸是甚麼?&quot;,</span><br><span class="line">        chunk_size=500,</span><br><span class="line">        max_doc_len=1500,</span><br><span class="line">        system_prompt=&quot;請用中文回答&quot;,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">五軸工具機是一種先進的加工裝置，透過2軸控制工具旋轉方向，再透過長寬高3軸移動進行切削加工。相較於工具方向不會改變的3軸工具機，五軸工具機能夠進行更加複雜形狀的加工，並且具有更高</span><br><span class="line">的加工精密度和自動化能力。</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="stream輸出"><a href="#stream輸出" class="headerlink" title="stream輸出"></a>stream輸出</h3><p>若需要即時輸出的場合(如UI即時顯示回答)，使用stream&#x3D;True可使get_response回傳generator。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">qa = akasha.Doc_QA(</span><br><span class="line">    verbose=False, </span><br><span class="line">    search_type=&quot;svm&quot;, </span><br><span class="line">    model=&quot;openai:gpt-3.5-turbo&quot;, </span><br><span class="line">    stream=True)</span><br><span class="line"></span><br><span class="line">streaming = qa.get_response(</span><br><span class="line">        doc_path=&quot;docs/mic/&quot;,</span><br><span class="line">        prompt=&quot;五軸是甚麼?&quot;,</span><br><span class="line">    hitstory_messages=[&quot;hi 我的名字是iii&quot;, &quot;你好iii&quot;],</span><br><span class="line">        system_prompt=&quot;請用中文回答&quot;,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">for s in streaming:</span><br><span class="line">    print(s)</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="dbs物件"><a href="#dbs物件" class="headerlink" title="dbs物件"></a>dbs物件</h3><p>如想對同個文件集做多次問答，可以先建立dbs物件並傳入，避免多次重複載入文件的chromadb</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line">db_files = akasha.createDB_file(file_path = [&quot;f1.txt&quot;,&quot;f2.docs&quot;], embeddings=&quot;openai:text-embedding-ada-002&quot;,chunk_size=500, ignore_check=True)</span><br><span class="line">db_directory = akasha.createDB_directory(doc_path= &quot;./docs/mic/&quot;, </span><br><span class="line">embeddings=&quot;openai:text-embedding-ada-002&quot;, ignore_check=True)</span><br><span class="line">qa = akasha.Doc_QA(</span><br><span class="line">    verbose=True, </span><br><span class="line">    search_type=&quot;svm&quot;, </span><br><span class="line">    model=&quot;openai:gpt-3.5-turbo&quot;, </span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">qa.get_response(</span><br><span class="line">        doc_path=db_directory,</span><br><span class="line">        prompt=&quot;五軸是甚麼?&quot;,</span><br><span class="line">        system_prompt=&quot;請用中文回答&quot;,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="Doc-QA-參數"><a href="#Doc-QA-參數" class="headerlink" title="Doc_QA 參數"></a>Doc_QA 參數</h3><h5 id="verbose-如果設True，會顯示每個步驟產生的文字和狀態"><a href="#verbose-如果設True，會顯示每個步驟產生的文字和狀態" class="headerlink" title="verbose: 如果設True，會顯示每個步驟產生的文字和狀態"></a>verbose: 如果設True，會顯示每個步驟產生的文字和狀態</h5><h5 id="search-type-用來搜尋文件段落的方法，可選擇-svm-tfidf-merge-mmr-knn"><a href="#search-type-用來搜尋文件段落的方法，可選擇-svm-tfidf-merge-mmr-knn" class="headerlink" title="search_type: 用來搜尋文件段落的方法，可選擇: svm, tfidf, merge, mmr, knn."></a>search_type: 用來搜尋文件段落的方法，可選擇: <em><strong>svm</strong></em>, <em><strong>tfidf</strong></em>, <em><strong>merge</strong></em>, <em><strong>mmr</strong></em>, <em><strong>knn</strong></em>.</h5><h5 id="model-使用的語言模型，如-openai-gpt-3-5-turbo-hf-meta-llama-Llama-2-13b-chat-hf"><a href="#model-使用的語言模型，如-openai-gpt-3-5-turbo-hf-meta-llama-Llama-2-13b-chat-hf" class="headerlink" title="model: 使用的語言模型，如 openai:gpt-3.5-turbo, hf:meta-llama&#x2F;Llama-2-13b-chat-hf"></a>model: 使用的語言模型，如 <em><strong>openai:gpt-3.5-turbo</strong></em>, <em><strong>hf:meta-llama&#x2F;Llama-2-13b-chat-hf</strong></em></h5><h5 id="doc-path-一個或多個包含文件檔案的資料夾路徑名稱"><a href="#doc-path-一個或多個包含文件檔案的資料夾路徑名稱" class="headerlink" title="doc_path: 一個或多個包含文件檔案的資料夾路徑名稱"></a>doc_path: 一個或多個包含文件檔案的資料夾路徑名稱</h5><h5 id="prompt-使用者的問題"><a href="#prompt-使用者的問題" class="headerlink" title="prompt: 使用者的問題"></a>prompt: 使用者的問題</h5><h5 id="max-doc-len-最長可允許的文件段落總長度"><a href="#max-doc-len-最長可允許的文件段落總長度" class="headerlink" title="max_doc_len: 最長可允許的文件段落總長度"></a>max_doc_len: 最長可允許的文件段落總長度</h5><h5 id="chunk-size-單個文件段落的長度"><a href="#chunk-size-單個文件段落的長度" class="headerlink" title="chunk_size: 單個文件段落的長度"></a>chunk_size: 單個文件段落的長度</h5><h5 id="system-prompt-指示給語言模型的output格式需求"><a href="#system-prompt-指示給語言模型的output格式需求" class="headerlink" title="system_prompt: 指示給語言模型的output格式需求"></a>system_prompt: 指示給語言模型的output格式需求</h5><h4 id="stream-如果設為True，會回傳generator"><a href="#stream-如果設為True，會回傳generator" class="headerlink" title="stream: 如果設為True，會回傳generator"></a>stream: 如果設為True，會回傳generator</h4><h4 id="history-messages-需要一併提供給語言模型的對話紀錄"><a href="#history-messages-需要一併提供給語言模型的對話紀錄" class="headerlink" title="history_messages: 需要一併提供給語言模型的對話紀錄"></a>history_messages: 需要一併提供給語言模型的對話紀錄</h4>]]></content>
+    <title>akashalab-註冊帳號</title>
+    <url>/2024/01/01/DEV-%E8%A8%BB%E5%86%8A%E5%B8%B3%E8%99%9F/</url>
+    <content><![CDATA[<h2 id="註冊帳號"><a href="#註冊帳號" class="headerlink" title="註冊帳號"></a>註冊帳號</h2><p>akasha dev-ui需要使用者註冊帳號，不同使用者可以獨自創建dataset、knowledge用來做文檔問答，也可以分享dataset、knowledge給其他使用者。</p>
+<p><img src="https://hackmd.io/_uploads/rJtjE0eqT.png" alt="image"></p>
+<p>點選右下角”Sign Up”進入註冊介面<br><img src="https://hackmd.io/_uploads/SygzS0gqa.png" alt="image"></p>
+<p>註冊完成後便可使用Username 和 Password登入帳號<br><img src="https://hackmd.io/_uploads/SkTBSAg5p.png" alt="image"></p>
+]]></content>
       <categories>
-        <category>文檔問答</category>
+        <category>akasha-lab</category>
       </categories>
       <tags>
-        <tag>akasha</tag>
+        <tag>akasha-UI</tag>
       </tags>
   </entry>
   <entry>
@@ -537,16 +492,30 @@
 ]]></content>
   </entry>
   <entry>
-    <title>summary</title>
-    <url>/2024/12/27/summary/</url>
-    <content><![CDATA[<h2 id="文件摘要"><a href="#文件摘要" class="headerlink" title="文件摘要"></a>文件摘要</h2><p>若要創建文本文件的摘要（.pdf、.txt.、docx），您可以使用 <em><strong>summary.summarize_file</strong></em> 函數。如範例，以下使用 map_reduce 摘要方法指示語言模型生成大約 500 字的摘要。有兩種摘要類型，<em><strong>map_reduce</strong></em> 和 <em><strong>refine</strong></em>，<em><strong>map_reduce</strong></em> 將對每個文本段落進行摘要，然後使用所有摘要的文本段落生成最終摘要；<em><strong>refine</strong></em> 將逐個摘要每個文本段落，並使用前一個摘要作為摘要下一段的提示，以獲得更高水平的摘要一致性。</p>
-<h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line">sum = akasha.Summary( chunk_size=1000, chunk_overlap=100)</span><br><span class="line">sum.summarize_file(file_path=&quot;doc/mic/5軸工具機因應市場訴求改變的發展態勢.pdf&quot;,summary_type=&quot;map_reduce&quot;, summary_len=500\</span><br><span class="line">, chunk_overlap=40)</span><br></pre></td></tr></table></figure>
+    <title>get_response</title>
+    <url>/2024/12/29/get_response/</url>
+    <content><![CDATA[<h2 id="get-response"><a href="#get-response" class="headerlink" title="get_response"></a>get_response</h2><p>使用者輸入一個或多個文件(.pdf, .docx, .txt)資料夾，此函數可以讓語言模型根據搜尋到的文件回答問題。藉由使用者的問題和文件庫搜尋到知識片段，可以不用將整份文件輸入給模型，就讓語言模型正確回答問題。</p>
+<h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">qa = akasha.Doc_QA(</span><br><span class="line">    verbose=False, </span><br><span class="line">    search_type=&quot;svm&quot;, </span><br><span class="line">    model=&quot;openai:gpt-3.5-turbo&quot;)</span><br><span class="line"></span><br><span class="line">qa.get_response(</span><br><span class="line">        doc_path=&quot;docs/mic/&quot;,</span><br><span class="line">        prompt=&quot;五軸是甚麼?&quot;,</span><br><span class="line">        chunk_size=500,</span><br><span class="line">        max_doc_len=1500,</span><br><span class="line">        system_prompt=&quot;請用中文回答&quot;,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">### Arguments of Summary class ###</span><br><span class="line"> Args:</span><br><span class="line">            **chunk_size (int, optional)**: chunk size of texts from documents. Defaults to 1000.</span><br><span class="line">            **chunk_overlap (int, optional)**: chunk overlap of texts from documents. Defaults to 40.</span><br><span class="line">            **model (str, optional)**: llm model to use. Defaults to &quot;gpt-3.5-turbo&quot;.</span><br><span class="line">            **verbose (bool, optional)**: show log texts or not. Defaults to False.</span><br><span class="line">            **threshold (float, optional)**: the similarity threshold of searching. Defaults to 0.2.</span><br><span class="line">            **language (str, optional)**: the language of documents and prompt, use to make sure docs won&#x27;t exceed</span><br><span class="line">                max token size of llm input.</span><br><span class="line">            **record_exp (str, optional)**: use aiido to save running params and metrics to the remote mlflow or not if record_exp not empty, and setrecord_exp as experiment name.  default &quot;&quot;.</span><br><span class="line">            **system_prompt (str, optional)**: the system prompt that you assign special instruction to llm model, so will not be used</span><br><span class="line">                in searching relevant documents. Defaults to &quot;&quot;.</span><br><span class="line">            **max_doc_len(int, optional)**: max docuemnt length of llm input. Defaults to 1500.</span><br><span class="line">            **temperature (float, optional)**: temperature of llm model from 0.0 to 1.0 . Defaults to 0.0.</span><br><span class="line">            **auto_translate (bool, optional)**: translate summary into language or not.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-]]></content>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">五軸工具機是一種先進的加工裝置，透過2軸控制工具旋轉方向，再透過長寬高3軸移動進行切削加工。相較於工具方向不會改變的3軸工具機，五軸工具機能夠進行更加複雜形狀的加工，並且具有更高</span><br><span class="line">的加工精密度和自動化能力。</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="stream輸出"><a href="#stream輸出" class="headerlink" title="stream輸出"></a>stream輸出</h3><p>若需要即時輸出的場合(如UI即時顯示回答)，使用stream&#x3D;True可使get_response回傳generator。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">qa = akasha.Doc_QA(</span><br><span class="line">    verbose=False, </span><br><span class="line">    search_type=&quot;svm&quot;, </span><br><span class="line">    model=&quot;openai:gpt-3.5-turbo&quot;, </span><br><span class="line">    stream=True)</span><br><span class="line"></span><br><span class="line">streaming = qa.get_response(</span><br><span class="line">        doc_path=&quot;docs/mic/&quot;,</span><br><span class="line">        prompt=&quot;五軸是甚麼?&quot;,</span><br><span class="line">    hitstory_messages=[&quot;hi 我的名字是iii&quot;, &quot;你好iii&quot;],</span><br><span class="line">        system_prompt=&quot;請用中文回答&quot;,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">for s in streaming:</span><br><span class="line">    print(s)</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="dbs物件"><a href="#dbs物件" class="headerlink" title="dbs物件"></a>dbs物件</h3><p>如想對同個文件集做多次問答，可以先建立dbs物件並傳入，避免多次重複載入文件的chromadb</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line">db_files = akasha.createDB_file(file_path = [&quot;f1.txt&quot;,&quot;f2.docs&quot;], embeddings=&quot;openai:text-embedding-ada-002&quot;,chunk_size=500, ignore_check=True)</span><br><span class="line">db_directory = akasha.createDB_directory(doc_path= &quot;./docs/mic/&quot;, </span><br><span class="line">embeddings=&quot;openai:text-embedding-ada-002&quot;, ignore_check=True)</span><br><span class="line">qa = akasha.Doc_QA(</span><br><span class="line">    verbose=True, </span><br><span class="line">    search_type=&quot;svm&quot;, </span><br><span class="line">    model=&quot;openai:gpt-3.5-turbo&quot;, </span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">qa.get_response(</span><br><span class="line">        doc_path=db_directory,</span><br><span class="line">        prompt=&quot;五軸是甚麼?&quot;,</span><br><span class="line">        system_prompt=&quot;請用中文回答&quot;,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="Doc-QA-參數"><a href="#Doc-QA-參數" class="headerlink" title="Doc_QA 參數"></a>Doc_QA 參數</h3><h5 id="verbose-如果設True，會顯示每個步驟產生的文字和狀態"><a href="#verbose-如果設True，會顯示每個步驟產生的文字和狀態" class="headerlink" title="verbose: 如果設True，會顯示每個步驟產生的文字和狀態"></a>verbose: 如果設True，會顯示每個步驟產生的文字和狀態</h5><h5 id="search-type-用來搜尋文件段落的方法，可選擇-svm-tfidf-merge-mmr-knn"><a href="#search-type-用來搜尋文件段落的方法，可選擇-svm-tfidf-merge-mmr-knn" class="headerlink" title="search_type: 用來搜尋文件段落的方法，可選擇: svm, tfidf, merge, mmr, knn."></a>search_type: 用來搜尋文件段落的方法，可選擇: <em><strong>svm</strong></em>, <em><strong>tfidf</strong></em>, <em><strong>merge</strong></em>, <em><strong>mmr</strong></em>, <em><strong>knn</strong></em>.</h5><h5 id="model-使用的語言模型，如-openai-gpt-3-5-turbo-hf-meta-llama-Llama-2-13b-chat-hf"><a href="#model-使用的語言模型，如-openai-gpt-3-5-turbo-hf-meta-llama-Llama-2-13b-chat-hf" class="headerlink" title="model: 使用的語言模型，如 openai:gpt-3.5-turbo, hf:meta-llama&#x2F;Llama-2-13b-chat-hf"></a>model: 使用的語言模型，如 <em><strong>openai:gpt-3.5-turbo</strong></em>, <em><strong>hf:meta-llama&#x2F;Llama-2-13b-chat-hf</strong></em></h5><h5 id="doc-path-一個或多個包含文件檔案的資料夾路徑名稱"><a href="#doc-path-一個或多個包含文件檔案的資料夾路徑名稱" class="headerlink" title="doc_path: 一個或多個包含文件檔案的資料夾路徑名稱"></a>doc_path: 一個或多個包含文件檔案的資料夾路徑名稱</h5><h5 id="prompt-使用者的問題"><a href="#prompt-使用者的問題" class="headerlink" title="prompt: 使用者的問題"></a>prompt: 使用者的問題</h5><h5 id="max-doc-len-最長可允許的文件段落總長度"><a href="#max-doc-len-最長可允許的文件段落總長度" class="headerlink" title="max_doc_len: 最長可允許的文件段落總長度"></a>max_doc_len: 最長可允許的文件段落總長度</h5><h5 id="chunk-size-單個文件段落的長度"><a href="#chunk-size-單個文件段落的長度" class="headerlink" title="chunk_size: 單個文件段落的長度"></a>chunk_size: 單個文件段落的長度</h5><h5 id="system-prompt-指示給語言模型的output格式需求"><a href="#system-prompt-指示給語言模型的output格式需求" class="headerlink" title="system_prompt: 指示給語言模型的output格式需求"></a>system_prompt: 指示給語言模型的output格式需求</h5><h4 id="stream-如果設為True，會回傳generator"><a href="#stream-如果設為True，會回傳generator" class="headerlink" title="stream: 如果設為True，會回傳generator"></a>stream: 如果設為True，會回傳generator</h4><h4 id="history-messages-需要一併提供給語言模型的對話紀錄"><a href="#history-messages-需要一併提供給語言模型的對話紀錄" class="headerlink" title="history_messages: 需要一併提供給語言模型的對話紀錄"></a>history_messages: 需要一併提供給語言模型的對話紀錄</h4>]]></content>
       <categories>
-        <category>摘要</category>
+        <category>文檔問答</category>
       </categories>
       <tags>
         <tag>akasha</tag>
@@ -579,6 +548,22 @@
       </tags>
   </entry>
   <entry>
+    <title>summary</title>
+    <url>/2024/12/27/summary/</url>
+    <content><![CDATA[<h2 id="文件摘要"><a href="#文件摘要" class="headerlink" title="文件摘要"></a>文件摘要</h2><p>若要創建文本文件的摘要（.pdf、.txt.、docx），您可以使用 <em><strong>summary.summarize_file</strong></em> 函數。如範例，以下使用 map_reduce 摘要方法指示語言模型生成大約 500 字的摘要。有兩種摘要類型，<em><strong>map_reduce</strong></em> 和 <em><strong>refine</strong></em>，<em><strong>map_reduce</strong></em> 將對每個文本段落進行摘要，然後使用所有摘要的文本段落生成最終摘要；<em><strong>refine</strong></em> 將逐個摘要每個文本段落，並使用前一個摘要作為摘要下一段的提示，以獲得更高水平的摘要一致性。</p>
+<h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line">sum = akasha.Summary( chunk_size=1000, chunk_overlap=100)</span><br><span class="line">sum.summarize_file(file_path=&quot;doc/mic/5軸工具機因應市場訴求改變的發展態勢.pdf&quot;,summary_type=&quot;map_reduce&quot;, summary_len=500\</span><br><span class="line">, chunk_overlap=40)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">### Arguments of Summary class ###</span><br><span class="line"> Args:</span><br><span class="line">            **chunk_size (int, optional)**: chunk size of texts from documents. Defaults to 1000.</span><br><span class="line">            **chunk_overlap (int, optional)**: chunk overlap of texts from documents. Defaults to 40.</span><br><span class="line">            **model (str, optional)**: llm model to use. Defaults to &quot;gpt-3.5-turbo&quot;.</span><br><span class="line">            **verbose (bool, optional)**: show log texts or not. Defaults to False.</span><br><span class="line">            **threshold (float, optional)**: the similarity threshold of searching. Defaults to 0.2.</span><br><span class="line">            **language (str, optional)**: the language of documents and prompt, use to make sure docs won&#x27;t exceed</span><br><span class="line">                max token size of llm input.</span><br><span class="line">            **record_exp (str, optional)**: use aiido to save running params and metrics to the remote mlflow or not if record_exp not empty, and setrecord_exp as experiment name.  default &quot;&quot;.</span><br><span class="line">            **system_prompt (str, optional)**: the system prompt that you assign special instruction to llm model, so will not be used</span><br><span class="line">                in searching relevant documents. Defaults to &quot;&quot;.</span><br><span class="line">            **max_doc_len(int, optional)**: max docuemnt length of llm input. Defaults to 1500.</span><br><span class="line">            **temperature (float, optional)**: temperature of llm model from 0.0 to 1.0 . Defaults to 0.0.</span><br><span class="line">            **auto_translate (bool, optional)**: translate summary into language or not.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>摘要</category>
+      </categories>
+      <tags>
+        <tag>akasha</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>optimum_combination</title>
     <url>/2024/12/28/optimum_combination/</url>
     <content><![CDATA[<h2 id="Find-Optimum-Combination"><a href="#Find-Optimum-Combination" class="headerlink" title="Find Optimum Combination"></a>Find Optimum Combination</h2><p>若要測試所有可用的組合並找到最佳參數，您可以使用 optimum_combination 函數。您可以提供不同的嵌入模型、文件段落大小、語言模型、文件搜索方法以及最相關文檔的數量（topK），該函數將測試所有組合以找到根據給定的問題集和文檔的最佳組合。請注意，最佳得分組合是最高正確率組合，而最佳性價比組合是需要最少token以獲得正確答案的組合。</p>
@@ -591,32 +576,6 @@
       </categories>
       <tags>
         <tag>akasha</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ui設定</title>
-    <url>/2024/12/24/ui%E8%A8%AD%E5%AE%9A/</url>
-    <content><![CDATA[<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>只要你安裝了akasha，便可以直接使用akasha_ui，在terminal執行:</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">akasha ui</span></span><br></pre></td></tr></table></figure>
-
-<p>便可以在瀏覽器上<a href="http://localhost:8501/">開啟</a>，開始使用akasha ui</p>
-</br>
-</br>
-
-<h2 id="上傳文件檔"><a href="#上傳文件檔" class="headerlink" title="上傳文件檔"></a>上傳文件檔</h2><p>上傳你需要的文件檔案，並取資料夾名稱，創立知識庫。<br>:::info<br>請注意文件檔只允許(.docx, .txt, .pdf)<br>:::<br><img src="https://hackmd.io/_uploads/B1glkq19a.png" alt="ui_upload"></p>
-</br>
-</br>
-
-<h2 id="設定"><a href="#設定" class="headerlink" title="設定"></a>設定</h2><p>在設定頁面，可以選擇要詢問的知識庫和調整各種參數、選擇不同語言模型。<br>:::info<br>若使用openAI模型，請在左側輸入 openAI的key，azure openAI則需要額外輸入url。<br>:::<br><img src="https://hackmd.io/_uploads/BJ0TRYJcT.png" alt="ui_setting"></p>
-<h2 id="手動增加模型"><a href="#手動增加模型" class="headerlink" title="手動增加模型"></a>手動增加模型</h2><p>如果你想使用不同的語言模型，可以至<a href="https://huggingface.co/">huggingface</a>下載模型到”&#x2F;model”資料夾，模型便會加至設定中</p>
-<p><img src="https://hackmd.io/_uploads/SyS6g5yqa.png" alt="ui_model"></p>
-<p>設定完成後，便可開始使用akasha ui</p>
-]]></content>
-      <categories>
-        <category>UI</category>
-      </categories>
-      <tags>
-        <tag>akasha-UI</tag>
       </tags>
   </entry>
   <entry>
@@ -649,83 +608,6 @@
 </br>
 
 <h3 id="test-agent-中的所有參數"><a href="#test-agent-中的所有參數" class="headerlink" title="test_agent 中的所有參數:"></a>test_agent 中的所有參數:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Args:</span><br><span class="line">   model (str, optional): 使用的大語言模型. Defaults to &quot;gpt-3.5-turbo&quot;.\n</span><br><span class="line">   verbose (bool, optional): 是否顯示log文字. Defaults to False.\n</span><br><span class="line">   language (str, optional): 用來計算文字長度(max_doc_len)的語言. Defaults to &quot;zh&quot;</span><br><span class="line">   temperature (float, optional): 大語言模型的temperature(0.0 ~ 1.0) . Defaults to 0.0.\n</span><br><span class="line">   keep_logs (bool, optional)**: 是否紀錄執行的log. Defaults to False.\n</span><br><span class="line">   max_round (int, optional)**: agent最多執行次數，超過即跳出，避免無線迴圈. Defaults to 20.\n</span><br><span class="line">   max_doc_len (int, optional): agent保留的之前做過的思考與動作的文字最大長度. Defaults to 1800.\n</span><br><span class="line">   max_past_observation (int, optional)**: agent保留的之前做過的思考與動作的最多次數. Defaults to 10.\n</span><br><span class="line">   retri_observation (bool, optional)**: 若設為True, agent會利用大語言模型去擷取tool回傳內容，避免多餘文字輸入. Defaults to False.\n</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>進階</category>
-      </categories>
-      <tags>
-        <tag>akasha-advanced</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>安裝&amp;使用</title>
-    <url>/2024/12/30/%E5%AE%89%E8%A3%9D&amp;%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h2 id="安裝WSL"><a href="#安裝WSL" class="headerlink" title="安裝WSL"></a>安裝WSL</h2><p>如果你是linux 使用者可以跳過這個步驟，windows使用者建議安裝Windows子系統(WSL)，直接在Windows 執行Linux，請先確認windows版本是 Windows 10 版本 2004(組建 19041 和更新版本)或 Windows 11以上的版本才能安裝WSL。<br>先搜尋PowerShell，以系統管理員開啟 PowerShell執行WSL並安裝linux ubuntu，安裝完畢後要重新開機。</p>
-<h3 id="install-wsl"><a href="#install-wsl" class="headerlink" title="install wsl"></a>install wsl</h3><p>安裝WSL並且安裝linux ubuntu。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ wsl --install</span><br></pre></td></tr></table></figure>
-<p>安裝完畢，重新開機</p>
-<h3 id="更新ubuntu"><a href="#更新ubuntu" class="headerlink" title="更新ubuntu"></a>更新ubuntu</h3><p>重新開機後，開啟wsl，更新ubuntu到最新版本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo apt update -y &amp;&amp; sudo apt upgrade -y</span><br></pre></td></tr></table></figure>
-
-<h3 id="更新系統套件到最新版本"><a href="#更新系統套件到最新版本" class="headerlink" title="更新系統套件到最新版本"></a>更新系統套件到最新版本</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$sudo apt update &amp;&amp; upgrade</span><br></pre></td></tr></table></figure>
-<h3 id="安裝curl-套件"><a href="#安裝curl-套件" class="headerlink" title="安裝curl 套件"></a>安裝curl 套件</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$sudo apt install curl</span><br></pre></td></tr></table></figure>
-<h3 id="安裝anaconda"><a href="#安裝anaconda" class="headerlink" title="安裝anaconda"></a>安裝anaconda</h3><p>###先建立一個資料夾</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$mkdir temp</span><br></pre></td></tr></table></figure>
-
-<p>###進入資料夾</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$cd temp</span><br></pre></td></tr></table></figure>
-<p>###下載anaconda.sh </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$curl https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh --output anaconda.sh</span><br></pre></td></tr></table></figure>
-<p>###安裝anaconda</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$bash anaconda.sh</span><br></pre></td></tr></table></figure>
-
-<h3 id="新增conda-指令"><a href="#新增conda-指令" class="headerlink" title="新增conda 指令"></a>新增conda 指令</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$source ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<h3 id="確認conda-有安裝成功"><a href="#確認conda-有安裝成功" class="headerlink" title="確認conda 有安裝成功"></a>確認conda 有安裝成功</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$conda info</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="使用anaconda和pip安裝akasha套件"><a href="#使用anaconda和pip安裝akasha套件" class="headerlink" title="使用anaconda和pip安裝akasha套件"></a>使用anaconda和pip安裝akasha套件</h2><p>Linux使用者安裝完畢anaconda，進行安裝akasha套件。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">###create environment</span><br><span class="line">$ conda create --name py3-8 python=3.8</span><br><span class="line">$ activate py3-8</span><br><span class="line"></span><br><span class="line">###install akasha</span><br><span class="line">$ pip install akasha-terminal</span><br></pre></td></tr></table></figure>
-
-</br>
-</br>
-
-<h2 id="在Python中使用"><a href="#在Python中使用" class="headerlink" title="在Python中使用"></a>在Python中使用</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#PYTHON3.8</span></span><br><span class="line"><span class="keyword">import</span> akasha</span><br><span class="line">ak = akasha.Doc_QA()</span><br><span class="line">response = ak.get_response(dir_path, prompt, model=<span class="string">&quot;hf:meta-llama/Llama-2-7b-chat-hf&quot;</span>)</span><br></pre></td></tr></table></figure>
-</br>
-</br>
-
-<h2 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h2><p>在terminal上輸入，便會開起streamlit使用介面</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ akasha ui</span><br></pre></td></tr></table></figure>
-</br>
-
-<p>在瀏覽器中開啟 <a href="http://localhost:8501/">http://localhost:8501/</a> <img src="https://hackmd.io/_uploads/Hkh8vijKT.png" alt="ui_5"> </p>
-</br>
-</br>
-
-<h2 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h2><p>透過command line interface使用akasha，你可以用’keep-responsing’來建立一個文檔問答模型，並可以提出不同的問題，根據給定目錄中的文檔獲取語言模型的回答。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">akasha keep-responsing -d ../doc/plc/  -c 400 -k 1</span></span><br><span class="line">Please input your question(type &quot;exit()&quot; to quit) : 應回收廢塑膠容器材質種類不包含哪種?  聚丙烯（PP） 聚苯乙烯（PS） 聚氯乙烯（PVC）  低密度聚乙烯（LDPE）</span><br><span class="line">Response:  應回收廢塑膠容器材質種類不包含低密度聚乙烯（LDPE）。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Please input your question(type &quot;exit()&quot; to quit) : 所謂市盈率，是指每股市價除以每股盈餘，也就是股票的?   本益比  帳面值比  派息   資金</span><br><span class="line">英國和德國等多個市場。然而，義大利、加拿大和澳洲並不在這些可交易的國家之列。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Please input your question(type &quot;exit()&quot; to quit) : exit()</span><br></pre></td></tr></table></figure>
-
-</br>
-</br>
-
-<p>現在可使用的指令: <em><strong>get-response</strong></em>, <em><strong>keep-responsing</strong></em>, <em><strong>chain-of-thought</strong></em>, <em><strong>auto-create-questionset</strong></em> and <em><strong>auto-evaluation</strong></em>.</p>
-</br>
-
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">akasha keep-responsing --<span class="built_in">help</span></span></span><br><span class="line">Usage: akasha keep-responsing [OPTIONS]</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  -d, --doc_path TEXT         document directory path, parse all .txt, .pdf,</span><br><span class="line">                              .docx files in the directory  [required]</span><br><span class="line">  -e, --embeddings TEXT       embeddings for storing the documents</span><br><span class="line">  -c, --chunk_size INTEGER    chunk size for storing the documents</span><br><span class="line">  -m, --model TEXT            llm model for generating the response</span><br><span class="line">  -ur --use_rerank BOOL       use rerank to sort the documents</span><br><span class="line">  -t, --threshold FLOAT       threshold score for selecting the relevant</span><br><span class="line">                              documents</span><br><span class="line">  -l, --language TEXT         language for the documents, default is &#x27;ch&#x27; for</span><br><span class="line">                              chinese</span><br><span class="line">  -s, --search_type TEXT      search type for the documents, include merge,</span><br><span class="line">                              svm, mmr, tfidf</span><br><span class="line">  -sys, --system_prompt TEXT  system prompt for the llm model</span><br><span class="line">  -md, --max_doc_len INTEGER    max document length for the llm model input</span><br><span class="line">  --help                      Show this message and exit.</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>安裝&amp;設定</category>
-      </categories>
-      <tags>
-        <tag>akasha</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>批量推理</title>
-    <url>/2024/12/26/%E6%89%B9%E9%87%8F%E6%8E%A8%E7%90%86/</url>
-    <content><![CDATA[<h2 id="批量推理"><a href="#批量推理" class="headerlink" title="批量推理"></a>批量推理</h2><p>如果你有大量不需要連貫的推理需求，可以使用<strong>akasha.helper.call_batch_model</strong> 來進行批量推理來提升速度。</p>
-<h3 id="call-batch-model"><a href="#call-batch-model" class="headerlink" title="call_batch_model"></a>call_batch_model</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">def call_batch_model(model: LLM, prompt: List[str], </span><br><span class="line">    system_prompt: Union[List[str], str] = &quot;&quot;) -&gt; List[str]:</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> akasha</span><br><span class="line"></span><br><span class="line">model_obj = akasha.helper.handle_model(<span class="string">&quot;openai:gpt-3.5-turbo&quot;</span>, <span class="literal">False</span>, <span class="number">0.0</span>)</span><br><span class="line"><span class="comment"># this prompt ask LLM to response &#x27;yes&#x27; or &#x27;no&#x27; if the document segment is relevant to the user question or not.</span></span><br><span class="line">SYSTEM_PROMPT = akasha.prompts.default_doc_grader_prompt() </span><br><span class="line">documents = [<span class="string">&quot;Doc1...&quot;</span>, <span class="string">&quot;Doc2...&quot;</span>, <span class="string">&quot;Doc3...&quot;</span>, <span class="string">&quot;Doc4...&quot;</span>]</span><br><span class="line">question = <span class="string">&quot;五軸是什麼?&quot;</span></span><br><span class="line"></span><br><span class="line">prompts = [<span class="string">&quot;document: &quot;</span> + doc +<span class="string">&quot;\n\n&quot;</span> + <span class="string">&quot;User Question: &quot;</span>+ question <span class="keyword">for</span> doc <span class="keyword">in</span> documents]</span><br><span class="line"></span><br><span class="line">response_list = call_batch_model(model_obj, prompt, SYSTEM_PROMPT)</span><br><span class="line"></span><br><span class="line"><span class="comment">## [&quot;yes&quot;, &quot;no&quot;, &quot;yes&quot;, &quot;yes&quot;]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>進階</category>
       </categories>
@@ -783,6 +665,61 @@
 
 <h2 id="取出特定文件db"><a href="#取出特定文件db" class="headerlink" title="取出特定文件db"></a>取出特定文件db</h2><p>當你想從大量文檔db中取出特定的文件db，以縮小搜尋範圍時，可以使用 <em><strong>extract_db_by_file</strong></em> (by file source name) 或 <em><strong>extract_db_by_keyword</strong></em> (by id)</p>
 <h3 id="example-1"><a href="#example-1" class="headerlink" title="example"></a>example</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line">emb_name = &quot;openai:text-embedding-ada-002&quot;</span><br><span class="line">emb_obj = akasha.handle_embeddings(emb_name, False)</span><br><span class="line">doc_path = [&quot;文檔資料夾1&quot;,&quot;文檔資料夾2&quot;]</span><br><span class="line">db, _ = akasha.db.processMultiDB(doc_path, True, emb_obj,</span><br><span class="line">                emb_name, chunk_size=1000, ignore_check=True)</span><br><span class="line"></span><br><span class="line">## extract from db ##</span><br><span class="line">file_name_list = [&quot;f1.txt&quot;, &quot;g2.docx&quot;, &quot;h3.pdf&quot;]</span><br><span class="line">ex_db = akasha.extract_db_by_file(db, file_name_list)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>進階</category>
+      </categories>
+      <tags>
+        <tag>akasha-advanced</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ui設定</title>
+    <url>/2024/12/24/ui%E8%A8%AD%E5%AE%9A/</url>
+    <content><![CDATA[<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>只要你安裝了akasha，便可以直接使用akasha_ui，在terminal執行:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">akasha ui</span></span><br></pre></td></tr></table></figure>
+
+<p>便可以在瀏覽器上<a href="http://localhost:8501/">開啟</a>，開始使用akasha ui</p>
+</br>
+</br>
+
+
+<h3 id="Docker安裝"><a href="#Docker安裝" class="headerlink" title="Docker安裝"></a>Docker安裝</h3><p>若要使用docker安裝，可以直接下載image</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">docker pull ccchang0518/akasha-ui:0.1</span></span><br></pre></td></tr></table></figure>
+
+<p>如要使用gpu來推論llama-cpp模型(.gguf)</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">docker pull ccchang0518/akasha-ui:llamacpp</span></span><br></pre></td></tr></table></figure>
+
+<p>執行image</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">docker run --gpus all -v ./model:/app/model  -v ./docs:/app/docs -v ./chromadb:/app/chromadb -p 8501:8501 akasha-llamacpp-ui:0.1</span></span><br></pre></td></tr></table></figure>
+
+
+</br>
+</br>
+
+<h2 id="上傳文件檔"><a href="#上傳文件檔" class="headerlink" title="上傳文件檔"></a>上傳文件檔</h2><p>上傳你需要的文件檔案，並取資料夾名稱，創立知識庫。<br>:::info<br>請注意文件檔只允許(.docx, .txt, .pdf)<br>:::<br><img src="https://hackmd.io/_uploads/B1glkq19a.png" alt="ui_upload"></p>
+</br>
+</br>
+
+<h2 id="設定"><a href="#設定" class="headerlink" title="設定"></a>設定</h2><p>在設定頁面，可以選擇要詢問的知識庫和調整各種參數、選擇不同語言模型。<br>:::info<br>若使用openAI模型，請在左側輸入 openAI的key，azure openAI則需要額外輸入url。<br>:::<br><img src="https://hackmd.io/_uploads/BJ0TRYJcT.png" alt="ui_setting"></p>
+<h2 id="手動增加模型"><a href="#手動增加模型" class="headerlink" title="手動增加模型"></a>手動增加模型</h2><p>如果你想使用不同的語言模型，可以至<a href="https://huggingface.co/">huggingface</a>下載模型到”&#x2F;model”資料夾，模型便會加至設定中</p>
+<p><img src="https://hackmd.io/_uploads/SyS6g5yqa.png" alt="ui_model"></p>
+<p>設定完成後，便可開始使用akasha ui</p>
+]]></content>
+      <categories>
+        <category>UI</category>
+      </categories>
+      <tags>
+        <tag>akasha-UI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FAST API</title>
+    <url>/2024/12/26/FAST%20API/</url>
+    <content><![CDATA[<h2 id="FAST-API"><a href="#FAST-API" class="headerlink" title="FAST API"></a>FAST API</h2><p>akasha 提供get_response, ask_self, ask_whole_file, get_summary的api server</p>
+<h3 id="啟動"><a href="#啟動" class="headerlink" title="啟動"></a>啟動</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">akasha api (–port &#123;port&#125; –host &#123;host&#125; –workers &#123;num_of_workers&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import requests</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">HOST = os.getenv(&quot;API_HOST&quot;, &quot;http://127.0.0.1&quot;)</span><br><span class="line">PORT = os.getenv(&quot;API_PORT&quot;, &quot;8000&quot;)</span><br><span class="line">urls = &#123;</span><br><span class="line">    &quot;summary&quot;: f&quot;&#123;HOST&#125;:&#123;PORT&#125;/get_summary&quot;,</span><br><span class="line">    &quot;qa&quot;: f&quot;&#123;HOST&#125;:&#123;PORT&#125;/get_response&quot;,</span><br><span class="line">    &quot;self&quot;: f&quot;&#123;HOST&#125;:&#123;PORT&#125;/ask_self&quot;,</span><br><span class="line">    &quot;file&quot;: f&quot;&#123;HOST&#125;:&#123;PORT&#125;/ask_whole_file&quot;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">openai_config = &#123;</span><br><span class="line">    &quot;azure_key&quot;: &#123;your api key&#125;,</span><br><span class="line">    &quot;azure_base&quot;: &#123;your api base&#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">self_data = &#123;</span><br><span class="line">    &quot;prompt&quot;: &quot;太陽電池技術?&quot;,</span><br><span class="line">    &quot;info&quot;: &quot;太陽能電池技術5塊錢&quot;,</span><br><span class="line">    &quot;model&quot;: &quot;openai:gpt-3.5-turbo&quot;,</span><br><span class="line">    &quot;system_prompt&quot;: &quot;&quot;,</span><br><span class="line">    &quot;max_doc_len&quot;: 1500,</span><br><span class="line">    &quot;temperature&quot;: 0.0,</span><br><span class="line">    &quot;openai_config&quot;: openai_config</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">file_data = &#123;</span><br><span class="line">    &quot;doc_path&quot;: &quot;docs/mic/20230317_5軸工具機因應市場訴求改變的發展態勢.pdf&quot;,</span><br><span class="line">    &quot;prompt&quot;: &quot;五軸是什麼?&quot;,</span><br><span class="line">    &quot;chunk_size&quot;: 1000,</span><br><span class="line">    &quot;model&quot;: &quot;openai:gpt-3.5-turbo&quot;,</span><br><span class="line">    &quot;embedding_model&quot;: &quot;openai:text-embedding-ada-002&quot;,</span><br><span class="line">    &quot;system_prompt&quot;: &quot;&quot;,</span><br><span class="line">    &quot;max_doc_len&quot;: 1500,</span><br><span class="line">    &quot;temperature&quot;: 0.0,</span><br><span class="line">    &quot;openai_config&quot;: openai_config</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">chat_data = &#123;</span><br><span class="line">    &quot;doc_path&quot;: &quot;docs/pns/&quot;,</span><br><span class="line">    &quot;prompt&quot;: &quot;太陽電池技術?&quot;,</span><br><span class="line">    &quot;chunk_size&quot;: 1000,</span><br><span class="line">    &quot;model&quot;: &quot;openai:gpt-3.5-turbo&quot;,</span><br><span class="line">    &quot;embedding_model&quot;: &quot;openai:text-embedding-ada-002&quot;,</span><br><span class="line">    &quot;threshold&quot;: 0.1,</span><br><span class="line">    &quot;search_type&quot;: &#x27;auto&#x27;,</span><br><span class="line">    &quot;system_prompt&quot;: &quot;&quot;,</span><br><span class="line">    &quot;max_doc_len&quot;: 1500,</span><br><span class="line">    &quot;temperature&quot;: 0.0,</span><br><span class="line">    &quot;openai_config&quot;: openai_config</span><br><span class="line">&#125;</span><br><span class="line">summary_data = &#123;</span><br><span class="line">    &quot;file_path&quot;: &quot;docs/pns/2484.txt&quot;,</span><br><span class="line">    &quot;model&quot;: &quot;openai:gpt-3.5-turbo&quot;,</span><br><span class="line">    &quot;summary_type&quot;: &quot;reduce_map&quot;,</span><br><span class="line">    &quot;summary_len&quot;: 500,</span><br><span class="line">    &quot;system_prompt&quot;: &quot;&quot;,</span><br><span class="line">    &quot;openai_config&quot;: openai_config</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"># chat_response = requests.post(urls[&quot;qa&quot;], json=chat_data).json()</span><br><span class="line"># print(chat_response)</span><br><span class="line"></span><br><span class="line"># sum_response = requests.post(</span><br><span class="line">#     urls[&quot;summary&quot;],</span><br><span class="line">#     json=summary_data,</span><br><span class="line"># ).json()</span><br><span class="line"></span><br><span class="line"># print(sum_response)</span><br><span class="line"></span><br><span class="line">self_response = requests.post(urls[&quot;self&quot;], json=self_data).json()</span><br><span class="line">print(self_response)</span><br><span class="line">file_response = requests.post(urls[&quot;file&quot;], json=file_data).json()</span><br><span class="line">print(file_response)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>進階</category>
       </categories>
@@ -857,104 +794,63 @@
       </tags>
   </entry>
   <entry>
-    <title>流輸出</title>
-    <url>/2024/12/26/%E6%B5%81%E8%BC%B8%E5%87%BA/</url>
-    <content><![CDATA[<h2 id="call-stream-model"><a href="#call-stream-model" class="headerlink" title="call_stream_model"></a>call_stream_model</h2><p>在輔助函數中，若LLM模型為若為<em><strong>openai</strong></em>, <em><strong>huggingface</strong></em>, <em><strong>remote</strong></em>類模型，可以使用akasha.call_stream_model()來得到流輸出</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> akasha</span><br><span class="line">prompt = <span class="string">&quot;say something.&quot;</span></span><br><span class="line">model_obj = akasha.handle_model(<span class="string">&quot;openai:gpt-3.5-turbo&quot;</span>, <span class="literal">False</span>, <span class="number">0.0</span>)</span><br><span class="line">streaming = akasha.call_stream_model(model_obj, prompt)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> s <span class="keyword">in</span> streaming:</span><br><span class="line">    <span class="built_in">print</span>(s)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>安裝&amp;使用</title>
+    <url>/2024/12/30/%E5%AE%89%E8%A3%9D&amp;%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="安裝WSL"><a href="#安裝WSL" class="headerlink" title="安裝WSL"></a>安裝WSL</h2><p>如果你是linux 使用者可以跳過這個步驟，windows使用者建議安裝Windows子系統(WSL)，直接在Windows 執行Linux，請先確認windows版本是 Windows 10 版本 2004(組建 19041 和更新版本)或 Windows 11以上的版本才能安裝WSL。<br>先搜尋PowerShell，以系統管理員開啟 PowerShell執行WSL並安裝linux ubuntu，安裝完畢後要重新開機。</p>
+<h3 id="install-wsl"><a href="#install-wsl" class="headerlink" title="install wsl"></a>install wsl</h3><p>安裝WSL並且安裝linux ubuntu。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ wsl --install</span><br></pre></td></tr></table></figure>
+<p>安裝完畢，重新開機</p>
+<h3 id="更新ubuntu"><a href="#更新ubuntu" class="headerlink" title="更新ubuntu"></a>更新ubuntu</h3><p>重新開機後，開啟wsl，更新ubuntu到最新版本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo apt update -y &amp;&amp; sudo apt upgrade -y</span><br></pre></td></tr></table></figure>
+
+<h3 id="更新系統套件到最新版本"><a href="#更新系統套件到最新版本" class="headerlink" title="更新系統套件到最新版本"></a>更新系統套件到最新版本</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$sudo apt update &amp;&amp; upgrade</span><br></pre></td></tr></table></figure>
+<h3 id="安裝curl-套件"><a href="#安裝curl-套件" class="headerlink" title="安裝curl 套件"></a>安裝curl 套件</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$sudo apt install curl</span><br></pre></td></tr></table></figure>
+<h3 id="安裝anaconda"><a href="#安裝anaconda" class="headerlink" title="安裝anaconda"></a>安裝anaconda</h3><p>###先建立一個資料夾</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$mkdir temp</span><br></pre></td></tr></table></figure>
+
+<p>###進入資料夾</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$cd temp</span><br></pre></td></tr></table></figure>
+<p>###下載anaconda.sh </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$curl https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh --output anaconda.sh</span><br></pre></td></tr></table></figure>
+<p>###安裝anaconda</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$bash anaconda.sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="新增conda-指令"><a href="#新增conda-指令" class="headerlink" title="新增conda 指令"></a>新增conda 指令</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<h3 id="確認conda-有安裝成功"><a href="#確認conda-有安裝成功" class="headerlink" title="確認conda 有安裝成功"></a>確認conda 有安裝成功</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$conda info</span><br></pre></td></tr></table></figure>
 
 
+<h2 id="使用anaconda和pip安裝akasha套件"><a href="#使用anaconda和pip安裝akasha套件" class="headerlink" title="使用anaconda和pip安裝akasha套件"></a>使用anaconda和pip安裝akasha套件</h2><p>Linux使用者安裝完畢anaconda，進行安裝akasha套件。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">###create environment</span><br><span class="line">$ conda create --name py3-8 python=3.8</span><br><span class="line">$ activate py3-8</span><br><span class="line"></span><br><span class="line">###install akasha</span><br><span class="line">$ pip install akasha-terminal</span><br></pre></td></tr></table></figure>
 
-<h2 id="Doc-QA-stream"><a href="#Doc-QA-stream" class="headerlink" title="Doc_QA stream"></a>Doc_QA stream</h2><p>Doc_QA class的函式皆可使用參數stream&#x3D;True來得到流輸出</p>
-<h2 id="Stream-Output"><a href="#Stream-Output" class="headerlink" title="Stream Output"></a>Stream Output</h2><p>要在網頁上或API中使用流輸出(及時一個字一個字輸出語言模型回答)時，若為<em><strong>openai</strong></em>, <em><strong>huggingface</strong></em>, <em><strong>remote</strong></em>類模型，可以使用model_obj.stream(prompt)，以下為streamlit write_stream在網頁上即時輸出回答為範例</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> streamlit <span class="keyword">as</span> st</span><br><span class="line"><span class="keyword">import</span> akasha</span><br><span class="line"><span class="keyword">import</span> gc, torch</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="string">&quot;pre&quot;</span> <span class="keyword">not</span> <span class="keyword">in</span> st.session_state:</span><br><span class="line">    st.session_state.pre = <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">if</span> <span class="string">&quot;model_obj&quot;</span> <span class="keyword">not</span> <span class="keyword">in</span> st.session_state:</span><br><span class="line">    st.session_state.model_obj = <span class="literal">None</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">clean</span>():</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        gc.collect()</span><br><span class="line">        torch.cuda.ipc_collect()</span><br><span class="line">        torch.cuda.empty_cache()</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">stream_response</span>(<span class="params">prompt:<span class="built_in">str</span>, model_name:<span class="built_in">str</span>=<span class="string">&quot;openai:gpt-3.5-turbo&quot;</span></span>):</span><br><span class="line">    <span class="comment"># Mistral-7B-Instruct-v0.3   Llama3-8B-Chinese-Chat</span></span><br><span class="line">    mdl_type = model_name.split(<span class="string">&#x27;:&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">    streaming = st.session_state.model_obj.stream(prompt)</span><br><span class="line">    <span class="keyword">for</span> s <span class="keyword">in</span> streaming:</span><br><span class="line">        <span class="keyword">if</span> mdl_type == <span class="string">&quot;openai&quot;</span>:</span><br><span class="line">            <span class="keyword">yield</span> s.content</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">yield</span> s</span><br><span class="line"></span><br><span class="line">model = st.selectbox(<span class="string">&quot;select model&quot;</span>, [<span class="string">&quot;openai:gpt-3.5-turbo&quot;</span>,<span class="string">&quot;hf:model/Mistral-7B-Instruct-v0.3&quot;</span>])</span><br><span class="line">prompt = st.chat_input(<span class="string">&quot;Say something&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> st.session_state.pre != model:</span><br><span class="line">    st.session_state.model_obj = <span class="literal">None</span></span><br><span class="line">    clean()</span><br><span class="line">    st.session_state.model_obj = akasha.helper.handle_model(model, <span class="literal">False</span>, <span class="number">0.0</span>)</span><br><span class="line">    st.session_state.pre = model</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> prompt:</span><br><span class="line">    st.write(<span class="string">&quot;question: &quot;</span> + prompt)</span><br><span class="line">    st.write_stream(stream_response(prompt, model))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</br>
+</br>
+
+<h2 id="在Python中使用"><a href="#在Python中使用" class="headerlink" title="在Python中使用"></a>在Python中使用</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#PYTHON3.8</span></span><br><span class="line"><span class="keyword">import</span> akasha</span><br><span class="line">ak = akasha.Doc_QA()</span><br><span class="line">response = ak.get_response(dir_path, prompt, model=<span class="string">&quot;hf:meta-llama/Llama-2-7b-chat-hf&quot;</span>)</span><br></pre></td></tr></table></figure>
+</br>
+</br>
+
+<h2 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h2><p>在terminal上輸入，便會開起streamlit使用介面</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ akasha ui</span><br></pre></td></tr></table></figure>
+</br>
+
+<p>在瀏覽器中開啟 <a href="http://localhost:8501/">http://localhost:8501/</a> <img src="https://hackmd.io/_uploads/Hkh8vijKT.png" alt="ui_5"> </p>
+</br>
+</br>
+
+<h2 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h2><p>透過command line interface使用akasha，你可以用’keep-responsing’來建立一個文檔問答模型，並可以提出不同的問題，根據給定目錄中的文檔獲取語言模型的回答。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">akasha keep-responsing -d ../doc/plc/  -c 400 -k 1</span></span><br><span class="line">Please input your question(type &quot;exit()&quot; to quit) : 應回收廢塑膠容器材質種類不包含哪種?  聚丙烯（PP） 聚苯乙烯（PS） 聚氯乙烯（PVC）  低密度聚乙烯（LDPE）</span><br><span class="line">Response:  應回收廢塑膠容器材質種類不包含低密度聚乙烯（LDPE）。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Please input your question(type &quot;exit()&quot; to quit) : 所謂市盈率，是指每股市價除以每股盈餘，也就是股票的?   本益比  帳面值比  派息   資金</span><br><span class="line">英國和德國等多個市場。然而，義大利、加拿大和澳洲並不在這些可交易的國家之列。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Please input your question(type &quot;exit()&quot; to quit) : exit()</span><br></pre></td></tr></table></figure>
+
+</br>
+</br>
+
+<p>現在可使用的指令: <em><strong>get-response</strong></em>, <em><strong>keep-responsing</strong></em>, <em><strong>chain-of-thought</strong></em>, <em><strong>auto-create-questionset</strong></em> and <em><strong>auto-evaluation</strong></em>.</p>
+</br>
 
 
-<p>使用model_obj &#x3D; akasha.helper.handle_model(model, False, 0.0)建立模型物件，當要使用推論時，使用model_obj.stream(prompt)進行推論，可使用yield讓stream_response函式回傳generator, 便可即時輸出回答。</p>
-<h3 id="模型為openai類型時，s-content才是輸出文字，其他類型s即是輸出文字。"><a href="#模型為openai類型時，s-content才是輸出文字，其他類型s即是輸出文字。" class="headerlink" title="模型為openai類型時，s.content才是輸出文字，其他類型s即是輸出文字。"></a>模型為openai類型時，s.content才是輸出文字，其他類型s即是輸出文字。</h3>]]></content>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">akasha keep-responsing --<span class="built_in">help</span></span></span><br><span class="line">Usage: akasha keep-responsing [OPTIONS]</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  -d, --doc_path TEXT         document directory path, parse all .txt, .pdf,</span><br><span class="line">                              .docx files in the directory  [required]</span><br><span class="line">  -e, --embeddings TEXT       embeddings for storing the documents</span><br><span class="line">  -c, --chunk_size INTEGER    chunk size for storing the documents</span><br><span class="line">  -m, --model TEXT            llm model for generating the response</span><br><span class="line">  -ur --use_rerank BOOL       use rerank to sort the documents</span><br><span class="line">  -t, --threshold FLOAT       threshold score for selecting the relevant</span><br><span class="line">                              documents</span><br><span class="line">  -l, --language TEXT         language for the documents, default is &#x27;ch&#x27; for</span><br><span class="line">                              chinese</span><br><span class="line">  -s, --search_type TEXT      search type for the documents, include merge,</span><br><span class="line">                              svm, mmr, tfidf</span><br><span class="line">  -sys, --system_prompt TEXT  system prompt for the llm model</span><br><span class="line">  -md, --max_doc_len INTEGER    max document length for the llm model input</span><br><span class="line">  --help                      Show this message and exit.</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>進階</category>
-      </categories>
-      <tags>
-        <tag>akasha-advanced</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>目錄</title>
-    <url>/2024/12/31/%E7%9B%AE%E9%8C%84/</url>
-    <content><![CDATA[<h1 id="目錄"><a href="#目錄" class="headerlink" title="目錄"></a>目錄</h1><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><ul>
-<li><a href="/2024/12/31/2024%20updates/">2024 updates</a></li>
-</ul>
-<h2 id="安裝-設定"><a href="#安裝-設定" class="headerlink" title="安裝&amp;設定"></a>安裝&amp;設定</h2><ul>
-<li><a href="/2024/12/30/%E5%AE%89%E8%A3%9D&%E4%BD%BF%E7%94%A8/">安裝&amp;使用</a></li>
-<li><a href="/2024/12/30/%E8%A8%AD%E5%AE%9A%20API%20Key/">設定 API Key</a></br>
-</br></li>
-</ul>
-<h2 id="文檔問答"><a href="#文檔問答" class="headerlink" title="文檔問答"></a>文檔問答</h2><ul>
-<li><a href="/2024/12/29/get_response/">get_response</a></li>
-<li><a href="/2024/12/29/chain_of_thought/">chain_of_thought</a></li>
-<li><a href="/2024/12/29/ask_whole_file/">ask_whole_file</a></li>
-<li><a href="/2024/12/29/ask_self/">ask_self</a></li>
-<li><a href="/2024/12/29/ask_agent/">ask_agent</a></li>
-<li><a href="/2024/12/29/ask_image/">ask_image</a></br>
-</br></li>
-</ul>
-<h2 id="評估"><a href="#評估" class="headerlink" title="評估"></a>評估</h2><ul>
-<li><a href="/2024/12/28/auto_evaluation/">auto_evaluation</a></li>
-<li><a href="/2024/12/28/auto_create_questionset/">auto_create_questionset</a></li>
-<li><a href="/2024/12/28/optimum_combination/">optimum_combination</a></br>
-</br></li>
-</ul>
-<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><ul>
-<li><a href="/2024/12/27/summary/">summary</a></li>
-</ul>
-</br>
-</br>
-
-<h2 id="進階"><a href="#進階" class="headerlink" title="進階"></a>進階</h2><ul>
-<li><a href="/2024/12/26/%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B/">語言模型</a></li>
-<li><a href="/2024/12/26/%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B/">嵌入模型</a></li>
-<li><a href="/2024/12/26/%E6%8F%90%E7%A4%BA%E6%A0%BC%E5%BC%8F/">提示格式</a></li>
-<li><a href="/2024/12/26/%E6%96%87%E4%BB%B6%E6%90%9C%E5%B0%8B/">文件搜尋</a></li>
-<li><a href="/2024/12/26/%E8%BC%94%E5%8A%A9%E5%87%BD%E6%95%B8/">輔助函數</a></li>
-<li><a href="/2024/12/26/%E4%BB%A3%E7%90%86/">代理</a></li>
-<li><a href="/2024/12/26/%E6%B5%81%E8%BC%B8%E5%87%BA/">流輸出</a></li>
-<li><a href="/2024/12/26/%E6%89%B9%E9%87%8F%E6%8E%A8%E7%90%86/">批量推理</a></li>
-<li><a href="/2024/12/26/FAST%20API/">FAST API</a></li>
-</ul>
-</br>
-</br>
-
-<h2 id="指定輸出格式"><a href="#指定輸出格式" class="headerlink" title="指定輸出格式"></a>指定輸出格式</h2><ul>
-<li><a href="/2024/12/25/JSON%E6%A0%BC%E5%BC%8F/">JSON格式</a></li>
-<li><a href="/2024/12/25/XML%E6%A0%BC%E5%BC%8F/">XML格式</a></li>
-</ul>
-</br>
-</br>
-
-
-
-
-
-<h2 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h2><ul>
-<li><a href="/2024/12/24/ui%E8%A8%AD%E5%AE%9A/">ui設定</a></li>
-<li><a href="/2024/12/24/ui%E6%93%8D%E4%BD%9C/">ui操作</a></li>
-</ul>
-</br>
-</br>
-
-
-
-<h2 id="UI-DEV"><a href="#UI-DEV" class="headerlink" title="UI-DEV"></a>UI-DEV</h2><ul>
-<li><a href="/2024/01/01/DEV-%E5%AE%89%E8%A3%9D&%E5%9F%B7%E8%A1%8C/">DEV-安裝&amp;執行</a></li>
-<li><a href="/2024/01/01/DEV-%E8%A8%BB%E5%86%8A%E5%B8%B3%E8%99%9F/">DEV-註冊帳號</a></li>
-<li><a href="/2024/01/01/DEV-%E8%A8%AD%E5%AE%9A/">DEV-設定</a></li>
-<li><a href="/2024/01/01/DEV-Datasets/">DEV-Datasets</a></li>
-<li><a href="/2024/01/01/DEV-Knowledges/">DEV-Knowledges</a></li>
-<li><a href="/2024/01/01/DEV-Consult/">DEV-Consult</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>目錄</category>
+        <category>安裝&amp;設定</category>
       </categories>
       <tags>
         <tag>akasha</tag>
@@ -997,6 +893,28 @@
       </categories>
       <tags>
         <tag>akasha</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>流輸出</title>
+    <url>/2024/12/26/%E6%B5%81%E8%BC%B8%E5%87%BA/</url>
+    <content><![CDATA[<h2 id="call-stream-model"><a href="#call-stream-model" class="headerlink" title="call_stream_model"></a>call_stream_model</h2><p>在輔助函數中，若LLM模型為若為<em><strong>openai</strong></em>, <em><strong>huggingface</strong></em>, <em><strong>remote</strong></em>類模型，可以使用akasha.call_stream_model()來得到流輸出</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> akasha</span><br><span class="line">prompt = <span class="string">&quot;say something.&quot;</span></span><br><span class="line">model_obj = akasha.handle_model(<span class="string">&quot;openai:gpt-3.5-turbo&quot;</span>, <span class="literal">False</span>, <span class="number">0.0</span>)</span><br><span class="line">streaming = akasha.call_stream_model(model_obj, prompt)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> s <span class="keyword">in</span> streaming:</span><br><span class="line">    <span class="built_in">print</span>(s)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Doc-QA-stream"><a href="#Doc-QA-stream" class="headerlink" title="Doc_QA stream"></a>Doc_QA stream</h2><p>Doc_QA class的函式皆可使用參數stream&#x3D;True來得到流輸出</p>
+<h2 id="Stream-Output"><a href="#Stream-Output" class="headerlink" title="Stream Output"></a>Stream Output</h2><p>要在網頁上或API中使用流輸出(及時一個字一個字輸出語言模型回答)時，若為<em><strong>openai</strong></em>, <em><strong>huggingface</strong></em>, <em><strong>remote</strong></em>類模型，可以使用model_obj.stream(prompt)，以下為streamlit write_stream在網頁上即時輸出回答為範例</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> streamlit <span class="keyword">as</span> st</span><br><span class="line"><span class="keyword">import</span> akasha</span><br><span class="line"><span class="keyword">import</span> gc, torch</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="string">&quot;pre&quot;</span> <span class="keyword">not</span> <span class="keyword">in</span> st.session_state:</span><br><span class="line">    st.session_state.pre = <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">if</span> <span class="string">&quot;model_obj&quot;</span> <span class="keyword">not</span> <span class="keyword">in</span> st.session_state:</span><br><span class="line">    st.session_state.model_obj = <span class="literal">None</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">clean</span>():</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        gc.collect()</span><br><span class="line">        torch.cuda.ipc_collect()</span><br><span class="line">        torch.cuda.empty_cache()</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">stream_response</span>(<span class="params">prompt:<span class="built_in">str</span>, model_name:<span class="built_in">str</span>=<span class="string">&quot;openai:gpt-3.5-turbo&quot;</span></span>):</span><br><span class="line">    <span class="comment"># Mistral-7B-Instruct-v0.3   Llama3-8B-Chinese-Chat</span></span><br><span class="line">    mdl_type = model_name.split(<span class="string">&#x27;:&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">    streaming = st.session_state.model_obj.stream(prompt)</span><br><span class="line">    <span class="keyword">for</span> s <span class="keyword">in</span> streaming:</span><br><span class="line">        <span class="keyword">if</span> mdl_type == <span class="string">&quot;openai&quot;</span>:</span><br><span class="line">            <span class="keyword">yield</span> s.content</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">yield</span> s</span><br><span class="line"></span><br><span class="line">model = st.selectbox(<span class="string">&quot;select model&quot;</span>, [<span class="string">&quot;openai:gpt-3.5-turbo&quot;</span>,<span class="string">&quot;hf:model/Mistral-7B-Instruct-v0.3&quot;</span>])</span><br><span class="line">prompt = st.chat_input(<span class="string">&quot;Say something&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> st.session_state.pre != model:</span><br><span class="line">    st.session_state.model_obj = <span class="literal">None</span></span><br><span class="line">    clean()</span><br><span class="line">    st.session_state.model_obj = akasha.helper.handle_model(model, <span class="literal">False</span>, <span class="number">0.0</span>)</span><br><span class="line">    st.session_state.pre = model</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> prompt:</span><br><span class="line">    st.write(<span class="string">&quot;question: &quot;</span> + prompt)</span><br><span class="line">    st.write_stream(stream_response(prompt, model))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>使用model_obj &#x3D; akasha.helper.handle_model(model, False, 0.0)建立模型物件，當要使用推論時，使用model_obj.stream(prompt)進行推論，可使用yield讓stream_response函式回傳generator, 便可即時輸出回答。</p>
+<h3 id="模型為openai類型時，s-content才是輸出文字，其他類型s即是輸出文字。"><a href="#模型為openai類型時，s-content才是輸出文字，其他類型s即是輸出文字。" class="headerlink" title="模型為openai類型時，s.content才是輸出文字，其他類型s即是輸出文字。"></a>模型為openai類型時，s.content才是輸出文字，其他類型s即是輸出文字。</h3>]]></content>
+      <categories>
+        <category>進階</category>
+      </categories>
+      <tags>
+        <tag>akasha-advanced</tag>
       </tags>
   </entry>
   <entry>
@@ -1067,6 +985,20 @@
 <p>此LLM物件也可直接傳入Doc_QA，避免重複宣告</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">model_obj = akasha.handle_model(&quot;openai:gpt-3.5-turbo&quot;,verbose=False,temperature=0.0)</span><br><span class="line"></span><br><span class="line">AK = Doc_QA(model=model_obj) </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>進階</category>
+      </categories>
+      <tags>
+        <tag>akasha-advanced</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>批量推理</title>
+    <url>/2024/12/26/%E6%89%B9%E9%87%8F%E6%8E%A8%E7%90%86/</url>
+    <content><![CDATA[<h2 id="批量推理"><a href="#批量推理" class="headerlink" title="批量推理"></a>批量推理</h2><p>如果你有大量不需要連貫的推理需求，可以使用<strong>akasha.helper.call_batch_model</strong> 來進行批量推理來提升速度。</p>
+<h3 id="call-batch-model"><a href="#call-batch-model" class="headerlink" title="call_batch_model"></a>call_batch_model</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">def call_batch_model(model: LLM, prompt: List[str], </span><br><span class="line">    system_prompt: Union[List[str], str] = &quot;&quot;) -&gt; List[str]:</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> akasha</span><br><span class="line"></span><br><span class="line">model_obj = akasha.helper.handle_model(<span class="string">&quot;openai:gpt-3.5-turbo&quot;</span>, <span class="literal">False</span>, <span class="number">0.0</span>)</span><br><span class="line"><span class="comment"># this prompt ask LLM to response &#x27;yes&#x27; or &#x27;no&#x27; if the document segment is relevant to the user question or not.</span></span><br><span class="line">SYSTEM_PROMPT = akasha.prompts.default_doc_grader_prompt() </span><br><span class="line">documents = [<span class="string">&quot;Doc1...&quot;</span>, <span class="string">&quot;Doc2...&quot;</span>, <span class="string">&quot;Doc3...&quot;</span>, <span class="string">&quot;Doc4...&quot;</span>]</span><br><span class="line">question = <span class="string">&quot;五軸是什麼?&quot;</span></span><br><span class="line"></span><br><span class="line">prompts = [<span class="string">&quot;document: &quot;</span> + doc +<span class="string">&quot;\n\n&quot;</span> + <span class="string">&quot;User Question: &quot;</span>+ question <span class="keyword">for</span> doc <span class="keyword">in</span> documents]</span><br><span class="line"></span><br><span class="line">response_list = call_batch_model(model_obj, prompt, SYSTEM_PROMPT)</span><br><span class="line"></span><br><span class="line"><span class="comment">## [&quot;yes&quot;, &quot;no&quot;, &quot;yes&quot;, &quot;yes&quot;]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>進階</category>
       </categories>
@@ -1155,6 +1087,88 @@
       </categories>
       <tags>
         <tag>akasha-advanced</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>目錄</title>
+    <url>/2024/12/31/%E7%9B%AE%E9%8C%84/</url>
+    <content><![CDATA[<h1 id="目錄"><a href="#目錄" class="headerlink" title="目錄"></a>目錄</h1><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><ul>
+<li><a href="/2024/12/31/2024%20updates/">2024 updates</a></li>
+</ul>
+<h2 id="安裝-設定"><a href="#安裝-設定" class="headerlink" title="安裝&amp;設定"></a>安裝&amp;設定</h2><ul>
+<li><a href="/2024/12/30/%E5%AE%89%E8%A3%9D&%E4%BD%BF%E7%94%A8/">安裝&amp;使用</a></li>
+<li><a href="/2024/12/30/%E8%A8%AD%E5%AE%9A%20API%20Key/">設定 API Key</a></br>
+</br></li>
+</ul>
+<h2 id="文檔問答"><a href="#文檔問答" class="headerlink" title="文檔問答"></a>文檔問答</h2><ul>
+<li><a href="/2024/12/29/get_response/">get_response</a></li>
+<li><a href="/2024/12/29/chain_of_thought/">chain_of_thought</a></li>
+<li><a href="/2024/12/29/ask_whole_file/">ask_whole_file</a></li>
+<li><a href="/2024/12/29/ask_self/">ask_self</a></li>
+<li><a href="/2024/12/29/ask_agent/">ask_agent</a></li>
+<li><a href="/2024/12/29/ask_image/">ask_image</a></br>
+</br></li>
+</ul>
+<h2 id="評估"><a href="#評估" class="headerlink" title="評估"></a>評估</h2><ul>
+<li><a href="/2024/12/28/auto_evaluation/">auto_evaluation</a></li>
+<li><a href="/2024/12/28/auto_create_questionset/">auto_create_questionset</a></li>
+<li><a href="/2024/12/28/optimum_combination/">optimum_combination</a></br>
+</br></li>
+</ul>
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><ul>
+<li><a href="/2024/12/27/summary/">summary</a></li>
+</ul>
+</br>
+</br>
+
+<h2 id="進階"><a href="#進階" class="headerlink" title="進階"></a>進階</h2><ul>
+<li><a href="/2024/12/26/%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B/">語言模型</a></li>
+<li><a href="/2024/12/26/%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B/">嵌入模型</a></li>
+<li><a href="/2024/12/26/%E6%8F%90%E7%A4%BA%E6%A0%BC%E5%BC%8F/">提示格式</a></li>
+<li><a href="/2024/12/26/%E6%96%87%E4%BB%B6%E6%90%9C%E5%B0%8B/">文件搜尋</a></li>
+<li><a href="/2024/12/26/%E8%BC%94%E5%8A%A9%E5%87%BD%E6%95%B8/">輔助函數</a></li>
+<li><a href="/2024/12/26/%E4%BB%A3%E7%90%86/">代理</a></li>
+<li><a href="/2024/12/26/%E6%B5%81%E8%BC%B8%E5%87%BA/">流輸出</a></li>
+<li><a href="/2024/12/26/%E6%89%B9%E9%87%8F%E6%8E%A8%E7%90%86/">批量推理</a></li>
+<li><a href="/2024/12/26/FAST%20API/">FAST API</a></li>
+</ul>
+</br>
+</br>
+
+<h2 id="指定輸出格式"><a href="#指定輸出格式" class="headerlink" title="指定輸出格式"></a>指定輸出格式</h2><ul>
+<li><a href="/2024/12/25/JSON%E6%A0%BC%E5%BC%8F/">JSON格式</a></li>
+<li><a href="/2024/12/25/XML%E6%A0%BC%E5%BC%8F/">XML格式</a></li>
+</ul>
+</br>
+</br>
+
+
+
+
+
+<h2 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h2><ul>
+<li><a href="/2024/12/24/ui%E8%A8%AD%E5%AE%9A/">ui設定</a></li>
+<li><a href="/2024/12/24/ui%E6%93%8D%E4%BD%9C/">ui操作</a></li>
+</ul>
+</br>
+</br>
+
+
+
+<h2 id="UI-DEV"><a href="#UI-DEV" class="headerlink" title="UI-DEV"></a>UI-DEV</h2><ul>
+<li><a href="/2024/01/01/DEV-%E5%AE%89%E8%A3%9D&%E5%9F%B7%E8%A1%8C/">DEV-安裝&amp;執行</a></li>
+<li><a href="/2024/01/01/DEV-%E8%A8%BB%E5%86%8A%E5%B8%B3%E8%99%9F/">DEV-註冊帳號</a></li>
+<li><a href="/2024/01/01/DEV-%E8%A8%AD%E5%AE%9A/">DEV-設定</a></li>
+<li><a href="/2024/01/01/DEV-Datasets/">DEV-Datasets</a></li>
+<li><a href="/2024/01/01/DEV-Knowledges/">DEV-Knowledges</a></li>
+<li><a href="/2024/01/01/DEV-Consult/">DEV-Consult</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>目錄</category>
+      </categories>
+      <tags>
+        <tag>akasha</tag>
       </tags>
   </entry>
 </search>
