@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"tea9297.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="選擇不同嵌入模型使用參數embeddings便可以選擇不同的嵌入模型，預設是openai:text-embedding-ada-002. 範例1. openai1234import akashaakasha.Doc_QA()ak.get_response(dir_path, prompt, embeddings&#x3D;&quot;openai:text-embedding-ada-002&quot;,)">
+    <meta name="description" content="選擇不同嵌入模型使用參數embeddings便可以選擇不同的嵌入模型，預設是openai:text-embedding-ada-002. 範例1. openai(請先完成設定 API Key) 1234import akashaakasha.Doc_QA()ak.get_response(dir_path, prompt, embeddings&#x3D;&quot;openai:text-embeddin">
 <meta property="og:type" content="article">
 <meta property="og:title" content="嵌入模型">
 <meta property="og:url" content="https://tea9297.github.io/2024/12/26/%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B/index.html">
 <meta property="og:site_name" content="akasha使用手冊">
-<meta property="og:description" content="選擇不同嵌入模型使用參數embeddings便可以選擇不同的嵌入模型，預設是openai:text-embedding-ada-002. 範例1. openai1234import akashaakasha.Doc_QA()ak.get_response(dir_path, prompt, embeddings&#x3D;&quot;openai:text-embedding-ada-002&quot;,)">
+<meta property="og:description" content="選擇不同嵌入模型使用參數embeddings便可以選擇不同的嵌入模型，預設是openai:text-embedding-ada-002. 範例1. openai(請先完成設定 API Key) 1234import akashaakasha.Doc_QA()ak.get_response(dir_path, prompt, embeddings&#x3D;&quot;openai:text-embeddin">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-12-26T14:59:59.000Z">
-<meta property="article:modified_time" content="2024-10-04T05:56:46.645Z">
+<meta property="article:modified_time" content="2024-10-30T03:31:30.790Z">
 <meta property="article:author" content="Chih Chuan Chang&lt;ccchang@iii.org.tw&gt;">
 <meta property="article:tag" content="akasha-advanced">
 <meta name="twitter:card" content="summary">
@@ -140,7 +140,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%81%B8%E6%93%87%E4%B8%8D%E5%90%8C%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">選擇不同嵌入模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">2.</span> <span class="nav-text">範例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-openai"><span class="nav-number">2.1.</span> <span class="nav-text">1. openai</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-huggingface"><span class="nav-number">2.2.</span> <span class="nav-text">2. huggingface</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E4%BD%BF%E7%94%A8%E7%9A%84%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">可使用的模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E8%A8%82%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">自訂嵌入模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#example"><span class="nav-number">4.1.</span> <span class="nav-text">example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8BEmbeddings%E7%89%A9%E4%BB%B6"><span class="nav-number">5.</span> <span class="nav-text">建立Embeddings物件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%96%E5%87%BA%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6db"><span class="nav-number">6.</span> <span class="nav-text">取出特定文件db</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#example-1"><span class="nav-number">6.1.</span> <span class="nav-text">example</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%81%B8%E6%93%87%E4%B8%8D%E5%90%8C%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">選擇不同嵌入模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">2.</span> <span class="nav-text">範例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-openai"><span class="nav-number">2.1.</span> <span class="nav-text">1. openai</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-huggingface"><span class="nav-number">2.2.</span> <span class="nav-text">2. huggingface</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-gemini"><span class="nav-number">2.3.</span> <span class="nav-text">3. gemini</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E4%BD%BF%E7%94%A8%E7%9A%84%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">可使用的模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E8%A8%82%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">自訂嵌入模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#example"><span class="nav-number">4.1.</span> <span class="nav-text">example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8BEmbeddings%E7%89%A9%E4%BB%B6"><span class="nav-number">5.</span> <span class="nav-text">建立Embeddings物件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%96%E5%87%BA%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6db"><span class="nav-number">6.</span> <span class="nav-text">取出特定文件db</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#example-1"><span class="nav-number">6.1.</span> <span class="nav-text">example</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -153,7 +153,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -238,7 +238,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-10-04 13:56:46" itemprop="dateModified" datetime="2024-10-04T13:56:46+08:00">2024-10-04</time>
+      <time title="修改時間：2024-10-30 11:31:30" itemprop="dateModified" datetime="2024-10-30T11:31:30+08:00">2024-10-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -260,7 +260,8 @@
     
     
     <div class="post-body" itemprop="articleBody"><h2 id="選擇不同嵌入模型"><a href="#選擇不同嵌入模型" class="headerlink" title="選擇不同嵌入模型"></a>選擇不同嵌入模型</h2><p>使用參數<em><strong>embeddings</strong></em>便可以選擇不同的嵌入模型，預設是<em><strong>openai:text-embedding-ada-002</strong></em>.</p>
-<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><h3 id="1-openai"><a href="#1-openai" class="headerlink" title="1. openai"></a>1. openai</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, prompt, embeddings=&quot;openai:text-embedding-ada-002&quot;,)</span><br></pre></td></tr></table></figure>
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><h3 id="1-openai"><a href="#1-openai" class="headerlink" title="1. openai"></a>1. openai</h3><p>(請先完成<a href="/2024/12/30/%E8%A8%AD%E5%AE%9A%20API%20Key/">設定 API Key</a>)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, prompt, embeddings=&quot;openai:text-embedding-ada-002&quot;,)</span><br></pre></td></tr></table></figure>
 
 </br>
 </br>
@@ -269,10 +270,15 @@
 </br>
 </br>
 
+<h3 id="3-gemini"><a href="#3-gemini" class="headerlink" title="3. gemini"></a>3. gemini</h3><p>(請先完成<a href="/2024/12/30/%E8%A8%AD%E5%AE%9A%20API%20Key/">設定 API Key</a>)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, </span><br><span class="line">                prompt, </span><br><span class="line">                embeddings=&quot;gemini:text-embedding-004&quot;,</span><br><span class="line">                model=&quot;gemini:gemini-1.5-flash&quot;)</span><br></pre></td></tr></table></figure>
 
+
+</br>
+</br>
 
 <h2 id="可使用的模型"><a href="#可使用的模型" class="headerlink" title="可使用的模型"></a>可使用的模型</h2><p>:::info<br>每個嵌入模型都有max sequence length，超過的話後面的文字就會被截斷，不會拿進去做嵌入。<br>:::</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">openai_emd = &quot;openai:text-embedding-ada-002&quot;  # need environment variable &quot;OPENAI_API_KEY&quot;  # 8192 max seq length</span><br><span class="line">huggingface_emd = &quot;hf:all-MiniLM-L6-v2&quot; </span><br><span class="line">text2vec_ch_emd = &quot;hf:shibing624/text2vec-base-chinese&quot;   # 128 max seq length </span><br><span class="line">text2vec_mul_emd = &quot;hf:shibing624/text2vec-base-multilingual&quot;  # 256 max seq length</span><br><span class="line">text2vec_ch_para_emd = &quot;hf:shibing624/text2vec-base-chinese-paraphrase&quot; # perform better for long text, 256 max seq length</span><br><span class="line">bge_en_emd = &quot;hf:BAAI/bge-base-en-v1.5&quot;  # 512 max seq length</span><br><span class="line">bge_ch_emd = &quot;hf:BAAI/bge-base-zh-v1.5&quot;  # 512 max seq length</span><br><span class="line"></span><br><span class="line">rerank_base = &quot;rerank:BAAI/bge-reranker-base&quot;    # 512 max seq length</span><br><span class="line">rerank_large = &quot;rerank:BAAI/bge-reranker-large&quot;  # 512 max seq length</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">openai_emd = &quot;openai:text-embedding-ada-002&quot;  # need environment variable &quot;OPENAI_API_KEY&quot;  # 8192 max seq length</span><br><span class="line">gemini_emd = &quot;gemini:text-embedding-004&quot;</span><br><span class="line">huggingface_emd = &quot;hf:all-MiniLM-L6-v2&quot; </span><br><span class="line">text2vec_ch_emd = &quot;hf:shibing624/text2vec-base-chinese&quot;   # 128 max seq length </span><br><span class="line">text2vec_mul_emd = &quot;hf:shibing624/text2vec-base-multilingual&quot;  # 256 max seq length</span><br><span class="line">text2vec_ch_para_emd = &quot;hf:shibing624/text2vec-base-chinese-paraphrase&quot; # perform better for long text, 256 max seq length</span><br><span class="line">bge_en_emd = &quot;hf:BAAI/bge-base-en-v1.5&quot;  # 512 max seq length</span><br><span class="line">bge_ch_emd = &quot;hf:BAAI/bge-base-zh-v1.5&quot;  # 512 max seq length</span><br><span class="line"></span><br><span class="line">rerank_base = &quot;rerank:BAAI/bge-reranker-base&quot;    # 512 max seq length</span><br><span class="line">rerank_large = &quot;rerank:BAAI/bge-reranker-large&quot;  # 512 max seq length</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 </br>
 </br>

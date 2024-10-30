@@ -148,7 +148,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -441,6 +441,113 @@
 
 
 <h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">HOST = os.getenv(&quot;API_HOST&quot;, &quot;http://127.0.0.1&quot;)</span><br><span class="line">PORT = os.getenv(&quot;API_PORT&quot;, &quot;8000&quot;)</span><br><span class="line">urls = &#123;</span><br><span class="line">    &quot;summary&quot;: f&quot;&#123;HOST&#125;:&#123;PORT&#125;/get_summary&quot;,</span><br><span class="line">    &quot;qa&quot;: f&quot;&#123;HOST&#125;:&#123;PORT&#125;/get_response&quot;,</span><br><span class="line">    &quot;self&quot;: f&quot;&#123;HOST&#125;:&#123;PORT&#125;/ask_self&quot;,</span><br><span class="line">    &quot;file&quot;: f&quot;&#123;HOST&#125;:&#123;PORT&#125;/ask_whole_file&quot;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">openai_config = &#123;</span><br><span class="line">    &quot;azure_key&quot;: &#123;your api key&#125;,</span><br><span class="line">    &quot;azure_base&quot;: &#123;your api base&#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">self_data = &#123;</span><br><span class="line">    &quot;prompt&quot;: &quot;太陽電池技術?&quot;,</span><br><span class="line">    &quot;info&quot;: &quot;太陽能電池技術5塊錢&quot;,</span><br><span class="line">    &quot;model&quot;: &quot;openai:gpt-3.5-turbo&quot;,</span><br><span class="line">    &quot;system_prompt&quot;: &quot;&quot;,</span><br><span class="line">    &quot;max_doc_len&quot;: 1500,</span><br><span class="line">    &quot;temperature&quot;: 0.0,</span><br><span class="line">    &quot;openai_config&quot;: openai_config</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">file_data = &#123;</span><br><span class="line">    &quot;doc_path&quot;: &quot;docs/mic/20230317_5軸工具機因應市場訴求改變的發展態勢.pdf&quot;,</span><br><span class="line">    &quot;prompt&quot;: &quot;五軸是什麼?&quot;,</span><br><span class="line">    &quot;chunk_size&quot;: 1000,</span><br><span class="line">    &quot;model&quot;: &quot;openai:gpt-3.5-turbo&quot;,</span><br><span class="line">    &quot;embedding_model&quot;: &quot;openai:text-embedding-ada-002&quot;,</span><br><span class="line">    &quot;system_prompt&quot;: &quot;&quot;,</span><br><span class="line">    &quot;max_doc_len&quot;: 1500,</span><br><span class="line">    &quot;temperature&quot;: 0.0,</span><br><span class="line">    &quot;openai_config&quot;: openai_config</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">chat_data = &#123;</span><br><span class="line">    &quot;doc_path&quot;: &quot;docs/pns/&quot;,</span><br><span class="line">    &quot;prompt&quot;: &quot;太陽電池技術?&quot;,</span><br><span class="line">    &quot;chunk_size&quot;: 1000,</span><br><span class="line">    &quot;model&quot;: &quot;openai:gpt-3.5-turbo&quot;,</span><br><span class="line">    &quot;embedding_model&quot;: &quot;openai:text-embedding-ada-002&quot;,</span><br><span class="line">    &quot;threshold&quot;: 0.1,</span><br><span class="line">    &quot;search_type&quot;: &#x27;auto&#x27;,</span><br><span class="line">    &quot;system_prompt&quot;: &quot;&quot;,</span><br><span class="line">    &quot;max_doc_len&quot;: 1500,</span><br><span class="line">    &quot;temperature&quot;: 0.0,</span><br><span class="line">    &quot;openai_config&quot;: openai_config</span><br><span class="line">&#125;</span><br><span class="line">summary_data = &#123;</span><br><span class="line">    &quot;file_path&quot;: &quot;docs/pns/2484.txt&quot;,</span><br><span class="line">    &quot;model&quot;: &quot;openai:gpt-3.5-turbo&quot;,</span><br><span class="line">    &quot;summary_type&quot;: &quot;reduce_map&quot;,</span><br><span class="line">    &quot;summary_len&quot;: 500,</span><br><span class="line">    &quot;system_prompt&quot;: &quot;&quot;,</span><br><span class="line">    &quot;openai_config&quot;: openai_config</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"># chat_response = requests.post(urls[&quot;qa&quot;], json=chat_data).json()</span><br><span class="line"># print(chat_response)</span><br><span class="line"></span><br><span class="line"># sum_response = requests.post(</span><br><span class="line">#     urls[&quot;summary&quot;],</span><br><span class="line">#     json=summary_data,</span><br><span class="line"># ).json()</span><br><span class="line"></span><br><span class="line"># print(sum_response)</span><br><span class="line"></span><br><span class="line">self_response = requests.post(urls[&quot;self&quot;], json=self_data).json()</span><br><span class="line">print(self_response)</span><br><span class="line">file_response = requests.post(urls[&quot;file&quot;], json=file_data).json()</span><br><span class="line">print(file_response)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://tea9297.github.io/2024/12/26/%E8%87%AA%E6%9F%A5%E8%A9%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/12/26/%E8%87%AA%E6%9F%A5%E8%A9%A2/" class="post-title-link" itemprop="url">自查詢</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-12-26 13:59:59" itemprop="dateCreated datePublished" datetime="2024-12-26T13:59:59+08:00">2024-12-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-10-30 15:59:29" itemprop="dateModified" datetime="2024-10-30T15:59:29+08:00">2024-10-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%80%B2%E9%9A%8E/" itemprop="url" rel="index"><span itemprop="name">進階</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="自查詢-Self-Query"><a href="#自查詢-Self-Query" class="headerlink" title="自查詢(Self Query)"></a>自查詢(Self Query)</h2><p>自查詢是指能夠自我查詢的檢索問題方法。透過結構化、包含metadata的文件集，能將使用者的問題先透過metadata進行篩選，再藉由向量來查詢語意相似的文檔，比起直接做向量查詢能更精確的找到需要的文件。</p>
+<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>自查詢的流程為</p>
+<h4 id="0-create-metadata"><a href="#0-create-metadata" class="headerlink" title="0. create metadata"></a>0. create metadata</h4><p>添加結構化資料到文件集與向量資料庫中</p>
+<h4 id="1-query-constructor"><a href="#1-query-constructor" class="headerlink" title="1. query constructor"></a>1. query constructor</h4><p>將使用者問題轉換成 query(用來做向量查詢的字串)與filter(用來篩選文件集的metatada keywords)<br>例如，使用者問題為: A公司在2024年對電動車的銷售量為多少?</p>
+<p>透過語言模型 將其轉換為</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;query&quot;</span><span class="punctuation">:</span> <span class="string">&quot;電動車的銷售量&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;filter&quot;</span><span class="punctuation">:</span> <span class="string">&quot;and(eq(\&quot;公司名稱\&quot;, \&quot;A公司\&quot;), eq(\&quot;日期年\&quot;, \&quot;2024\&quot;))&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="2-filter-translator"><a href="#2-filter-translator" class="headerlink" title="2. filter translator"></a>2. filter translator</h4><p>將filter處理為程式可執行的dictionary</p>
+<h4 id="3-filter-docs"><a href="#3-filter-docs" class="headerlink" title="3. filter docs"></a>3. filter docs</h4><p>根據filter篩選需要的文件集</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span>&#x27;filter&#x27;<span class="punctuation">:</span> <span class="punctuation">&#123;</span>&#x27;$and&#x27;<span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">&#123;</span>&#x27;拜訪年&#x27;<span class="punctuation">:</span> <span class="punctuation">&#123;</span>&#x27;$eq&#x27;<span class="punctuation">:</span> &#x27;<span class="number">2024</span>&#x27;<span class="punctuation">&#125;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span>&#x27;公司名稱&#x27;<span class="punctuation">:</span> <span class="punctuation">&#123;</span>&#x27;$eq&#x27;<span class="punctuation">:</span> &#x27;A公司&#x27;<span class="punctuation">&#125;</span><span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="punctuation">&#125;</span><span class="punctuation">&#125;</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="4-similarity-search"><a href="#4-similarity-search" class="headerlink" title="4. similarity search"></a>4. similarity search</h4><p>從篩選出來的文件集做向量相似度搜尋</p>
+</br>
+</br>
+
+<h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><h4 id="1-create-chromadb-add-metadatas"><a href="#1-create-chromadb-add-metadatas" class="headerlink" title="1. create chromadb &amp; add metadatas"></a>1. create chromadb &amp; add metadatas</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> akasha</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add_metadata</span>(<span class="params">metadata_list: <span class="built_in">list</span></span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">import</span> json</span><br><span class="line">    <span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</span><br><span class="line">    <span class="keyword">for</span> metadata <span class="keyword">in</span> metadata_list:</span><br><span class="line">        file_path = metadata[<span class="string">&#x27;source&#x27;</span>] <span class="comment"># file path</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="keyword">with</span> Path(file_path).<span class="built_in">open</span>(<span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">                dictionary = json.load(file)</span><br><span class="line"></span><br><span class="line">            </span><br><span class="line">            metadata[<span class="string">&#x27;課別&#x27;</span>] = dictionary[<span class="string">&#x27;課別&#x27;</span>]</span><br><span class="line">            metadata[<span class="string">&#x27;業務擔當&#x27;</span>] = dictionary[<span class="string">&#x27;業務擔當&#x27;</span>]</span><br><span class="line">            ddate = dictionary[<span class="string">&#x27;拜訪日期&#x27;</span>]</span><br><span class="line">            metadata[<span class="string">&#x27;拜訪年&#x27;</span>] = <span class="built_in">int</span>(ddate.split(<span class="string">&#x27;-&#x27;</span>)[<span class="number">0</span>])</span><br><span class="line">            metadata[<span class="string">&#x27;拜訪月&#x27;</span>] = <span class="built_in">int</span>(ddate.split(<span class="string">&#x27;-&#x27;</span>)[<span class="number">1</span>])</span><br><span class="line">            metadata[<span class="string">&#x27;產品&#x27;</span>] = dictionary[<span class="string">&#x27;產品&#x27;</span>]</span><br><span class="line">            metadata[<span class="string">&#x27;公司名稱&#x27;</span>] = dictionary[<span class="string">&#x27;公司名稱&#x27;</span>]</span><br><span class="line">            metadata[<span class="string">&#x27;大分類&#x27;</span>] = dictionary[<span class="string">&#x27;大分類&#x27;</span>]</span><br><span class="line">            metadata[<span class="string">&#x27;中分類&#x27;</span>] = dictionary[<span class="string">&#x27;中分類&#x27;</span>]</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;JSONDecodeError: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> metadata_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">### set parameter ###</span></span><br><span class="line"><span class="built_in">dir</span> = <span class="string">&quot;docs/pns_query&quot;</span></span><br><span class="line">embed_name = <span class="string">&quot;openai:text-embedding-ada-002&quot;</span></span><br><span class="line">chunk_size = <span class="number">99999</span>  <span class="comment"># make sure 1 file 1 chunk</span></span><br><span class="line">emb_obj = akasha.handle_embeddings(<span class="string">&quot;openai:text-embedding-ada-002&quot;</span>)</span><br><span class="line"><span class="comment">####################</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># create chromadb from docs</span></span><br><span class="line">db, _ = akasha.db.processMultiDB(<span class="built_in">dir</span>, <span class="literal">False</span>, emb_obj, embed_name, chunk_size,</span><br><span class="line">                                 <span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">### add metadata to chromadb ###</span></span><br><span class="line">metadata_list = akasha.db.get_db_metadata(<span class="built_in">dir</span>, embed_name, chunk_size) <span class="comment"># get original metada from chromadb, list of dictionary</span></span><br><span class="line">metadata_list = add_metadata(metadata_list)  <span class="comment"># update/add metadata, you can build your own function to update metadata</span></span><br><span class="line">akasha.db.update_db_metadata(metadata_list, <span class="built_in">dir</span>, embed_name, chunk_size)  <span class="comment"># update and save new metadatas to chromadb</span></span><br><span class="line"><span class="built_in">print</span>(akasha.db.get_db_metadata(<span class="built_in">dir</span>, embed_name, chunk_size)[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+
+</br>
+</br>
+
+
+<h4 id="2-create-chromadb-add-metadatas"><a href="#2-create-chromadb-add-metadatas" class="headerlink" title="2. create chromadb &amp; add metadatas"></a>2. create chromadb &amp; add metadatas</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> akasha.self_query <span class="keyword">import</span> query_filter</span><br><span class="line"><span class="keyword">from</span> langchain.chains.query_constructor.base <span class="keyword">import</span> AttributeInfo</span><br><span class="line"><span class="comment">### set parameter ###</span></span><br><span class="line"></span><br><span class="line">db, _ = akasha.db.processMultiDB(<span class="built_in">dir</span>, <span class="literal">False</span>, emb_obj, embed_name, chunk_size,</span><br><span class="line">                                 <span class="literal">True</span>)</span><br><span class="line">prompt = <span class="string">&quot;A公司在2024年對電動車的銷售量為多少?&quot;</span> </span><br><span class="line">search_type = <span class="string">&quot;bm25&quot;</span></span><br><span class="line">model_obj = akasha.helper.handle_model(<span class="string">&quot;openai:gpt-4o&quot;</span>, <span class="literal">True</span>)</span><br><span class="line">metadata_field_info = [</span><br><span class="line">    AttributeInfo(</span><br><span class="line">        name=<span class="string">&quot;拜訪年&quot;</span>,</span><br><span class="line">        description=<span class="string">&quot;此訪談紀錄的拜訪年份&quot;</span>,</span><br><span class="line">        <span class="built_in">type</span>=<span class="string">&quot;integer&quot;</span>,</span><br><span class="line">    ),</span><br><span class="line">    AttributeInfo(</span><br><span class="line">        name=<span class="string">&quot;拜訪月&quot;</span>,</span><br><span class="line">        description=<span class="string">&quot;此訪談紀錄的拜訪月份&quot;</span>,</span><br><span class="line">        <span class="built_in">type</span>=<span class="string">&quot;integer&quot;</span>,</span><br><span class="line">    ),</span><br><span class="line">    AttributeInfo(</span><br><span class="line">        name=<span class="string">&quot;業務擔當&quot;</span>,</span><br><span class="line">        description=<span class="string">&quot;業務的名稱&quot;</span>,</span><br><span class="line">        <span class="built_in">type</span>=<span class="string">&quot;string&quot;</span>,</span><br><span class="line">    ),</span><br><span class="line">    AttributeInfo(name=<span class="string">&quot;中分類&quot;</span>, description=<span class="string">&quot;訪談產品的中等分類&quot;</span>, <span class="built_in">type</span>=<span class="string">&quot;string&quot;</span>),</span><br><span class="line">    AttributeInfo(name=<span class="string">&quot;公司名稱&quot;</span>, description=<span class="string">&quot;訪談對象的公司名稱&quot;</span>, <span class="built_in">type</span>=<span class="string">&quot;string&quot;</span>),</span><br><span class="line">    AttributeInfo(name=<span class="string">&quot;大分類&quot;</span>, description=<span class="string">&quot;訪談產品的大分類&quot;</span>, <span class="built_in">type</span>=<span class="string">&quot;string&quot;</span>),</span><br><span class="line">    AttributeInfo(name=<span class="string">&quot;產品&quot;</span>, description=<span class="string">&quot;訪談的產品名稱/型號&quot;</span>, <span class="built_in">type</span>=<span class="string">&quot;string&quot;</span>),</span><br><span class="line">    AttributeInfo(name=<span class="string">&quot;課別&quot;</span>, description=<span class="string">&quot;公司部門的課別名稱或代號&quot;</span>, <span class="built_in">type</span>=<span class="string">&quot;string&quot;</span>),</span><br><span class="line">]</span><br><span class="line">document_content_description = <span class="string">&quot;業務與客戶的訪談紀錄&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">####################</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">### use self-query to filter docs</span></span><br><span class="line">new_dbs, query = query_filter(</span><br><span class="line">            prompt, model_obj, db, metadata_field_info,</span><br><span class="line">            document_content_description)</span><br><span class="line"></span><br><span class="line"><span class="comment">### option1   use svm similarity search to sort docs from filtered docs</span></span><br><span class="line">retriver = akasha.search.get_retrivers(new_dbs, emb_obj, <span class="literal">False</span>, <span class="number">0.0</span>,</span><br><span class="line">                                               search_type)[<span class="number">0</span>]</span><br><span class="line">retri_docs, retri_scores = retriver._gs(query)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">### option2 use new_dbs(filtered docs) to run other akasha functions</span></span><br><span class="line">ak = akasha.Doc_QA(embeddings=emb_obj, model=model_obj)</span><br><span class="line">ak.get_response(doc_path=new_dbs,prompt=prompt)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -1050,99 +1157,6 @@
 <p><img src="https://hackmd.io/_uploads/rJtjE0eqT.png" alt="image"></p>
 <p>點選右下角”Sign Up”進入註冊介面<br><img src="https://hackmd.io/_uploads/SygzS0gqa.png" alt="image"></p>
 <p>註冊完成後便可使用Username 和 Password登入帳號<br><img src="https://hackmd.io/_uploads/SkTBSAg5p.png" alt="image"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://tea9297.github.io/2024/01/01/DEV-%E8%A8%AD%E5%AE%9A/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="akasha使用手冊">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | akasha使用手冊">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/01/01/DEV-%E8%A8%AD%E5%AE%9A/" class="post-title-link" itemprop="url">akashalab-設定</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2024-01-01 22:58:00" itemprop="dateCreated datePublished" datetime="2024-01-01T22:58:00+08:00">2024-01-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-08-30 11:30:22" itemprop="dateModified" datetime="2024-08-30T11:30:22+08:00">2024-08-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分類於</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/akasha-lab/" itemprop="url" rel="index"><span itemprop="name">akasha-lab</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="API-KEY"><a href="#API-KEY" class="headerlink" title="API KEY"></a>API KEY</h2><p>若要使用openAI的模型，必須輸入API KEY，可選擇openAI或是Azure openAI其一<br>如範例，選擇使用Azure openAI後，輸入key值與URL，按下儲存，若顯示成功，便成功添加API KEY。</p>
-<p><img src="https://hackmd.io/_uploads/S1dU30xca.png" alt="image"></p>
-<p>若勾選左下角”Save Permanently”便會將key值儲存至config中，下次登入也可以直接使用。</p>
-<p><img src="https://hackmd.io/_uploads/BJgE53Cl9T.png" alt="image"></p>
-</br>
-</br>
-
-<h2 id="History"><a href="#History" class="headerlink" title="History"></a>History</h2><p>History分頁可下載文檔問答的紀錄，並下載成.txt或.json檔案。<br><img src="https://hackmd.io/_uploads/SJBzpRlq6.png" alt="image"></p>
-<h2 id="Account"><a href="#Account" class="headerlink" title="Account"></a>Account</h2><p>Account分頁可更改密碼或是刪除帳號<br><img src="https://hackmd.io/_uploads/SkYEaAx5a.png" alt="image"></p>
 
       
     </div>
