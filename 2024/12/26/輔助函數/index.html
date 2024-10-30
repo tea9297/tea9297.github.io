@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://hackmd.io/_uploads/rkSjnt19p.png">
 <meta property="og:image" content="https://hackmd.io/_uploads/SyvahY1qp.png">
 <meta property="article:published_time" content="2024-12-26T11:59:59.000Z">
-<meta property="article:modified_time" content="2024-10-30T07:07:34.281Z">
+<meta property="article:modified_time" content="2024-10-30T08:20:34.636Z">
 <meta property="article:author" content="Chih Chuan Chang&lt;ccchang@iii.org.tw&gt;">
 <meta property="article:tag" content="akasha-advanced">
 <meta name="twitter:card" content="summary">
@@ -242,7 +242,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-10-30 15:07:34" itemprop="dateModified" datetime="2024-10-30T15:07:34+08:00">2024-10-30</time>
+      <time title="修改時間：2024-10-30 16:20:34" itemprop="dateModified" datetime="2024-10-30T16:20:34+08:00">2024-10-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -265,7 +265,7 @@
     
     <div class="post-body" itemprop="articleBody"><h2 id="儲存紀錄"><a href="#儲存紀錄" class="headerlink" title="儲存紀錄"></a>儲存紀錄</h2><p>每次執行akasha 的任何函數時，如果使用參數keep_logs&#x3D;True，它都會保存此次運行的參數和結果到logs。每個運行都有一個timestamp，您可以使用 {obj_name}.timestamp_list 來查看它們，並使用它來找到您想要查看的logs。<br>您還可以將logs保存為 .txt 文件或 .json 文件。</p>
 <h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><p>執行完get_response後，可以利用timestamp獲取log，也可以使用<em><strong>save_logs</strong></em>來保存log</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">qa = akasha.Doc_QA(verbose=False, keep_logs=True, search_type=&quot;merge&quot;, max_doc_len=1500,model=&quot;llama-gpu:model/chinese-alpaca-2-7b.Q5_K_S.gguf&quot;)</span><br><span class="line">query1 = &quot;五軸是什麼&quot;</span><br><span class="line">qa.get_response(doc_path=&quot;./doc/mic/&quot;, prompt = query1)</span><br><span class="line"></span><br><span class="line">tp = qa.timestamp_list</span><br><span class="line">print(tp)</span><br><span class="line">## [&quot;2023/09/26, 10:52:36&quot;, &quot;2023/09/26, 10:59:49&quot;, &quot;2023/09/26, 11:09:23&quot;]</span><br><span class="line"></span><br><span class="line">print(qa.logs[tp[-1]])</span><br><span class="line">## &#123;&quot;fn_type&quot;:&quot;get_response&quot;,&quot;search_type&quot;:&quot;merge&quot;, &quot;max_doc_len&quot;:1500,.....&quot;response&quot;:....&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">qa.save_logs(file_name=&quot;logs.json&quot;,file_type=&quot;json&quot;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">qa = akasha.Doc_QA(verbose=False, keep_logs=True, search_type=&quot;merge&quot;, max_input_tokens=3000,model=&quot;llama-gpu:model/chinese-alpaca-2-7b.Q5_K_S.gguf&quot;)</span><br><span class="line">query1 = &quot;五軸是什麼&quot;</span><br><span class="line">qa.get_response(doc_path=&quot;./doc/mic/&quot;, prompt = query1)</span><br><span class="line"></span><br><span class="line">tp = qa.timestamp_list</span><br><span class="line">print(tp)</span><br><span class="line">## [&quot;2023/09/26, 10:52:36&quot;, &quot;2023/09/26, 10:59:49&quot;, &quot;2023/09/26, 11:09:23&quot;]</span><br><span class="line"></span><br><span class="line">print(qa.logs[tp[-1]])</span><br><span class="line">## &#123;&quot;fn_type&quot;:&quot;get_response&quot;,&quot;search_type&quot;:&quot;merge&quot;, &quot;max_input_tokens&quot;:3000,.....&quot;response&quot;:....&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">qa.save_logs(file_name=&quot;logs.json&quot;,file_type=&quot;json&quot;)</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://hackmd.io/_uploads/SyfwoYk5T.png" alt="logs"></p>
 </br>

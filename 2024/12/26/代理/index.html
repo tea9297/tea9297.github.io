@@ -27,7 +27,7 @@
 <meta property="og:description" content="代理使用代理(agent)可以賦予語言模型其他能力，以便完成你下的指令，例如提供文件编辑、google搜尋的工具，便可以使語言模型提供更準確地回答，也可以請他幫忙儲存或刪除文件。 範例在範例1中，創建了一個可以讓使用者輸入文字的工具，也提供給代理一個將文字儲存成json檔案的工具。創建代理後，我們指示它詢問用戶問題，並將結果儲存到default.json中。 1234567891011121314">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-12-26T10:59:59.000Z">
-<meta property="article:modified_time" content="2024-08-30T03:03:37.226Z">
+<meta property="article:modified_time" content="2024-10-30T08:19:27.775Z">
 <meta property="article:author" content="Chih Chuan Chang&lt;ccchang@iii.org.tw&gt;">
 <meta property="article:tag" content="akasha-advanced">
 <meta name="twitter:card" content="summary">
@@ -238,7 +238,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-08-30 11:03:37" itemprop="dateModified" datetime="2024-08-30T11:03:37+08:00">2024-08-30</time>
+      <time title="修改時間：2024-10-30 16:19:27" itemprop="dateModified" datetime="2024-10-30T16:19:27+08:00">2024-10-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -285,7 +285,7 @@
 </br>
 </br>
 
-<h3 id="test-agent-中的所有參數"><a href="#test-agent-中的所有參數" class="headerlink" title="test_agent 中的所有參數:"></a>test_agent 中的所有參數:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Args:</span><br><span class="line">   model (str, optional): 使用的大語言模型. Defaults to &quot;gpt-3.5-turbo&quot;.\n</span><br><span class="line">   verbose (bool, optional): 是否顯示log文字. Defaults to False.\n</span><br><span class="line">   language (str, optional): 用來計算文字長度(max_doc_len)的語言. Defaults to &quot;zh&quot;</span><br><span class="line">   temperature (float, optional): 大語言模型的temperature(0.0 ~ 1.0) . Defaults to 0.0.\n</span><br><span class="line">   keep_logs (bool, optional)**: 是否紀錄執行的log. Defaults to False.\n</span><br><span class="line">   max_round (int, optional)**: agent最多執行次數，超過即跳出，避免無線迴圈. Defaults to 20.\n</span><br><span class="line">   max_doc_len (int, optional): agent保留的之前做過的思考與動作的文字最大長度. Defaults to 1800.\n</span><br><span class="line">   max_past_observation (int, optional)**: agent保留的之前做過的思考與動作的最多次數. Defaults to 10.\n</span><br><span class="line">   retri_observation (bool, optional)**: 若設為True, agent會利用大語言模型去擷取tool回傳內容，避免多餘文字輸入. Defaults to False.\n</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="test-agent-中的所有參數"><a href="#test-agent-中的所有參數" class="headerlink" title="test_agent 中的所有參數:"></a>test_agent 中的所有參數:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Args:</span><br><span class="line">   model (str, optional): 使用的大語言模型. Defaults to &quot;gpt-3.5-turbo&quot;.\n</span><br><span class="line">   verbose (bool, optional): 是否顯示log文字. Defaults to False.\n</span><br><span class="line">   language (str, optional): 用來計算文字長度(max_doc_len)的語言. Defaults to &quot;zh&quot;</span><br><span class="line">   temperature (float, optional): 大語言模型的temperature(0.0 ~ 1.0) . Defaults to 0.0.\n</span><br><span class="line">   keep_logs (bool, optional)**: 是否紀錄執行的log. Defaults to False.\n</span><br><span class="line">   max_round (int, optional)**: agent最多執行次數，超過即跳出，避免無線迴圈. Defaults to 20.\n</span><br><span class="line">   max_input_tokens (int, optional): agent保留的之前做過的思考與動作的文字最大長度. Defaults to 3200.\n</span><br><span class="line">   max_past_observation (int, optional)**: agent保留的之前做過的思考與動作的最多次數. Defaults to 10.\n</span><br><span class="line">   retri_observation (bool, optional)**: 若設為True, agent會利用大語言模型去擷取tool回傳內容，避免多餘文字輸入. Defaults to False.\n</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
     </div>
 
     
