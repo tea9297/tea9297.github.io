@@ -388,7 +388,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-10-30 16:16:06" itemprop="dateModified" datetime="2024-10-30T16:16:06+08:00">2024-10-30</time>
+      <time title="修改時間：2024-11-04 11:43:09" itemprop="dateModified" datetime="2024-11-04T11:43:09+08:00">2024-11-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -410,7 +410,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="10-30-0-8-70"><a href="#10-30-0-8-70" class="headerlink" title="10&#x2F;30(0.8.70)"></a>10&#x2F;30(0.8.70)</h2><ul>
+          <h2 id="11-04-0-8-71"><a href="#11-04-0-8-71" class="headerlink" title="11&#x2F;04(0.8.71)"></a>11&#x2F;04(0.8.71)</h2><ul>
+<li>新增參數env_file，可指定export API KEY的.evn 檔名(見<a href="/2024/12/30/%E8%A8%AD%E5%AE%9A%20API%20Key/">設定 API Key</a>)</li>
+</ul>
+<h2 id="10-30-0-8-70"><a href="#10-30-0-8-70" class="headerlink" title="10&#x2F;30(0.8.70)"></a>10&#x2F;30(0.8.70)</h2><ul>
 <li>新增支援gemini語言模型、嵌入模型(見<a href="/2024/12/26/%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B/">語言模型</a>, <a href="/2024/12/26/%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B">嵌入模型</a>)</li>
 <li>新增self_query模組(見<a href="/2024/12/26/%E8%87%AA%E6%9F%A5%E8%A9%A2/">自查詢</a>)</li>
 <li>將 max_doc_len 取代為 max_input_tokens，新增計算token長度的輔助函式 <em><strong>Tokenizer.compute_tokens</strong></em> (見<a href="/2024/12/26/%E8%BC%94%E5%8A%A9%E5%87%BD%E6%95%B8/">輔助函數</a>)</li>
@@ -695,7 +698,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-10-30 11:22:56" itemprop="dateModified" datetime="2024-10-30T11:22:56+08:00">2024-10-30</time>
+      <time title="修改時間：2024-11-04 11:45:51" itemprop="dateModified" datetime="2024-11-04T11:45:51+08:00">2024-11-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -754,6 +757,16 @@
 <h5 id="1-將KEY放於-env檔案中HF-TOKEN-your-api-key"><a href="#1-將KEY放於-env檔案中HF-TOKEN-your-api-key" class="headerlink" title="1.將KEY放於.env檔案中HF_TOKEN&#x3D;your api key"></a>1.將KEY放於.env檔案中HF_TOKEN&#x3D;your api key</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HF_TOKEN=&#123;your api key&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="2-設定成環境變數-變數名-HF-TOKEN"><a href="#2-設定成環境變數-變數名-HF-TOKEN" class="headerlink" title="2.設定成環境變數(變數名:HF_TOKEN)"></a>2.設定成環境變數(變數名:HF_TOKEN)</h5><h5 id="3-在terminal中使用export設定環境變數-2"><a href="#3-在terminal中使用export設定環境變數-2" class="headerlink" title="3.在terminal中使用export設定環境變數"></a>3.在terminal中使用export設定環境變數</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export HF_TOKEN=&#123;your api key&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="4-在Python中使用os-environ-‘HF-TOKEN’-your-api-key"><a href="#4-在Python中使用os-environ-‘HF-TOKEN’-your-api-key" class="headerlink" title="4.在Python中使用os.environ[‘HF_TOKEN’]&#x3D;your api key"></a>4.在Python中使用os.environ[‘HF_TOKEN’]&#x3D;your api key</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#PYTHON3.8</span><br><span class="line"># os.environ[&#x27;HF_TOKEN&#x27;]=your api key</span><br><span class="line">import akasha</span><br><span class="line">ak = akasha.Doc_QA()</span><br><span class="line">response = ak.get_response(dir_path, prompt, model=&quot;hf:meta-llama/Llama-2-7b-chat-hf&quot;)</span><br></pre></td></tr></table></figure>
+
+
+</br>
+</br>
+
+<h1 id="設定多組不同API-KEY"><a href="#設定多組不同API-KEY" class="headerlink" title="設定多組不同API KEY"></a>設定多組不同API KEY</h1><p>若你需要根據不同模型設定不同的API KEY，在Doc_QA, Model_Eval, Summary Class中皆提供env_file參數，可輸入不同的.env檔來export API KEY<br>若不存在或為空值，則為預設值(.env)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> akasha</span><br><span class="line">ak = akasha.Doc_QA(<span class="string">&quot;openai:gpt-4o&quot;</span>, env_file=<span class="string">&quot;.env&quot;</span>, verbose=<span class="literal">True</span>)</span><br><span class="line">ak.ask_self(<span class="string">&quot;日本本州最大的城市是哪裡?&quot;</span>)</span><br><span class="line"></span><br><span class="line">ak2 = akasha.Doc_QA(<span class="string">&quot;openai:gpt-4&quot;</span>, env_file=<span class="string">&quot;.env2&quot;</span>, verbose=<span class="literal">True</span>)</span><br><span class="line">ak2.ask_self(<span class="string">&quot;日本本州最大的城市是哪裡?&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
       
     </div>
 
@@ -815,7 +828,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-10-30 16:18:42" itemprop="dateModified" datetime="2024-10-30T16:18:42+08:00">2024-10-30</time>
+      <time title="修改時間：2024-11-04 11:46:31" itemprop="dateModified" datetime="2024-11-04T11:46:31+08:00">2024-11-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -856,7 +869,7 @@
 
 
 
-<h3 id="Doc-QA-參數"><a href="#Doc-QA-參數" class="headerlink" title="Doc_QA 參數"></a>Doc_QA 參數</h3><h5 id="verbose-如果設True，會顯示每個步驟產生的文字和狀態"><a href="#verbose-如果設True，會顯示每個步驟產生的文字和狀態" class="headerlink" title="verbose: 如果設True，會顯示每個步驟產生的文字和狀態"></a>verbose: 如果設True，會顯示每個步驟產生的文字和狀態</h5><h5 id="search-type-用來搜尋文件段落的方法，可選擇-svm-tfidf-merge-mmr-knn"><a href="#search-type-用來搜尋文件段落的方法，可選擇-svm-tfidf-merge-mmr-knn" class="headerlink" title="search_type: 用來搜尋文件段落的方法，可選擇: svm, tfidf, merge, mmr, knn."></a>search_type: 用來搜尋文件段落的方法，可選擇: <em><strong>svm</strong></em>, <em><strong>tfidf</strong></em>, <em><strong>merge</strong></em>, <em><strong>mmr</strong></em>, <em><strong>knn</strong></em>.</h5><h5 id="model-使用的語言模型，如-openai-gpt-3-5-turbo-hf-meta-llama-Llama-2-13b-chat-hf"><a href="#model-使用的語言模型，如-openai-gpt-3-5-turbo-hf-meta-llama-Llama-2-13b-chat-hf" class="headerlink" title="model: 使用的語言模型，如 openai:gpt-3.5-turbo, hf:meta-llama&#x2F;Llama-2-13b-chat-hf"></a>model: 使用的語言模型，如 <em><strong>openai:gpt-3.5-turbo</strong></em>, <em><strong>hf:meta-llama&#x2F;Llama-2-13b-chat-hf</strong></em></h5><h5 id="doc-path-一個或多個包含文件檔案的資料夾路徑名稱"><a href="#doc-path-一個或多個包含文件檔案的資料夾路徑名稱" class="headerlink" title="doc_path: 一個或多個包含文件檔案的資料夾路徑名稱"></a>doc_path: 一個或多個包含文件檔案的資料夾路徑名稱</h5><h5 id="prompt-使用者的問題"><a href="#prompt-使用者的問題" class="headerlink" title="prompt: 使用者的問題"></a>prompt: 使用者的問題</h5><h5 id="max-input-tokens-最長可允許的文件總token長度"><a href="#max-input-tokens-最長可允許的文件總token長度" class="headerlink" title="max_input_tokens: 最長可允許的文件總token長度"></a>max_input_tokens: 最長可允許的文件總token長度</h5><h5 id="chunk-size-單個文件段落的長度"><a href="#chunk-size-單個文件段落的長度" class="headerlink" title="chunk_size: 單個文件段落的長度"></a>chunk_size: 單個文件段落的長度</h5><h5 id="system-prompt-指示給語言模型的output格式需求"><a href="#system-prompt-指示給語言模型的output格式需求" class="headerlink" title="system_prompt: 指示給語言模型的output格式需求"></a>system_prompt: 指示給語言模型的output格式需求</h5><h4 id="stream-如果設為True，會回傳generator"><a href="#stream-如果設為True，會回傳generator" class="headerlink" title="stream: 如果設為True，會回傳generator"></a>stream: 如果設為True，會回傳generator</h4><h4 id="history-messages-需要一併提供給語言模型的對話紀錄"><a href="#history-messages-需要一併提供給語言模型的對話紀錄" class="headerlink" title="history_messages: 需要一併提供給語言模型的對話紀錄"></a>history_messages: 需要一併提供給語言模型的對話紀錄</h4>
+<h3 id="Doc-QA-參數"><a href="#Doc-QA-參數" class="headerlink" title="Doc_QA 參數"></a>Doc_QA 參數</h3><h5 id="verbose-如果設True，會顯示每個步驟產生的文字和狀態"><a href="#verbose-如果設True，會顯示每個步驟產生的文字和狀態" class="headerlink" title="verbose: 如果設True，會顯示每個步驟產生的文字和狀態"></a>verbose: 如果設True，會顯示每個步驟產生的文字和狀態</h5><h5 id="search-type-用來搜尋文件段落的方法，可選擇-svm-tfidf-merge-mmr-knn"><a href="#search-type-用來搜尋文件段落的方法，可選擇-svm-tfidf-merge-mmr-knn" class="headerlink" title="search_type: 用來搜尋文件段落的方法，可選擇: svm, tfidf, merge, mmr, knn."></a>search_type: 用來搜尋文件段落的方法，可選擇: <em><strong>svm</strong></em>, <em><strong>tfidf</strong></em>, <em><strong>merge</strong></em>, <em><strong>mmr</strong></em>, <em><strong>knn</strong></em>.</h5><h5 id="model-使用的語言模型，如-openai-gpt-3-5-turbo-hf-meta-llama-Llama-2-13b-chat-hf"><a href="#model-使用的語言模型，如-openai-gpt-3-5-turbo-hf-meta-llama-Llama-2-13b-chat-hf" class="headerlink" title="model: 使用的語言模型，如 openai:gpt-3.5-turbo, hf:meta-llama&#x2F;Llama-2-13b-chat-hf"></a>model: 使用的語言模型，如 <em><strong>openai:gpt-3.5-turbo</strong></em>, <em><strong>hf:meta-llama&#x2F;Llama-2-13b-chat-hf</strong></em></h5><h5 id="doc-path-一個或多個包含文件檔案的資料夾路徑名稱"><a href="#doc-path-一個或多個包含文件檔案的資料夾路徑名稱" class="headerlink" title="doc_path: 一個或多個包含文件檔案的資料夾路徑名稱"></a>doc_path: 一個或多個包含文件檔案的資料夾路徑名稱</h5><h5 id="prompt-使用者的問題"><a href="#prompt-使用者的問題" class="headerlink" title="prompt: 使用者的問題"></a>prompt: 使用者的問題</h5><h5 id="max-input-tokens-最長可允許的文件總token長度"><a href="#max-input-tokens-最長可允許的文件總token長度" class="headerlink" title="max_input_tokens: 最長可允許的文件總token長度"></a>max_input_tokens: 最長可允許的文件總token長度</h5><h5 id="chunk-size-單個文件段落的長度"><a href="#chunk-size-單個文件段落的長度" class="headerlink" title="chunk_size: 單個文件段落的長度"></a>chunk_size: 單個文件段落的長度</h5><h5 id="system-prompt-指示給語言模型的output格式需求"><a href="#system-prompt-指示給語言模型的output格式需求" class="headerlink" title="system_prompt: 指示給語言模型的output格式需求"></a>system_prompt: 指示給語言模型的output格式需求</h5><h4 id="stream-如果設為True，會回傳generator"><a href="#stream-如果設為True，會回傳generator" class="headerlink" title="stream: 如果設為True，會回傳generator"></a>stream: 如果設為True，會回傳generator</h4><h4 id="history-messages-需要一併提供給語言模型的對話紀錄"><a href="#history-messages-需要一併提供給語言模型的對話紀錄" class="headerlink" title="history_messages: 需要一併提供給語言模型的對話紀錄"></a>history_messages: 需要一併提供給語言模型的對話紀錄</h4><h4 id="max-input-tokens-單次輸入模型的最大token數"><a href="#max-input-tokens-單次輸入模型的最大token數" class="headerlink" title="max_input_tokens: 單次輸入模型的最大token數"></a>max_input_tokens: 單次輸入模型的最大token數</h4><h4 id="max-output-tokens-模型輸出的最大token數"><a href="#max-output-tokens-模型輸出的最大token數" class="headerlink" title="max_output_tokens: 模型輸出的最大token數"></a>max_output_tokens: 模型輸出的最大token數</h4><h4 id="env-file-指定-env環境設定檔名"><a href="#env-file-指定-env環境設定檔名" class="headerlink" title="env_file: 指定.env環境設定檔名"></a>env_file: 指定.env環境設定檔名</h4>
       
     </div>
 
