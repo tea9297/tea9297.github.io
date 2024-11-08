@@ -566,7 +566,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-10-30 16:20:06" itemprop="dateModified" datetime="2024-10-30T16:20:06+08:00">2024-10-30</time>
+      <time title="修改時間：2024-11-08 15:37:24" itemprop="dateModified" datetime="2024-11-08T15:37:24+08:00">2024-11-08</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -588,37 +588,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="安裝WSL"><a href="#安裝WSL" class="headerlink" title="安裝WSL"></a>安裝WSL</h2><p>如果你是linux 使用者可以跳過這個步驟，windows使用者建議安裝Windows子系統(WSL)，直接在Windows 執行Linux，請先確認windows版本是 Windows 10 版本 2004(組建 19041 和更新版本)或 Windows 11以上的版本才能安裝WSL。<br>先搜尋PowerShell，以系統管理員開啟 PowerShell執行WSL並安裝linux ubuntu，安裝完畢後要重新開機。</p>
-<h3 id="install-wsl"><a href="#install-wsl" class="headerlink" title="install wsl"></a>install wsl</h3><p>安裝WSL並且安裝linux ubuntu。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wsl --install</span><br></pre></td></tr></table></figure>
-<p>安裝完畢，重新開機</p>
-<h3 id="更新ubuntu"><a href="#更新ubuntu" class="headerlink" title="更新ubuntu"></a>更新ubuntu</h3><p>重新開機後，開啟wsl，更新ubuntu到最新版本</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt update -y &amp;&amp; sudo apt upgrade -y</span><br></pre></td></tr></table></figure>
-
-<h3 id="更新系統套件到最新版本"><a href="#更新系統套件到最新版本" class="headerlink" title="更新系統套件到最新版本"></a>更新系統套件到最新版本</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo apt update &amp;&amp; upgrade</span><br></pre></td></tr></table></figure>
-<h3 id="安裝curl-套件"><a href="#安裝curl-套件" class="headerlink" title="安裝curl 套件"></a>安裝curl 套件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo apt install curl</span><br></pre></td></tr></table></figure>
-<h3 id="安裝anaconda"><a href="#安裝anaconda" class="headerlink" title="安裝anaconda"></a>安裝anaconda</h3><p>###先建立一個資料夾</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$mkdir temp</span><br></pre></td></tr></table></figure>
-
-<p>###進入資料夾</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$cd temp</span><br></pre></td></tr></table></figure>
-<p>###下載anaconda.sh </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$curl https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh --output anaconda.sh</span><br></pre></td></tr></table></figure>
-<p>###安裝anaconda</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$bash anaconda.sh</span><br></pre></td></tr></table></figure>
-
-<h3 id="新增conda-指令"><a href="#新增conda-指令" class="headerlink" title="新增conda 指令"></a>新增conda 指令</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$source ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<h3 id="確認conda-有安裝成功"><a href="#確認conda-有安裝成功" class="headerlink" title="確認conda 有安裝成功"></a>確認conda 有安裝成功</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda info</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="使用anaconda和pip安裝akasha套件"><a href="#使用anaconda和pip安裝akasha套件" class="headerlink" title="使用anaconda和pip安裝akasha套件"></a>使用anaconda和pip安裝akasha套件</h2><p>Linux使用者安裝完畢anaconda，進行安裝akasha套件。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">###create environment</span><br><span class="line">$ conda create --name py3-8 python=3.8</span><br><span class="line">$ activate py3-8</span><br><span class="line"></span><br><span class="line">###install akasha</span><br><span class="line">$ pip install akasha-terminal</span><br></pre></td></tr></table></figure>
+          <h2 id="使用anaconda和pip安裝akasha套件"><a href="#使用anaconda和pip安裝akasha套件" class="headerlink" title="使用anaconda和pip安裝akasha套件"></a>使用anaconda和pip安裝akasha套件</h2><p>Linux使用者安裝完畢anaconda，進行安裝akasha套件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">###create environment</span><br><span class="line">$ conda create --name py3-9 python=3.9</span><br><span class="line">$ activate py3-9</span><br><span class="line"></span><br><span class="line">###install akasha</span><br><span class="line">$ pip install akasha-terminal</span><br></pre></td></tr></table></figure>
 
 </br>
 </br>
 
-<h2 id="在Python中使用"><a href="#在Python中使用" class="headerlink" title="在Python中使用"></a>在Python中使用</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#PYTHON3.8</span></span><br><span class="line"><span class="keyword">import</span> akasha</span><br><span class="line">ak = akasha.Doc_QA()</span><br><span class="line">response = ak.get_response(dir_path, prompt, model=<span class="string">&quot;hf:meta-llama/Llama-2-7b-chat-hf&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="在Python中使用"><a href="#在Python中使用" class="headerlink" title="在Python中使用"></a>在Python中使用</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#PYTHON3.9</span></span><br><span class="line"><span class="keyword">import</span> akasha</span><br><span class="line">ak = akasha.Doc_QA()</span><br><span class="line">response = ak.get_response(dir_path, prompt, model=<span class="string">&quot;hf:meta-llama/Llama-2-7b-chat-hf&quot;</span>)</span><br></pre></td></tr></table></figure>
 </br>
 </br>
 
@@ -641,6 +617,29 @@
 
 
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">akasha keep-responsing --<span class="built_in">help</span></span></span><br><span class="line">Usage: akasha keep-responsing [OPTIONS]</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  -d, --doc_path TEXT         document directory path, parse all .txt, .pdf,</span><br><span class="line">                              .docx files in the directory  [required]</span><br><span class="line">  -e, --embeddings TEXT       embeddings for storing the documents</span><br><span class="line">  -c, --chunk_size INTEGER    chunk size for storing the documents</span><br><span class="line">  -m, --model TEXT            llm model for generating the response</span><br><span class="line">  -ur --use_rerank BOOL       use rerank to sort the documents</span><br><span class="line">  -t, --threshold FLOAT       threshold score for selecting the relevant</span><br><span class="line">                              documents</span><br><span class="line">  -l, --language TEXT         language for the documents, default is &#x27;ch&#x27; for</span><br><span class="line">                              chinese</span><br><span class="line">  -s, --search_type TEXT      search type for the documents, include merge,</span><br><span class="line">                              svm, mmr, tfidf</span><br><span class="line">  -sys, --system_prompt TEXT  system prompt for the llm model</span><br><span class="line">  -mt, --max_input_tokens INTEGER max token length for the llm model input</span><br><span class="line">  --help                      Show this message and exit.</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</br>
+</br>
+
+<h2 id="安裝WSL"><a href="#安裝WSL" class="headerlink" title="安裝WSL"></a>安裝WSL</h2><p>windows使用者可以安裝Windows子系統(WSL)，直接在Windows 執行Linux，請先確認windows版本是 Windows 10 版本 2004(組建 19041 和更新版本)或 Windows 11以上的版本才能安裝WSL。<br>先搜尋PowerShell，以系統管理員開啟 PowerShell執行WSL並安裝linux ubuntu，安裝完畢後要重新開機。</p>
+<h3 id="install-wsl"><a href="#install-wsl" class="headerlink" title="install wsl"></a>install wsl</h3><p>安裝WSL並且安裝linux ubuntu。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wsl --install</span><br></pre></td></tr></table></figure>
+<p>安裝完畢，重新開機</p>
+<h3 id="更新ubuntu"><a href="#更新ubuntu" class="headerlink" title="更新ubuntu"></a>更新ubuntu</h3><p>重新開機後，開啟wsl，更新ubuntu到最新版本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt update -y &amp;&amp; sudo apt upgrade -y</span><br></pre></td></tr></table></figure>
+
+<h3 id="更新系統套件到最新版本"><a href="#更新系統套件到最新版本" class="headerlink" title="更新系統套件到最新版本"></a>更新系統套件到最新版本</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo apt update &amp;&amp; upgrade</span><br></pre></td></tr></table></figure>
+<h3 id="安裝curl-套件"><a href="#安裝curl-套件" class="headerlink" title="安裝curl 套件"></a>安裝curl 套件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo apt install curl</span><br></pre></td></tr></table></figure>
+<h3 id="安裝anaconda"><a href="#安裝anaconda" class="headerlink" title="安裝anaconda"></a>安裝anaconda</h3><h3 id="先建立一個資料夾"><a href="#先建立一個資料夾" class="headerlink" title="先建立一個資料夾"></a>先建立一個資料夾</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$mkdir temp</span><br></pre></td></tr></table></figure>
+
+<h3 id="進入資料夾"><a href="#進入資料夾" class="headerlink" title="進入資料夾"></a>進入資料夾</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$cd temp</span><br></pre></td></tr></table></figure>
+<h3 id="下載anaconda-sh"><a href="#下載anaconda-sh" class="headerlink" title="下載anaconda.sh"></a>下載anaconda.sh</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$curl https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh --output anaconda.sh</span><br></pre></td></tr></table></figure>
+<h3 id="安裝anaconda-1"><a href="#安裝anaconda-1" class="headerlink" title="安裝anaconda"></a>安裝anaconda</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$bash anaconda.sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="新增conda-指令"><a href="#新增conda-指令" class="headerlink" title="新增conda 指令"></a>新增conda 指令</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<h3 id="確認conda-有安裝成功"><a href="#確認conda-有安裝成功" class="headerlink" title="確認conda 有安裝成功"></a>確認conda 有安裝成功</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$conda info</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
