@@ -388,7 +388,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-11-05 14:27:12" itemprop="dateModified" datetime="2024-11-05T14:27:12+08:00">2024-11-05</time>
+      <time title="修改時間：2024-11-08 14:02:09" itemprop="dateModified" datetime="2024-11-08T14:02:09+08:00">2024-11-08</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -410,7 +410,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="11-05-0-8-73"><a href="#11-05-0-8-73" class="headerlink" title="11&#x2F;05(0.8.73)"></a>11&#x2F;05(0.8.73)</h2><ul>
+          <h2 id="11-08-0-8-76"><a href="#11-08-0-8-76" class="headerlink" title="11&#x2F;08(0.8.76)"></a>11&#x2F;08(0.8.76)</h2><ul>
+<li>新增支援anthropic語言模型、vision模型(見<a href="/2024/12/26/%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B/">語言模型</a>, <a href="/2024/12/29/ask_image/">ask_image</a>)</li>
+</ul>
+<h2 id="11-05-0-8-73"><a href="#11-05-0-8-73" class="headerlink" title="11&#x2F;05(0.8.73)"></a>11&#x2F;05(0.8.73)</h2><ul>
 <li>新增參數env_file，可指定export API KEY的.evn 檔名(見<a href="/2024/12/30/%E8%A8%AD%E5%AE%9A%20API%20Key/">設定 API Key</a>)</li>
 <li>自查詢更新parse函式，新增custom_parser參數可自訂parser函式(見<a href="/2024/12/26/%E8%87%AA%E6%9F%A5%E8%A9%A2/">自查詢</a>)</li>
 </ul>
@@ -699,7 +702,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-11-04 12:06:27" itemprop="dateModified" datetime="2024-11-04T12:06:27+08:00">2024-11-04</time>
+      <time title="修改時間：2024-11-08 14:00:17" itemprop="dateModified" datetime="2024-11-08T14:00:17+08:00">2024-11-08</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -741,9 +744,16 @@
 
 <h1 id="gemini-API-Key"><a href="#gemini-API-Key" class="headerlink" title="gemini API Key"></a>gemini API Key</h1><p>如果你想使用Gemini 模型，請至<a target="_blank" rel="noopener" href="https://aistudio.google.com/">google aistudio</a> 或 <a target="_blank" rel="noopener" href="https://console.cloud.google.com/">GCP</a>申請API金鑰。</p>
 <p>取得金鑰後，你可以選擇其中一種方法來匯入key:</p>
-<h5 id="1-將KEY放於-env檔案中OPENAI-API-KEY-your-api-key-1"><a href="#1-將KEY放於-env檔案中OPENAI-API-KEY-your-api-key-1" class="headerlink" title="1.將KEY放於.env檔案中OPENAI_API_KEY&#x3D;your api key"></a>1.將KEY放於.env檔案中OPENAI_API_KEY&#x3D;your api key</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GEMINI_API_KEY=&#123;your api key&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="1-將KEY放於-env檔案中GEMINI-API-KEY-your-api-key"><a href="#1-將KEY放於-env檔案中GEMINI-API-KEY-your-api-key" class="headerlink" title="1.將KEY放於.env檔案中GEMINI_API_KEY&#x3D;your api key"></a>1.將KEY放於.env檔案中GEMINI_API_KEY&#x3D;your api key</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GEMINI_API_KEY=&#123;your api key&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="2-設定成環境變數-變數名-GEMINI-API-KEY"><a href="#2-設定成環境變數-變數名-GEMINI-API-KEY" class="headerlink" title="2.設定成環境變數(變數名:GEMINI_API_KEY)"></a>2.設定成環境變數(變數名:GEMINI_API_KEY)</h5><h5 id="3-在terminal中使用export設定環境變數-1"><a href="#3-在terminal中使用export設定環境變數-1" class="headerlink" title="3.在terminal中使用export設定環境變數"></a>3.在terminal中使用export設定環境變數</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export GEMINI_API_KEY=&#123;your api key&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="4-在Python中使用os-environ-‘GEMINI-API-KEY’-your-api-key"><a href="#4-在Python中使用os-environ-‘GEMINI-API-KEY’-your-api-key" class="headerlink" title="4.在Python中使用os.environ[‘GEMINI_API_KEY’]&#x3D;your api key"></a>4.在Python中使用os.environ[‘GEMINI_API_KEY’]&#x3D;your api key</h5></br>
+</br>
+
+<h1 id="anthropic-API-Key"><a href="#anthropic-API-Key" class="headerlink" title="anthropic API Key"></a>anthropic API Key</h1><p>如果你想使用Gemini 模型，請至<a target="_blank" rel="noopener" href="https://www.anthropic.com/api/">anthropic</a>申請API金鑰。</p>
+<p>取得金鑰後，你可以選擇其中一種方法來匯入key:</p>
+<h5 id="1-將KEY放於-env檔案中ANTHROPIC-API-KEY-your-api-key"><a href="#1-將KEY放於-env檔案中ANTHROPIC-API-KEY-your-api-key" class="headerlink" title="1.將KEY放於.env檔案中ANTHROPIC_API_KEY&#x3D;your api key"></a>1.將KEY放於.env檔案中ANTHROPIC_API_KEY&#x3D;your api key</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ANTHROPIC_API_KEY=&#123;your api key&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2-設定成環境變數-變數名-ANTHROPIC-API-KEY"><a href="#2-設定成環境變數-變數名-ANTHROPIC-API-KEY" class="headerlink" title="2.設定成環境變數(變數名:ANTHROPIC_API_KEY)"></a>2.設定成環境變數(變數名:ANTHROPIC_API_KEY)</h5><h5 id="3-在terminal中使用export設定環境變數-2"><a href="#3-在terminal中使用export設定環境變數-2" class="headerlink" title="3.在terminal中使用export設定環境變數"></a>3.在terminal中使用export設定環境變數</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export ANTHROPIC_API_KEY=&#123;your api key&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="4-在Python中使用os-environ-‘ANTHROPIC-API-KEY’-your-api-key"><a href="#4-在Python中使用os-environ-‘ANTHROPIC-API-KEY’-your-api-key" class="headerlink" title="4.在Python中使用os.environ[‘ANTHROPIC_API_KEY’]&#x3D;your api key"></a>4.在Python中使用os.environ[‘ANTHROPIC_API_KEY’]&#x3D;your api key</h5></br>
 </br>
 
 
@@ -756,7 +766,7 @@
 
 <p>同樣的，取得huggingface key值後，你可以選擇其中一種方法來匯入key:</p>
 <h5 id="1-將KEY放於-env檔案中HF-TOKEN-your-api-key"><a href="#1-將KEY放於-env檔案中HF-TOKEN-your-api-key" class="headerlink" title="1.將KEY放於.env檔案中HF_TOKEN&#x3D;your api key"></a>1.將KEY放於.env檔案中HF_TOKEN&#x3D;your api key</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HF_TOKEN=&#123;your api key&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="2-設定成環境變數-變數名-HF-TOKEN"><a href="#2-設定成環境變數-變數名-HF-TOKEN" class="headerlink" title="2.設定成環境變數(變數名:HF_TOKEN)"></a>2.設定成環境變數(變數名:HF_TOKEN)</h5><h5 id="3-在terminal中使用export設定環境變數-2"><a href="#3-在terminal中使用export設定環境變數-2" class="headerlink" title="3.在terminal中使用export設定環境變數"></a>3.在terminal中使用export設定環境變數</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export HF_TOKEN=&#123;your api key&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2-設定成環境變數-變數名-HF-TOKEN"><a href="#2-設定成環境變數-變數名-HF-TOKEN" class="headerlink" title="2.設定成環境變數(變數名:HF_TOKEN)"></a>2.設定成環境變數(變數名:HF_TOKEN)</h5><h5 id="3-在terminal中使用export設定環境變數-3"><a href="#3-在terminal中使用export設定環境變數-3" class="headerlink" title="3.在terminal中使用export設定環境變數"></a>3.在terminal中使用export設定環境變數</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export HF_TOKEN=&#123;your api key&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="4-在Python中使用os-environ-‘HF-TOKEN’-your-api-key"><a href="#4-在Python中使用os-environ-‘HF-TOKEN’-your-api-key" class="headerlink" title="4.在Python中使用os.environ[‘HF_TOKEN’]&#x3D;your api key"></a>4.在Python中使用os.environ[‘HF_TOKEN’]&#x3D;your api key</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#PYTHON3.9</span><br><span class="line"># os.environ[&#x27;HF_TOKEN&#x27;]=your api key</span><br><span class="line">import akasha</span><br><span class="line">ak = akasha.Doc_QA()</span><br><span class="line">response = ak.get_response(dir_path, prompt, model=&quot;hf:meta-llama/Llama-2-7b-chat-hf&quot;)</span><br></pre></td></tr></table></figure>
 
 
@@ -1118,7 +1128,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-10-04 13:47:26" itemprop="dateModified" datetime="2024-10-04T13:47:26+08:00">2024-10-04</time>
+      <time title="修改時間：2024-11-08 13:57:55" itemprop="dateModified" datetime="2024-11-08T13:57:55+08:00">2024-11-08</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1140,7 +1150,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="ask-image"><a href="#ask-image" class="headerlink" title="ask_image"></a>ask_image</h2><p>如果你想同時輸入圖片與文字來詢問多模態模型(如gpt-4o, llama3.2-Vision)，可以使用ask_image，圖片路徑image_path可以是網址或本地圖片路徑，模型類別目前支援 <em><strong>openai</strong></em>, <em><strong>remote</strong></em>(vllm), <em><strong>huggingface</strong></em>(llama3.2-Vision)，但huggingface目前不支援stream流輸出。</p>
+          <h2 id="ask-image"><a href="#ask-image" class="headerlink" title="ask_image"></a>ask_image</h2><p>如果你想同時輸入圖片與文字來詢問多模態模型(如gpt-4o, llama3.2-Vision)，可以使用ask_image，圖片路徑image_path可以是網址或本地圖片路徑，模型類別目前支援 <em><strong>openai</strong></em>, <em><strong>remote</strong></em>(vllm), <em><strong>huggingface</strong></em>(llama3.2-Vision), <em><strong>anthropic</strong></em>(claude-3-5-sonnet-20241022) ，但huggingface目前不支援stream流輸出。</p>
 <h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ak = akasha.Doc_QA(model=<span class="string">&quot;openai:gpt-4o&quot;</span>,)</span><br><span class="line">url = <span class="string">&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gfp-wisconsin-madison-the-nature-boardwalk.jpg/2560px-Gfp-wisconsin-madison-the-nature-boardwalk.jpg&quot;</span></span><br><span class="line">png = <span class="string">&quot;../miao.png&quot;</span></span><br><span class="line"></span><br><span class="line">res = ak.ask_image(image_path=url, prompt = <span class="string">&quot;這張圖片是甚麼?&quot;</span>) </span><br><span class="line"><span class="built_in">print</span>(res)</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">這張圖片顯示了一個長度不等的木板路，穿過一片綠色的草地和樹林。路面上有許多細小的草根和葉子。路面兩側是高約1米左右的青綠色野生植物，中間有一些紅色的灌木丛。天空是藍色的，有一</span><br><span class="line">些白雲。</span><br><span class="line"></span><br><span class="line">這張圖像可能是一個自然景觀或一個旅遊目的地，例如一個國家公園或一個鳥類保護區。它也可能是一個攝影作品，用來展示自然美景和人們與環境之間的互動關係。</span><br><span class="line"></span><br><span class="line">總體而言，這張圖像展現了人們與自然環境之間美麗而微妙的關係，並呼籲我們去探索、欣賞和保護我們周圍的世界。這張圖片顯示了一個長度不等的木板路，穿過一片綠色的草地和樹林。路面上有許多細小的草根和葉子。路面兩側是高約1米左右的青綠色野生植物，中間有一些紅色的灌木叢。天空是藍色的，有一些白雲。</span><br><span class="line"></span><br><span class="line">這張圖像可能是一個自然景觀或一個旅遊目的地，例如一個國家公園或一個鳥類保護區。它也可能是一個攝影作品，用來展示自然美景和人們與環境之間的互動關係。</span><br><span class="line"></span><br><span class="line">總體而言，這張圖像展現了人們與自然環境之間美麗而微妙的關係，並呼籲我們去探索、欣賞和保護我們周圍的世界。</span><br></pre></td></tr></table></figure>

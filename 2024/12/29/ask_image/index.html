@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"tea9297.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="ask_image如果你想同時輸入圖片與文字來詢問多模態模型(如gpt-4o, llama3.2-Vision)，可以使用ask_image，圖片路徑image_path可以是網址或本地圖片路徑，模型類別目前支援 openai, remote(vllm), huggingface(llama3.2-Vision)，但huggingface目前不支援stream流輸出。 example123456a">
+    <meta name="description" content="ask_image如果你想同時輸入圖片與文字來詢問多模態模型(如gpt-4o, llama3.2-Vision)，可以使用ask_image，圖片路徑image_path可以是網址或本地圖片路徑，模型類別目前支援 openai, remote(vllm), huggingface(llama3.2-Vision), anthropic(claude-3-5-sonnet-20241022) ，但h">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ask_image">
 <meta property="og:url" content="https://tea9297.github.io/2024/12/29/ask_image/index.html">
 <meta property="og:site_name" content="akasha使用手冊">
-<meta property="og:description" content="ask_image如果你想同時輸入圖片與文字來詢問多模態模型(如gpt-4o, llama3.2-Vision)，可以使用ask_image，圖片路徑image_path可以是網址或本地圖片路徑，模型類別目前支援 openai, remote(vllm), huggingface(llama3.2-Vision)，但huggingface目前不支援stream流輸出。 example123456a">
+<meta property="og:description" content="ask_image如果你想同時輸入圖片與文字來詢問多模態模型(如gpt-4o, llama3.2-Vision)，可以使用ask_image，圖片路徑image_path可以是網址或本地圖片路徑，模型類別目前支援 openai, remote(vllm), huggingface(llama3.2-Vision), anthropic(claude-3-5-sonnet-20241022) ，但h">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-12-29T12:59:59.000Z">
-<meta property="article:modified_time" content="2024-10-04T05:47:26.376Z">
+<meta property="article:modified_time" content="2024-11-08T05:57:55.343Z">
 <meta property="article:author" content="Chih Chuan Chang&lt;ccchang@iii.org.tw&gt;">
 <meta property="article:tag" content="akasha">
 <meta name="twitter:card" content="summary">
@@ -238,7 +238,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-10-04 13:47:26" itemprop="dateModified" datetime="2024-10-04T13:47:26+08:00">2024-10-04</time>
+      <time title="修改時間：2024-11-08 13:57:55" itemprop="dateModified" datetime="2024-11-08T13:57:55+08:00">2024-11-08</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -259,7 +259,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="ask-image"><a href="#ask-image" class="headerlink" title="ask_image"></a>ask_image</h2><p>如果你想同時輸入圖片與文字來詢問多模態模型(如gpt-4o, llama3.2-Vision)，可以使用ask_image，圖片路徑image_path可以是網址或本地圖片路徑，模型類別目前支援 <em><strong>openai</strong></em>, <em><strong>remote</strong></em>(vllm), <em><strong>huggingface</strong></em>(llama3.2-Vision)，但huggingface目前不支援stream流輸出。</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="ask-image"><a href="#ask-image" class="headerlink" title="ask_image"></a>ask_image</h2><p>如果你想同時輸入圖片與文字來詢問多模態模型(如gpt-4o, llama3.2-Vision)，可以使用ask_image，圖片路徑image_path可以是網址或本地圖片路徑，模型類別目前支援 <em><strong>openai</strong></em>, <em><strong>remote</strong></em>(vllm), <em><strong>huggingface</strong></em>(llama3.2-Vision), <em><strong>anthropic</strong></em>(claude-3-5-sonnet-20241022) ，但huggingface目前不支援stream流輸出。</p>
 <h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ak = akasha.Doc_QA(model=<span class="string">&quot;openai:gpt-4o&quot;</span>,)</span><br><span class="line">url = <span class="string">&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gfp-wisconsin-madison-the-nature-boardwalk.jpg/2560px-Gfp-wisconsin-madison-the-nature-boardwalk.jpg&quot;</span></span><br><span class="line">png = <span class="string">&quot;../miao.png&quot;</span></span><br><span class="line"></span><br><span class="line">res = ak.ask_image(image_path=url, prompt = <span class="string">&quot;這張圖片是甚麼?&quot;</span>) </span><br><span class="line"><span class="built_in">print</span>(res)</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">這張圖片顯示了一個長度不等的木板路，穿過一片綠色的草地和樹林。路面上有許多細小的草根和葉子。路面兩側是高約1米左右的青綠色野生植物，中間有一些紅色的灌木丛。天空是藍色的，有一</span><br><span class="line">些白雲。</span><br><span class="line"></span><br><span class="line">這張圖像可能是一個自然景觀或一個旅遊目的地，例如一個國家公園或一個鳥類保護區。它也可能是一個攝影作品，用來展示自然美景和人們與環境之間的互動關係。</span><br><span class="line"></span><br><span class="line">總體而言，這張圖像展現了人們與自然環境之間美麗而微妙的關係，並呼籲我們去探索、欣賞和保護我們周圍的世界。這張圖片顯示了一個長度不等的木板路，穿過一片綠色的草地和樹林。路面上有許多細小的草根和葉子。路面兩側是高約1米左右的青綠色野生植物，中間有一些紅色的灌木叢。天空是藍色的，有一些白雲。</span><br><span class="line"></span><br><span class="line">這張圖像可能是一個自然景觀或一個旅遊目的地，例如一個國家公園或一個鳥類保護區。它也可能是一個攝影作品，用來展示自然美景和人們與環境之間的互動關係。</span><br><span class="line"></span><br><span class="line">總體而言，這張圖像展現了人們與自然環境之間美麗而微妙的關係，並呼籲我們去探索、欣賞和保護我們周圍的世界。</span><br></pre></td></tr></table></figure>

@@ -3,7 +3,10 @@
   <entry>
     <title>2024 updates</title>
     <url>/2024/12/31/2024%20updates/</url>
-    <content><![CDATA[<h2 id="11-05-0-8-73"><a href="#11-05-0-8-73" class="headerlink" title="11&#x2F;05(0.8.73)"></a>11&#x2F;05(0.8.73)</h2><ul>
+    <content><![CDATA[<h2 id="11-08-0-8-76"><a href="#11-08-0-8-76" class="headerlink" title="11&#x2F;08(0.8.76)"></a>11&#x2F;08(0.8.76)</h2><ul>
+<li>新增支援anthropic語言模型、vision模型(見<a href="/2024/12/26/%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B/">語言模型</a>, <a href="/2024/12/29/ask_image/">ask_image</a>)</li>
+</ul>
+<h2 id="11-05-0-8-73"><a href="#11-05-0-8-73" class="headerlink" title="11&#x2F;05(0.8.73)"></a>11&#x2F;05(0.8.73)</h2><ul>
 <li>新增參數env_file，可指定export API KEY的.evn 檔名(見<a href="/2024/12/30/%E8%A8%AD%E5%AE%9A%20API%20Key/">設定 API Key</a>)</li>
 <li>自查詢更新parse函式，新增custom_parser參數可自訂parser函式(見<a href="/2024/12/26/%E8%87%AA%E6%9F%A5%E8%A9%A2/">自查詢</a>)</li>
 </ul>
@@ -138,6 +141,60 @@
       </tags>
   </entry>
   <entry>
+    <title>akashalab-Knowledges</title>
+    <url>/2024/01/01/DEV-Knowledges/</url>
+    <content><![CDATA[<h2 id="創建Knowledge"><a href="#創建Knowledge" class="headerlink" title="創建Knowledge"></a>創建Knowledge</h2><p>knowledge為一個保存資料集(Datasets)和搜尋參數的設定檔，可以直接使用knowledge來使用文檔問答。<br>至New Knowledge頁面，輸入Knowledge名稱，選擇嵌入模型，選擇文件段落大小，選擇Dataset(可以多個)，預設為選擇所有文件檔案，也可以各個檔案逐一勾選。</p>
+<p><img src="https://hackmd.io/_uploads/Bk9a71bq6.png" alt="image"></p>
+</br>
+</br>hhh
+
+<p>可選擇是否分享Knowledge給其他使用者<br><img src="https://hackmd.io/_uploads/ry2K4yZ9p.png" alt="image"></p>
+</br>
+</br>
+
+<p>按下 “Create Knowledge”，會為每個文件產生向量db，因此可能需要等待一段時間。<br><img src="https://hackmd.io/_uploads/Sy3kS1bc6.png" alt="image"></p>
+</br>
+</br>
+
+<p>:::warning<br>同一使用者無法創建相同名稱的Knowledge，不同使用者可以創建相同名稱的Knowledge<br>:::<br><img src="https://hackmd.io/_uploads/Ski7By-5T.png" alt="image"></p>
+</br>
+</br>
+
+<h2 id="檢視Knowledge"><a href="#檢視Knowledge" class="headerlink" title="檢視Knowledge"></a>檢視Knowledge</h2><p>創建完Knowledge後，可至My Knowledges頁面檢視，勾選Shared Knowledges按鈕後也會顯示別人分享的Knowledges，自己創建的Knowledge可以刪除，但無法刪除別人分享的Knowledge。</p>
+<p><img src="https://hackmd.io/_uploads/Hkq2HJbca.png" alt="image"></p>
+</br>
+</br>
+
+<h2 id="更新Knowledge"><a href="#更新Knowledge" class="headerlink" title="更新Knowledge"></a>更新Knowledge</h2><p>若要更新Knowledge資訊，可至Update Knowledge頁面，選擇要更新的Knowledge後，便可以更改Knowledge名稱、描述，也可以新增或刪除文件、分享者。<br><img src="https://hackmd.io/_uploads/r1RvLJZqa.png" alt="image"><br><img src="https://hackmd.io/_uploads/B1afL1b56.png" alt="image"></p>
+]]></content>
+      <categories>
+        <category>akasha-lab</category>
+      </categories>
+      <tags>
+        <tag>akasha-UI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>akashalab-設定</title>
+    <url>/2024/01/01/DEV-%E8%A8%AD%E5%AE%9A/</url>
+    <content><![CDATA[<h2 id="API-KEY"><a href="#API-KEY" class="headerlink" title="API KEY"></a>API KEY</h2><p>若要使用openAI的模型，必須輸入API KEY，可選擇openAI或是Azure openAI其一<br>如範例，選擇使用Azure openAI後，輸入key值與URL，按下儲存，若顯示成功，便成功添加API KEY。</p>
+<p><img src="https://hackmd.io/_uploads/S1dU30xca.png" alt="image"></p>
+<p>若勾選左下角”Save Permanently”便會將key值儲存至config中，下次登入也可以直接使用。</p>
+<p><img src="https://hackmd.io/_uploads/BJgE53Cl9T.png" alt="image"></p>
+</br>
+</br>
+
+<h2 id="History"><a href="#History" class="headerlink" title="History"></a>History</h2><p>History分頁可下載文檔問答的紀錄，並下載成.txt或.json檔案。<br><img src="https://hackmd.io/_uploads/SJBzpRlq6.png" alt="image"></p>
+<h2 id="Account"><a href="#Account" class="headerlink" title="Account"></a>Account</h2><p>Account分頁可更改密碼或是刪除帳號<br><img src="https://hackmd.io/_uploads/SkYEaAx5a.png" alt="image"></p>
+]]></content>
+      <categories>
+        <category>akasha-lab</category>
+      </categories>
+      <tags>
+        <tag>akasha-UI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>akashalab-Consult</title>
     <url>/2024/01/01/DEV-Consult/</url>
     <content><![CDATA[<h2 id="Chat"><a href="#Chat" class="headerlink" title="Chat"></a>Chat</h2><p>Chat與Regular Consult相似，會根據提供的文檔進行問答，但同時Chat也會記住使用者之前的問答互動，方便使用者進行追問。</p>
@@ -166,6 +223,21 @@
 
 <p>你也可以上傳一個文件檔案進行摘要</p>
 <p><img src="https://hackmd.io/_uploads/r1kcr2Knp.png" alt="image"></p>
+]]></content>
+      <categories>
+        <category>akasha-lab</category>
+      </categories>
+      <tags>
+        <tag>akasha-UI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>akashalab-註冊帳號</title>
+    <url>/2024/01/01/DEV-%E8%A8%BB%E5%86%8A%E5%B8%B3%E8%99%9F/</url>
+    <content><![CDATA[<h2 id="註冊帳號"><a href="#註冊帳號" class="headerlink" title="註冊帳號"></a>註冊帳號</h2><p>akasha dev-ui需要使用者註冊帳號，不同使用者可以獨自創建dataset、knowledge用來做文檔問答，也可以分享dataset、knowledge給其他使用者。</p>
+<p><img src="https://hackmd.io/_uploads/rJtjE0eqT.png" alt="image"></p>
+<p>點選右下角”Sign Up”進入註冊介面<br><img src="https://hackmd.io/_uploads/SygzS0gqa.png" alt="image"></p>
+<p>註冊完成後便可使用Username 和 Password登入帳號<br><img src="https://hackmd.io/_uploads/SkTBSAg5p.png" alt="image"></p>
 ]]></content>
       <categories>
         <category>akasha-lab</category>
@@ -230,75 +302,6 @@
       </tags>
   </entry>
   <entry>
-    <title>akashalab-Knowledges</title>
-    <url>/2024/01/01/DEV-Knowledges/</url>
-    <content><![CDATA[<h2 id="創建Knowledge"><a href="#創建Knowledge" class="headerlink" title="創建Knowledge"></a>創建Knowledge</h2><p>knowledge為一個保存資料集(Datasets)和搜尋參數的設定檔，可以直接使用knowledge來使用文檔問答。<br>至New Knowledge頁面，輸入Knowledge名稱，選擇嵌入模型，選擇文件段落大小，選擇Dataset(可以多個)，預設為選擇所有文件檔案，也可以各個檔案逐一勾選。</p>
-<p><img src="https://hackmd.io/_uploads/Bk9a71bq6.png" alt="image"></p>
-</br>
-</br>hhh
-
-<p>可選擇是否分享Knowledge給其他使用者<br><img src="https://hackmd.io/_uploads/ry2K4yZ9p.png" alt="image"></p>
-</br>
-</br>
-
-<p>按下 “Create Knowledge”，會為每個文件產生向量db，因此可能需要等待一段時間。<br><img src="https://hackmd.io/_uploads/Sy3kS1bc6.png" alt="image"></p>
-</br>
-</br>
-
-<p>:::warning<br>同一使用者無法創建相同名稱的Knowledge，不同使用者可以創建相同名稱的Knowledge<br>:::<br><img src="https://hackmd.io/_uploads/Ski7By-5T.png" alt="image"></p>
-</br>
-</br>
-
-<h2 id="檢視Knowledge"><a href="#檢視Knowledge" class="headerlink" title="檢視Knowledge"></a>檢視Knowledge</h2><p>創建完Knowledge後，可至My Knowledges頁面檢視，勾選Shared Knowledges按鈕後也會顯示別人分享的Knowledges，自己創建的Knowledge可以刪除，但無法刪除別人分享的Knowledge。</p>
-<p><img src="https://hackmd.io/_uploads/Hkq2HJbca.png" alt="image"></p>
-</br>
-</br>
-
-<h2 id="更新Knowledge"><a href="#更新Knowledge" class="headerlink" title="更新Knowledge"></a>更新Knowledge</h2><p>若要更新Knowledge資訊，可至Update Knowledge頁面，選擇要更新的Knowledge後，便可以更改Knowledge名稱、描述，也可以新增或刪除文件、分享者。<br><img src="https://hackmd.io/_uploads/r1RvLJZqa.png" alt="image"><br><img src="https://hackmd.io/_uploads/B1afL1b56.png" alt="image"></p>
-]]></content>
-      <categories>
-        <category>akasha-lab</category>
-      </categories>
-      <tags>
-        <tag>akasha-UI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>akashalab-設定</title>
-    <url>/2024/01/01/DEV-%E8%A8%AD%E5%AE%9A/</url>
-    <content><![CDATA[<h2 id="API-KEY"><a href="#API-KEY" class="headerlink" title="API KEY"></a>API KEY</h2><p>若要使用openAI的模型，必須輸入API KEY，可選擇openAI或是Azure openAI其一<br>如範例，選擇使用Azure openAI後，輸入key值與URL，按下儲存，若顯示成功，便成功添加API KEY。</p>
-<p><img src="https://hackmd.io/_uploads/S1dU30xca.png" alt="image"></p>
-<p>若勾選左下角”Save Permanently”便會將key值儲存至config中，下次登入也可以直接使用。</p>
-<p><img src="https://hackmd.io/_uploads/BJgE53Cl9T.png" alt="image"></p>
-</br>
-</br>
-
-<h2 id="History"><a href="#History" class="headerlink" title="History"></a>History</h2><p>History分頁可下載文檔問答的紀錄，並下載成.txt或.json檔案。<br><img src="https://hackmd.io/_uploads/SJBzpRlq6.png" alt="image"></p>
-<h2 id="Account"><a href="#Account" class="headerlink" title="Account"></a>Account</h2><p>Account分頁可更改密碼或是刪除帳號<br><img src="https://hackmd.io/_uploads/SkYEaAx5a.png" alt="image"></p>
-]]></content>
-      <categories>
-        <category>akasha-lab</category>
-      </categories>
-      <tags>
-        <tag>akasha-UI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>akashalab-註冊帳號</title>
-    <url>/2024/01/01/DEV-%E8%A8%BB%E5%86%8A%E5%B8%B3%E8%99%9F/</url>
-    <content><![CDATA[<h2 id="註冊帳號"><a href="#註冊帳號" class="headerlink" title="註冊帳號"></a>註冊帳號</h2><p>akasha dev-ui需要使用者註冊帳號，不同使用者可以獨自創建dataset、knowledge用來做文檔問答，也可以分享dataset、knowledge給其他使用者。</p>
-<p><img src="https://hackmd.io/_uploads/rJtjE0eqT.png" alt="image"></p>
-<p>點選右下角”Sign Up”進入註冊介面<br><img src="https://hackmd.io/_uploads/SygzS0gqa.png" alt="image"></p>
-<p>註冊完成後便可使用Username 和 Password登入帳號<br><img src="https://hackmd.io/_uploads/SkTBSAg5p.png" alt="image"></p>
-]]></content>
-      <categories>
-        <category>akasha-lab</category>
-      </categories>
-      <tags>
-        <tag>akasha-UI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>FAST API</title>
     <url>/2024/12/26/FAST%20API/</url>
     <content><![CDATA[<h2 id="FAST-API"><a href="#FAST-API" class="headerlink" title="FAST API"></a>FAST API</h2><p>akasha 提供get_response, ask_self, ask_whole_file, get_summary的api server</p>
@@ -314,6 +317,21 @@
       </tags>
   </entry>
   <entry>
+    <title>ask_image</title>
+    <url>/2024/12/29/ask_image/</url>
+    <content><![CDATA[<h2 id="ask-image"><a href="#ask-image" class="headerlink" title="ask_image"></a>ask_image</h2><p>如果你想同時輸入圖片與文字來詢問多模態模型(如gpt-4o, llama3.2-Vision)，可以使用ask_image，圖片路徑image_path可以是網址或本地圖片路徑，模型類別目前支援 <em><strong>openai</strong></em>, <em><strong>remote</strong></em>(vllm), <em><strong>huggingface</strong></em>(llama3.2-Vision), <em><strong>anthropic</strong></em>(claude-3-5-sonnet-20241022) ，但huggingface目前不支援stream流輸出。</p>
+<h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ak = akasha.Doc_QA(model=<span class="string">&quot;openai:gpt-4o&quot;</span>,)</span><br><span class="line">url = <span class="string">&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gfp-wisconsin-madison-the-nature-boardwalk.jpg/2560px-Gfp-wisconsin-madison-the-nature-boardwalk.jpg&quot;</span></span><br><span class="line">png = <span class="string">&quot;../miao.png&quot;</span></span><br><span class="line"></span><br><span class="line">res = ak.ask_image(image_path=url, prompt = <span class="string">&quot;這張圖片是甚麼?&quot;</span>) </span><br><span class="line"><span class="built_in">print</span>(res)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">這張圖片顯示了一個長度不等的木板路，穿過一片綠色的草地和樹林。路面上有許多細小的草根和葉子。路面兩側是高約1米左右的青綠色野生植物，中間有一些紅色的灌木丛。天空是藍色的，有一</span><br><span class="line">些白雲。</span><br><span class="line"></span><br><span class="line">這張圖像可能是一個自然景觀或一個旅遊目的地，例如一個國家公園或一個鳥類保護區。它也可能是一個攝影作品，用來展示自然美景和人們與環境之間的互動關係。</span><br><span class="line"></span><br><span class="line">總體而言，這張圖像展現了人們與自然環境之間美麗而微妙的關係，並呼籲我們去探索、欣賞和保護我們周圍的世界。這張圖片顯示了一個長度不等的木板路，穿過一片綠色的草地和樹林。路面上有許多細小的草根和葉子。路面兩側是高約1米左右的青綠色野生植物，中間有一些紅色的灌木叢。天空是藍色的，有一些白雲。</span><br><span class="line"></span><br><span class="line">這張圖像可能是一個自然景觀或一個旅遊目的地，例如一個國家公園或一個鳥類保護區。它也可能是一個攝影作品，用來展示自然美景和人們與環境之間的互動關係。</span><br><span class="line"></span><br><span class="line">總體而言，這張圖像展現了人們與自然環境之間美麗而微妙的關係，並呼籲我們去探索、欣賞和保護我們周圍的世界。</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>文檔問答</category>
+      </categories>
+      <tags>
+        <tag>akasha</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JSON格式</title>
     <url>/2024/12/25/JSON%E6%A0%BC%E5%BC%8F/</url>
     <content><![CDATA[<h2 id="JSON-Formatter"><a href="#JSON-Formatter" class="headerlink" title="JSON Formatter"></a>JSON Formatter</h2><p>如果你想讓語言模型的回答為JSON格式，可以使用JSONformatter</p>
@@ -323,21 +341,6 @@
 
 
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#x27;學歷&#x27;: &#x27;國立臺北科技大學電資學士班 四技&#x27;, &#x27;經驗&#x27;: &#x27;總年資0-1年年工作經歷&#x27;, &#x27;專長&#x27;: [&#x27;計算機網路(協定)&#x27;, &#x27;資料庫系統&#x27;, &#x27;物件導向程式設計&#x27;, &#x27;C語言&#x27;, &#x27;python&#x27;, &#x27;C++&#x27;, &#x27;Gitlab&#x27;, &#x27;Jenkins&#x27;, &#x27;Git&#x27;, &#x27;linux&#x27;, &#x27;Google表單&#x27;], &#x27;年資&#x27;: 1&#125; </span><br><span class="line"></span><br><span class="line">&lt;class &#x27;dict&#x27;&gt;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>指定輸出格式</category>
-      </categories>
-      <tags>
-        <tag>akasha-advanced</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>XML格式</title>
-    <url>/2024/12/25/XML%E6%A0%BC%E5%BC%8F/</url>
-    <content><![CDATA[<h2 id="XML-Formatter"><a href="#XML-Formatter" class="headerlink" title="XML Formatter"></a>XML Formatter</h2><p>如果你想讓語言模型的回答為XML格式，可以使用XMLformatter</p>
-<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><p>如以下範例，首先先定義你想要回傳的key值的名稱、說明和型別，並利用<em><strong>XML_formatter</strong></em>轉換成xml格式的prompt，並在問問題時把xml_prompt丟入system_prompt中。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha.prompts as prompts</span><br><span class="line">import akasha</span><br><span class="line">import akasha.eval as eval</span><br><span class="line"></span><br><span class="line">formatter = [</span><br><span class="line">        prompts.OutputSchema(name=&quot;學歷&quot;, description=&quot;受試者的就讀大學&quot;, type=&quot;str&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;經驗&quot;, description=&quot;受試者的工作經驗&quot;, type=&quot;str&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;專長&quot;, description=&quot;受試者的專長能力&quot;, type=&quot;list&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;年資&quot;, description=&quot;受試者的總工作年數&quot;, type=&quot;int&quot;)</span><br><span class="line">    ]</span><br><span class="line">xml_prompt = prompts.XML_formatter(formatter)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA(topK=10, threshold=0.0)</span><br><span class="line"></span><br><span class="line">response = ak.ask_whole_file(file_path=&quot;docs/resume_pool/A.docx&quot;,</span><br><span class="line">system_prompt=xml_prompt, prompt=f&#x27;&#x27;&#x27;以上是受試者的履歷，請回答該受試者的學歷、經驗、專長、年資&#x27;&#x27;&#x27;)</span><br><span class="line"></span><br><span class="line">print(response)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;resume&gt;</span><br><span class="line">    &lt;學歷&gt;國立臺北科技大學電資學士班 四技 就學中&lt;/學歷&gt;</span><br><span class="line">    &lt;經驗&gt;英文短期文理補習班補習班導師／管理人員&lt;/經驗&gt;</span><br><span class="line">    &lt;專長&gt;</span><br><span class="line">        &lt;能力&gt;語言能力&lt;/能力&gt;</span><br><span class="line">        &lt;英文&gt;聽-中等, 說-中等, 讀-中等, 寫-中等&lt;/英文&gt;</span><br><span class="line">        &lt;證照&gt;TOEIC &lt;/證照&gt;</span><br><span class="line">    &lt;/專長&gt;</span><br><span class="line">    &lt;年資&gt;0-1&lt;/年資&gt;</span><br><span class="line">&lt;/resume&gt;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>指定輸出格式</category>
       </categories>
@@ -361,18 +364,18 @@
       </tags>
   </entry>
   <entry>
-    <title>ask_image</title>
-    <url>/2024/12/29/ask_image/</url>
-    <content><![CDATA[<h2 id="ask-image"><a href="#ask-image" class="headerlink" title="ask_image"></a>ask_image</h2><p>如果你想同時輸入圖片與文字來詢問多模態模型(如gpt-4o, llama3.2-Vision)，可以使用ask_image，圖片路徑image_path可以是網址或本地圖片路徑，模型類別目前支援 <em><strong>openai</strong></em>, <em><strong>remote</strong></em>(vllm), <em><strong>huggingface</strong></em>(llama3.2-Vision)，但huggingface目前不支援stream流輸出。</p>
-<h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ak = akasha.Doc_QA(model=<span class="string">&quot;openai:gpt-4o&quot;</span>,)</span><br><span class="line">url = <span class="string">&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gfp-wisconsin-madison-the-nature-boardwalk.jpg/2560px-Gfp-wisconsin-madison-the-nature-boardwalk.jpg&quot;</span></span><br><span class="line">png = <span class="string">&quot;../miao.png&quot;</span></span><br><span class="line"></span><br><span class="line">res = ak.ask_image(image_path=url, prompt = <span class="string">&quot;這張圖片是甚麼?&quot;</span>) </span><br><span class="line"><span class="built_in">print</span>(res)</span><br></pre></td></tr></table></figure>
+    <title>XML格式</title>
+    <url>/2024/12/25/XML%E6%A0%BC%E5%BC%8F/</url>
+    <content><![CDATA[<h2 id="XML-Formatter"><a href="#XML-Formatter" class="headerlink" title="XML Formatter"></a>XML Formatter</h2><p>如果你想讓語言模型的回答為XML格式，可以使用XMLformatter</p>
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><p>如以下範例，首先先定義你想要回傳的key值的名稱、說明和型別，並利用<em><strong>XML_formatter</strong></em>轉換成xml格式的prompt，並在問問題時把xml_prompt丟入system_prompt中。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha.prompts as prompts</span><br><span class="line">import akasha</span><br><span class="line">import akasha.eval as eval</span><br><span class="line"></span><br><span class="line">formatter = [</span><br><span class="line">        prompts.OutputSchema(name=&quot;學歷&quot;, description=&quot;受試者的就讀大學&quot;, type=&quot;str&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;經驗&quot;, description=&quot;受試者的工作經驗&quot;, type=&quot;str&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;專長&quot;, description=&quot;受試者的專長能力&quot;, type=&quot;list&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;年資&quot;, description=&quot;受試者的總工作年數&quot;, type=&quot;int&quot;)</span><br><span class="line">    ]</span><br><span class="line">xml_prompt = prompts.XML_formatter(formatter)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA(topK=10, threshold=0.0)</span><br><span class="line"></span><br><span class="line">response = ak.ask_whole_file(file_path=&quot;docs/resume_pool/A.docx&quot;,</span><br><span class="line">system_prompt=xml_prompt, prompt=f&#x27;&#x27;&#x27;以上是受試者的履歷，請回答該受試者的學歷、經驗、專長、年資&#x27;&#x27;&#x27;)</span><br><span class="line"></span><br><span class="line">print(response)</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">這張圖片顯示了一個長度不等的木板路，穿過一片綠色的草地和樹林。路面上有許多細小的草根和葉子。路面兩側是高約1米左右的青綠色野生植物，中間有一些紅色的灌木丛。天空是藍色的，有一</span><br><span class="line">些白雲。</span><br><span class="line"></span><br><span class="line">這張圖像可能是一個自然景觀或一個旅遊目的地，例如一個國家公園或一個鳥類保護區。它也可能是一個攝影作品，用來展示自然美景和人們與環境之間的互動關係。</span><br><span class="line"></span><br><span class="line">總體而言，這張圖像展現了人們與自然環境之間美麗而微妙的關係，並呼籲我們去探索、欣賞和保護我們周圍的世界。這張圖片顯示了一個長度不等的木板路，穿過一片綠色的草地和樹林。路面上有許多細小的草根和葉子。路面兩側是高約1米左右的青綠色野生植物，中間有一些紅色的灌木叢。天空是藍色的，有一些白雲。</span><br><span class="line"></span><br><span class="line">這張圖像可能是一個自然景觀或一個旅遊目的地，例如一個國家公園或一個鳥類保護區。它也可能是一個攝影作品，用來展示自然美景和人們與環境之間的互動關係。</span><br><span class="line"></span><br><span class="line">總體而言，這張圖像展現了人們與自然環境之間美麗而微妙的關係，並呼籲我們去探索、欣賞和保護我們周圍的世界。</span><br></pre></td></tr></table></figure>
-]]></content>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;resume&gt;</span><br><span class="line">    &lt;學歷&gt;國立臺北科技大學電資學士班 四技 就學中&lt;/學歷&gt;</span><br><span class="line">    &lt;經驗&gt;英文短期文理補習班補習班導師／管理人員&lt;/經驗&gt;</span><br><span class="line">    &lt;專長&gt;</span><br><span class="line">        &lt;能力&gt;語言能力&lt;/能力&gt;</span><br><span class="line">        &lt;英文&gt;聽-中等, 說-中等, 讀-中等, 寫-中等&lt;/英文&gt;</span><br><span class="line">        &lt;證照&gt;TOEIC &lt;/證照&gt;</span><br><span class="line">    &lt;/專長&gt;</span><br><span class="line">    &lt;年資&gt;0-1&lt;/年資&gt;</span><br><span class="line">&lt;/resume&gt;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>文檔問答</category>
+        <category>指定輸出格式</category>
       </categories>
       <tags>
-        <tag>akasha</tag>
+        <tag>akasha-advanced</tag>
       </tags>
   </entry>
   <entry>
@@ -481,6 +484,21 @@
       </tags>
   </entry>
   <entry>
+    <title>optimum_combination</title>
+    <url>/2024/12/28/optimum_combination/</url>
+    <content><![CDATA[<h2 id="Find-Optimum-Combination"><a href="#Find-Optimum-Combination" class="headerlink" title="Find Optimum Combination"></a>Find Optimum Combination</h2><p>若要測試所有可用的組合並找到最佳參數，您可以使用 optimum_combination 函數。您可以提供不同的嵌入模型、文件段落大小、語言模型、文件搜索方法以及最相關文檔的數量（topK），該函數將測試所有組合以找到根據給定的問題集和文檔的最佳組合。請注意，最佳得分組合是最高正確率組合，而最佳性價比組合是需要最少token以獲得正確答案的組合。</p>
+<h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha.eval as eval</span><br><span class="line">import os</span><br><span class="line">from dotenv import load_dotenv</span><br><span class="line">load_dotenv() </span><br><span class="line"></span><br><span class="line">os.environ[&quot;OPENAI_API_KEY&quot;] = &quot;your openAI key&quot;</span><br><span class="line">os.environ[&quot;HF_TOKEN&quot;] = &quot;your huggingface key&quot;</span><br><span class="line">dir_path = &quot;doc/pvc/&quot;</span><br><span class="line">exp_name = &quot;exp_akasha_optimum_combination&quot;</span><br><span class="line">embeddings_list = [&quot;hf:shibing624/text2vec-base-chinese&quot;, &quot;openai:text-embedding-ada-002&quot;]</span><br><span class="line">model_list = [&quot;openai:gpt-3.5-turbo&quot;,&quot;hf:FlagAlpha/Llama2-Chinese-13b-Chat-4bit&quot;,&quot;hf:meta-llama/Llama-2-7b-chat-hf&quot;,\</span><br><span class="line">            &quot;llama-gpu:model/llama-2-7b-chat.Q5_K_S.gguf&quot;, &quot;llama-gpu:model/llama-2-13b-chat.Q5_K_S.gguf&quot;]</span><br><span class="line"></span><br><span class="line">eva = eval.Model_Eval(question_style=&quot;single_choice&quot;)</span><br><span class="line">eva.optimum_combination(&quot;question_pvc.txt&quot;, dir_path,  embeddings_list = embeddings_list, model_list = model_list,</span><br><span class="line">            chunk_size_list=[200, 400, 600], search_type_list=[&quot;merge&quot;,&quot;tfidf&quot;,],record_exp=exp_name)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Best correct rate:  1.000</span><br><span class="line">Best score combination:  </span><br><span class="line"></span><br><span class="line">embeddings: openai:text-embedding-ada-002, chunk size: 400, model: openai:gpt-3.5-turbo, search type: merge</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">embeddings: openai:text-embedding-ada-002, chunk size: 400, model: openai:gpt-3.5-turbo, search type: tfidf</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">Best cost-effective:</span><br><span class="line"></span><br><span class="line">embeddings: hf:shibing624/text2vec-base-chinese, chunk size: 400, model: openai:gpt-3.5-turbo, search type: tfidf</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>模型評估</category>
+      </categories>
+      <tags>
+        <tag>akasha</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>get_response</title>
     <url>/2024/12/29/get_response/</url>
     <content><![CDATA[<h2 id="get-response"><a href="#get-response" class="headerlink" title="get_response"></a>get_response</h2><p>使用者輸入一個或多個文件(.pdf, .docx, .txt)資料夾，此函數可以讓語言模型根據搜尋到的文件回答問題。藉由使用者的問題和文件庫搜尋到知識片段，可以不用將整份文件輸入給模型，就讓語言模型正確回答問題。</p>
@@ -511,34 +529,29 @@
       </tags>
   </entry>
   <entry>
-    <title>optimum_combination</title>
-    <url>/2024/12/28/optimum_combination/</url>
-    <content><![CDATA[<h2 id="Find-Optimum-Combination"><a href="#Find-Optimum-Combination" class="headerlink" title="Find Optimum Combination"></a>Find Optimum Combination</h2><p>若要測試所有可用的組合並找到最佳參數，您可以使用 optimum_combination 函數。您可以提供不同的嵌入模型、文件段落大小、語言模型、文件搜索方法以及最相關文檔的數量（topK），該函數將測試所有組合以找到根據給定的問題集和文檔的最佳組合。請注意，最佳得分組合是最高正確率組合，而最佳性價比組合是需要最少token以獲得正確答案的組合。</p>
-<h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha.eval as eval</span><br><span class="line">import os</span><br><span class="line">from dotenv import load_dotenv</span><br><span class="line">load_dotenv() </span><br><span class="line"></span><br><span class="line">os.environ[&quot;OPENAI_API_KEY&quot;] = &quot;your openAI key&quot;</span><br><span class="line">os.environ[&quot;HF_TOKEN&quot;] = &quot;your huggingface key&quot;</span><br><span class="line">dir_path = &quot;doc/pvc/&quot;</span><br><span class="line">exp_name = &quot;exp_akasha_optimum_combination&quot;</span><br><span class="line">embeddings_list = [&quot;hf:shibing624/text2vec-base-chinese&quot;, &quot;openai:text-embedding-ada-002&quot;]</span><br><span class="line">model_list = [&quot;openai:gpt-3.5-turbo&quot;,&quot;hf:FlagAlpha/Llama2-Chinese-13b-Chat-4bit&quot;,&quot;hf:meta-llama/Llama-2-7b-chat-hf&quot;,\</span><br><span class="line">            &quot;llama-gpu:model/llama-2-7b-chat.Q5_K_S.gguf&quot;, &quot;llama-gpu:model/llama-2-13b-chat.Q5_K_S.gguf&quot;]</span><br><span class="line"></span><br><span class="line">eva = eval.Model_Eval(question_style=&quot;single_choice&quot;)</span><br><span class="line">eva.optimum_combination(&quot;question_pvc.txt&quot;, dir_path,  embeddings_list = embeddings_list, model_list = model_list,</span><br><span class="line">            chunk_size_list=[200, 400, 600], search_type_list=[&quot;merge&quot;,&quot;tfidf&quot;,],record_exp=exp_name)</span><br></pre></td></tr></table></figure>
+    <title>ui操作</title>
+    <url>/2024/12/24/ui%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<h2 id="get-response"><a href="#get-response" class="headerlink" title="get_response"></a>get_response</h2><p>確認設定中有選擇正確的知識庫後，在system_prompt中填入希望回答的格式，在prompt中填入問題，按下submit便可以執行文檔問答。<br><img src="https://hackmd.io/_uploads/BkmIZ9y5T.png" alt="ui_5"></p>
+</br>
+</br>
 
 
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Best correct rate:  1.000</span><br><span class="line">Best score combination:  </span><br><span class="line"></span><br><span class="line">embeddings: openai:text-embedding-ada-002, chunk size: 400, model: openai:gpt-3.5-turbo, search type: merge</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">embeddings: openai:text-embedding-ada-002, chunk size: 400, model: openai:gpt-3.5-turbo, search type: tfidf</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">Best cost-effective:</span><br><span class="line"></span><br><span class="line">embeddings: hf:shibing624/text2vec-base-chinese, chunk size: 400, model: openai:gpt-3.5-turbo, search type: tfidf</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>模型評估</category>
-      </categories>
-      <tags>
-        <tag>akasha</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>summary</title>
-    <url>/2024/12/27/summary/</url>
-    <content><![CDATA[<h2 id="文件摘要"><a href="#文件摘要" class="headerlink" title="文件摘要"></a>文件摘要</h2><p>若要創建文本文件的摘要（.pdf、.txt.、docx），您可以使用 <em><strong>summary.summarize_file</strong></em> 函數。如範例，以下使用 map_reduce 摘要方法指示語言模型生成大約 500 字的摘要。有兩種摘要類型，<em><strong>map_reduce</strong></em> 和 <em><strong>refine</strong></em>，<em><strong>map_reduce</strong></em> 將對每個文本段落進行摘要，然後使用所有摘要的文本段落生成最終摘要；<em><strong>refine</strong></em> 將逐個摘要每個文本段落，並使用前一個摘要作為摘要下一段的提示，以獲得更高水平的摘要一致性。</p>
-<h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line">sum = akasha.Summary( chunk_size=1000, chunk_overlap=100)</span><br><span class="line">sum.summarize_file(file_path=&quot;doc/mic/5軸工具機因應市場訴求改變的發展態勢.pdf&quot;,summary_type=&quot;map_reduce&quot;, summary_len=500\</span><br><span class="line">, chunk_overlap=40)</span><br></pre></td></tr></table></figure>
+<p>可以使用<em><strong>clear</strong></em> 按鈕清空對話欄，也可以使用左側<em><strong>Download Log</strong></em>按鈕下載紀錄<br><img src="https://hackmd.io/_uploads/H1MgEckqT.png" alt="image"></p>
+</br>
+</br>
 
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">### Arguments of Summary class ###</span><br><span class="line"> Args:</span><br><span class="line">            **chunk_size (int, optional)**: chunk size of texts from documents. Defaults to 1000.</span><br><span class="line">            **chunk_overlap (int, optional)**: chunk overlap of texts from documents. Defaults to 40.</span><br><span class="line">            **model (str, optional)**: llm model to use. Defaults to &quot;gpt-3.5-turbo&quot;.</span><br><span class="line">            **verbose (bool, optional)**: show log texts or not. Defaults to False.</span><br><span class="line">            **threshold (float, optional)**: the similarity threshold of searching. Defaults to 0.2.</span><br><span class="line">            **language (str, optional)**: the language of documents and prompt, use to make sure docs won&#x27;t exceed</span><br><span class="line">                max token size of llm input.</span><br><span class="line">            **record_exp (str, optional)**: use aiido to save running params and metrics to the remote mlflow or not if record_exp not empty, and setrecord_exp as experiment name.  default &quot;&quot;.</span><br><span class="line">            **system_prompt (str, optional)**: the system prompt that you assign special instruction to llm model, so will not be used</span><br><span class="line">                in searching relevant documents. Defaults to &quot;&quot;.</span><br><span class="line">            **max_input_tokens(int, optional)**: max token length of llm input. Defaults to 3000.</span><br><span class="line">            **temperature (float, optional)**: temperature of llm model from 0.0 to 1.0 . Defaults to 0.0.</span><br><span class="line">            **auto_translate (bool, optional)**: translate summary into language or not.</span><br><span class="line">                        **max_output_tokens (int, optional)**: max output tokens of llm model. Defaults to 1024.</span><br><span class="line">            **max_input_tokens (int, optional)**: max input tokens of llm model. Defaults to 3000.   </span><br><span class="line">            **env_file (str, optional)**: the path of env file. Defaults to &quot;&quot;.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="chain-of-thought"><a href="#chain-of-thought" class="headerlink" title="chain_of_thought"></a>chain_of_thought</h2><p>使用<em><strong>Add Prompt</strong></em> 按鈕增加子問題，便可以使用chain of thought先提問小問題並利用小問題的答案回答較為複雜的問題。<br><img src="https://hackmd.io/_uploads/HkEQG5kqa.png" alt="image"></p>
+</br>
+</br>
 
+
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>選擇summary方法與長度後，上傳單一文件檔便可得到該文檔的摘要。<br><img src="https://hackmd.io/_uploads/r15wQ9y96.png" alt="image"></p>
 ]]></content>
       <categories>
-        <category>摘要</category>
+        <category>UI</category>
       </categories>
       <tags>
-        <tag>akasha</tag>
+        <tag>akasha-UI</tag>
       </tags>
   </entry>
   <entry>
@@ -586,32 +599,6 @@
       </tags>
   </entry>
   <entry>
-    <title>ui操作</title>
-    <url>/2024/12/24/ui%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<h2 id="get-response"><a href="#get-response" class="headerlink" title="get_response"></a>get_response</h2><p>確認設定中有選擇正確的知識庫後，在system_prompt中填入希望回答的格式，在prompt中填入問題，按下submit便可以執行文檔問答。<br><img src="https://hackmd.io/_uploads/BkmIZ9y5T.png" alt="ui_5"></p>
-</br>
-</br>
-
-
-<p>可以使用<em><strong>clear</strong></em> 按鈕清空對話欄，也可以使用左側<em><strong>Download Log</strong></em>按鈕下載紀錄<br><img src="https://hackmd.io/_uploads/H1MgEckqT.png" alt="image"></p>
-</br>
-</br>
-
-<h2 id="chain-of-thought"><a href="#chain-of-thought" class="headerlink" title="chain_of_thought"></a>chain_of_thought</h2><p>使用<em><strong>Add Prompt</strong></em> 按鈕增加子問題，便可以使用chain of thought先提問小問題並利用小問題的答案回答較為複雜的問題。<br><img src="https://hackmd.io/_uploads/HkEQG5kqa.png" alt="image"></p>
-</br>
-</br>
-
-
-<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>選擇summary方法與長度後，上傳單一文件檔便可得到該文檔的摘要。<br><img src="https://hackmd.io/_uploads/r15wQ9y96.png" alt="image"></p>
-]]></content>
-      <categories>
-        <category>UI</category>
-      </categories>
-      <tags>
-        <tag>akasha-UI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>代理</title>
     <url>/2024/12/26/%E4%BB%A3%E7%90%86/</url>
     <content><![CDATA[<h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><p>使用代理(agent)可以賦予語言模型其他能力，以便完成你下的指令，例如提供文件编辑、google搜尋的工具，便可以使語言模型提供更準確地回答，也可以請他幫忙儲存或刪除文件。</p>
@@ -641,6 +628,83 @@
 </br>
 
 <h3 id="test-agent-中的所有參數"><a href="#test-agent-中的所有參數" class="headerlink" title="test_agent 中的所有參數:"></a>test_agent 中的所有參數:</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Args:</span><br><span class="line">   model (str, optional): 使用的大語言模型. Defaults to &quot;gpt-3.5-turbo&quot;.\n</span><br><span class="line">   verbose (bool, optional): 是否顯示log文字. Defaults to False.\n</span><br><span class="line">   language (str, optional): 用來計算文字長度(max_doc_len)的語言. Defaults to &quot;zh&quot;</span><br><span class="line">   temperature (float, optional): 大語言模型的temperature(0.0 ~ 1.0) . Defaults to 0.0.\n</span><br><span class="line">   keep_logs (bool, optional)**: 是否紀錄執行的log. Defaults to False.\n</span><br><span class="line">   max_round (int, optional)**: agent最多執行次數，超過即跳出，避免無線迴圈. Defaults to 20.\n</span><br><span class="line">   max_input_tokens (int, optional): agent保留的之前做過的思考與動作的文字最大長度. Defaults to 3200.\n</span><br><span class="line">   max_past_observation (int, optional)**: agent保留的之前做過的思考與動作的最多次數. Defaults to 10.\n</span><br><span class="line">   retri_observation (bool, optional)**: 若設為True, agent會利用大語言模型去擷取tool回傳內容，避免多餘文字輸入. Defaults to False.\n</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>進階</category>
+      </categories>
+      <tags>
+        <tag>akasha-advanced</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>嵌入模型</title>
+    <url>/2024/12/26/%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B/</url>
+    <content><![CDATA[<h2 id="選擇不同嵌入模型"><a href="#選擇不同嵌入模型" class="headerlink" title="選擇不同嵌入模型"></a>選擇不同嵌入模型</h2><p>使用參數<em><strong>embeddings</strong></em>便可以選擇不同的嵌入模型，預設是<em><strong>openai:text-embedding-ada-002</strong></em>.</p>
+<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><h3 id="1-openai"><a href="#1-openai" class="headerlink" title="1. openai"></a>1. openai</h3><p>(請先完成<a href="/2024/12/30/%E8%A8%AD%E5%AE%9A%20API%20Key/">設定 API Key</a>)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, prompt, embeddings=&quot;openai:text-embedding-ada-002&quot;,)</span><br></pre></td></tr></table></figure>
+
+</br>
+</br>
+
+<h3 id="2-huggingface"><a href="#2-huggingface" class="headerlink" title="2. huggingface"></a>2. huggingface</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA(embeddings=&quot;huggingface:all-MiniLM-L6-v2&quot;)</span><br><span class="line">resposne = ak.get_response(dir_path, prompt)</span><br></pre></td></tr></table></figure>
+</br>
+</br>
+
+<h3 id="3-gemini"><a href="#3-gemini" class="headerlink" title="3. gemini"></a>3. gemini</h3><p>(請先完成<a href="/2024/12/30/%E8%A8%AD%E5%AE%9A%20API%20Key/">設定 API Key</a>)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, </span><br><span class="line">                prompt, </span><br><span class="line">                embeddings=&quot;gemini:text-embedding-004&quot;,</span><br><span class="line">                model=&quot;gemini:gemini-1.5-flash&quot;)</span><br></pre></td></tr></table></figure>
+
+
+</br>
+</br>
+
+<h2 id="可使用的模型"><a href="#可使用的模型" class="headerlink" title="可使用的模型"></a>可使用的模型</h2><p>:::info<br>每個嵌入模型都有max sequence length，超過的話後面的文字就會被截斷，不會拿進去做嵌入。<br>:::</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">openai_emd = &quot;openai:text-embedding-ada-002&quot;  # need environment variable &quot;OPENAI_API_KEY&quot;  # 8192 max seq length</span><br><span class="line">gemini_emd = &quot;gemini:text-embedding-004&quot;</span><br><span class="line">huggingface_emd = &quot;hf:all-MiniLM-L6-v2&quot; </span><br><span class="line">text2vec_ch_emd = &quot;hf:shibing624/text2vec-base-chinese&quot;   # 128 max seq length </span><br><span class="line">text2vec_mul_emd = &quot;hf:shibing624/text2vec-base-multilingual&quot;  # 256 max seq length</span><br><span class="line">text2vec_ch_para_emd = &quot;hf:shibing624/text2vec-base-chinese-paraphrase&quot; # perform better for long text, 256 max seq length</span><br><span class="line">bge_en_emd = &quot;hf:BAAI/bge-base-en-v1.5&quot;  # 512 max seq length</span><br><span class="line">bge_ch_emd = &quot;hf:BAAI/bge-base-zh-v1.5&quot;  # 512 max seq length</span><br><span class="line"></span><br><span class="line">rerank_base = &quot;rerank:BAAI/bge-reranker-base&quot;    # 512 max seq length</span><br><span class="line">rerank_large = &quot;rerank:BAAI/bge-reranker-large&quot;  # 512 max seq length</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</br>
+</br>
+</br>
+</br>
+
+
+<h2 id="自訂嵌入模型"><a href="#自訂嵌入模型" class="headerlink" title="自訂嵌入模型"></a>自訂嵌入模型</h2><p>如果你想使用其他模型，可以建立一個輸入是<em><strong>texts:list</strong></em>的函數，代表的是文件庫中所有分割好的文字段落，此函數需回傳embedding之後每段文字的向量，並將此函數作為<em><strong>embeddings</strong></em>參數</p>
+<h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><p>我們建立一個test_embed函數，並可以將它作為參數輸入進get_response回答問題</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">def test_embed(texts:list)-&gt;list:</span><br><span class="line"></span><br><span class="line">    from sentence_transformers import SentenceTransformer</span><br><span class="line">    mdl = SentenceTransformer(&#x27;BAAI/bge-large-zh-v1.5&#x27;)</span><br><span class="line">    embeds =  mdl.encode(texts,normalize_embeddings=True)</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    return embeds</span><br><span class="line"></span><br><span class="line">doc_path = &quot;./mic/&quot;</span><br><span class="line">prompt = &quot;五軸是什麼?&quot;</span><br><span class="line"></span><br><span class="line">qa = akasha.Doc_QA(verbose=True, search_type = &quot;svm&quot;, embeddings = test_embed)</span><br><span class="line">qa.get_response(doc_path= doc_path, prompt = prompt)</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="建立Embeddings物件"><a href="#建立Embeddings物件" class="headerlink" title="建立Embeddings物件"></a>建立Embeddings物件</h2><p>以上使用embeddings參數選擇模型後，便會在Doc_QA物件內建立模型的物件embeddings_obj(Embeddings)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">AK = akasha.Doc_QA(embeddings=&quot;openai:text-embedding-ada-002&quot;)</span><br><span class="line"></span><br><span class="line">print(type(AK.embeddings_obj)) </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</br>
+</br>
+
+
+<p>也可以使用輔助函數建立Embeddings物件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">embeddings_obj = akasha.handle_embeddings(&quot;openai:text-embedding-ada-002&quot;,verbose=False)</span><br><span class="line"></span><br><span class="line">print(type(embeddings_obj)) </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</br>
+</br>
+
+<p>此Embeddings物件也可直接傳入Doc_QA，避免重複宣告</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">model_obj = akasha.handle_model(&quot;openai:gpt-3.5-turbo&quot;,verbose=False,temperature=0.0)</span><br><span class="line">embeddings_obj = akasha.handle_embeddings(&quot;openai:text-embedding-ada-002&quot;,verbose=False)</span><br><span class="line">AK = Doc_QA(model=model_obj, embeddings=embeddings_obj) </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</br>
+</br>
+
+<h2 id="取出特定文件db"><a href="#取出特定文件db" class="headerlink" title="取出特定文件db"></a>取出特定文件db</h2><p>當你想從大量文檔db中取出特定的文件db，以縮小搜尋範圍時，可以使用 <em><strong>extract_db_by_file</strong></em> (by file source name) 或 <em><strong>extract_db_by_keyword</strong></em> (by id)</p>
+<h3 id="example-1"><a href="#example-1" class="headerlink" title="example"></a>example</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line">emb_name = &quot;openai:text-embedding-ada-002&quot;</span><br><span class="line">emb_obj = akasha.handle_embeddings(emb_name, False)</span><br><span class="line">doc_path = [&quot;文檔資料夾1&quot;,&quot;文檔資料夾2&quot;]</span><br><span class="line">db, _ = akasha.db.processMultiDB(doc_path, True, emb_obj,</span><br><span class="line">                emb_name, chunk_size=1000, ignore_check=True)</span><br><span class="line"></span><br><span class="line">## extract from db ##</span><br><span class="line">file_name_list = [&quot;f1.txt&quot;, &quot;g2.docx&quot;, &quot;h3.pdf&quot;]</span><br><span class="line">ex_db = akasha.extract_db_by_file(db, file_name_list)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>進階</category>
+      </categories>
+      <tags>
+        <tag>akasha-advanced</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>批量推理</title>
+    <url>/2024/12/26/%E6%89%B9%E9%87%8F%E6%8E%A8%E7%90%86/</url>
+    <content><![CDATA[<h2 id="批量推理"><a href="#批量推理" class="headerlink" title="批量推理"></a>批量推理</h2><p>如果你有大量不需要連貫的推理需求，可以使用<strong>akasha.helper.call_batch_model</strong> 來進行批量推理來提升速度。</p>
+<h3 id="call-batch-model"><a href="#call-batch-model" class="headerlink" title="call_batch_model"></a>call_batch_model</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">def call_batch_model(model: LLM, prompt: List[str], </span><br><span class="line">    system_prompt: Union[List[str], str] = &quot;&quot;) -&gt; List[str]:</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> akasha</span><br><span class="line"></span><br><span class="line">model_obj = akasha.helper.handle_model(<span class="string">&quot;openai:gpt-3.5-turbo&quot;</span>, <span class="literal">False</span>, <span class="number">0.0</span>)</span><br><span class="line"><span class="comment"># this prompt ask LLM to response &#x27;yes&#x27; or &#x27;no&#x27; if the document segment is relevant to the user question or not.</span></span><br><span class="line">SYSTEM_PROMPT = akasha.prompts.default_doc_grader_prompt() </span><br><span class="line">documents = [<span class="string">&quot;Doc1...&quot;</span>, <span class="string">&quot;Doc2...&quot;</span>, <span class="string">&quot;Doc3...&quot;</span>, <span class="string">&quot;Doc4...&quot;</span>]</span><br><span class="line">question = <span class="string">&quot;五軸是什麼?&quot;</span></span><br><span class="line"></span><br><span class="line">prompts = [<span class="string">&quot;document: &quot;</span> + doc +<span class="string">&quot;\n\n&quot;</span> + <span class="string">&quot;User Question: &quot;</span>+ question <span class="keyword">for</span> doc <span class="keyword">in</span> documents]</span><br><span class="line"></span><br><span class="line">response_list = call_batch_model(model_obj, prompt, SYSTEM_PROMPT)</span><br><span class="line"></span><br><span class="line"><span class="comment">## [&quot;yes&quot;, &quot;no&quot;, &quot;yes&quot;, &quot;yes&quot;]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>進階</category>
       </categories>
@@ -742,80 +806,19 @@
       </tags>
   </entry>
   <entry>
-    <title>嵌入模型</title>
-    <url>/2024/12/26/%E5%B5%8C%E5%85%A5%E6%A8%A1%E5%9E%8B/</url>
-    <content><![CDATA[<h2 id="選擇不同嵌入模型"><a href="#選擇不同嵌入模型" class="headerlink" title="選擇不同嵌入模型"></a>選擇不同嵌入模型</h2><p>使用參數<em><strong>embeddings</strong></em>便可以選擇不同的嵌入模型，預設是<em><strong>openai:text-embedding-ada-002</strong></em>.</p>
-<h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><h3 id="1-openai"><a href="#1-openai" class="headerlink" title="1. openai"></a>1. openai</h3><p>(請先完成<a href="/2024/12/30/%E8%A8%AD%E5%AE%9A%20API%20Key/">設定 API Key</a>)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, prompt, embeddings=&quot;openai:text-embedding-ada-002&quot;,)</span><br></pre></td></tr></table></figure>
+    <title>summary</title>
+    <url>/2024/12/27/summary/</url>
+    <content><![CDATA[<h2 id="文件摘要"><a href="#文件摘要" class="headerlink" title="文件摘要"></a>文件摘要</h2><p>若要創建文本文件的摘要（.pdf、.txt.、docx），您可以使用 <em><strong>summary.summarize_file</strong></em> 函數。如範例，以下使用 map_reduce 摘要方法指示語言模型生成大約 500 字的摘要。有兩種摘要類型，<em><strong>map_reduce</strong></em> 和 <em><strong>refine</strong></em>，<em><strong>map_reduce</strong></em> 將對每個文本段落進行摘要，然後使用所有摘要的文本段落生成最終摘要；<em><strong>refine</strong></em> 將逐個摘要每個文本段落，並使用前一個摘要作為摘要下一段的提示，以獲得更高水平的摘要一致性。</p>
+<h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line">sum = akasha.Summary( chunk_size=1000, chunk_overlap=100)</span><br><span class="line">sum.summarize_file(file_path=&quot;doc/mic/5軸工具機因應市場訴求改變的發展態勢.pdf&quot;,summary_type=&quot;map_reduce&quot;, summary_len=500\</span><br><span class="line">, chunk_overlap=40)</span><br></pre></td></tr></table></figure>
 
-</br>
-</br>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">### Arguments of Summary class ###</span><br><span class="line"> Args:</span><br><span class="line">            **chunk_size (int, optional)**: chunk size of texts from documents. Defaults to 1000.</span><br><span class="line">            **chunk_overlap (int, optional)**: chunk overlap of texts from documents. Defaults to 40.</span><br><span class="line">            **model (str, optional)**: llm model to use. Defaults to &quot;gpt-3.5-turbo&quot;.</span><br><span class="line">            **verbose (bool, optional)**: show log texts or not. Defaults to False.</span><br><span class="line">            **threshold (float, optional)**: the similarity threshold of searching. Defaults to 0.2.</span><br><span class="line">            **language (str, optional)**: the language of documents and prompt, use to make sure docs won&#x27;t exceed</span><br><span class="line">                max token size of llm input.</span><br><span class="line">            **record_exp (str, optional)**: use aiido to save running params and metrics to the remote mlflow or not if record_exp not empty, and setrecord_exp as experiment name.  default &quot;&quot;.</span><br><span class="line">            **system_prompt (str, optional)**: the system prompt that you assign special instruction to llm model, so will not be used</span><br><span class="line">                in searching relevant documents. Defaults to &quot;&quot;.</span><br><span class="line">            **max_input_tokens(int, optional)**: max token length of llm input. Defaults to 3000.</span><br><span class="line">            **temperature (float, optional)**: temperature of llm model from 0.0 to 1.0 . Defaults to 0.0.</span><br><span class="line">            **auto_translate (bool, optional)**: translate summary into language or not.</span><br><span class="line">                        **max_output_tokens (int, optional)**: max output tokens of llm model. Defaults to 1024.</span><br><span class="line">            **max_input_tokens (int, optional)**: max input tokens of llm model. Defaults to 3000.   </span><br><span class="line">            **env_file (str, optional)**: the path of env file. Defaults to &quot;&quot;.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="2-huggingface"><a href="#2-huggingface" class="headerlink" title="2. huggingface"></a>2. huggingface</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA(embeddings=&quot;huggingface:all-MiniLM-L6-v2&quot;)</span><br><span class="line">resposne = ak.get_response(dir_path, prompt)</span><br></pre></td></tr></table></figure>
-</br>
-</br>
-
-<h3 id="3-gemini"><a href="#3-gemini" class="headerlink" title="3. gemini"></a>3. gemini</h3><p>(請先完成<a href="/2024/12/30/%E8%A8%AD%E5%AE%9A%20API%20Key/">設定 API Key</a>)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, </span><br><span class="line">                prompt, </span><br><span class="line">                embeddings=&quot;gemini:text-embedding-004&quot;,</span><br><span class="line">                model=&quot;gemini:gemini-1.5-flash&quot;)</span><br></pre></td></tr></table></figure>
-
-
-</br>
-</br>
-
-<h2 id="可使用的模型"><a href="#可使用的模型" class="headerlink" title="可使用的模型"></a>可使用的模型</h2><p>:::info<br>每個嵌入模型都有max sequence length，超過的話後面的文字就會被截斷，不會拿進去做嵌入。<br>:::</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">openai_emd = &quot;openai:text-embedding-ada-002&quot;  # need environment variable &quot;OPENAI_API_KEY&quot;  # 8192 max seq length</span><br><span class="line">gemini_emd = &quot;gemini:text-embedding-004&quot;</span><br><span class="line">huggingface_emd = &quot;hf:all-MiniLM-L6-v2&quot; </span><br><span class="line">text2vec_ch_emd = &quot;hf:shibing624/text2vec-base-chinese&quot;   # 128 max seq length </span><br><span class="line">text2vec_mul_emd = &quot;hf:shibing624/text2vec-base-multilingual&quot;  # 256 max seq length</span><br><span class="line">text2vec_ch_para_emd = &quot;hf:shibing624/text2vec-base-chinese-paraphrase&quot; # perform better for long text, 256 max seq length</span><br><span class="line">bge_en_emd = &quot;hf:BAAI/bge-base-en-v1.5&quot;  # 512 max seq length</span><br><span class="line">bge_ch_emd = &quot;hf:BAAI/bge-base-zh-v1.5&quot;  # 512 max seq length</span><br><span class="line"></span><br><span class="line">rerank_base = &quot;rerank:BAAI/bge-reranker-base&quot;    # 512 max seq length</span><br><span class="line">rerank_large = &quot;rerank:BAAI/bge-reranker-large&quot;  # 512 max seq length</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-</br>
-</br>
-</br>
-</br>
-
-
-<h2 id="自訂嵌入模型"><a href="#自訂嵌入模型" class="headerlink" title="自訂嵌入模型"></a>自訂嵌入模型</h2><p>如果你想使用其他模型，可以建立一個輸入是<em><strong>texts:list</strong></em>的函數，代表的是文件庫中所有分割好的文字段落，此函數需回傳embedding之後每段文字的向量，並將此函數作為<em><strong>embeddings</strong></em>參數</p>
-<h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><p>我們建立一個test_embed函數，並可以將它作為參數輸入進get_response回答問題</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">def test_embed(texts:list)-&gt;list:</span><br><span class="line"></span><br><span class="line">    from sentence_transformers import SentenceTransformer</span><br><span class="line">    mdl = SentenceTransformer(&#x27;BAAI/bge-large-zh-v1.5&#x27;)</span><br><span class="line">    embeds =  mdl.encode(texts,normalize_embeddings=True)</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    return embeds</span><br><span class="line"></span><br><span class="line">doc_path = &quot;./mic/&quot;</span><br><span class="line">prompt = &quot;五軸是什麼?&quot;</span><br><span class="line"></span><br><span class="line">qa = akasha.Doc_QA(verbose=True, search_type = &quot;svm&quot;, embeddings = test_embed)</span><br><span class="line">qa.get_response(doc_path= doc_path, prompt = prompt)</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="建立Embeddings物件"><a href="#建立Embeddings物件" class="headerlink" title="建立Embeddings物件"></a>建立Embeddings物件</h2><p>以上使用embeddings參數選擇模型後，便會在Doc_QA物件內建立模型的物件embeddings_obj(Embeddings)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">AK = akasha.Doc_QA(embeddings=&quot;openai:text-embedding-ada-002&quot;)</span><br><span class="line"></span><br><span class="line">print(type(AK.embeddings_obj)) </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-</br>
-</br>
-
-
-<p>也可以使用輔助函數建立Embeddings物件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">embeddings_obj = akasha.handle_embeddings(&quot;openai:text-embedding-ada-002&quot;,verbose=False)</span><br><span class="line"></span><br><span class="line">print(type(embeddings_obj)) </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-</br>
-</br>
-
-<p>此Embeddings物件也可直接傳入Doc_QA，避免重複宣告</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">model_obj = akasha.handle_model(&quot;openai:gpt-3.5-turbo&quot;,verbose=False,temperature=0.0)</span><br><span class="line">embeddings_obj = akasha.handle_embeddings(&quot;openai:text-embedding-ada-002&quot;,verbose=False)</span><br><span class="line">AK = Doc_QA(model=model_obj, embeddings=embeddings_obj) </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-</br>
-</br>
-
-<h2 id="取出特定文件db"><a href="#取出特定文件db" class="headerlink" title="取出特定文件db"></a>取出特定文件db</h2><p>當你想從大量文檔db中取出特定的文件db，以縮小搜尋範圍時，可以使用 <em><strong>extract_db_by_file</strong></em> (by file source name) 或 <em><strong>extract_db_by_keyword</strong></em> (by id)</p>
-<h3 id="example-1"><a href="#example-1" class="headerlink" title="example"></a>example</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line">emb_name = &quot;openai:text-embedding-ada-002&quot;</span><br><span class="line">emb_obj = akasha.handle_embeddings(emb_name, False)</span><br><span class="line">doc_path = [&quot;文檔資料夾1&quot;,&quot;文檔資料夾2&quot;]</span><br><span class="line">db, _ = akasha.db.processMultiDB(doc_path, True, emb_obj,</span><br><span class="line">                emb_name, chunk_size=1000, ignore_check=True)</span><br><span class="line"></span><br><span class="line">## extract from db ##</span><br><span class="line">file_name_list = [&quot;f1.txt&quot;, &quot;g2.docx&quot;, &quot;h3.pdf&quot;]</span><br><span class="line">ex_db = akasha.extract_db_by_file(db, file_name_list)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+]]></content>
       <categories>
-        <category>進階</category>
+        <category>摘要</category>
       </categories>
       <tags>
-        <tag>akasha-advanced</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>批量推理</title>
-    <url>/2024/12/26/%E6%89%B9%E9%87%8F%E6%8E%A8%E7%90%86/</url>
-    <content><![CDATA[<h2 id="批量推理"><a href="#批量推理" class="headerlink" title="批量推理"></a>批量推理</h2><p>如果你有大量不需要連貫的推理需求，可以使用<strong>akasha.helper.call_batch_model</strong> 來進行批量推理來提升速度。</p>
-<h3 id="call-batch-model"><a href="#call-batch-model" class="headerlink" title="call_batch_model"></a>call_batch_model</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">def call_batch_model(model: LLM, prompt: List[str], </span><br><span class="line">    system_prompt: Union[List[str], str] = &quot;&quot;) -&gt; List[str]:</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> akasha</span><br><span class="line"></span><br><span class="line">model_obj = akasha.helper.handle_model(<span class="string">&quot;openai:gpt-3.5-turbo&quot;</span>, <span class="literal">False</span>, <span class="number">0.0</span>)</span><br><span class="line"><span class="comment"># this prompt ask LLM to response &#x27;yes&#x27; or &#x27;no&#x27; if the document segment is relevant to the user question or not.</span></span><br><span class="line">SYSTEM_PROMPT = akasha.prompts.default_doc_grader_prompt() </span><br><span class="line">documents = [<span class="string">&quot;Doc1...&quot;</span>, <span class="string">&quot;Doc2...&quot;</span>, <span class="string">&quot;Doc3...&quot;</span>, <span class="string">&quot;Doc4...&quot;</span>]</span><br><span class="line">question = <span class="string">&quot;五軸是什麼?&quot;</span></span><br><span class="line"></span><br><span class="line">prompts = [<span class="string">&quot;document: &quot;</span> + doc +<span class="string">&quot;\n\n&quot;</span> + <span class="string">&quot;User Question: &quot;</span>+ question <span class="keyword">for</span> doc <span class="keyword">in</span> documents]</span><br><span class="line"></span><br><span class="line">response_list = call_batch_model(model_obj, prompt, SYSTEM_PROMPT)</span><br><span class="line"></span><br><span class="line"><span class="comment">## [&quot;yes&quot;, &quot;no&quot;, &quot;yes&quot;, &quot;yes&quot;]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>進階</category>
-      </categories>
-      <tags>
-        <tag>akasha-advanced</tag>
+        <tag>akasha</tag>
       </tags>
   </entry>
   <entry>
@@ -847,6 +850,55 @@
 
 <h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><p>如範例，我們使用歐幾里得距離度量來識別最相關的文檔。它返回一個表示距離小於指定閾值的查詢和文檔嵌入之間的前 k 個文檔的索引列表。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">def cust(query_embeds, docs_embeds, k:int, relevancy_threshold:float, log:dict):</span><br><span class="line">    </span><br><span class="line">    from scipy.spatial.distance import euclidean</span><br><span class="line">    import numpy as np</span><br><span class="line">    distance = [[euclidean(query_embeds, docs_embeds[idx]),idx] for idx in range(len(docs_embeds))]</span><br><span class="line">    distance = sorted(distance, key=lambda x: x[0])</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    ## change dist if embeddings not between 0~1</span><br><span class="line">    max_dist = 1</span><br><span class="line">    while max_dist &lt; distance[-1][0]:</span><br><span class="line">        max_dist *= 10</span><br><span class="line">        relevancy_threshold *= 10</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    ## add log para</span><br><span class="line">    log[&#x27;dd&#x27;] = &quot;miao&quot;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    return  [idx for dist,idx in distance[:k] if (max_dist - dist) &gt;= relevancy_threshold]</span><br><span class="line"></span><br><span class="line">doc_path = &quot;./mic/&quot;</span><br><span class="line">prompt = &quot;五軸是什麼?&quot;</span><br><span class="line"></span><br><span class="line">qa = akasha.Doc_QA(verbose=True, search_type = cust, embeddings=&quot;hf:shibing624/text2vec-base-chinese&quot;)</span><br><span class="line">qa.get_response(doc_path= doc_path, prompt = prompt)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>進階</category>
+      </categories>
+      <tags>
+        <tag>akasha-advanced</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自查詢</title>
+    <url>/2024/12/26/%E8%87%AA%E6%9F%A5%E8%A9%A2/</url>
+    <content><![CDATA[<h2 id="自查詢-Self-Query"><a href="#自查詢-Self-Query" class="headerlink" title="自查詢(Self Query)"></a>自查詢(Self Query)</h2><p>自查詢是指能夠自我查詢的檢索問題方法。透過結構化、包含metadata的文件集，能將使用者的問題先透過metadata進行篩選，再藉由向量來查詢語意相似的文檔，比起直接做向量查詢能更精確的找到需要的文件。</p>
+<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>自查詢的流程為</p>
+<h4 id="0-create-metadata"><a href="#0-create-metadata" class="headerlink" title="0. create metadata"></a>0. create metadata</h4><p>添加結構化資料到文件集與向量資料庫中</p>
+<h4 id="1-query-constructor"><a href="#1-query-constructor" class="headerlink" title="1. query constructor"></a>1. query constructor</h4><p>將使用者問題轉換成 query(用來做向量查詢的字串)與filter(用來篩選文件集的metatada keywords)<br>例如，使用者問題為: A公司在2024年對電動車的銷售量為多少?</p>
+<p>透過語言模型 將其轉換為</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;query&quot;</span><span class="punctuation">:</span> <span class="string">&quot;電動車的銷售量&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;filter&quot;</span><span class="punctuation">:</span> <span class="string">&quot;and(eq(\&quot;公司名稱\&quot;, \&quot;A公司\&quot;), eq(\&quot;日期年\&quot;, \&quot;2024\&quot;))&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="2-filter-translator"><a href="#2-filter-translator" class="headerlink" title="2. filter translator"></a>2. filter translator</h4><p>將filter處理為程式可執行的dictionary</p>
+<h4 id="3-filter-docs"><a href="#3-filter-docs" class="headerlink" title="3. filter docs"></a>3. filter docs</h4><p>根據filter篩選需要的文件集</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span>&#x27;filter&#x27;<span class="punctuation">:</span> <span class="punctuation">&#123;</span>&#x27;$and&#x27;<span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">&#123;</span>&#x27;拜訪年&#x27;<span class="punctuation">:</span> <span class="punctuation">&#123;</span>&#x27;$eq&#x27;<span class="punctuation">:</span> &#x27;<span class="number">2024</span>&#x27;<span class="punctuation">&#125;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span>&#x27;公司名稱&#x27;<span class="punctuation">:</span> <span class="punctuation">&#123;</span>&#x27;$eq&#x27;<span class="punctuation">:</span> &#x27;A公司&#x27;<span class="punctuation">&#125;</span><span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="punctuation">&#125;</span><span class="punctuation">&#125;</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="4-similarity-search"><a href="#4-similarity-search" class="headerlink" title="4. similarity search"></a>4. similarity search</h4><p>從篩選出來的文件集做向量相似度搜尋</p>
+</br>
+</br>
+
+<h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><h4 id="1-create-chromadb-add-metadatas"><a href="#1-create-chromadb-add-metadatas" class="headerlink" title="1. create chromadb &amp; add metadatas"></a>1. create chromadb &amp; add metadatas</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> akasha</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add_metadata</span>(<span class="params">metadata_list: <span class="built_in">list</span></span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">import</span> json</span><br><span class="line">    <span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</span><br><span class="line">    <span class="keyword">for</span> metadata <span class="keyword">in</span> metadata_list:</span><br><span class="line">        file_path = metadata[<span class="string">&#x27;source&#x27;</span>] <span class="comment"># file path</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="keyword">with</span> Path(file_path).<span class="built_in">open</span>(<span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">                dictionary = json.load(file)</span><br><span class="line"></span><br><span class="line">            </span><br><span class="line">            metadata[<span class="string">&#x27;課別&#x27;</span>] = dictionary[<span class="string">&#x27;課別&#x27;</span>]</span><br><span class="line">            metadata[<span class="string">&#x27;業務擔當&#x27;</span>] = dictionary[<span class="string">&#x27;業務擔當&#x27;</span>]</span><br><span class="line">            ddate = dictionary[<span class="string">&#x27;拜訪日期&#x27;</span>]</span><br><span class="line">            metadata[<span class="string">&#x27;拜訪年&#x27;</span>] = <span class="built_in">int</span>(ddate.split(<span class="string">&#x27;-&#x27;</span>)[<span class="number">0</span>])</span><br><span class="line">            metadata[<span class="string">&#x27;拜訪月&#x27;</span>] = <span class="built_in">int</span>(ddate.split(<span class="string">&#x27;-&#x27;</span>)[<span class="number">1</span>])</span><br><span class="line">            metadata[<span class="string">&#x27;產品&#x27;</span>] = dictionary[<span class="string">&#x27;產品&#x27;</span>]</span><br><span class="line">            metadata[<span class="string">&#x27;公司名稱&#x27;</span>] = dictionary[<span class="string">&#x27;公司名稱&#x27;</span>]</span><br><span class="line">            metadata[<span class="string">&#x27;大分類&#x27;</span>] = dictionary[<span class="string">&#x27;大分類&#x27;</span>]</span><br><span class="line">            metadata[<span class="string">&#x27;中分類&#x27;</span>] = dictionary[<span class="string">&#x27;中分類&#x27;</span>]</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;JSONDecodeError: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> metadata_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">### set parameter ###</span></span><br><span class="line"><span class="built_in">dir</span> = <span class="string">&quot;docs/pns_query&quot;</span></span><br><span class="line">embed_name = <span class="string">&quot;openai:text-embedding-ada-002&quot;</span></span><br><span class="line">chunk_size = <span class="number">99999</span>  <span class="comment"># make sure 1 file 1 chunk</span></span><br><span class="line">emb_obj = akasha.handle_embeddings(<span class="string">&quot;openai:text-embedding-ada-002&quot;</span>)</span><br><span class="line"><span class="comment">####################</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># create chromadb from docs</span></span><br><span class="line">db, _ = akasha.db.processMultiDB(<span class="built_in">dir</span>, <span class="literal">False</span>, emb_obj, embed_name, chunk_size,</span><br><span class="line">                                 <span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">### add metadata to chromadb ###</span></span><br><span class="line">metadata_list = akasha.db.get_db_metadata(<span class="built_in">dir</span>, embed_name, chunk_size) <span class="comment"># get original metada from chromadb, list of dictionary</span></span><br><span class="line">metadata_list = add_metadata(metadata_list)  <span class="comment"># update/add metadata, you can build your own function to update metadata</span></span><br><span class="line">akasha.db.update_db_metadata(metadata_list, <span class="built_in">dir</span>, embed_name, chunk_size)  <span class="comment"># update and save new metadatas to chromadb</span></span><br><span class="line"><span class="built_in">print</span>(akasha.db.get_db_metadata(<span class="built_in">dir</span>, embed_name, chunk_size)[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+
+</br>
+</br>
+
+
+<h4 id="2-use-self-query-to-filter-docs-and-use-query-for-similarity-search"><a href="#2-use-self-query-to-filter-docs-and-use-query-for-similarity-search" class="headerlink" title="2. use self-query to filter docs and use query for similarity search"></a>2. use self-query to filter docs and use query for similarity search</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> akasha.self_query <span class="keyword">import</span> query_filter</span><br><span class="line"><span class="keyword">from</span> langchain.chains.query_constructor.base <span class="keyword">import</span> AttributeInfo</span><br><span class="line"><span class="comment">### set parameter ###</span></span><br><span class="line"></span><br><span class="line">db, _ = akasha.db.processMultiDB(<span class="built_in">dir</span>, <span class="literal">False</span>, emb_obj, embed_name, chunk_size,</span><br><span class="line">                                 <span class="literal">True</span>)</span><br><span class="line">prompt = <span class="string">&quot;A公司在2024年對電動車的銷售量為多少?&quot;</span> </span><br><span class="line">search_type = <span class="string">&quot;bm25&quot;</span></span><br><span class="line">model_obj = akasha.helper.handle_model(<span class="string">&quot;openai:gpt-4o&quot;</span>, <span class="literal">True</span>)</span><br><span class="line">metadata_field_info = [</span><br><span class="line">    AttributeInfo(</span><br><span class="line">        name=<span class="string">&quot;拜訪年&quot;</span>,</span><br><span class="line">        description=<span class="string">&quot;此訪談紀錄的拜訪年份&quot;</span>,</span><br><span class="line">        <span class="built_in">type</span>=<span class="string">&quot;integer&quot;</span>,</span><br><span class="line">    ),</span><br><span class="line">    AttributeInfo(</span><br><span class="line">        name=<span class="string">&quot;拜訪月&quot;</span>,</span><br><span class="line">        description=<span class="string">&quot;此訪談紀錄的拜訪月份&quot;</span>,</span><br><span class="line">        <span class="built_in">type</span>=<span class="string">&quot;integer&quot;</span>,</span><br><span class="line">    ),</span><br><span class="line">    AttributeInfo(</span><br><span class="line">        name=<span class="string">&quot;業務擔當&quot;</span>,</span><br><span class="line">        description=<span class="string">&quot;業務的名稱&quot;</span>,</span><br><span class="line">        <span class="built_in">type</span>=<span class="string">&quot;string&quot;</span>,</span><br><span class="line">    ),</span><br><span class="line">    AttributeInfo(name=<span class="string">&quot;中分類&quot;</span>, description=<span class="string">&quot;訪談產品的中等分類&quot;</span>, <span class="built_in">type</span>=<span class="string">&quot;string&quot;</span>),</span><br><span class="line">    AttributeInfo(name=<span class="string">&quot;公司名稱&quot;</span>, description=<span class="string">&quot;訪談對象的公司名稱&quot;</span>, <span class="built_in">type</span>=<span class="string">&quot;string&quot;</span>),</span><br><span class="line">    AttributeInfo(name=<span class="string">&quot;大分類&quot;</span>, description=<span class="string">&quot;訪談產品的大分類&quot;</span>, <span class="built_in">type</span>=<span class="string">&quot;string&quot;</span>),</span><br><span class="line">    AttributeInfo(name=<span class="string">&quot;產品&quot;</span>, description=<span class="string">&quot;訪談的產品名稱/型號&quot;</span>, <span class="built_in">type</span>=<span class="string">&quot;string&quot;</span>),</span><br><span class="line">    AttributeInfo(name=<span class="string">&quot;課別&quot;</span>, description=<span class="string">&quot;公司部門的課別名稱或代號&quot;</span>, <span class="built_in">type</span>=<span class="string">&quot;string&quot;</span>),</span><br><span class="line">]</span><br><span class="line">document_content_description = <span class="string">&quot;業務與客戶的訪談紀錄&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">####################</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">### use self-query to filter docs</span></span><br><span class="line">new_dbs, query, matched_fields = query_filter(</span><br><span class="line">            prompt, model_obj, db, metadata_field_info,</span><br><span class="line">            document_content_description)</span><br><span class="line"></span><br><span class="line"><span class="comment">### option1   use svm similarity search to sort docs from filtered docs</span></span><br><span class="line">retriver = akasha.search.get_retrivers(new_dbs, emb_obj, <span class="literal">False</span>, <span class="number">0.0</span>,</span><br><span class="line">                                               search_type)[<span class="number">0</span>]</span><br><span class="line">retri_docs, retri_scores = retriver._gs(query)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">### option2 use new_dbs(filtered docs) to run other akasha functions</span></span><br><span class="line">ak = akasha.Doc_QA(embeddings=emb_obj, model=model_obj)</span><br><span class="line">ak.get_response(doc_path=new_dbs,prompt=prompt)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</br>
+</br>
+
+
+<h3 id="自訂parser函式"><a href="#自訂parser函式" class="headerlink" title="自訂parser函式"></a>自訂parser函式</h3><p>若您使用的語言模型回答無法使用預設的parser找出query與filter，可以自訂一個parser函式，輸入為語言模型的回答(string)，輸出為[query(string), filter(dictionary)]。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">just_an_example</span>(<span class="params">input_text: <span class="built_in">str</span></span>):</span><br><span class="line">    <span class="comment"># input_text :</span></span><br><span class="line">    <span class="comment">#```json</span></span><br><span class="line">    <span class="comment">#&#123;</span></span><br><span class="line">    <span class="comment">#   &quot;query&quot;: &quot;產品疑慮&quot;,</span></span><br><span class="line">    <span class="comment">#   &quot;filter&quot;: &quot;and(eq(\&quot;公司名稱\&quot;, \&quot;a公司\&quot;), eq(\&quot;拜訪年\&quot;, \&quot;2024\&quot;))&quot;</span></span><br><span class="line">    <span class="comment">#&#125;</span></span><br><span class="line">    <span class="comment">#```</span></span><br><span class="line"></span><br><span class="line">    jstr = <span class="string">&#x27;&#123;&quot;$and&quot;: [&#123;&quot;公司名稱&quot;: &#123;&quot;$eq&quot;: &quot;a公司&quot;&#125;&#125;, &#123;&quot;拜訪年&quot;: &#123;&quot;$eq&quot;: &quot;2024&quot;&#125;&#125;]&#125;&#x27;</span></span><br><span class="line">    dic = json.loads(jstr)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;產品疑慮&quot;</span>, dic</span><br><span class="line"></span><br><span class="line"><span class="comment">### use self-query to filter docs</span></span><br><span class="line">new_dbs, query, matched_fields = query_filter(</span><br><span class="line">            prompt, model_obj, db, metadata_field_info,</span><br><span class="line">            document_content_description, just_an_example)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+</br>
+</br>
+
+
+<h2 id="loose-filter"><a href="#loose-filter" class="headerlink" title="loose filter"></a>loose filter</h2><p>使用參數 <em><strong>loose_filter&#x3D;True</strong></em>會將filter中的$and替換成$or，只要文件有符合任意attribute便會選取</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">### use self-query to filter docs</span></span><br><span class="line"><span class="comment">## filter become &#x27;&#123;&quot;$or&quot;: [&#123;&quot;公司名稱&quot;: &#123;&quot;$eq&quot;: &quot;a公司&quot;&#125;&#125;, &#123;&quot;拜訪年&quot;: &#123;&quot;$eq&quot;: &quot;2024&quot;&#125;&#125;]&#125;&#x27;</span></span><br><span class="line">new_dbs, query, matched_fields = query_filter(</span><br><span class="line">            prompt, model_obj, db, metadata_field_info,</span><br><span class="line">            document_content_description, loose_filter = <span class="literal">True</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>進階</category>
       </categories>
@@ -960,55 +1012,6 @@
       </tags>
   </entry>
   <entry>
-    <title>自查詢</title>
-    <url>/2024/12/26/%E8%87%AA%E6%9F%A5%E8%A9%A2/</url>
-    <content><![CDATA[<h2 id="自查詢-Self-Query"><a href="#自查詢-Self-Query" class="headerlink" title="自查詢(Self Query)"></a>自查詢(Self Query)</h2><p>自查詢是指能夠自我查詢的檢索問題方法。透過結構化、包含metadata的文件集，能將使用者的問題先透過metadata進行篩選，再藉由向量來查詢語意相似的文檔，比起直接做向量查詢能更精確的找到需要的文件。</p>
-<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>自查詢的流程為</p>
-<h4 id="0-create-metadata"><a href="#0-create-metadata" class="headerlink" title="0. create metadata"></a>0. create metadata</h4><p>添加結構化資料到文件集與向量資料庫中</p>
-<h4 id="1-query-constructor"><a href="#1-query-constructor" class="headerlink" title="1. query constructor"></a>1. query constructor</h4><p>將使用者問題轉換成 query(用來做向量查詢的字串)與filter(用來篩選文件集的metatada keywords)<br>例如，使用者問題為: A公司在2024年對電動車的銷售量為多少?</p>
-<p>透過語言模型 將其轉換為</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;query&quot;</span><span class="punctuation">:</span> <span class="string">&quot;電動車的銷售量&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;filter&quot;</span><span class="punctuation">:</span> <span class="string">&quot;and(eq(\&quot;公司名稱\&quot;, \&quot;A公司\&quot;), eq(\&quot;日期年\&quot;, \&quot;2024\&quot;))&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-
-<h4 id="2-filter-translator"><a href="#2-filter-translator" class="headerlink" title="2. filter translator"></a>2. filter translator</h4><p>將filter處理為程式可執行的dictionary</p>
-<h4 id="3-filter-docs"><a href="#3-filter-docs" class="headerlink" title="3. filter docs"></a>3. filter docs</h4><p>根據filter篩選需要的文件集</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span>&#x27;filter&#x27;<span class="punctuation">:</span> <span class="punctuation">&#123;</span>&#x27;$and&#x27;<span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">&#123;</span>&#x27;拜訪年&#x27;<span class="punctuation">:</span> <span class="punctuation">&#123;</span>&#x27;$eq&#x27;<span class="punctuation">:</span> &#x27;<span class="number">2024</span>&#x27;<span class="punctuation">&#125;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span>&#x27;公司名稱&#x27;<span class="punctuation">:</span> <span class="punctuation">&#123;</span>&#x27;$eq&#x27;<span class="punctuation">:</span> &#x27;A公司&#x27;<span class="punctuation">&#125;</span><span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="punctuation">&#125;</span><span class="punctuation">&#125;</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-<h4 id="4-similarity-search"><a href="#4-similarity-search" class="headerlink" title="4. similarity search"></a>4. similarity search</h4><p>從篩選出來的文件集做向量相似度搜尋</p>
-</br>
-</br>
-
-<h3 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h3><h4 id="1-create-chromadb-add-metadatas"><a href="#1-create-chromadb-add-metadatas" class="headerlink" title="1. create chromadb &amp; add metadatas"></a>1. create chromadb &amp; add metadatas</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> akasha</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add_metadata</span>(<span class="params">metadata_list: <span class="built_in">list</span></span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">import</span> json</span><br><span class="line">    <span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</span><br><span class="line">    <span class="keyword">for</span> metadata <span class="keyword">in</span> metadata_list:</span><br><span class="line">        file_path = metadata[<span class="string">&#x27;source&#x27;</span>] <span class="comment"># file path</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="keyword">with</span> Path(file_path).<span class="built_in">open</span>(<span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">                dictionary = json.load(file)</span><br><span class="line"></span><br><span class="line">            </span><br><span class="line">            metadata[<span class="string">&#x27;課別&#x27;</span>] = dictionary[<span class="string">&#x27;課別&#x27;</span>]</span><br><span class="line">            metadata[<span class="string">&#x27;業務擔當&#x27;</span>] = dictionary[<span class="string">&#x27;業務擔當&#x27;</span>]</span><br><span class="line">            ddate = dictionary[<span class="string">&#x27;拜訪日期&#x27;</span>]</span><br><span class="line">            metadata[<span class="string">&#x27;拜訪年&#x27;</span>] = <span class="built_in">int</span>(ddate.split(<span class="string">&#x27;-&#x27;</span>)[<span class="number">0</span>])</span><br><span class="line">            metadata[<span class="string">&#x27;拜訪月&#x27;</span>] = <span class="built_in">int</span>(ddate.split(<span class="string">&#x27;-&#x27;</span>)[<span class="number">1</span>])</span><br><span class="line">            metadata[<span class="string">&#x27;產品&#x27;</span>] = dictionary[<span class="string">&#x27;產品&#x27;</span>]</span><br><span class="line">            metadata[<span class="string">&#x27;公司名稱&#x27;</span>] = dictionary[<span class="string">&#x27;公司名稱&#x27;</span>]</span><br><span class="line">            metadata[<span class="string">&#x27;大分類&#x27;</span>] = dictionary[<span class="string">&#x27;大分類&#x27;</span>]</span><br><span class="line">            metadata[<span class="string">&#x27;中分類&#x27;</span>] = dictionary[<span class="string">&#x27;中分類&#x27;</span>]</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;JSONDecodeError: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> metadata_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">### set parameter ###</span></span><br><span class="line"><span class="built_in">dir</span> = <span class="string">&quot;docs/pns_query&quot;</span></span><br><span class="line">embed_name = <span class="string">&quot;openai:text-embedding-ada-002&quot;</span></span><br><span class="line">chunk_size = <span class="number">99999</span>  <span class="comment"># make sure 1 file 1 chunk</span></span><br><span class="line">emb_obj = akasha.handle_embeddings(<span class="string">&quot;openai:text-embedding-ada-002&quot;</span>)</span><br><span class="line"><span class="comment">####################</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># create chromadb from docs</span></span><br><span class="line">db, _ = akasha.db.processMultiDB(<span class="built_in">dir</span>, <span class="literal">False</span>, emb_obj, embed_name, chunk_size,</span><br><span class="line">                                 <span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">### add metadata to chromadb ###</span></span><br><span class="line">metadata_list = akasha.db.get_db_metadata(<span class="built_in">dir</span>, embed_name, chunk_size) <span class="comment"># get original metada from chromadb, list of dictionary</span></span><br><span class="line">metadata_list = add_metadata(metadata_list)  <span class="comment"># update/add metadata, you can build your own function to update metadata</span></span><br><span class="line">akasha.db.update_db_metadata(metadata_list, <span class="built_in">dir</span>, embed_name, chunk_size)  <span class="comment"># update and save new metadatas to chromadb</span></span><br><span class="line"><span class="built_in">print</span>(akasha.db.get_db_metadata(<span class="built_in">dir</span>, embed_name, chunk_size)[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
-
-</br>
-</br>
-
-
-<h4 id="2-use-self-query-to-filter-docs-and-use-query-for-similarity-search"><a href="#2-use-self-query-to-filter-docs-and-use-query-for-similarity-search" class="headerlink" title="2. use self-query to filter docs and use query for similarity search"></a>2. use self-query to filter docs and use query for similarity search</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> akasha.self_query <span class="keyword">import</span> query_filter</span><br><span class="line"><span class="keyword">from</span> langchain.chains.query_constructor.base <span class="keyword">import</span> AttributeInfo</span><br><span class="line"><span class="comment">### set parameter ###</span></span><br><span class="line"></span><br><span class="line">db, _ = akasha.db.processMultiDB(<span class="built_in">dir</span>, <span class="literal">False</span>, emb_obj, embed_name, chunk_size,</span><br><span class="line">                                 <span class="literal">True</span>)</span><br><span class="line">prompt = <span class="string">&quot;A公司在2024年對電動車的銷售量為多少?&quot;</span> </span><br><span class="line">search_type = <span class="string">&quot;bm25&quot;</span></span><br><span class="line">model_obj = akasha.helper.handle_model(<span class="string">&quot;openai:gpt-4o&quot;</span>, <span class="literal">True</span>)</span><br><span class="line">metadata_field_info = [</span><br><span class="line">    AttributeInfo(</span><br><span class="line">        name=<span class="string">&quot;拜訪年&quot;</span>,</span><br><span class="line">        description=<span class="string">&quot;此訪談紀錄的拜訪年份&quot;</span>,</span><br><span class="line">        <span class="built_in">type</span>=<span class="string">&quot;integer&quot;</span>,</span><br><span class="line">    ),</span><br><span class="line">    AttributeInfo(</span><br><span class="line">        name=<span class="string">&quot;拜訪月&quot;</span>,</span><br><span class="line">        description=<span class="string">&quot;此訪談紀錄的拜訪月份&quot;</span>,</span><br><span class="line">        <span class="built_in">type</span>=<span class="string">&quot;integer&quot;</span>,</span><br><span class="line">    ),</span><br><span class="line">    AttributeInfo(</span><br><span class="line">        name=<span class="string">&quot;業務擔當&quot;</span>,</span><br><span class="line">        description=<span class="string">&quot;業務的名稱&quot;</span>,</span><br><span class="line">        <span class="built_in">type</span>=<span class="string">&quot;string&quot;</span>,</span><br><span class="line">    ),</span><br><span class="line">    AttributeInfo(name=<span class="string">&quot;中分類&quot;</span>, description=<span class="string">&quot;訪談產品的中等分類&quot;</span>, <span class="built_in">type</span>=<span class="string">&quot;string&quot;</span>),</span><br><span class="line">    AttributeInfo(name=<span class="string">&quot;公司名稱&quot;</span>, description=<span class="string">&quot;訪談對象的公司名稱&quot;</span>, <span class="built_in">type</span>=<span class="string">&quot;string&quot;</span>),</span><br><span class="line">    AttributeInfo(name=<span class="string">&quot;大分類&quot;</span>, description=<span class="string">&quot;訪談產品的大分類&quot;</span>, <span class="built_in">type</span>=<span class="string">&quot;string&quot;</span>),</span><br><span class="line">    AttributeInfo(name=<span class="string">&quot;產品&quot;</span>, description=<span class="string">&quot;訪談的產品名稱/型號&quot;</span>, <span class="built_in">type</span>=<span class="string">&quot;string&quot;</span>),</span><br><span class="line">    AttributeInfo(name=<span class="string">&quot;課別&quot;</span>, description=<span class="string">&quot;公司部門的課別名稱或代號&quot;</span>, <span class="built_in">type</span>=<span class="string">&quot;string&quot;</span>),</span><br><span class="line">]</span><br><span class="line">document_content_description = <span class="string">&quot;業務與客戶的訪談紀錄&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">####################</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">### use self-query to filter docs</span></span><br><span class="line">new_dbs, query, matched_fields = query_filter(</span><br><span class="line">            prompt, model_obj, db, metadata_field_info,</span><br><span class="line">            document_content_description)</span><br><span class="line"></span><br><span class="line"><span class="comment">### option1   use svm similarity search to sort docs from filtered docs</span></span><br><span class="line">retriver = akasha.search.get_retrivers(new_dbs, emb_obj, <span class="literal">False</span>, <span class="number">0.0</span>,</span><br><span class="line">                                               search_type)[<span class="number">0</span>]</span><br><span class="line">retri_docs, retri_scores = retriver._gs(query)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">### option2 use new_dbs(filtered docs) to run other akasha functions</span></span><br><span class="line">ak = akasha.Doc_QA(embeddings=emb_obj, model=model_obj)</span><br><span class="line">ak.get_response(doc_path=new_dbs,prompt=prompt)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-</br>
-</br>
-
-
-<h3 id="自訂parser函式"><a href="#自訂parser函式" class="headerlink" title="自訂parser函式"></a>自訂parser函式</h3><p>若您使用的語言模型回答無法使用預設的parser找出query與filter，可以自訂一個parser函式，輸入為語言模型的回答(string)，輸出為[query(string), filter(dictionary)]。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">just_an_example</span>(<span class="params">input_text: <span class="built_in">str</span></span>):</span><br><span class="line">    <span class="comment"># input_text :</span></span><br><span class="line">    <span class="comment">#```json</span></span><br><span class="line">    <span class="comment">#&#123;</span></span><br><span class="line">    <span class="comment">#   &quot;query&quot;: &quot;產品疑慮&quot;,</span></span><br><span class="line">    <span class="comment">#   &quot;filter&quot;: &quot;and(eq(\&quot;公司名稱\&quot;, \&quot;a公司\&quot;), eq(\&quot;拜訪年\&quot;, \&quot;2024\&quot;))&quot;</span></span><br><span class="line">    <span class="comment">#&#125;</span></span><br><span class="line">    <span class="comment">#```</span></span><br><span class="line"></span><br><span class="line">    jstr = <span class="string">&#x27;&#123;&quot;$and&quot;: [&#123;&quot;公司名稱&quot;: &#123;&quot;$eq&quot;: &quot;a公司&quot;&#125;&#125;, &#123;&quot;拜訪年&quot;: &#123;&quot;$eq&quot;: &quot;2024&quot;&#125;&#125;]&#125;&#x27;</span></span><br><span class="line">    dic = json.loads(jstr)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;產品疑慮&quot;</span>, dic</span><br><span class="line"></span><br><span class="line"><span class="comment">### use self-query to filter docs</span></span><br><span class="line">new_dbs, query, matched_fields = query_filter(</span><br><span class="line">            prompt, model_obj, db, metadata_field_info,</span><br><span class="line">            document_content_description, just_an_example)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-</br>
-</br>
-
-
-<h2 id="loose-filter"><a href="#loose-filter" class="headerlink" title="loose filter"></a>loose filter</h2><p>使用參數 <em><strong>loose_filter&#x3D;True</strong></em>會將filter中的$and替換成$or，只要文件有符合任意attribute便會選取</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">### use self-query to filter docs</span></span><br><span class="line"><span class="comment">## filter become &#x27;&#123;&quot;$or&quot;: [&#123;&quot;公司名稱&quot;: &#123;&quot;$eq&quot;: &quot;a公司&quot;&#125;&#125;, &#123;&quot;拜訪年&quot;: &#123;&quot;$eq&quot;: &quot;2024&quot;&#125;&#125;]&#125;&#x27;</span></span><br><span class="line">new_dbs, query, matched_fields = query_filter(</span><br><span class="line">            prompt, model_obj, db, metadata_field_info,</span><br><span class="line">            document_content_description, loose_filter = <span class="literal">True</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>進階</category>
-      </categories>
-      <tags>
-        <tag>akasha-advanced</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>設定 API Key</title>
     <url>/2024/12/30/%E8%A8%AD%E5%AE%9A%20API%20Key/</url>
     <content><![CDATA[<h1 id="openAI-API-Key"><a href="#openAI-API-Key" class="headerlink" title="openAI API Key"></a>openAI API Key</h1></br>
@@ -1031,9 +1034,16 @@
 
 <h1 id="gemini-API-Key"><a href="#gemini-API-Key" class="headerlink" title="gemini API Key"></a>gemini API Key</h1><p>如果你想使用Gemini 模型，請至<a href="https://aistudio.google.com/">google aistudio</a> 或 <a href="https://console.cloud.google.com/">GCP</a>申請API金鑰。</p>
 <p>取得金鑰後，你可以選擇其中一種方法來匯入key:</p>
-<h5 id="1-將KEY放於-env檔案中OPENAI-API-KEY-your-api-key-1"><a href="#1-將KEY放於-env檔案中OPENAI-API-KEY-your-api-key-1" class="headerlink" title="1.將KEY放於.env檔案中OPENAI_API_KEY&#x3D;your api key"></a>1.將KEY放於.env檔案中OPENAI_API_KEY&#x3D;your api key</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GEMINI_API_KEY=&#123;your api key&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="1-將KEY放於-env檔案中GEMINI-API-KEY-your-api-key"><a href="#1-將KEY放於-env檔案中GEMINI-API-KEY-your-api-key" class="headerlink" title="1.將KEY放於.env檔案中GEMINI_API_KEY&#x3D;your api key"></a>1.將KEY放於.env檔案中GEMINI_API_KEY&#x3D;your api key</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GEMINI_API_KEY=&#123;your api key&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="2-設定成環境變數-變數名-GEMINI-API-KEY"><a href="#2-設定成環境變數-變數名-GEMINI-API-KEY" class="headerlink" title="2.設定成環境變數(變數名:GEMINI_API_KEY)"></a>2.設定成環境變數(變數名:GEMINI_API_KEY)</h5><h5 id="3-在terminal中使用export設定環境變數-1"><a href="#3-在terminal中使用export設定環境變數-1" class="headerlink" title="3.在terminal中使用export設定環境變數"></a>3.在terminal中使用export設定環境變數</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export GEMINI_API_KEY=&#123;your api key&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="4-在Python中使用os-environ-‘GEMINI-API-KEY’-your-api-key"><a href="#4-在Python中使用os-environ-‘GEMINI-API-KEY’-your-api-key" class="headerlink" title="4.在Python中使用os.environ[‘GEMINI_API_KEY’]&#x3D;your api key"></a>4.在Python中使用os.environ[‘GEMINI_API_KEY’]&#x3D;your api key</h5></br>
+</br>
+
+<h1 id="anthropic-API-Key"><a href="#anthropic-API-Key" class="headerlink" title="anthropic API Key"></a>anthropic API Key</h1><p>如果你想使用Gemini 模型，請至<a href="https://www.anthropic.com/api/">anthropic</a>申請API金鑰。</p>
+<p>取得金鑰後，你可以選擇其中一種方法來匯入key:</p>
+<h5 id="1-將KEY放於-env檔案中ANTHROPIC-API-KEY-your-api-key"><a href="#1-將KEY放於-env檔案中ANTHROPIC-API-KEY-your-api-key" class="headerlink" title="1.將KEY放於.env檔案中ANTHROPIC_API_KEY&#x3D;your api key"></a>1.將KEY放於.env檔案中ANTHROPIC_API_KEY&#x3D;your api key</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ANTHROPIC_API_KEY=&#123;your api key&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2-設定成環境變數-變數名-ANTHROPIC-API-KEY"><a href="#2-設定成環境變數-變數名-ANTHROPIC-API-KEY" class="headerlink" title="2.設定成環境變數(變數名:ANTHROPIC_API_KEY)"></a>2.設定成環境變數(變數名:ANTHROPIC_API_KEY)</h5><h5 id="3-在terminal中使用export設定環境變數-2"><a href="#3-在terminal中使用export設定環境變數-2" class="headerlink" title="3.在terminal中使用export設定環境變數"></a>3.在terminal中使用export設定環境變數</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export ANTHROPIC_API_KEY=&#123;your api key&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="4-在Python中使用os-environ-‘ANTHROPIC-API-KEY’-your-api-key"><a href="#4-在Python中使用os-environ-‘ANTHROPIC-API-KEY’-your-api-key" class="headerlink" title="4.在Python中使用os.environ[‘ANTHROPIC_API_KEY’]&#x3D;your api key"></a>4.在Python中使用os.environ[‘ANTHROPIC_API_KEY’]&#x3D;your api key</h5></br>
 </br>
 
 
@@ -1046,7 +1056,7 @@
 
 <p>同樣的，取得huggingface key值後，你可以選擇其中一種方法來匯入key:</p>
 <h5 id="1-將KEY放於-env檔案中HF-TOKEN-your-api-key"><a href="#1-將KEY放於-env檔案中HF-TOKEN-your-api-key" class="headerlink" title="1.將KEY放於.env檔案中HF_TOKEN&#x3D;your api key"></a>1.將KEY放於.env檔案中HF_TOKEN&#x3D;your api key</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HF_TOKEN=&#123;your api key&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="2-設定成環境變數-變數名-HF-TOKEN"><a href="#2-設定成環境變數-變數名-HF-TOKEN" class="headerlink" title="2.設定成環境變數(變數名:HF_TOKEN)"></a>2.設定成環境變數(變數名:HF_TOKEN)</h5><h5 id="3-在terminal中使用export設定環境變數-2"><a href="#3-在terminal中使用export設定環境變數-2" class="headerlink" title="3.在terminal中使用export設定環境變數"></a>3.在terminal中使用export設定環境變數</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export HF_TOKEN=&#123;your api key&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2-設定成環境變數-變數名-HF-TOKEN"><a href="#2-設定成環境變數-變數名-HF-TOKEN" class="headerlink" title="2.設定成環境變數(變數名:HF_TOKEN)"></a>2.設定成環境變數(變數名:HF_TOKEN)</h5><h5 id="3-在terminal中使用export設定環境變數-3"><a href="#3-在terminal中使用export設定環境變數-3" class="headerlink" title="3.在terminal中使用export設定環境變數"></a>3.在terminal中使用export設定環境變數</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export HF_TOKEN=&#123;your api key&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="4-在Python中使用os-environ-‘HF-TOKEN’-your-api-key"><a href="#4-在Python中使用os-environ-‘HF-TOKEN’-your-api-key" class="headerlink" title="4.在Python中使用os.environ[‘HF_TOKEN’]&#x3D;your api key"></a>4.在Python中使用os.environ[‘HF_TOKEN’]&#x3D;your api key</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#PYTHON3.9</span><br><span class="line"># os.environ[&#x27;HF_TOKEN&#x27;]=your api key</span><br><span class="line">import akasha</span><br><span class="line">ak = akasha.Doc_QA()</span><br><span class="line">response = ak.get_response(dir_path, prompt, model=&quot;hf:meta-llama/Llama-2-7b-chat-hf&quot;)</span><br></pre></td></tr></table></figure>
 
 
@@ -1107,7 +1117,15 @@
 </br>
 
 
-<h2 id="可使用的模型"><a href="#可使用的模型" class="headerlink" title="可使用的模型"></a>可使用的模型</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">openai_model = &quot;openai:gpt-3.5-turbo&quot;  # need environment variable &quot;OPENAI_API_KEY&quot;</span><br><span class="line">gemini_model=&quot;gemini:gemini-1.5-flash&quot; # need environment variable &quot;GEMINI_API_KEY&quot;</span><br><span class="line">huggingface_model = &quot;hf:meta-llama/Llama-2-7b-chat-hf&quot; #need environment variable &quot;HUGGINGFACEHUB_API_TOKEN&quot; to download meta-llama model</span><br><span class="line">quantized_ch_llama_model = &quot;hf:FlagAlpha/Llama2-Chinese-13b-Chat-4bit&quot;</span><br><span class="line">taiwan_llama_gptq = &quot;hf:weiren119/Taiwan-LLaMa-v1.0-4bits-GPTQ&quot;</span><br><span class="line">mistral = &quot;hf:Mistral-7B-Instruct-v0.2&quot; </span><br><span class="line">mediatek_Breeze = &quot;hf:MediaTek-Research/Breeze-7B-Instruct-64k-v0.1&quot;</span><br><span class="line">### If you want to use llama-cpp to run model on cpu, you can download gguf version of models </span><br><span class="line">### from https://huggingface.co/TheBloke/Llama-2-7b-Chat-GGUF  and the name behind &quot;llama-gpu:&quot; or &quot;llama-cpu:&quot;</span><br><span class="line">### from https://huggingface.co/TheBloke/CodeUp-Llama-2-13B-Chat-HF-GGUF</span><br><span class="line">### is the path of the downloaded .gguf file</span><br><span class="line">llama_cpp_model = &quot;llama-gpu:model/llama-2-13b-chat-hf.Q5_K_S.gguf&quot;  </span><br><span class="line">llama_cpp_model = &quot;llama-cpu:model/llama-2-7b-chat.Q5_K_S.gguf&quot;</span><br><span class="line">llama_cpp_chinese_alpaca = &quot;llama-gpu:model/chinese-alpaca-2-7b.Q5_K_S.gguf&quot;</span><br><span class="line">llama_cpp_chinese_alpaca = &quot;llama-cpu:model/chinese-alpaca-2-13b.Q5_K_M.gguf&quot;</span><br><span class="line">chatglm_model = &quot;chatglm:THUDM/chatglm2-6b&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="6-anthropic"><a href="#6-anthropic" class="headerlink" title="6. anthropic"></a>6. anthropic</h3><p>(請先完成<a href="/2024/12/30/%E8%A8%AD%E5%AE%9A%20API%20Key/">設定 API Key</a>)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, </span><br><span class="line">                prompt, </span><br><span class="line">                model=&quot;anthropic:claude-3-5-sonnet-20241022&quot;)</span><br></pre></td></tr></table></figure>
+
+
+</br>
+</br>
+
+
+<h2 id="可使用的模型"><a href="#可使用的模型" class="headerlink" title="可使用的模型"></a>可使用的模型</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">openai_model = &quot;openai:gpt-3.5-turbo&quot;  # need environment variable &quot;OPENAI_API_KEY&quot;</span><br><span class="line">gemini_model=&quot;gemini:gemini-1.5-flash&quot; # need environment variable &quot;GEMINI_API_KEY&quot;</span><br><span class="line">anthropic_model = &quot;anthropic:claude-3-5-sonnet-20241022&quot; # need environment variable &quot;ANTHROPIC_API_KEY&quot;</span><br><span class="line">huggingface_model = &quot;hf:meta-llama/Llama-2-7b-chat-hf&quot; #need environment variable &quot;HUGGINGFACEHUB_API_TOKEN&quot; to download meta-llama model</span><br><span class="line">quantized_ch_llama_model = &quot;hf:FlagAlpha/Llama2-Chinese-13b-Chat-4bit&quot;</span><br><span class="line">taiwan_llama_gptq = &quot;hf:weiren119/Taiwan-LLaMa-v1.0-4bits-GPTQ&quot;</span><br><span class="line">mistral = &quot;hf:Mistral-7B-Instruct-v0.2&quot; </span><br><span class="line">mediatek_Breeze = &quot;hf:MediaTek-Research/Breeze-7B-Instruct-64k-v0.1&quot;</span><br><span class="line">### If you want to use llama-cpp to run model on cpu, you can download gguf version of models </span><br><span class="line">### from https://huggingface.co/TheBloke/Llama-2-7b-Chat-GGUF  and the name behind &quot;llama-gpu:&quot; or &quot;llama-cpu:&quot;</span><br><span class="line">### from https://huggingface.co/TheBloke/CodeUp-Llama-2-13B-Chat-HF-GGUF</span><br><span class="line">### is the path of the downloaded .gguf file</span><br><span class="line">llama_cpp_model = &quot;llama-gpu:model/llama-2-13b-chat-hf.Q5_K_S.gguf&quot;  </span><br><span class="line">llama_cpp_model = &quot;llama-cpu:model/llama-2-7b-chat.Q5_K_S.gguf&quot;</span><br><span class="line">llama_cpp_chinese_alpaca = &quot;llama-gpu:model/chinese-alpaca-2-7b.Q5_K_S.gguf&quot;</span><br><span class="line">llama_cpp_chinese_alpaca = &quot;llama-cpu:model/chinese-alpaca-2-13b.Q5_K_M.gguf&quot;</span><br><span class="line">chatglm_model = &quot;chatglm:THUDM/chatglm2-6b&quot;</span><br></pre></td></tr></table></figure>
 
 
 </br>
