@@ -27,7 +27,7 @@
 <meta property="og:description" content="XML Formatter如果你想讓語言模型的回答為XML格式，可以使用XMLformatter 範例如以下範例，首先先定義你想要回傳的key值的名稱、說明和型別，並利用XML_formatter轉換成xml格式的prompt，並在問問題時把xml_prompt丟入system_prompt中。 12345678910111213141516171819import akasha.prompts">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-12-25T14:59:59.000Z">
-<meta property="article:modified_time" content="2024-08-30T03:04:51.398Z">
+<meta property="article:modified_time" content="2024-11-13T03:16:33.328Z">
 <meta property="article:author" content="Chih Chuan Chang&lt;ccchang@iii.org.tw&gt;">
 <meta property="article:tag" content="akasha-advanced">
 <meta name="twitter:card" content="summary">
@@ -153,7 +153,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -164,7 +164,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -238,7 +238,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-08-30 11:04:51" itemprop="dateModified" datetime="2024-08-30T11:04:51+08:00">2024-08-30</time>
+      <time title="修改時間：2024-11-13 11:16:33" itemprop="dateModified" datetime="2024-11-13T11:16:33+08:00">2024-11-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -261,7 +261,7 @@
     
     <div class="post-body" itemprop="articleBody"><h2 id="XML-Formatter"><a href="#XML-Formatter" class="headerlink" title="XML Formatter"></a>XML Formatter</h2><p>如果你想讓語言模型的回答為XML格式，可以使用XMLformatter</p>
 <h2 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h2><p>如以下範例，首先先定義你想要回傳的key值的名稱、說明和型別，並利用<em><strong>XML_formatter</strong></em>轉換成xml格式的prompt，並在問問題時把xml_prompt丟入system_prompt中。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import akasha.prompts as prompts</span><br><span class="line">import akasha</span><br><span class="line">import akasha.eval as eval</span><br><span class="line"></span><br><span class="line">formatter = [</span><br><span class="line">        prompts.OutputSchema(name=&quot;學歷&quot;, description=&quot;受試者的就讀大學&quot;, type=&quot;str&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;經驗&quot;, description=&quot;受試者的工作經驗&quot;, type=&quot;str&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;專長&quot;, description=&quot;受試者的專長能力&quot;, type=&quot;list&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;年資&quot;, description=&quot;受試者的總工作年數&quot;, type=&quot;int&quot;)</span><br><span class="line">    ]</span><br><span class="line">xml_prompt = prompts.XML_formatter(formatter)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA(topK=10, threshold=0.0)</span><br><span class="line"></span><br><span class="line">response = ak.ask_whole_file(file_path=&quot;docs/resume_pool/A.docx&quot;,</span><br><span class="line">system_prompt=xml_prompt, prompt=f&#x27;&#x27;&#x27;以上是受試者的履歷，請回答該受試者的學歷、經驗、專長、年資&#x27;&#x27;&#x27;)</span><br><span class="line"></span><br><span class="line">print(response)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import akasha.prompts as prompts</span><br><span class="line">import akasha</span><br><span class="line">import akasha.eval as eval</span><br><span class="line"></span><br><span class="line">formatter = [</span><br><span class="line">        prompts.OutputSchema(name=&quot;學歷&quot;, description=&quot;受試者的就讀大學&quot;, type=&quot;str&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;經驗&quot;, description=&quot;受試者的工作經驗&quot;, type=&quot;str&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;專長&quot;, description=&quot;受試者的專長能力&quot;, type=&quot;list&quot;),</span><br><span class="line">        prompts.OutputSchema(name=&quot;年資&quot;, description=&quot;受試者的總工作年數&quot;, type=&quot;int&quot;)</span><br><span class="line">    ]</span><br><span class="line">xml_prompt = prompts.XML_formatter(formatter)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA()</span><br><span class="line"></span><br><span class="line">response = ak.ask_whole_file(file_path=&quot;docs/resume_pool/A.docx&quot;,</span><br><span class="line">system_prompt=xml_prompt, prompt=f&#x27;&#x27;&#x27;以上是受試者的履歷，請回答該受試者的學歷、經驗、專長、年資&#x27;&#x27;&#x27;)</span><br><span class="line"></span><br><span class="line">print(response)</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;resume&gt;</span><br><span class="line">    &lt;學歷&gt;國立臺北科技大學電資學士班 四技 就學中&lt;/學歷&gt;</span><br><span class="line">    &lt;經驗&gt;英文短期文理補習班補習班導師／管理人員&lt;/經驗&gt;</span><br><span class="line">    &lt;專長&gt;</span><br><span class="line">        &lt;能力&gt;語言能力&lt;/能力&gt;</span><br><span class="line">        &lt;英文&gt;聽-中等, 說-中等, 讀-中等, 寫-中等&lt;/英文&gt;</span><br><span class="line">        &lt;證照&gt;TOEIC &lt;/證照&gt;</span><br><span class="line">    &lt;/專長&gt;</span><br><span class="line">    &lt;年資&gt;0-1&lt;/年資&gt;</span><br><span class="line">&lt;/resume&gt;</span><br></pre></td></tr></table></figure>
     </div>

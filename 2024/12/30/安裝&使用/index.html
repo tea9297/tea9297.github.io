@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://hackmd.io/_uploads/Hkh8vijKT.png">
 <meta property="article:published_time" content="2024-12-30T15:59:59.000Z">
-<meta property="article:modified_time" content="2024-11-08T07:37:24.779Z">
+<meta property="article:modified_time" content="2024-11-13T03:16:58.981Z">
 <meta property="article:author" content="Chih Chuan Chang&lt;ccchang@iii.org.tw&gt;">
 <meta property="article:tag" content="akasha">
 <meta name="twitter:card" content="summary">
@@ -155,7 +155,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -166,7 +166,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -240,7 +240,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-11-08 15:37:24" itemprop="dateModified" datetime="2024-11-08T15:37:24+08:00">2024-11-08</time>
+      <time title="修改時間：2024-11-13 11:16:58" itemprop="dateModified" datetime="2024-11-13T11:16:58+08:00">2024-11-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -289,7 +289,7 @@
 </br>
 
 
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">akasha keep-responsing --<span class="built_in">help</span></span></span><br><span class="line">Usage: akasha keep-responsing [OPTIONS]</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  -d, --doc_path TEXT         document directory path, parse all .txt, .pdf,</span><br><span class="line">                              .docx files in the directory  [required]</span><br><span class="line">  -e, --embeddings TEXT       embeddings for storing the documents</span><br><span class="line">  -c, --chunk_size INTEGER    chunk size for storing the documents</span><br><span class="line">  -m, --model TEXT            llm model for generating the response</span><br><span class="line">  -ur --use_rerank BOOL       use rerank to sort the documents</span><br><span class="line">  -t, --threshold FLOAT       threshold score for selecting the relevant</span><br><span class="line">                              documents</span><br><span class="line">  -l, --language TEXT         language for the documents, default is &#x27;ch&#x27; for</span><br><span class="line">                              chinese</span><br><span class="line">  -s, --search_type TEXT      search type for the documents, include merge,</span><br><span class="line">                              svm, mmr, tfidf</span><br><span class="line">  -sys, --system_prompt TEXT  system prompt for the llm model</span><br><span class="line">  -mt, --max_input_tokens INTEGER max token length for the llm model input</span><br><span class="line">  --help                      Show this message and exit.</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">akasha keep-responsing --<span class="built_in">help</span></span></span><br><span class="line">Usage: akasha keep-responsing [OPTIONS]</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  -d, --doc_path TEXT         document directory path, parse all .txt, .pdf,</span><br><span class="line">                              .docx files in the directory  [required]</span><br><span class="line">  -e, --embeddings TEXT       embeddings for storing the documents</span><br><span class="line">  -c, --chunk_size INTEGER    chunk size for storing the documents</span><br><span class="line">  -m, --model TEXT            llm model for generating the response</span><br><span class="line">  -ur --use_rerank BOOL       use rerank to sort the documents</span><br><span class="line">  -l, --language TEXT         language for the documents, default is &#x27;ch&#x27; for</span><br><span class="line">                              chinese</span><br><span class="line">  -s, --search_type TEXT      search type for the documents, include merge,</span><br><span class="line">                              svm, mmr, tfidf</span><br><span class="line">  -sys, --system_prompt TEXT  system prompt for the llm model</span><br><span class="line">  -mt, --max_input_tokens INTEGER max token length for the llm model input</span><br><span class="line">  --help                      Show this message and exit.</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 </br>
 </br>

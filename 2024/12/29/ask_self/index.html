@@ -19,17 +19,18 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"tea9297.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="ask_self如果你不想使用文件檔案，希望直接輸入文件內容，你可以使用ask_self，使用info 參數將文件的內容傳給語言模型，info參數可為str 或者 list of str。 example12345678910111213141516171819202122232425262728293031install_requires &#x3D; [    &quot;pypdf&quot;,">
+    <meta name="description" content="ask_self如果你不想使用文件檔案，希望直接輸入文件內容，你可以使用ask_self，使用 info 參數將文件的內容傳給語言模型，info參數可為str 或者 list of str。若 info中的單一字串長度大於語言模型上限，該字串會被自行切割成 list of str，因此建議若文字過多，請自行分段成 list of str 若 info中的總文字內容過多，文件內容會被分別提供給語言模">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ask_self">
 <meta property="og:url" content="https://tea9297.github.io/2024/12/29/ask_self/index.html">
 <meta property="og:site_name" content="akasha使用手冊">
-<meta property="og:description" content="ask_self如果你不想使用文件檔案，希望直接輸入文件內容，你可以使用ask_self，使用info 參數將文件的內容傳給語言模型，info參數可為str 或者 list of str。 example12345678910111213141516171819202122232425262728293031install_requires &#x3D; [    &quot;pypdf&quot;,">
+<meta property="og:description" content="ask_self如果你不想使用文件檔案，希望直接輸入文件內容，你可以使用ask_self，使用 info 參數將文件的內容傳給語言模型，info參數可為str 或者 list of str。若 info中的單一字串長度大於語言模型上限，該字串會被自行切割成 list of str，因此建議若文字過多，請自行分段成 list of str 若 info中的總文字內容過多，文件內容會被分別提供給語言模">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-12-29T12:59:59.000Z">
-<meta property="article:modified_time" content="2024-10-30T08:17:07.314Z">
+<meta property="article:modified_time" content="2024-11-13T08:00:50.723Z">
 <meta property="article:author" content="Chih Chuan Chang&lt;ccchang@iii.org.tw&gt;">
 <meta property="article:tag" content="akasha">
+<meta property="article:tag" content="Doc_QA">
 <meta name="twitter:card" content="summary">
 
 
@@ -140,7 +141,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ask-self"><span class="nav-number">1.</span> <span class="nav-text">ask_self</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#example"><span class="nav-number">1.1.</span> <span class="nav-text">example</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ask-self"><span class="nav-number">1.</span> <span class="nav-text">ask_self</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#example"><span class="nav-number">1.1.</span> <span class="nav-text">example</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#self-docs%E7%9A%84%E8%A9%B3%E7%B4%B0%E8%B3%87%E8%A8%8A%E5%8F%AF%E5%8F%83%E8%80%83%E6%96%87%E4%BB%B6%E6%90%9C%E5%B0%8B"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">self.docs的詳細資訊可參考文件搜尋</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#self-model-obj%E7%9A%84%E8%A9%B3%E7%B4%B0%E8%B3%87%E8%A8%8A%E5%8F%AF%E5%8F%83%E8%80%83%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">self.model_obj的詳細資訊可參考語言模型</span></a></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -153,7 +154,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -164,7 +165,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -238,7 +239,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-10-30 16:17:07" itemprop="dateModified" datetime="2024-10-30T16:17:07+08:00">2024-10-30</time>
+      <time title="修改時間：2024-11-13 16:00:50" itemprop="dateModified" datetime="2024-11-13T16:00:50+08:00">2024-11-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -259,11 +260,14 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="ask-self"><a href="#ask-self" class="headerlink" title="ask_self"></a>ask_self</h2><p>如果你不想使用文件檔案，希望直接輸入文件內容，你可以使用ask_self，使用<em><strong>info</strong></em> 參數將文件的內容傳給語言模型，<em><strong>info</strong></em>參數可為<em><strong>str</strong></em> 或者 <em><strong>list of str</strong></em>。</p>
-<h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">install_requires = [</span><br><span class="line">    &quot;pypdf&quot;,</span><br><span class="line">    &quot;langchain&gt;=0.1.0&quot;,</span><br><span class="line">    &quot;chromadb==0.4.14&quot;,</span><br><span class="line">    &quot;openai==0.27&quot;,</span><br><span class="line">    &quot;tiktoken&quot;,</span><br><span class="line">    &quot;lark==1.1.7&quot;,</span><br><span class="line">    &quot;scikit-learn&lt;1.3.0&quot;,</span><br><span class="line">    &quot;jieba==0.42.1&quot;,</span><br><span class="line">    &quot;sentence-transformers==2.2.2&quot;,</span><br><span class="line">    &quot;torch==2.0.1&quot;,</span><br><span class="line">    &quot;transformers&gt;=4.33.4&quot;, </span><br><span class="line">    &quot;llama-cpp-python==0.2.6&quot;,</span><br><span class="line">    &quot;auto-gptq==0.3.1&quot;,</span><br><span class="line">    &quot;tqdm==4.65.0&quot;,</span><br><span class="line">    &quot;docx2txt==0.8&quot;,</span><br><span class="line">    &quot;rouge==1.0.1&quot;,</span><br><span class="line">    &quot;rouge-chinese==1.0.3&quot;,</span><br><span class="line">    &quot;bert-score==0.3.13&quot;,</span><br><span class="line">    &quot;click&quot;,</span><br><span class="line">    &quot;tokenizers&gt;=0.13.3&quot;,</span><br><span class="line">    &quot;streamlit==1.28.2&quot;,</span><br><span class="line">    &quot;streamlit_option_menu==0.3.6&quot;,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA(</span><br><span class="line">    verbose=True,</span><br><span class="line">    max_input_tokens=30000,</span><br><span class="line">    model=&quot;openai:gpt-4&quot;,</span><br><span class="line">)</span><br><span class="line">response = ak.ask_self(prompt=&quot;langchain的套件版本?&quot;, info=install_requires)</span><br></pre></td></tr></table></figure>
+    <div class="post-body" itemprop="articleBody"><h2 id="ask-self"><a href="#ask-self" class="headerlink" title="ask_self"></a>ask_self</h2><p>如果你不想使用文件檔案，希望直接輸入文件內容，你可以使用ask_self，使用 <em><strong>info</strong></em> 參數將文件的內容傳給語言模型，<em><strong>info</strong></em>參數可為<em><strong>str</strong></em> 或者 <em><strong>list of str</strong></em>。<br>若 <em><strong>info</strong></em>中的單一字串長度大於語言模型上限，該字串會被自行切割成 <em><strong>list of str</strong></em>，因此建議若文字過多，請自行分段成 <em><strong>list of str</strong></em></p>
+<p>若 <em><strong>info</strong></em>中的總文字內容過多，文件內容會被分別提供給語言模型作回答，並最終整合成一個最終回答，因此可能會花費較久時間。</p>
+<h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">install_requires = [</span><br><span class="line">    &quot;pypdf&quot;,</span><br><span class="line">    &quot;langchain&gt;=0.1.0&quot;,</span><br><span class="line">    &quot;chromadb==0.4.14&quot;,</span><br><span class="line">    &quot;openai==0.27&quot;,</span><br><span class="line">    &quot;tiktoken&quot;,</span><br><span class="line">    &quot;lark==1.1.7&quot;,</span><br><span class="line">    &quot;scikit-learn&lt;1.3.0&quot;,</span><br><span class="line">    &quot;jieba==0.42.1&quot;,</span><br><span class="line">    &quot;sentence-transformers==2.2.2&quot;,</span><br><span class="line">    &quot;torch==2.0.1&quot;,</span><br><span class="line">    &quot;transformers&gt;=4.33.4&quot;, </span><br><span class="line">    &quot;llama-cpp-python==0.2.6&quot;,</span><br><span class="line">    &quot;auto-gptq==0.3.1&quot;,</span><br><span class="line">    &quot;tqdm==4.65.0&quot;,</span><br><span class="line">    &quot;docx2txt==0.8&quot;,</span><br><span class="line">    &quot;rouge==1.0.1&quot;,</span><br><span class="line">    &quot;rouge-chinese==1.0.3&quot;,</span><br><span class="line">    &quot;bert-score==0.3.13&quot;,</span><br><span class="line">    &quot;click&quot;,</span><br><span class="line">    &quot;tokenizers&gt;=0.13.3&quot;,</span><br><span class="line">    &quot;streamlit==1.28.2&quot;,</span><br><span class="line">    &quot;streamlit_option_menu==0.3.6&quot;,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA(</span><br><span class="line">    verbose=True,</span><br><span class="line">    max_input_tokens=30000,</span><br><span class="line">    model=&quot;openai:gpt-4&quot;,</span><br><span class="line">)</span><br><span class="line">response = ak.ask_self(prompt=&quot;langchain的套件版本?&quot;, info=install_requires)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">langchain的套件版本是0.1.0或更高版本。</span><br></pre></td></tr></table></figure>
+
+<h5 id="self-docs的詳細資訊可參考文件搜尋"><a href="#self-docs的詳細資訊可參考文件搜尋" class="headerlink" title="self.docs的詳細資訊可參考文件搜尋"></a>self.docs的詳細資訊可參考<a href="/2024/12/26/%E6%96%87%E4%BB%B6%E6%90%9C%E5%B0%8B/">文件搜尋</a></h5><h5 id="self-model-obj的詳細資訊可參考語言模型"><a href="#self-model-obj的詳細資訊可參考語言模型" class="headerlink" title="self.model_obj的詳細資訊可參考語言模型"></a>self.model_obj的詳細資訊可參考<a href="/2024/12/26/%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B/">語言模型</a></h5>
     </div>
 
     
@@ -273,6 +277,7 @@
     <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/akasha/" rel="tag"># akasha</a>
+              <a href="/tags/Doc-QA/" rel="tag"># Doc_QA</a>
           </div>
 
         
