@@ -27,7 +27,7 @@
 <meta property="og:description" content="自動產生問題如果您不想自己創建問題集來評估當前參數的性能，您可以使用 eval.auto_create_questionset 功能自動生成一個包含參考答案的問題集。隨後，您可以使用 eval.auto_evaluation 獲取評估指標，如 Bert_score、Rouge 和 LLM_score（對於問答問題集），以及單選問題集的正確率。這些分數範圍從 0 到 1，較高的值表示生成的回答與參考">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-12-28T15:59:59.000Z">
-<meta property="article:modified_time" content="2024-11-13T08:01:24.834Z">
+<meta property="article:modified_time" content="2024-11-14T08:12:05.678Z">
 <meta property="article:author" content="Chih Chuan Chang&lt;ccchang@iii.org.tw&gt;">
 <meta property="article:tag" content="akasha">
 <meta property="article:tag" content="Model_Eval">
@@ -141,7 +141,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8B%95%E7%94%A2%E7%94%9F%E5%95%8F%E9%A1%8C"><span class="nav-number">1.</span> <span class="nav-text">自動產生問題</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8question-type%E6%B8%AC%E8%A9%A6%E4%B8%8D%E5%90%8C%E6%96%B9%E9%9D%A2%E7%9A%84%E8%83%BD%E5%8A%9B"><span class="nav-number">2.</span> <span class="nav-text">使用question_type測試不同方面的能力</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">2.1.</span> <span class="nav-text">範例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A%E5%95%8F%E9%A1%8C%E9%9B%86%E4%B8%BB%E9%A1%8C"><span class="nav-number">3.</span> <span class="nav-text">指定問題集主題</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B-1"><span class="nav-number">3.1.</span> <span class="nav-text">範例</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8B%95%E7%94%A2%E7%94%9F%E5%95%8F%E9%A1%8C"><span class="nav-number">1.</span> <span class="nav-text">自動產生問題</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8question-type%E6%B8%AC%E8%A9%A6%E4%B8%8D%E5%90%8C%E6%96%B9%E9%9D%A2%E7%9A%84%E8%83%BD%E5%8A%9B"><span class="nav-number">2.</span> <span class="nav-text">使用question_type測試不同方面的能力</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-number">2.1.</span> <span class="nav-text">範例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A%E5%95%8F%E9%A1%8C%E9%9B%86%E4%B8%BB%E9%A1%8C"><span class="nav-number">3.</span> <span class="nav-text">指定問題集主題</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B-1"><span class="nav-number">3.1.</span> <span class="nav-text">範例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#self-db%E7%9A%84%E8%A9%B3%E7%B4%B0%E8%B3%87%E8%A8%8A%E5%8F%AF%E5%8F%83%E8%80%83%E5%90%91%E9%87%8F%E8%B3%87%E6%96%99%E5%BA%AB"><span class="nav-number">3.1.0.1.</span> <span class="nav-text">self.db的詳細資訊可參考向量資料庫</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#self-model-obj%E7%9A%84%E8%A9%B3%E7%B4%B0%E8%B3%87%E8%A8%8A%E5%8F%AF%E5%8F%83%E8%80%83%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.1.0.2.</span> <span class="nav-text">self.model_obj的詳細資訊可參考語言模型</span></a></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -239,7 +239,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-11-13 16:01:24" itemprop="dateModified" datetime="2024-11-13T16:01:24+08:00">2024-11-13</time>
+      <time title="修改時間：2024-11-14 16:12:05" itemprop="dateModified" datetime="2024-11-14T16:12:05+08:00">2024-11-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -283,6 +283,11 @@
 
 <h2 id="指定問題集主題"><a href="#指定問題集主題" class="headerlink" title="指定問題集主題"></a>指定問題集主題</h2><p>如果你想生成特定主題的問題，你可以使用 <em><strong>create_topic_questionset</strong></em> 函數，它會使用輸入的主題在文檔中找到相關的文件段落並生成問題集。</p>
 <h3 id="範例-1"><a href="#範例-1" class="headerlink" title="範例"></a>範例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import akasha.eval as eval</span><br><span class="line"></span><br><span class="line">eva = eval.Model_Eval(search_type=&#x27;merge&#x27;,question_type = &quot;irrelevant&quot;, model=&quot;openai:gpt-3.5-turbo&quot;, record_exp=&quot;exp_mic_auto_questionset&quot;)</span><br><span class="line"></span><br><span class="line">eva.create_topic_questionset(doc_path=&quot;doc/mic/&quot;, topic= &quot;工業4.0&quot;, question_num=3, output_file_path=&quot;questionset/mic_topic_irre.txt&quot;)</span><br><span class="line"></span><br><span class="line">bert_score, rouge, llm_score, tol_tokens = eva.auto_evaluation(questionset_file=&quot;questionset/mic_topic_irre.txt&quot;, doc_path=&quot;doc/mic/&quot;, question_style = &quot;essay&quot;, record_exp=&quot;exp_mic_auto_evaluation&quot;,search_type=&quot;svm&quot;)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h5 id="self-db的詳細資訊可參考向量資料庫"><a href="#self-db的詳細資訊可參考向量資料庫" class="headerlink" title="self.db的詳細資訊可參考向量資料庫"></a>self.db的詳細資訊可參考<a href="/2024/12/26/%E5%90%91%E9%87%8F%E8%B3%87%E6%96%99%E5%BA%AB/">向量資料庫</a></h5><h5 id="self-model-obj的詳細資訊可參考語言模型"><a href="#self-model-obj的詳細資訊可參考語言模型" class="headerlink" title="self.model_obj的詳細資訊可參考語言模型"></a>self.model_obj的詳細資訊可參考<a href="/2024/12/26/%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B/">語言模型</a></h5>
     </div>
 
     
