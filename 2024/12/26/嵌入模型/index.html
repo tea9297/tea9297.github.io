@@ -27,7 +27,7 @@
 <meta property="og:description" content="選擇不同嵌入模型使用參數embeddings便可以選擇不同的嵌入模型，預設是openai:text-embedding-ada-002. 範例1. openai(請先完成設定 API Key) 1234import akashaakasha.Doc_QA()ak.get_response(dir_path, prompt, embeddings&#x3D;&quot;openai:text-embeddin">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-12-26T14:59:59.000Z">
-<meta property="article:modified_time" content="2024-11-14T07:55:26.546Z">
+<meta property="article:modified_time" content="2024-12-03T03:26:14.278Z">
 <meta property="article:author" content="Chih Chuan Chang&lt;ccchang@iii.org.tw&gt;">
 <meta property="article:tag" content="akasha-advanced">
 <meta property="article:tag" content="Doc_QA">
@@ -240,7 +240,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-11-14 15:55:26" itemprop="dateModified" datetime="2024-11-14T15:55:26+08:00">2024-11-14</time>
+      <time title="修改時間：2024-12-03 11:26:14" itemprop="dateModified" datetime="2024-12-03T11:26:14+08:00">2024-12-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -273,14 +273,14 @@
 </br>
 
 <h3 id="3-gemini"><a href="#3-gemini" class="headerlink" title="3. gemini"></a>3. gemini</h3><p>(請先完成<a href="/2024/12/30/%E8%A8%AD%E5%AE%9A%20API%20Key/">設定 API Key</a>)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, </span><br><span class="line">                prompt, </span><br><span class="line">                embeddings=&quot;gemini:text-embedding-004&quot;,</span><br><span class="line">                model=&quot;gemini:gemini-1.5-flash&quot;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, </span><br><span class="line">                prompt, </span><br><span class="line">                embeddings=&quot;gemini:models/text-embedding-004&quot;,</span><br><span class="line">                model=&quot;gemini:gemini-1.5-flash&quot;)</span><br></pre></td></tr></table></figure>
 
 
 </br>
 </br>
 
 <h2 id="可使用的模型"><a href="#可使用的模型" class="headerlink" title="可使用的模型"></a>可使用的模型</h2><p>:::info<br>每個嵌入模型都有max sequence length，超過的話後面的文字就會被截斷，不會拿進去做嵌入。<br>:::</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">openai_emd = &quot;openai:text-embedding-ada-002&quot;  # need environment variable &quot;OPENAI_API_KEY&quot;  # 8192 max seq length</span><br><span class="line">gemini_emd = &quot;gemini:text-embedding-004&quot;</span><br><span class="line">huggingface_emd = &quot;hf:all-MiniLM-L6-v2&quot; </span><br><span class="line">text2vec_ch_emd = &quot;hf:shibing624/text2vec-base-chinese&quot;   # 128 max seq length </span><br><span class="line">text2vec_mul_emd = &quot;hf:shibing624/text2vec-base-multilingual&quot;  # 256 max seq length</span><br><span class="line">text2vec_ch_para_emd = &quot;hf:shibing624/text2vec-base-chinese-paraphrase&quot; # perform better for long text, 256 max seq length</span><br><span class="line">bge_en_emd = &quot;hf:BAAI/bge-base-en-v1.5&quot;  # 512 max seq length</span><br><span class="line">bge_ch_emd = &quot;hf:BAAI/bge-base-zh-v1.5&quot;  # 512 max seq length</span><br><span class="line"></span><br><span class="line">rerank_base = &quot;rerank:BAAI/bge-reranker-base&quot;    # 512 max seq length</span><br><span class="line">rerank_large = &quot;rerank:BAAI/bge-reranker-large&quot;  # 512 max seq length</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">openai_emd = &quot;openai:text-embedding-ada-002&quot;  # need environment variable &quot;OPENAI_API_KEY&quot;  # 8192 max seq length</span><br><span class="line">gemini_emd = &quot;gemini:models/text-embedding-004&quot;</span><br><span class="line">huggingface_emd = &quot;hf:all-MiniLM-L6-v2&quot; </span><br><span class="line">text2vec_ch_emd = &quot;hf:shibing624/text2vec-base-chinese&quot;   # 128 max seq length </span><br><span class="line">text2vec_mul_emd = &quot;hf:shibing624/text2vec-base-multilingual&quot;  # 256 max seq length</span><br><span class="line">text2vec_ch_para_emd = &quot;hf:shibing624/text2vec-base-chinese-paraphrase&quot; # perform better for long text, 256 max seq length</span><br><span class="line">bge_en_emd = &quot;hf:BAAI/bge-base-en-v1.5&quot;  # 512 max seq length</span><br><span class="line">bge_ch_emd = &quot;hf:BAAI/bge-base-zh-v1.5&quot;  # 512 max seq length</span><br><span class="line"></span><br><span class="line">rerank_base = &quot;rerank:BAAI/bge-reranker-base&quot;    # 512 max seq length</span><br><span class="line">rerank_large = &quot;rerank:BAAI/bge-reranker-large&quot;  # 512 max seq length</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 </br>
 </br>

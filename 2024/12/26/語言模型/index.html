@@ -27,7 +27,7 @@
 <meta property="og:description" content="選擇不同語言模型使用參數model便可以選擇不同的語言模型，預設是openai:gpt-3.5-turbo. 範例1. openai(請先完成設定 API Key) 1234567import akashaakasha.Doc_QA()ak.get_response(dir_path,                 prompt,                 embeddings&#x3D;&amp;quot">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-12-26T15:59:59.000Z">
-<meta property="article:modified_time" content="2024-11-14T08:04:07.997Z">
+<meta property="article:modified_time" content="2024-12-03T03:25:55.833Z">
 <meta property="article:author" content="Chih Chuan Chang&lt;ccchang@iii.org.tw&gt;">
 <meta property="article:tag" content="akasha-advanced">
 <meta property="article:tag" content="Doc_QA">
@@ -241,7 +241,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-11-14 16:04:07" itemprop="dateModified" datetime="2024-11-14T16:04:07+08:00">2024-11-14</time>
+      <time title="修改時間：2024-12-03 11:25:55" itemprop="dateModified" datetime="2024-12-03T11:25:55+08:00">2024-12-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -294,7 +294,7 @@
 </br>
 
 <h3 id="5-gemini"><a href="#5-gemini" class="headerlink" title="5. gemini"></a>5. gemini</h3><p>(請先完成<a href="/2024/12/30/%E8%A8%AD%E5%AE%9A%20API%20Key/">設定 API Key</a>)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, </span><br><span class="line">                prompt, </span><br><span class="line">                embeddings=&quot;gemini:text-embedding-004&quot;,</span><br><span class="line">                model=&quot;gemini:gemini-1.5-flash&quot;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, </span><br><span class="line">                prompt, </span><br><span class="line">                embeddings=&quot;gemini:models/text-embedding-004&quot;,</span><br><span class="line">                model=&quot;gemini:gemini-1.5-flash&quot;)</span><br></pre></td></tr></table></figure>
 
 
 </br>
@@ -302,7 +302,7 @@
 
 
 <h3 id="6-anthropic"><a href="#6-anthropic" class="headerlink" title="6. anthropic"></a>6. anthropic</h3><p>(請先完成<a href="/2024/12/30/%E8%A8%AD%E5%AE%9A%20API%20Key/">設定 API Key</a>)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, </span><br><span class="line">                prompt, </span><br><span class="line">                model=&quot;anthropic:claude-3-5-sonnet-20241022&quot;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, </span><br><span class="line">                prompt, </span><br><span class="line">                model=&quot;anthropic:claude-3-5-sonnet-20241022&quot;)</span><br></pre></td></tr></table></figure>
 
 
 </br>
