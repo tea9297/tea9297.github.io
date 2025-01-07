@@ -148,7 +148,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">36</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -187,6 +187,134 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://tea9297.github.io/2024/01/01/DEV-%E5%AE%89%E8%A3%9D&%E5%9F%B7%E8%A1%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Chih Chuan Chang<ccchang@iii.org.tw>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | akasha使用手冊">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/01/01/DEV-%E5%AE%89%E8%A3%9D&%E5%9F%B7%E8%A1%8C/" class="post-title-link" itemprop="url">akashalab-安裝&執行</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-01-01 23:00:00" itemprop="dateCreated datePublished" datetime="2024-01-01T23:00:00+08:00">2024-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-08-30 11:30:25" itemprop="dateModified" datetime="2024-08-30T11:30:25+08:00">2024-08-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/akasha-lab/" itemprop="url" rel="index"><span itemprop="name">akasha-lab</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="pip-安裝"><a href="#pip-安裝" class="headerlink" title="pip 安裝"></a>pip 安裝</h2><ol>
+<li>下載或git clone akasha ui-dev專案分支到你的資料夾 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git <span class="built_in">clone</span> --branch ui-dev https://github.com/iii-org/akasha.git</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> akasha</span></span><br></pre></td></tr></table></figure></li>
+<li>安裝所需python套件 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">python -m pip install -r requirements.txt</span></span><br></pre></td></tr></table></figure></li>
+<li>啟動fast api server 和 streamlit 介面 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">nohup</span> /bin/bash -c <span class="string">&quot;uvicorn api:app &amp;&quot;</span> &amp;&amp; streamlit run main.py</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><img src="https://hackmd.io/_uploads/HJKlJ2lqp.png" alt="image"></p>
+<h2 id="Docker-安裝"><a href="#Docker-安裝" class="headerlink" title="Docker 安裝"></a>Docker 安裝</h2><p>在某些情況之下採用pip 安裝，無法開啟dev-ui，或許這時候可以考慮使用docker</p>
+<ol>
+<li>下載或git clone akasha ui-dev專案分支到你的資料夾 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git <span class="built_in">clone</span> --branch ui-dev https://github.com/iii-org/akasha.git</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> akasha</span></span><br></pre></td></tr></table></figure></li>
+<li>(optional) 編輯 install.env 檔案 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">## install.env</span><br><span class="line">MODEL=./model    # 存放語言模型的資料夾</span><br><span class="line">CONFIG=./config # 存放dataset, knowledge 配置檔的資料夾</span><br><span class="line">DOCS=./docs # 存放文件的資料夾</span><br><span class="line">IMAGE_NAME=akasha_dev_ui</span><br><span class="line">IMAGE_VERSION=0.1</span><br></pre></td></tr></table></figure></li>
+<li>執行安裝 script <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">sudo</span> bash install.sh</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="預設openAI-key"><a href="#預設openAI-key" class="headerlink" title="預設openAI key"></a>預設openAI key</h3><p>如果您想要添加預設的 OpenAI API 密鑰或 Azure OpenAI API 密鑰，以便每個用戶都可以直接使用它，在第二步中，您可以在 <em><strong>install.env</strong></em> 文件中添加您的預設密鑰。<br>這將在你的config目錄中創建一個 <em><strong>default_key.json</strong></em> 文件，你可以更改該文件中的密鑰值以便在啟動akasha_dev_ui後更改或刪除密鑰。</p>
+<h3 id="openAI"><a href="#openAI" class="headerlink" title="openAI:"></a>openAI:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## install.env ##</span></span><br><span class="line">MODEL=./model   </span><br><span class="line">CONFIG=./config </span><br><span class="line">DOCS=./docs </span><br><span class="line">IMAGE_NAME=akasha-lab</span><br><span class="line">IMAGE_VERSION=0.6</span><br><span class="line">DEFAULT_OPENAI_API_KEY=&#123;your openAI key&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Azure-openAI"><a href="#Azure-openAI" class="headerlink" title="Azure openAI:"></a>Azure openAI:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## install.env ##</span></span><br><span class="line">MODEL=./model   </span><br><span class="line">CONFIG=./config </span><br><span class="line">DOCS=./docs </span><br><span class="line">IMAGE_NAME=akasha_dev_ui</span><br><span class="line">IMAGE_VERSION=0.6</span><br><span class="line">DEFAULT_AZURE_API_KEY=&#123;your Azure key&#125;</span><br><span class="line">DEFAULT_AZURE_API_BASE=&#123;your Azure base url&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<br/>
+<br/>
+
+
+<h2 id="使用docker-image建構container"><a href="#使用docker-image建構container" class="headerlink" title="使用docker image建構container"></a>使用docker image建構container</h2><p>1.創建資料夾儲存模型、文件資料</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p config</span><br><span class="line"><span class="built_in">mkdir</span> -p model</span><br><span class="line"><span class="built_in">mkdir</span> -p docs</span><br><span class="line"><span class="built_in">mkdir</span> -p chromadb</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>2.創建帳號yaml檔accounts.yaml</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">cookie:</span><br><span class="line">  expiry_days: 30</span><br><span class="line">  key: random_signature_key</span><br><span class="line">  name: random_cookie_name</span><br><span class="line">credentials:</span><br><span class="line">  usernames:</span><br><span class="line">    cws:</span><br><span class="line">      email: cws@gmail.com</span><br><span class="line">      name: cws</span><br><span class="line">      password: $2b$12$jCB8MeVqMc3jWDynjNyeVeLS8IWBduxnX362gLfJ1KIkeTPH9KYha</span><br><span class="line">  emails: []</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>3.從docker hub下載image並執行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> docker pull ccchang0518/akasha-lab:0.6</span><br><span class="line"><span class="built_in">sudo</span> docker run -v ./model:/app/model -v ./config:/app/config -v ./docs:/app/docs -v ./chromadb:/app/chromadb -v ./accounts.yaml:/app/accounts.yaml -p 8501:8501 --name akasha_dev_ui ccchang0518/akasha-lab:0.6</span><br></pre></td></tr></table></figure>
+
+<br/>
+<br/>
+
+
+<h2 id="使用API"><a href="#使用API" class="headerlink" title="使用API"></a>使用API</h2><p>若要直接串接akasha dev-ui API，啟動fastapi後，可至docs查詢API functions (<a target="_blank" rel="noopener" href="http://127.0.0.1:8000/docs">http://127.0.0.1:8000/docs</a>)</p>
+<p><img src="https://hackmd.io/_uploads/HkbuIKLAp.png" alt="image"></p>
+<br/>
+<br/>
+
+<p>若為docker安裝請使用-p {port}:8000 開啟fastapi port</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> docker run -v ./model:/app/model -v ./config:/app/config -v ./docs:/app/docs -v ./chromadb:/app/chromadb -v ./accounts.yaml:/app/accounts.yaml -p 8000:8000 -p 8501:8501 --name akasha-lab akasha-lab:0.6</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
