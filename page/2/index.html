@@ -713,7 +713,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2025-01-07 12:08:33" itemprop="dateModified" datetime="2025-01-07T12:08:33+08:00">2025-01-07</time>
+      <time title="修改時間：2025-01-09 12:10:12" itemprop="dateModified" datetime="2025-01-09T12:10:12+08:00">2025-01-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -760,9 +760,9 @@
 </br>
 </br>
 
-<h3 id="4-遠端api"><a href="#4-遠端api" class="headerlink" title="4. 遠端api"></a>4. 遠端api</h3><p>如果你使用別人的api或者透過支援openAI api框架的部署自己的模型(例如vllm, TGI, litellm…)，你可以使用 <em><strong>remote:{your LLM api url}</strong></em> 來加載模型。</p>
-<p>若遠端api需要api金鑰或指定模型名稱，請先完成設定環境變數 <em><strong>REMOTE_API_KEY</strong></em>和 <em><strong>REMOTE_MODEL_NAME</strong></em> ，參考<a href="/2024/12/30/%E8%A8%AD%E5%AE%9A%20API%20Key/">設定 API Key</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, </span><br><span class="line">                prompt, </span><br><span class="line">                model=&quot;remote:http://140.92.60.189:8081&quot;)</span><br></pre></td></tr></table></figure>
+<h3 id="4-遠端api"><a href="#4-遠端api" class="headerlink" title="4. 遠端api"></a>4. 遠端api</h3><p>如果你使用別人的api或者透過支援openAI api框架的部署自己的模型(例如vllm, TGI, litellm…)，你可以使用 <em><strong>remote:{your LLM api url}</strong></em> 來加載模型，若須指定模型名稱，使用 <em><strong>remote:{your LLM api url}@{your model name}</strong></em> 。</p>
+<p>若遠端api需要api金鑰，請先完成設定環境變數 <em><strong>REMOTE_API_KEY</strong></em> ，參考<a href="/2024/12/30/%E8%A8%AD%E5%AE%9A%20API%20Key/">設定 API Key</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import akasha</span><br><span class="line"></span><br><span class="line">ak = akasha.Doc_QA()</span><br><span class="line">ak.get_response(dir_path, </span><br><span class="line">                prompt, </span><br><span class="line">                model=&quot;remote:http://140.92.60.189:8081@llama-3.2-11B&quot;)</span><br></pre></td></tr></table></figure>
 
 </br>
 </br>
